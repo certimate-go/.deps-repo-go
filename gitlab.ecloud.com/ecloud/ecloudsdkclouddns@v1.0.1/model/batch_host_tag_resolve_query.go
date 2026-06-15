@@ -5,11 +5,11 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
 )
 
 type BatchHostTagResolveQuery struct {
-    position.Query
+	_ position.Query
 	// 指定解析结果IP的类型，可以选择6(IPv6)或4(IPv4)。默认值为4
 	Query string `json:"query,omitempty"`
 
