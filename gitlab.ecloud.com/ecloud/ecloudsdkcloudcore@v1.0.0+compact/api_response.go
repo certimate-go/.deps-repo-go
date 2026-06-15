@@ -1,4 +1,4 @@
-package ecloudsdkcore
+package ecloudsdkcloudcore
 
 import (
 	"net/http"

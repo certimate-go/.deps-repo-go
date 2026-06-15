@@ -1,4 +1,4 @@
-package ecloudsdkcore
+package ecloudsdkcloudcore
 
 import (
 	"bytes"
@@ -6,7 +6,6 @@ import (
 	"encoding/xml"
 	"errors"
 	"fmt"
-	"gitlab.ecloud.com/ecloud/ecloudsdkcore/config"
 	"io"
 	"io/ioutil"
 	"mime/multipart"
@@ -20,6 +19,8 @@ import (
 	"strings"
 	"time"
 	"unicode/utf8"
+
+	"gitlab.ecloud.com/ecloud/ecloudsdkcloudcore/config"
 )
 
 var (

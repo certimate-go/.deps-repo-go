@@ -1,4 +1,4 @@
-package ecloudsdkcore
+package ecloudsdkcloudcore
 
 type HttpRequest struct {
 	Url          string                 `json:"url,omitempty"`
@@ -13,7 +13,6 @@ type HttpRequest struct {
 	QueryParams  map[string]interface{} `json:"queryParams,omitempty"`
 	HeaderParams map[string]interface{} `json:"headerParams,omitempty"`
 }
-
 
 func NewDefaultHttpRequest() *HttpRequest {
 	return &HttpRequest{

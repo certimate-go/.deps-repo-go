@@ -1,4 +1,4 @@
-package ecloudsdkcore
+package ecloudsdkcloudcore
 
 type OpenApiRequest struct {
 	Product         string                 `json:"product,omitempty"`
