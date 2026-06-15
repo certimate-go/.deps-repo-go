@@ -5,31 +5,34 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"os"
+
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
+
 type ModifyCdnDomainBodyCdnProtocolEnum string
 
 // List of CdnProtocol
 const (
-    ModifyCdnDomainBodyCdnProtocolEnumHttp ModifyCdnDomainBodyCdnProtocolEnum = "HTTP"
-    ModifyCdnDomainBodyCdnProtocolEnumHttps ModifyCdnDomainBodyCdnProtocolEnum = "HTTPS"
-    ModifyCdnDomainBodyCdnProtocolEnumHttpHttps ModifyCdnDomainBodyCdnProtocolEnum = "HTTP_HTTPS"
+	ModifyCdnDomainBodyCdnProtocolEnumHttp      ModifyCdnDomainBodyCdnProtocolEnum = "HTTP"
+	ModifyCdnDomainBodyCdnProtocolEnumHttps     ModifyCdnDomainBodyCdnProtocolEnum = "HTTPS"
+	ModifyCdnDomainBodyCdnProtocolEnumHttpHttps ModifyCdnDomainBodyCdnProtocolEnum = "HTTP_HTTPS"
 )
 
 type ModifyCdnDomainBody struct {
-    position.Body
-    // 上传的文件列表
+	position.Body
+	// 上传的文件列表
 	File *os.File `json:"file,omitempty"`
-    // 证书uniqueId
+	// 证书uniqueId
 	CrtUniqueId *string `json:"crtUniqueId,omitempty"`
-    // 回源地址列表
+	// 回源地址列表
 	Sources *[]ModifyCdnDomainRequestSources `json:"sources,omitempty"`
-    // 客户访问服务节点的协议
+	// 客户访问服务节点的协议
 	CdnProtocol *ModifyCdnDomainBodyCdnProtocolEnum `json:"cdnProtocol,omitempty"`
-    // 域名Id
+	// 域名Id
 	DomainId *int32 `json:"domainId,omitempty"`
-    // 已经存在的文件名
+	// 已经存在的文件名
 	ExistFile []string `json:"existFile,omitempty"`
 }
 
@@ -75,7 +78,6 @@ func (s *ModifyCdnDomainBody) SetExistFile(v []string) *ModifyCdnDomainBody {
 	return s
 }
 
-
 type ModifyCdnDomainBodyBuilder struct {
 	s *ModifyCdnDomainBody
 }
@@ -119,5 +121,3 @@ func (b *ModifyCdnDomainBodyBuilder) ExistFile(v []string) *ModifyCdnDomainBodyB
 func (b *ModifyCdnDomainBodyBuilder) Build() *ModifyCdnDomainBody {
 	return b.s
 }
-
-

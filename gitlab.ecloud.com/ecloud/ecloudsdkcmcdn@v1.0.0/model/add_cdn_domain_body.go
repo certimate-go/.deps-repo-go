@@ -5,50 +5,55 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"os"
+
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
+
 type AddCdnDomainBodyCdnTypeEnum string
 
 // List of CdnType
 const (
-    AddCdnDomainBodyCdnTypeEnumWeb AddCdnDomainBodyCdnTypeEnum = "web"
-    AddCdnDomainBodyCdnTypeEnumDownload AddCdnDomainBodyCdnTypeEnum = "download"
-    AddCdnDomainBodyCdnTypeEnumVideo AddCdnDomainBodyCdnTypeEnum = "video"
-    AddCdnDomainBodyCdnTypeEnumLivestream AddCdnDomainBodyCdnTypeEnum = "liveStream"
+	AddCdnDomainBodyCdnTypeEnumWeb        AddCdnDomainBodyCdnTypeEnum = "web"
+	AddCdnDomainBodyCdnTypeEnumDownload   AddCdnDomainBodyCdnTypeEnum = "download"
+	AddCdnDomainBodyCdnTypeEnumVideo      AddCdnDomainBodyCdnTypeEnum = "video"
+	AddCdnDomainBodyCdnTypeEnumLivestream AddCdnDomainBodyCdnTypeEnum = "liveStream"
 )
+
 type AddCdnDomainBodyCdnProtocolEnum string
 
 // List of CdnProtocol
 const (
-    AddCdnDomainBodyCdnProtocolEnumHttp AddCdnDomainBodyCdnProtocolEnum = "HTTP"
-    AddCdnDomainBodyCdnProtocolEnumHttps AddCdnDomainBodyCdnProtocolEnum = "HTTPS"
-    AddCdnDomainBodyCdnProtocolEnumHttpHttps AddCdnDomainBodyCdnProtocolEnum = "HTTP_HTTPS"
+	AddCdnDomainBodyCdnProtocolEnumHttp      AddCdnDomainBodyCdnProtocolEnum = "HTTP"
+	AddCdnDomainBodyCdnProtocolEnumHttps     AddCdnDomainBodyCdnProtocolEnum = "HTTPS"
+	AddCdnDomainBodyCdnProtocolEnumHttpHttps AddCdnDomainBodyCdnProtocolEnum = "HTTP_HTTPS"
 )
+
 type AddCdnDomainBodyProductTypeEnum string
 
 // List of ProductType
 const (
-    AddCdnDomainBodyProductTypeEnumEcdn AddCdnDomainBodyProductTypeEnum = "ECDN"
+	AddCdnDomainBodyProductTypeEnumEcdn AddCdnDomainBodyProductTypeEnum = "ECDN"
 )
 
 type AddCdnDomainBody struct {
-    position.Body
-    // 上传的文件
+	position.Body
+	// 上传的文件
 	File *os.File `json:"file,omitempty"`
-    // 加速域名的业务类型：页面：web，下载：download，点播：video
+	// 加速域名的业务类型：页面：web，下载：download，点播：video
 	CdnType *AddCdnDomainBodyCdnTypeEnum `json:"cdnType,omitempty"`
-    // 证书uniqueId
+	// 证书uniqueId
 	CrtUniqueId *string `json:"crtUniqueId,omitempty"`
-    // 域名
+	// 域名
 	DomainName *string `json:"domainName,omitempty"`
-    // 协议类型：http，https
+	// 协议类型：http，https
 	CdnProtocol *AddCdnDomainBodyCdnProtocolEnum `json:"cdnProtocol,omitempty"`
-    // 源站信息
+	// 源站信息
 	CdnSrcDetails *[]AddCdnDomainRequestCdnSrcDetails `json:"cdnSrcDetails,omitempty"`
-    // 域名备案号
+	// 域名备案号
 	IcpLicensing *string `json:"icpLicensing,omitempty"`
-    // 产品类型
+	// 产品类型
 	ProductType *AddCdnDomainBodyProductTypeEnum `json:"productType,omitempty"`
 }
 
@@ -104,7 +109,6 @@ func (s *AddCdnDomainBody) SetProductType(v AddCdnDomainBodyProductTypeEnum) *Ad
 	return s
 }
 
-
 type AddCdnDomainBodyBuilder struct {
 	s *AddCdnDomainBody
 }
@@ -158,5 +162,3 @@ func (b *AddCdnDomainBodyBuilder) ProductType(v AddCdnDomainBodyProductTypeEnum)
 func (b *AddCdnDomainBodyBuilder) Build() *AddCdnDomainBody {
 	return b.s
 }
-
-
