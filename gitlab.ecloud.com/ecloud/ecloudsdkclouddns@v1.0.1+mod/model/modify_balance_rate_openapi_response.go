@@ -4,19 +4,17 @@
 
 package model
 
-
 type ModifyBalanceRateOpenapiResponseStateEnum string
 
 // List of State
 const (
-    ModifyBalanceRateOpenapiResponseStateEnumError ModifyBalanceRateOpenapiResponseStateEnum = "ERROR"
-    ModifyBalanceRateOpenapiResponseStateEnumException ModifyBalanceRateOpenapiResponseStateEnum = "EXCEPTION"
-    ModifyBalanceRateOpenapiResponseStateEnumForbidden ModifyBalanceRateOpenapiResponseStateEnum = "FORBIDDEN"
-    ModifyBalanceRateOpenapiResponseStateEnumOk ModifyBalanceRateOpenapiResponseStateEnum = "OK"
+	ModifyBalanceRateOpenapiResponseStateEnumError     ModifyBalanceRateOpenapiResponseStateEnum = "ERROR"
+	ModifyBalanceRateOpenapiResponseStateEnumException ModifyBalanceRateOpenapiResponseStateEnum = "EXCEPTION"
+	ModifyBalanceRateOpenapiResponseStateEnumForbidden ModifyBalanceRateOpenapiResponseStateEnum = "FORBIDDEN"
+	ModifyBalanceRateOpenapiResponseStateEnumOk        ModifyBalanceRateOpenapiResponseStateEnum = "OK"
 )
 
 type ModifyBalanceRateOpenapiResponse struct {
-
 	RequestId string `json:"requestId,omitempty"`
 
 	ErrorMessage string `json:"errorMessage,omitempty"`

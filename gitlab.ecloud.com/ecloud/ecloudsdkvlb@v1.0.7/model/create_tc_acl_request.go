@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type CreateTCAclRequest struct {
-
-
 	CreateTCAclBody *CreateTCAclBody `json:"createTCAclBody,omitempty"`
 
 	CreateTCAclHeader *CreateTCAclHeader `json:"createTCAclHeader,omitempty"`
@@ -38,7 +36,6 @@ func (s *CreateTCAclRequest) SetCreateTCAclHeader(v *CreateTCAclHeader) *CreateT
 	return s
 }
 
-
 type CreateTCAclRequestBuilder struct {
 	s *CreateTCAclRequest
 }
@@ -62,5 +59,3 @@ func (b *CreateTCAclRequestBuilder) CreateTCAclHeader(v *CreateTCAclHeader) *Cre
 func (b *CreateTCAclRequestBuilder) Build() *CreateTCAclRequest {
 	return b.s
 }
-
-

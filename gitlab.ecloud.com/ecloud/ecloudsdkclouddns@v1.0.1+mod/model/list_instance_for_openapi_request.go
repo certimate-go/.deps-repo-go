@@ -4,10 +4,7 @@
 
 package model
 
-
-
 type ListInstanceForOpenapiRequest struct {
-
 	ListInstanceForOpenapiQuery *ListInstanceForOpenapiQuery `json:"listInstanceForOpenapiQuery,omitempty"`
 
 	ListInstanceForOpenapiBody *ListInstanceForOpenapiBody `json:"listInstanceForOpenapiBody,omitempty"`

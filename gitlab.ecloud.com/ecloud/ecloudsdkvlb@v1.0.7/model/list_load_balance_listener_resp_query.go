@@ -5,37 +5,37 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type ListLoadBalanceListenerRespQueryProtocolsEnum string
 
 // List of Protocols
 const (
-    ListLoadBalanceListenerRespQueryProtocolsEnumHttp ListLoadBalanceListenerRespQueryProtocolsEnum = "HTTP"
-    ListLoadBalanceListenerRespQueryProtocolsEnumHttps ListLoadBalanceListenerRespQueryProtocolsEnum = "HTTPS"
-    ListLoadBalanceListenerRespQueryProtocolsEnumTcp ListLoadBalanceListenerRespQueryProtocolsEnum = "TCP"
-    ListLoadBalanceListenerRespQueryProtocolsEnumUdp ListLoadBalanceListenerRespQueryProtocolsEnum = "UDP"
-    ListLoadBalanceListenerRespQueryProtocolsEnumTerminatedHttps ListLoadBalanceListenerRespQueryProtocolsEnum = "TERMINATED_HTTPS"
-    ListLoadBalanceListenerRespQueryProtocolsEnumSip ListLoadBalanceListenerRespQueryProtocolsEnum = "SIP"
+	ListLoadBalanceListenerRespQueryProtocolsEnumHttp            ListLoadBalanceListenerRespQueryProtocolsEnum = "HTTP"
+	ListLoadBalanceListenerRespQueryProtocolsEnumHttps           ListLoadBalanceListenerRespQueryProtocolsEnum = "HTTPS"
+	ListLoadBalanceListenerRespQueryProtocolsEnumTcp             ListLoadBalanceListenerRespQueryProtocolsEnum = "TCP"
+	ListLoadBalanceListenerRespQueryProtocolsEnumUdp             ListLoadBalanceListenerRespQueryProtocolsEnum = "UDP"
+	ListLoadBalanceListenerRespQueryProtocolsEnumTerminatedHttps ListLoadBalanceListenerRespQueryProtocolsEnum = "TERMINATED_HTTPS"
+	ListLoadBalanceListenerRespQueryProtocolsEnumSip             ListLoadBalanceListenerRespQueryProtocolsEnum = "SIP"
 )
 
 type ListLoadBalanceListenerRespQuery struct {
-    position.Query
-    // 实例使用的监听端口
+	position.Query
+	// 实例使用的监听端口
 	ProtocolPorts *string `json:"protocolPorts,omitempty"`
-    // 证书（容器）UUID
+	// 证书（容器）UUID
 	ContainerUuid *string `json:"containerUuid,omitempty"`
-    // 监听器名称
+	// 监听器名称
 	ListenerName *string `json:"listenerName,omitempty"`
-    // 列表分页每页大小，小于0将默认为10
+	// 列表分页每页大小，小于0将默认为10
 	PageSize *int32 `json:"pageSize,omitempty"`
-    // 列表分页页数，小于1会默认第1页
+	// 列表分页页数，小于1会默认第1页
 	Page *int32 `json:"page,omitempty"`
-    // 协议
+	// 协议
 	Protocols []ListLoadBalanceListenerRespQueryProtocolsEnum `json:"protocols,omitempty"`
-    // 双AZ场景下创建请求的requestId唯一标志为UUID
+	// 双AZ场景下创建请求的requestId唯一标志为UUID
 	MultiAzUuid *string `json:"multiAzUuid,omitempty"`
 }
 
@@ -86,7 +86,6 @@ func (s *ListLoadBalanceListenerRespQuery) SetMultiAzUuid(v string) *ListLoadBal
 	return s
 }
 
-
 type ListLoadBalanceListenerRespQueryBuilder struct {
 	s *ListLoadBalanceListenerRespQuery
 }
@@ -135,5 +134,3 @@ func (b *ListLoadBalanceListenerRespQueryBuilder) MultiAzUuid(v string) *ListLoa
 func (b *ListLoadBalanceListenerRespQueryBuilder) Build() *ListLoadBalanceListenerRespQuery {
 	return b.s
 }
-
-

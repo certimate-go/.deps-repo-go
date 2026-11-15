@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type ListControlGroupDetailRequest struct {
-
-
 	ListControlGroupDetailPath *ListControlGroupDetailPath `json:"listControlGroupDetailPath,omitempty"`
 }
 
@@ -31,7 +29,6 @@ func (s *ListControlGroupDetailRequest) SetListControlGroupDetailPath(v *ListCon
 	return s
 }
 
-
 type ListControlGroupDetailRequestBuilder struct {
 	s *ListControlGroupDetailRequest
 }
@@ -50,5 +47,3 @@ func (b *ListControlGroupDetailRequestBuilder) ListControlGroupDetailPath(v *Lis
 func (b *ListControlGroupDetailRequestBuilder) Build() *ListControlGroupDetailRequest {
 	return b.s
 }
-
-

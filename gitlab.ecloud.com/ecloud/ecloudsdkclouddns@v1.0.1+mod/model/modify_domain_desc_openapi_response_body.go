@@ -4,36 +4,36 @@
 
 package model
 
-
 type ModifyDomainDescOpenapiResponseBodyServiceTypeEnum string
 
 // List of ServiceType
 const (
-    ModifyDomainDescOpenapiResponseBodyServiceTypeEnumBasic ModifyDomainDescOpenapiResponseBodyServiceTypeEnum = "BASIC"
-    ModifyDomainDescOpenapiResponseBodyServiceTypeEnumPremium ModifyDomainDescOpenapiResponseBodyServiceTypeEnum = "PREMIUM"
-    ModifyDomainDescOpenapiResponseBodyServiceTypeEnumStandard ModifyDomainDescOpenapiResponseBodyServiceTypeEnum = "STANDARD"
-    ModifyDomainDescOpenapiResponseBodyServiceTypeEnumUltimate ModifyDomainDescOpenapiResponseBodyServiceTypeEnum = "ULTIMATE"
+	ModifyDomainDescOpenapiResponseBodyServiceTypeEnumBasic    ModifyDomainDescOpenapiResponseBodyServiceTypeEnum = "BASIC"
+	ModifyDomainDescOpenapiResponseBodyServiceTypeEnumPremium  ModifyDomainDescOpenapiResponseBodyServiceTypeEnum = "PREMIUM"
+	ModifyDomainDescOpenapiResponseBodyServiceTypeEnumStandard ModifyDomainDescOpenapiResponseBodyServiceTypeEnum = "STANDARD"
+	ModifyDomainDescOpenapiResponseBodyServiceTypeEnumUltimate ModifyDomainDescOpenapiResponseBodyServiceTypeEnum = "ULTIMATE"
 )
+
 type ModifyDomainDescOpenapiResponseBodyAdoptStateEnum string
 
 // List of AdoptState
 const (
-    ModifyDomainDescOpenapiResponseBodyAdoptStateEnumUncertain ModifyDomainDescOpenapiResponseBodyAdoptStateEnum = "UNCERTAIN"
-    ModifyDomainDescOpenapiResponseBodyAdoptStateEnumUnused ModifyDomainDescOpenapiResponseBodyAdoptStateEnum = "UNUSED"
-    ModifyDomainDescOpenapiResponseBodyAdoptStateEnumUsing ModifyDomainDescOpenapiResponseBodyAdoptStateEnum = "USING"
+	ModifyDomainDescOpenapiResponseBodyAdoptStateEnumUncertain ModifyDomainDescOpenapiResponseBodyAdoptStateEnum = "UNCERTAIN"
+	ModifyDomainDescOpenapiResponseBodyAdoptStateEnumUnused    ModifyDomainDescOpenapiResponseBodyAdoptStateEnum = "UNUSED"
+	ModifyDomainDescOpenapiResponseBodyAdoptStateEnumUsing     ModifyDomainDescOpenapiResponseBodyAdoptStateEnum = "USING"
 )
+
 type ModifyDomainDescOpenapiResponseBodyInstanceStatusEnum string
 
 // List of InstanceStatus
 const (
-    ModifyDomainDescOpenapiResponseBodyInstanceStatusEnumCanceling ModifyDomainDescOpenapiResponseBodyInstanceStatusEnum = "CANCELING"
-    ModifyDomainDescOpenapiResponseBodyInstanceStatusEnumDisabled ModifyDomainDescOpenapiResponseBodyInstanceStatusEnum = "DISABLED"
-    ModifyDomainDescOpenapiResponseBodyInstanceStatusEnumEnabled ModifyDomainDescOpenapiResponseBodyInstanceStatusEnum = "ENABLED"
-    ModifyDomainDescOpenapiResponseBodyInstanceStatusEnumExpired ModifyDomainDescOpenapiResponseBodyInstanceStatusEnum = "EXPIRED"
+	ModifyDomainDescOpenapiResponseBodyInstanceStatusEnumCanceling ModifyDomainDescOpenapiResponseBodyInstanceStatusEnum = "CANCELING"
+	ModifyDomainDescOpenapiResponseBodyInstanceStatusEnumDisabled  ModifyDomainDescOpenapiResponseBodyInstanceStatusEnum = "DISABLED"
+	ModifyDomainDescOpenapiResponseBodyInstanceStatusEnumEnabled   ModifyDomainDescOpenapiResponseBodyInstanceStatusEnum = "ENABLED"
+	ModifyDomainDescOpenapiResponseBodyInstanceStatusEnumExpired   ModifyDomainDescOpenapiResponseBodyInstanceStatusEnum = "EXPIRED"
 )
 
 type ModifyDomainDescOpenapiResponseBody struct {
-
 	// 套餐类型
 	ServiceType ModifyDomainDescOpenapiResponseBodyServiceTypeEnum `json:"serviceType,omitempty"`
 

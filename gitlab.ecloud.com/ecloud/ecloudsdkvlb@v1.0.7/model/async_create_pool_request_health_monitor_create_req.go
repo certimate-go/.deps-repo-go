@@ -5,42 +5,42 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
+
 type AsyncCreatePoolRequestHealthMonitorCreateReqHealthTypeEnum string
 
 // List of HealthType
 const (
-    AsyncCreatePoolRequestHealthMonitorCreateReqHealthTypeEnumHttp AsyncCreatePoolRequestHealthMonitorCreateReqHealthTypeEnum = "HTTP"
-    AsyncCreatePoolRequestHealthMonitorCreateReqHealthTypeEnumHttp10 AsyncCreatePoolRequestHealthMonitorCreateReqHealthTypeEnum = "HTTP10"
-    AsyncCreatePoolRequestHealthMonitorCreateReqHealthTypeEnumHttp11 AsyncCreatePoolRequestHealthMonitorCreateReqHealthTypeEnum = "HTTP11"
-    AsyncCreatePoolRequestHealthMonitorCreateReqHealthTypeEnumHttps AsyncCreatePoolRequestHealthMonitorCreateReqHealthTypeEnum = "HTTPS"
-    AsyncCreatePoolRequestHealthMonitorCreateReqHealthTypeEnumTcp AsyncCreatePoolRequestHealthMonitorCreateReqHealthTypeEnum = "TCP"
-    AsyncCreatePoolRequestHealthMonitorCreateReqHealthTypeEnumPing AsyncCreatePoolRequestHealthMonitorCreateReqHealthTypeEnum = "PING"
-    AsyncCreatePoolRequestHealthMonitorCreateReqHealthTypeEnumUdp AsyncCreatePoolRequestHealthMonitorCreateReqHealthTypeEnum = "UDP"
+	AsyncCreatePoolRequestHealthMonitorCreateReqHealthTypeEnumHttp   AsyncCreatePoolRequestHealthMonitorCreateReqHealthTypeEnum = "HTTP"
+	AsyncCreatePoolRequestHealthMonitorCreateReqHealthTypeEnumHttp10 AsyncCreatePoolRequestHealthMonitorCreateReqHealthTypeEnum = "HTTP10"
+	AsyncCreatePoolRequestHealthMonitorCreateReqHealthTypeEnumHttp11 AsyncCreatePoolRequestHealthMonitorCreateReqHealthTypeEnum = "HTTP11"
+	AsyncCreatePoolRequestHealthMonitorCreateReqHealthTypeEnumHttps  AsyncCreatePoolRequestHealthMonitorCreateReqHealthTypeEnum = "HTTPS"
+	AsyncCreatePoolRequestHealthMonitorCreateReqHealthTypeEnumTcp    AsyncCreatePoolRequestHealthMonitorCreateReqHealthTypeEnum = "TCP"
+	AsyncCreatePoolRequestHealthMonitorCreateReqHealthTypeEnumPing   AsyncCreatePoolRequestHealthMonitorCreateReqHealthTypeEnum = "PING"
+	AsyncCreatePoolRequestHealthMonitorCreateReqHealthTypeEnumUdp    AsyncCreatePoolRequestHealthMonitorCreateReqHealthTypeEnum = "UDP"
 )
 
 type AsyncCreatePoolRequestHealthMonitorCreateReq struct {
-
-    // 监听器的检查间隔（单位：秒）
+	// 监听器的检查间隔（单位：秒）
 	HealthDelay *int32 `json:"healthDelay,omitempty"`
-    // 期望HTTP状态代码，取值范围100~599
+	// 期望HTTP状态代码，取值范围100~599
 	HealthExpectedCode *string `json:"healthExpectedCode,omitempty"`
-    // 监听器的最大尝试次数
+	// 监听器的最大尝试次数
 	HealthMaxRetries *int32 `json:"healthMaxRetries,omitempty"`
-    // 监听器绑定的检查方式为HTTP的用于检查的方法，取值范围：GET，POST，HEAD
+	// 监听器绑定的检查方式为HTTP的用于检查的方法，取值范围：GET，POST，HEAD
 	HealthHttpMethod *string `json:"healthHttpMethod,omitempty"`
-    // 后端服务器组ID
+	// 后端服务器组ID
 	PoolId *string `json:"poolId,omitempty"`
-    // 监听器健康检查方式
+	// 监听器健康检查方式
 	HealthType *AsyncCreatePoolRequestHealthMonitorCreateReqHealthTypeEnum `json:"healthType,omitempty"`
-    // 用于监控的URL
+	// 用于监控的URL
 	HealthUrlPath *string `json:"healthUrlPath,omitempty"`
-    // 健康检查开关
+	// 健康检查开关
 	AdminStateUp *bool `json:"adminStateUp,omitempty"`
-    // 监听器的超时时间（单位：秒）
+	// 监听器的超时时间（单位：秒）
 	HealthTimeout *int32 `json:"healthTimeout,omitempty"`
-    // 是否是多AZ场景
+	// 是否是多AZ场景
 	IsMultiAz *bool `json:"isMultiAz,omitempty"`
 }
 
@@ -106,7 +106,6 @@ func (s *AsyncCreatePoolRequestHealthMonitorCreateReq) SetIsMultiAz(v bool) *Asy
 	return s
 }
 
-
 type AsyncCreatePoolRequestHealthMonitorCreateReqBuilder struct {
 	s *AsyncCreatePoolRequestHealthMonitorCreateReq
 }
@@ -170,5 +169,3 @@ func (b *AsyncCreatePoolRequestHealthMonitorCreateReqBuilder) IsMultiAz(v bool) 
 func (b *AsyncCreatePoolRequestHealthMonitorCreateReqBuilder) Build() *AsyncCreatePoolRequestHealthMonitorCreateReq {
 	return b.s
 }
-
-

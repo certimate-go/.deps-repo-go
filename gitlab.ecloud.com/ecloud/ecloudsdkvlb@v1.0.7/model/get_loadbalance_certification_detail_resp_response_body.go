@@ -5,40 +5,40 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
+
 type GetLoadbalanceCertificationDetailRespResponseBodyTypeEnum string
 
 // List of Type
 const (
-    GetLoadbalanceCertificationDetailRespResponseBodyTypeEnumServer GetLoadbalanceCertificationDetailRespResponseBodyTypeEnum = "SERVER"
-    GetLoadbalanceCertificationDetailRespResponseBodyTypeEnumCa GetLoadbalanceCertificationDetailRespResponseBodyTypeEnum = "CA"
-    GetLoadbalanceCertificationDetailRespResponseBodyTypeEnumSni GetLoadbalanceCertificationDetailRespResponseBodyTypeEnum = "SNI"
+	GetLoadbalanceCertificationDetailRespResponseBodyTypeEnumServer GetLoadbalanceCertificationDetailRespResponseBodyTypeEnum = "SERVER"
+	GetLoadbalanceCertificationDetailRespResponseBodyTypeEnumCa     GetLoadbalanceCertificationDetailRespResponseBodyTypeEnum = "CA"
+	GetLoadbalanceCertificationDetailRespResponseBodyTypeEnumSni    GetLoadbalanceCertificationDetailRespResponseBodyTypeEnum = "SNI"
 )
 
 type GetLoadbalanceCertificationDetailRespResponseBody struct {
-
-    // 证书私钥
+	// 证书私钥
 	PrivateKey *string `json:"privateKey,omitempty"`
-    // 证书所在容器的访问地址
+	// 证书所在容器的访问地址
 	ContainerRef *string `json:"containerRef,omitempty"`
-    // 证书过期时间
+	// 证书过期时间
 	ExpirationTime *string `json:"expirationTime,omitempty"`
-    // 证书名称
+	// 证书名称
 	Name *string `json:"name,omitempty"`
-    // 证书创建时间
+	// 证书创建时间
 	CreatedTime *string `json:"createdTime,omitempty"`
-    // 证书描述
+	// 证书描述
 	Description *string `json:"description,omitempty"`
-    // 证书所在容器的访问地址ID
+	// 证书所在容器的访问地址ID
 	Id *string `json:"id,omitempty"`
-    // 证书内容
+	// 证书内容
 	PublicKey *string `json:"publicKey,omitempty"`
-    // 证书类型
+	// 证书类型
 	Type *GetLoadbalanceCertificationDetailRespResponseBodyTypeEnum `json:"type,omitempty"`
-    // 边缘云字段
+	// 边缘云字段
 	Vaz *string `json:"vaz,omitempty"`
-    // 标签
+	// 标签
 	Tags *[]GetLoadbalanceCertificationDetailRespResponseTags `json:"tags,omitempty"`
 }
 
@@ -109,7 +109,6 @@ func (s *GetLoadbalanceCertificationDetailRespResponseBody) SetTags(v []GetLoadb
 	return s
 }
 
-
 type GetLoadbalanceCertificationDetailRespResponseBodyBuilder struct {
 	s *GetLoadbalanceCertificationDetailRespResponseBody
 }
@@ -178,5 +177,3 @@ func (b *GetLoadbalanceCertificationDetailRespResponseBodyBuilder) Tags(v []GetL
 func (b *GetLoadbalanceCertificationDetailRespResponseBodyBuilder) Build() *GetLoadbalanceCertificationDetailRespResponseBody {
 	return b.s
 }
-
-

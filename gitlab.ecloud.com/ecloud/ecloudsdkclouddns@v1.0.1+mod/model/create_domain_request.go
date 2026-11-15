@@ -4,9 +4,6 @@
 
 package model
 
-
-
 type CreateDomainRequest struct {
-
 	CreateDomainBody *CreateDomainBody `json:"createDomainBody,omitempty"`
 }

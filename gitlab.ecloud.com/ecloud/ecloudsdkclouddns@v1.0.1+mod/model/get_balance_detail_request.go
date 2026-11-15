@@ -4,9 +4,6 @@
 
 package model
 
-
-
 type GetBalanceDetailRequest struct {
-
 	GetBalanceDetailBody *GetBalanceDetailBody `json:"getBalanceDetailBody,omitempty"`
 }

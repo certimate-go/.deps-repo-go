@@ -4,10 +4,7 @@
 
 package model
 
-
-
 type ListCustomLineOpenapiResponseBody struct {
-
 	// 当前页的具体数据列表
 	Data *[]ListCustomLineOpenapiResponseData `json:"data,omitempty"`
 

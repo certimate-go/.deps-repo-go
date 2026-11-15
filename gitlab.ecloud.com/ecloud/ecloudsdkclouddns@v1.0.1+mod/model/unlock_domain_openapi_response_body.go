@@ -4,17 +4,15 @@
 
 package model
 
-
 type UnlockDomainOpenapiResponseBodyCodeEnum string
 
 // List of Code
 const (
-    UnlockDomainOpenapiResponseBodyCodeEnumError UnlockDomainOpenapiResponseBodyCodeEnum = "ERROR"
-    UnlockDomainOpenapiResponseBodyCodeEnumSuccess UnlockDomainOpenapiResponseBodyCodeEnum = "SUCCESS"
+	UnlockDomainOpenapiResponseBodyCodeEnumError   UnlockDomainOpenapiResponseBodyCodeEnum = "ERROR"
+	UnlockDomainOpenapiResponseBodyCodeEnumSuccess UnlockDomainOpenapiResponseBodyCodeEnum = "SUCCESS"
 )
 
 type UnlockDomainOpenapiResponseBody struct {
-
 	// 结果说明
 	Msg string `json:"msg,omitempty"`
 

@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type UpdateTLSNameRequest struct {
-
-
 	UpdateTLSNameBody *UpdateTLSNameBody `json:"updateTLSNameBody,omitempty"`
 }
 
@@ -31,7 +29,6 @@ func (s *UpdateTLSNameRequest) SetUpdateTLSNameBody(v *UpdateTLSNameBody) *Updat
 	return s
 }
 
-
 type UpdateTLSNameRequestBuilder struct {
 	s *UpdateTLSNameRequest
 }
@@ -50,5 +47,3 @@ func (b *UpdateTLSNameRequestBuilder) UpdateTLSNameBody(v *UpdateTLSNameBody) *U
 func (b *UpdateTLSNameRequestBuilder) Build() *UpdateTLSNameRequest {
 	return b.s
 }
-
-

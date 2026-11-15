@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type BindTagsRequest struct {
-
-
 	BindTagsBody *BindTagsBody `json:"bindTagsBody,omitempty"`
 }
 
@@ -31,7 +29,6 @@ func (s *BindTagsRequest) SetBindTagsBody(v *BindTagsBody) *BindTagsRequest {
 	return s
 }
 
-
 type BindTagsRequestBuilder struct {
 	s *BindTagsRequest
 }
@@ -50,5 +47,3 @@ func (b *BindTagsRequestBuilder) BindTagsBody(v *BindTagsBody) *BindTagsRequestB
 func (b *BindTagsRequestBuilder) Build() *BindTagsRequest {
 	return b.s
 }
-
-

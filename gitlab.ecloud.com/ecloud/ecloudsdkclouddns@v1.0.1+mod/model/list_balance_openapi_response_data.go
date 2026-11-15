@@ -4,25 +4,24 @@
 
 package model
 
-
 type ListBalanceOpenapiResponseDataStateEnum string
 
 // List of State
 const (
-    ListBalanceOpenapiResponseDataStateEnumDisabled ListBalanceOpenapiResponseDataStateEnum = "DISABLED"
-    ListBalanceOpenapiResponseDataStateEnumEnabled ListBalanceOpenapiResponseDataStateEnum = "ENABLED"
+	ListBalanceOpenapiResponseDataStateEnumDisabled ListBalanceOpenapiResponseDataStateEnum = "DISABLED"
+	ListBalanceOpenapiResponseDataStateEnumEnabled  ListBalanceOpenapiResponseDataStateEnum = "ENABLED"
 )
+
 type ListBalanceOpenapiResponseDataTypeEnum string
 
 // List of Type
 const (
-    ListBalanceOpenapiResponseDataTypeEnumA ListBalanceOpenapiResponseDataTypeEnum = "A"
-    ListBalanceOpenapiResponseDataTypeEnumAaaa ListBalanceOpenapiResponseDataTypeEnum = "AAAA"
-    ListBalanceOpenapiResponseDataTypeEnumCname ListBalanceOpenapiResponseDataTypeEnum = "CNAME"
+	ListBalanceOpenapiResponseDataTypeEnumA     ListBalanceOpenapiResponseDataTypeEnum = "A"
+	ListBalanceOpenapiResponseDataTypeEnumAaaa  ListBalanceOpenapiResponseDataTypeEnum = "AAAA"
+	ListBalanceOpenapiResponseDataTypeEnumCname ListBalanceOpenapiResponseDataTypeEnum = "CNAME"
 )
 
 type ListBalanceOpenapiResponseData struct {
-
 	// 主机头
 	Rr string `json:"rr,omitempty"`
 

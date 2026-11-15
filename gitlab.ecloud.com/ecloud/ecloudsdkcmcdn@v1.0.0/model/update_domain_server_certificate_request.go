@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type UpdateDomainServerCertificateRequest struct {
-
-
 	UpdateDomainServerCertificateHeader *UpdateDomainServerCertificateHeader `json:"updateDomainServerCertificateHeader,omitempty"`
 
 	UpdateDomainServerCertificateBody *UpdateDomainServerCertificateBody `json:"updateDomainServerCertificateBody,omitempty"`
@@ -38,7 +36,6 @@ func (s *UpdateDomainServerCertificateRequest) SetUpdateDomainServerCertificateB
 	return s
 }
 
-
 type UpdateDomainServerCertificateRequestBuilder struct {
 	s *UpdateDomainServerCertificateRequest
 }
@@ -62,5 +59,3 @@ func (b *UpdateDomainServerCertificateRequestBuilder) UpdateDomainServerCertific
 func (b *UpdateDomainServerCertificateRequestBuilder) Build() *UpdateDomainServerCertificateRequest {
 	return b.s
 }
-
-

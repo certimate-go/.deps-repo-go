@@ -9,16 +9,17 @@ import (
 	"encoding/xml"
 	"errors"
 	"fmt"
-	"gitlab.ecloud.com/ecloud/ecloudsdkcore/errs"
-	"gitlab.ecloud.com/ecloud/ecloudsdkcore/request"
-	"gitlab.ecloud.com/ecloud/ecloudsdkcore/response"
-	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 	"io/ioutil"
 	"net"
 	"net/http"
 	"net/url"
 	"strings"
 	"time"
+
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/errs"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/request"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/response"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type HttpClient struct {
@@ -59,8 +60,8 @@ func (hc *HttpClient) doRequest(request *http.Request) (*http.Response, error) {
 }
 
 func (hc *HttpClient) Execute(request *request.HttpRequest,
-	returnType interface{}) (*response.HttpResponse, error) {
-
+	returnType interface{},
+) (*response.HttpResponse, error) {
 	req := hc.buildRequest(request)
 	resp, err := hc.doRequest(req)
 	if err != nil {

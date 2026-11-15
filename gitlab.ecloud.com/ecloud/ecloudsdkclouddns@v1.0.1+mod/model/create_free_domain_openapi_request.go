@@ -4,9 +4,6 @@
 
 package model
 
-
-
 type CreateFreeDomainOpenapiRequest struct {
-
 	CreateFreeDomainOpenapiBody *CreateFreeDomainOpenapiBody `json:"createFreeDomainOpenapiBody,omitempty"`
 }

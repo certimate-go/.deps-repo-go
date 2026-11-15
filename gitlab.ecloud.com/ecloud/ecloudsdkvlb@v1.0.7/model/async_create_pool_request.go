@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type AsyncCreatePoolRequest struct {
-
-
 	AsyncCreatePoolBody *AsyncCreatePoolBody `json:"asyncCreatePoolBody,omitempty"`
 }
 
@@ -31,7 +29,6 @@ func (s *AsyncCreatePoolRequest) SetAsyncCreatePoolBody(v *AsyncCreatePoolBody) 
 	return s
 }
 
-
 type AsyncCreatePoolRequestBuilder struct {
 	s *AsyncCreatePoolRequest
 }
@@ -50,5 +47,3 @@ func (b *AsyncCreatePoolRequestBuilder) AsyncCreatePoolBody(v *AsyncCreatePoolBo
 func (b *AsyncCreatePoolRequestBuilder) Build() *AsyncCreatePoolRequest {
 	return b.s
 }
-
-

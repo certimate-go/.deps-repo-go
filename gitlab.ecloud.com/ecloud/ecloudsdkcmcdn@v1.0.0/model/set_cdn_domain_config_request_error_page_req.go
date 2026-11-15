@@ -5,14 +5,13 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type SetCdnDomainConfigRequestErrorPageReq struct {
-
-    // 是否启用
+	// 是否启用
 	Enable *bool `json:"enable,omitempty"`
-    // error page内容
+	// error page内容
 	Detail *[]SetCdnDomainConfigRequestDetail `json:"detail,omitempty"`
 }
 
@@ -38,7 +37,6 @@ func (s *SetCdnDomainConfigRequestErrorPageReq) SetDetail(v []SetCdnDomainConfig
 	return s
 }
 
-
 type SetCdnDomainConfigRequestErrorPageReqBuilder struct {
 	s *SetCdnDomainConfigRequestErrorPageReq
 }
@@ -62,5 +60,3 @@ func (b *SetCdnDomainConfigRequestErrorPageReqBuilder) Detail(v []SetCdnDomainCo
 func (b *SetCdnDomainConfigRequestErrorPageReqBuilder) Build() *SetCdnDomainConfigRequestErrorPageReq {
 	return b.s
 }
-
-

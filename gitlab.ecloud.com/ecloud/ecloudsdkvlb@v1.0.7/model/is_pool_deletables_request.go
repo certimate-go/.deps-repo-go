@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type IsPoolDeletablesRequest struct {
-
-
 	IsPoolDeletablesBody *IsPoolDeletablesBody `json:"isPoolDeletablesBody,omitempty"`
 }
 
@@ -31,7 +29,6 @@ func (s *IsPoolDeletablesRequest) SetIsPoolDeletablesBody(v *IsPoolDeletablesBod
 	return s
 }
 
-
 type IsPoolDeletablesRequestBuilder struct {
 	s *IsPoolDeletablesRequest
 }
@@ -50,5 +47,3 @@ func (b *IsPoolDeletablesRequestBuilder) IsPoolDeletablesBody(v *IsPoolDeletable
 func (b *IsPoolDeletablesRequestBuilder) Build() *IsPoolDeletablesRequest {
 	return b.s
 }
-
-

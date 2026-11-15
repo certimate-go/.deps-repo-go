@@ -4,19 +4,17 @@
 
 package model
 
-
 type DeleteDomainResponseStateEnum string
 
 // List of State
 const (
-    DeleteDomainResponseStateEnumError DeleteDomainResponseStateEnum = "ERROR"
-    DeleteDomainResponseStateEnumException DeleteDomainResponseStateEnum = "EXCEPTION"
-    DeleteDomainResponseStateEnumForbidden DeleteDomainResponseStateEnum = "FORBIDDEN"
-    DeleteDomainResponseStateEnumOk DeleteDomainResponseStateEnum = "OK"
+	DeleteDomainResponseStateEnumError     DeleteDomainResponseStateEnum = "ERROR"
+	DeleteDomainResponseStateEnumException DeleteDomainResponseStateEnum = "EXCEPTION"
+	DeleteDomainResponseStateEnumForbidden DeleteDomainResponseStateEnum = "FORBIDDEN"
+	DeleteDomainResponseStateEnumOk        DeleteDomainResponseStateEnum = "OK"
 )
 
 type DeleteDomainResponse struct {
-
 	RequestId string `json:"requestId,omitempty"`
 
 	ErrorMessage string `json:"errorMessage,omitempty"`

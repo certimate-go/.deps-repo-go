@@ -4,9 +4,6 @@
 
 package model
 
-
-
 type ListNewRecordLineRequest struct {
-
 	ListNewRecordLineQuery *ListNewRecordLineQuery `json:"listNewRecordLineQuery,omitempty"`
 }

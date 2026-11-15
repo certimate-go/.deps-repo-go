@@ -5,17 +5,17 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type UpdateLoadbalanceCertificationBody struct {
-    position.Body
-    // 证书名称，5~64个字符，以英文大小写字母开头，可包含数字、下划线（_）和连字符（-）
+	position.Body
+	// 证书名称，5~64个字符，以英文大小写字母开头，可包含数字、下划线（_）和连字符（-）
 	Name *string `json:"name,omitempty"`
-    // 证书描述
+	// 证书描述
 	Description *string `json:"description,omitempty"`
-    // 证书ID
+	// 证书ID
 	Id *string `json:"id,omitempty"`
 }
 
@@ -46,7 +46,6 @@ func (s *UpdateLoadbalanceCertificationBody) SetId(v string) *UpdateLoadbalanceC
 	return s
 }
 
-
 type UpdateLoadbalanceCertificationBodyBuilder struct {
 	s *UpdateLoadbalanceCertificationBody
 }
@@ -75,5 +74,3 @@ func (b *UpdateLoadbalanceCertificationBodyBuilder) Id(v string) *UpdateLoadbala
 func (b *UpdateLoadbalanceCertificationBodyBuilder) Build() *UpdateLoadbalanceCertificationBody {
 	return b.s
 }
-
-

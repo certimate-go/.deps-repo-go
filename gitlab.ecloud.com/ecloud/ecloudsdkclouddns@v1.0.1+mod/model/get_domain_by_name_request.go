@@ -4,9 +4,6 @@
 
 package model
 
-
-
 type GetDomainByNameRequest struct {
-
 	GetDomainByNameQuery *GetDomainByNameQuery `json:"getDomainByNameQuery,omitempty"`
 }

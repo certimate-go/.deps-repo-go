@@ -5,14 +5,13 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type ElbOrderCreateAsyncWithHttpStatusRequestTags struct {
-
-    // 标签值
+	// 标签值
 	Value *string `json:"value,omitempty"`
-    // 标签键
+	// 标签键
 	Key *string `json:"key,omitempty"`
 }
 
@@ -38,7 +37,6 @@ func (s *ElbOrderCreateAsyncWithHttpStatusRequestTags) SetKey(v string) *ElbOrde
 	return s
 }
 
-
 type ElbOrderCreateAsyncWithHttpStatusRequestTagsBuilder struct {
 	s *ElbOrderCreateAsyncWithHttpStatusRequestTags
 }
@@ -62,5 +60,3 @@ func (b *ElbOrderCreateAsyncWithHttpStatusRequestTagsBuilder) Key(v string) *Elb
 func (b *ElbOrderCreateAsyncWithHttpStatusRequestTagsBuilder) Build() *ElbOrderCreateAsyncWithHttpStatusRequestTags {
 	return b.s
 }
-
-

@@ -4,9 +4,6 @@
 
 package model
 
-
-
 type ModifyOrderRequest struct {
-
 	ModifyOrderBody *ModifyOrderBody `json:"modifyOrderBody,omitempty"`
 }

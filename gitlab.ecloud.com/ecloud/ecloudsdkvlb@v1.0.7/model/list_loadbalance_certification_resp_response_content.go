@@ -5,62 +5,64 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
+
 type ListLoadbalanceCertificationRespResponseContentContainerTypeEnum string
 
 // List of ContainerType
 const (
-    ListLoadbalanceCertificationRespResponseContentContainerTypeEnumGeneric ListLoadbalanceCertificationRespResponseContentContainerTypeEnum = "generic"
-    ListLoadbalanceCertificationRespResponseContentContainerTypeEnumRsa ListLoadbalanceCertificationRespResponseContentContainerTypeEnum = "rsa"
-    ListLoadbalanceCertificationRespResponseContentContainerTypeEnumCertificate ListLoadbalanceCertificationRespResponseContentContainerTypeEnum = "certificate"
+	ListLoadbalanceCertificationRespResponseContentContainerTypeEnumGeneric     ListLoadbalanceCertificationRespResponseContentContainerTypeEnum = "generic"
+	ListLoadbalanceCertificationRespResponseContentContainerTypeEnumRsa         ListLoadbalanceCertificationRespResponseContentContainerTypeEnum = "rsa"
+	ListLoadbalanceCertificationRespResponseContentContainerTypeEnumCertificate ListLoadbalanceCertificationRespResponseContentContainerTypeEnum = "certificate"
 )
+
 type ListLoadbalanceCertificationRespResponseContentTypeEnum string
 
 // List of Type
 const (
-    ListLoadbalanceCertificationRespResponseContentTypeEnumServer ListLoadbalanceCertificationRespResponseContentTypeEnum = "SERVER"
-    ListLoadbalanceCertificationRespResponseContentTypeEnumCa ListLoadbalanceCertificationRespResponseContentTypeEnum = "CA"
-    ListLoadbalanceCertificationRespResponseContentTypeEnumSni ListLoadbalanceCertificationRespResponseContentTypeEnum = "SNI"
+	ListLoadbalanceCertificationRespResponseContentTypeEnumServer ListLoadbalanceCertificationRespResponseContentTypeEnum = "SERVER"
+	ListLoadbalanceCertificationRespResponseContentTypeEnumCa     ListLoadbalanceCertificationRespResponseContentTypeEnum = "CA"
+	ListLoadbalanceCertificationRespResponseContentTypeEnumSni    ListLoadbalanceCertificationRespResponseContentTypeEnum = "SNI"
 )
+
 type ListLoadbalanceCertificationRespResponseContentStatusEnum string
 
 // List of Status
 const (
-    ListLoadbalanceCertificationRespResponseContentStatusEnumPending ListLoadbalanceCertificationRespResponseContentStatusEnum = "PENDING"
-    ListLoadbalanceCertificationRespResponseContentStatusEnumActive ListLoadbalanceCertificationRespResponseContentStatusEnum = "ACTIVE"
-    ListLoadbalanceCertificationRespResponseContentStatusEnumError ListLoadbalanceCertificationRespResponseContentStatusEnum = "ERROR"
+	ListLoadbalanceCertificationRespResponseContentStatusEnumPending ListLoadbalanceCertificationRespResponseContentStatusEnum = "PENDING"
+	ListLoadbalanceCertificationRespResponseContentStatusEnumActive  ListLoadbalanceCertificationRespResponseContentStatusEnum = "ACTIVE"
+	ListLoadbalanceCertificationRespResponseContentStatusEnumError   ListLoadbalanceCertificationRespResponseContentStatusEnum = "ERROR"
 )
 
 type ListLoadbalanceCertificationRespResponseContent struct {
-
-    // 证书ID
+	// 证书ID
 	ContainerUuid *string `json:"containerUuid,omitempty"`
-    // 证书绑定监听器个数
+	// 证书绑定监听器个数
 	BindedListeners *int32 `json:"bindedListeners,omitempty"`
-    // 证书所在容器的类型，默认均为certificate
+	// 证书所在容器的类型，默认均为certificate
 	ContainerType *ListLoadbalanceCertificationRespResponseContentContainerTypeEnum `json:"containerType,omitempty"`
-    // 证书描述
+	// 证书描述
 	Description *string `json:"description,omitempty"`
-    // 证书类型
+	// 证书类型
 	Type *ListLoadbalanceCertificationRespResponseContentTypeEnum `json:"type,omitempty"`
-    // 证书是否被删除，true：已删除，false：未删除
+	// 证书是否被删除，true：已删除，false：未删除
 	Delete *bool `json:"delete,omitempty"`
-    // 边缘云字段
+	// 边缘云字段
 	Vaz *string `json:"vaz,omitempty"`
-    // 证书所在容器的访问地址
+	// 证书所在容器的访问地址
 	ContainerRef *string `json:"containerRef,omitempty"`
-    // 证书过期时间
+	// 证书过期时间
 	ExpirationTime *string `json:"expirationTime,omitempty"`
-    // 证书名称
+	// 证书名称
 	Name *string `json:"name,omitempty"`
-    // 证书创建时间
+	// 证书创建时间
 	CreatedTime *string `json:"createdTime,omitempty"`
-    // 证书ID
+	// 证书ID
 	Id *string `json:"id,omitempty"`
-    // 可用区名称
+	// 可用区名称
 	Region *string `json:"region,omitempty"`
-    // 证书所在容器的状态，暂未使用
+	// 证书所在容器的状态，暂未使用
 	Status *ListLoadbalanceCertificationRespResponseContentStatusEnum `json:"status,omitempty"`
 }
 
@@ -146,7 +148,6 @@ func (s *ListLoadbalanceCertificationRespResponseContent) SetStatus(v ListLoadba
 	return s
 }
 
-
 type ListLoadbalanceCertificationRespResponseContentBuilder struct {
 	s *ListLoadbalanceCertificationRespResponseContent
 }
@@ -230,5 +231,3 @@ func (b *ListLoadbalanceCertificationRespResponseContentBuilder) Status(v ListLo
 func (b *ListLoadbalanceCertificationRespResponseContentBuilder) Build() *ListLoadbalanceCertificationRespResponseContent {
 	return b.s
 }
-
-

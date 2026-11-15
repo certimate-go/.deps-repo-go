@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type IDeleteListenerDeletablesRequest struct {
-
-
 	IDeleteListenerDeletablesHeader *IDeleteListenerDeletablesHeader `json:"iDeleteListenerDeletablesHeader,omitempty"`
 
 	IDeleteListenerDeletablesBody *IDeleteListenerDeletablesBody `json:"iDeleteListenerDeletablesBody,omitempty"`
@@ -38,7 +36,6 @@ func (s *IDeleteListenerDeletablesRequest) SetIDeleteListenerDeletablesBody(v *I
 	return s
 }
 
-
 type IDeleteListenerDeletablesRequestBuilder struct {
 	s *IDeleteListenerDeletablesRequest
 }
@@ -62,5 +59,3 @@ func (b *IDeleteListenerDeletablesRequestBuilder) IDeleteListenerDeletablesBody(
 func (b *IDeleteListenerDeletablesRequestBuilder) Build() *IDeleteListenerDeletablesRequest {
 	return b.s
 }
-
-

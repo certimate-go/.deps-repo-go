@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type CreateLoadBalanceHTTPListenerRequest struct {
-
-
 	CreateLoadBalanceHTTPListenerBody *CreateLoadBalanceHTTPListenerBody `json:"createLoadBalanceHTTPListenerBody,omitempty"`
 }
 
@@ -31,7 +29,6 @@ func (s *CreateLoadBalanceHTTPListenerRequest) SetCreateLoadBalanceHTTPListenerB
 	return s
 }
 
-
 type CreateLoadBalanceHTTPListenerRequestBuilder struct {
 	s *CreateLoadBalanceHTTPListenerRequest
 }
@@ -50,5 +47,3 @@ func (b *CreateLoadBalanceHTTPListenerRequestBuilder) CreateLoadBalanceHTTPListe
 func (b *CreateLoadBalanceHTTPListenerRequestBuilder) Build() *CreateLoadBalanceHTTPListenerRequest {
 	return b.s
 }
-
-

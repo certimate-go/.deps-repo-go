@@ -5,15 +5,15 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type GetHealthStatusRespPath struct {
-    position.Path
-    // 负载均衡后端服务器组ID
+	position.Path
+	// 负载均衡后端服务器组ID
 	PoolId *string `json:"poolId,omitempty"`
-    // 负载均衡后端服务器ID
+	// 负载均衡后端服务器ID
 	MemberId *string `json:"memberId,omitempty"`
 }
 
@@ -39,7 +39,6 @@ func (s *GetHealthStatusRespPath) SetMemberId(v string) *GetHealthStatusRespPath
 	return s
 }
 
-
 type GetHealthStatusRespPathBuilder struct {
 	s *GetHealthStatusRespPath
 }
@@ -63,5 +62,3 @@ func (b *GetHealthStatusRespPathBuilder) MemberId(v string) *GetHealthStatusResp
 func (b *GetHealthStatusRespPathBuilder) Build() *GetHealthStatusRespPath {
 	return b.s
 }
-
-

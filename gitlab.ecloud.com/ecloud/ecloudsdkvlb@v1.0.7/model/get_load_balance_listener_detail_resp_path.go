@@ -5,13 +5,13 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type GetLoadBalanceListenerDetailRespPath struct {
-    position.Path
-    // 监听器的ID
+	position.Path
+	// 监听器的ID
 	ListenerId *string `json:"listenerId,omitempty"`
 }
 
@@ -32,7 +32,6 @@ func (s *GetLoadBalanceListenerDetailRespPath) SetListenerId(v string) *GetLoadB
 	return s
 }
 
-
 type GetLoadBalanceListenerDetailRespPathBuilder struct {
 	s *GetLoadBalanceListenerDetailRespPath
 }
@@ -51,5 +50,3 @@ func (b *GetLoadBalanceListenerDetailRespPathBuilder) ListenerId(v string) *GetL
 func (b *GetLoadBalanceListenerDetailRespPathBuilder) Build() *GetLoadBalanceListenerDetailRespPath {
 	return b.s
 }
-
-

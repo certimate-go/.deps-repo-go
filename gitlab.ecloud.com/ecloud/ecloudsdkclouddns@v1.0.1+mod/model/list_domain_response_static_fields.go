@@ -4,10 +4,7 @@
 
 package model
 
-
-
 type ListDomainResponseStaticFields struct {
-
 	// 字段名称
 	Name string `json:"name,omitempty"`
 

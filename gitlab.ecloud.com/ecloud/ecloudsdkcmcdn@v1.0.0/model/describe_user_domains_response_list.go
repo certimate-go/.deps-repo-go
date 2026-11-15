@@ -5,75 +5,77 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
+
 type DescribeUserDomainsResponseListCdnTypeEnum string
 
 // List of CdnType
 const (
-    DescribeUserDomainsResponseListCdnTypeEnumWeb DescribeUserDomainsResponseListCdnTypeEnum = "web"
-    DescribeUserDomainsResponseListCdnTypeEnumDownload DescribeUserDomainsResponseListCdnTypeEnum = "download"
-    DescribeUserDomainsResponseListCdnTypeEnumVideo DescribeUserDomainsResponseListCdnTypeEnum = "video"
-    DescribeUserDomainsResponseListCdnTypeEnumLivestream DescribeUserDomainsResponseListCdnTypeEnum = "liveStream"
+	DescribeUserDomainsResponseListCdnTypeEnumWeb        DescribeUserDomainsResponseListCdnTypeEnum = "web"
+	DescribeUserDomainsResponseListCdnTypeEnumDownload   DescribeUserDomainsResponseListCdnTypeEnum = "download"
+	DescribeUserDomainsResponseListCdnTypeEnumVideo      DescribeUserDomainsResponseListCdnTypeEnum = "video"
+	DescribeUserDomainsResponseListCdnTypeEnumLivestream DescribeUserDomainsResponseListCdnTypeEnum = "liveStream"
 )
+
 type DescribeUserDomainsResponseListDomainStatusEnum string
 
 // List of DomainStatus
 const (
-    DescribeUserDomainsResponseListDomainStatusEnumAddAuditing DescribeUserDomainsResponseListDomainStatusEnum = "ADD_AUDITING"
-    DescribeUserDomainsResponseListDomainStatusEnumAddOpening DescribeUserDomainsResponseListDomainStatusEnum = "ADD_OPENING"
-    DescribeUserDomainsResponseListDomainStatusEnumUpdateAuditing DescribeUserDomainsResponseListDomainStatusEnum = "UPDATE_AUDITING"
-    DescribeUserDomainsResponseListDomainStatusEnumUpdateHandling DescribeUserDomainsResponseListDomainStatusEnum = "UPDATE_HANDLING"
-    DescribeUserDomainsResponseListDomainStatusEnumPauseAuditing DescribeUserDomainsResponseListDomainStatusEnum = "PAUSE_AUDITING"
-    DescribeUserDomainsResponseListDomainStatusEnumPauseHandling DescribeUserDomainsResponseListDomainStatusEnum = "PAUSE_HANDLING"
-    DescribeUserDomainsResponseListDomainStatusEnumRecoverAuditing DescribeUserDomainsResponseListDomainStatusEnum = "RECOVER_AUDITING"
-    DescribeUserDomainsResponseListDomainStatusEnumRecoverHandling DescribeUserDomainsResponseListDomainStatusEnum = "RECOVER_HANDLING"
-    DescribeUserDomainsResponseListDomainStatusEnumOfflineAuditing DescribeUserDomainsResponseListDomainStatusEnum = "OFFLINE_AUDITING"
-    DescribeUserDomainsResponseListDomainStatusEnumOfflineHandling DescribeUserDomainsResponseListDomainStatusEnum = "OFFLINE_HANDLING"
-    DescribeUserDomainsResponseListDomainStatusEnumRunning DescribeUserDomainsResponseListDomainStatusEnum = "RUNNING"
-    DescribeUserDomainsResponseListDomainStatusEnumPaused DescribeUserDomainsResponseListDomainStatusEnum = "PAUSED"
-    DescribeUserDomainsResponseListDomainStatusEnumOffline DescribeUserDomainsResponseListDomainStatusEnum = "OFFLINE"
-    DescribeUserDomainsResponseListDomainStatusEnumAuditFail DescribeUserDomainsResponseListDomainStatusEnum = "AUDIT_FAIL"
-    DescribeUserDomainsResponseListDomainStatusEnumUpdateFail DescribeUserDomainsResponseListDomainStatusEnum = "UPDATE_FAIL"
-    DescribeUserDomainsResponseListDomainStatusEnumAddFail DescribeUserDomainsResponseListDomainStatusEnum = "ADD_FAIL"
-    DescribeUserDomainsResponseListDomainStatusEnumOfflineFail DescribeUserDomainsResponseListDomainStatusEnum = "OFFLINE_FAIL"
-    DescribeUserDomainsResponseListDomainStatusEnumPauseOfflineAuditing DescribeUserDomainsResponseListDomainStatusEnum = "PAUSE_OFFLINE_AUDITING"
-    DescribeUserDomainsResponseListDomainStatusEnumPauseOfflineFail DescribeUserDomainsResponseListDomainStatusEnum = "PAUSE_OFFLINE_FAIL"
+	DescribeUserDomainsResponseListDomainStatusEnumAddAuditing          DescribeUserDomainsResponseListDomainStatusEnum = "ADD_AUDITING"
+	DescribeUserDomainsResponseListDomainStatusEnumAddOpening           DescribeUserDomainsResponseListDomainStatusEnum = "ADD_OPENING"
+	DescribeUserDomainsResponseListDomainStatusEnumUpdateAuditing       DescribeUserDomainsResponseListDomainStatusEnum = "UPDATE_AUDITING"
+	DescribeUserDomainsResponseListDomainStatusEnumUpdateHandling       DescribeUserDomainsResponseListDomainStatusEnum = "UPDATE_HANDLING"
+	DescribeUserDomainsResponseListDomainStatusEnumPauseAuditing        DescribeUserDomainsResponseListDomainStatusEnum = "PAUSE_AUDITING"
+	DescribeUserDomainsResponseListDomainStatusEnumPauseHandling        DescribeUserDomainsResponseListDomainStatusEnum = "PAUSE_HANDLING"
+	DescribeUserDomainsResponseListDomainStatusEnumRecoverAuditing      DescribeUserDomainsResponseListDomainStatusEnum = "RECOVER_AUDITING"
+	DescribeUserDomainsResponseListDomainStatusEnumRecoverHandling      DescribeUserDomainsResponseListDomainStatusEnum = "RECOVER_HANDLING"
+	DescribeUserDomainsResponseListDomainStatusEnumOfflineAuditing      DescribeUserDomainsResponseListDomainStatusEnum = "OFFLINE_AUDITING"
+	DescribeUserDomainsResponseListDomainStatusEnumOfflineHandling      DescribeUserDomainsResponseListDomainStatusEnum = "OFFLINE_HANDLING"
+	DescribeUserDomainsResponseListDomainStatusEnumRunning              DescribeUserDomainsResponseListDomainStatusEnum = "RUNNING"
+	DescribeUserDomainsResponseListDomainStatusEnumPaused               DescribeUserDomainsResponseListDomainStatusEnum = "PAUSED"
+	DescribeUserDomainsResponseListDomainStatusEnumOffline              DescribeUserDomainsResponseListDomainStatusEnum = "OFFLINE"
+	DescribeUserDomainsResponseListDomainStatusEnumAuditFail            DescribeUserDomainsResponseListDomainStatusEnum = "AUDIT_FAIL"
+	DescribeUserDomainsResponseListDomainStatusEnumUpdateFail           DescribeUserDomainsResponseListDomainStatusEnum = "UPDATE_FAIL"
+	DescribeUserDomainsResponseListDomainStatusEnumAddFail              DescribeUserDomainsResponseListDomainStatusEnum = "ADD_FAIL"
+	DescribeUserDomainsResponseListDomainStatusEnumOfflineFail          DescribeUserDomainsResponseListDomainStatusEnum = "OFFLINE_FAIL"
+	DescribeUserDomainsResponseListDomainStatusEnumPauseOfflineAuditing DescribeUserDomainsResponseListDomainStatusEnum = "PAUSE_OFFLINE_AUDITING"
+	DescribeUserDomainsResponseListDomainStatusEnumPauseOfflineFail     DescribeUserDomainsResponseListDomainStatusEnum = "PAUSE_OFFLINE_FAIL"
 )
+
 type DescribeUserDomainsResponseListConfigStatusEnum string
 
 // List of ConfigStatus
 const (
-    DescribeUserDomainsResponseListConfigStatusEnumUpdateFail DescribeUserDomainsResponseListConfigStatusEnum = "UPDATE_FAIL"
-    DescribeUserDomainsResponseListConfigStatusEnumUpdating DescribeUserDomainsResponseListConfigStatusEnum = "UPDATING"
-    DescribeUserDomainsResponseListConfigStatusEnumUpdated DescribeUserDomainsResponseListConfigStatusEnum = "UPDATED"
+	DescribeUserDomainsResponseListConfigStatusEnumUpdateFail DescribeUserDomainsResponseListConfigStatusEnum = "UPDATE_FAIL"
+	DescribeUserDomainsResponseListConfigStatusEnumUpdating   DescribeUserDomainsResponseListConfigStatusEnum = "UPDATING"
+	DescribeUserDomainsResponseListConfigStatusEnumUpdated    DescribeUserDomainsResponseListConfigStatusEnum = "UPDATED"
 )
 
 type DescribeUserDomainsResponseList struct {
-
-    // 是否删除，0：否，1：是
+	// 是否删除，0：否，1：是
 	Deleted *bool `json:"deleted,omitempty"`
-    // 加速域名类型
+	// 加速域名类型
 	CdnType *DescribeUserDomainsResponseListCdnTypeEnum `json:"cdnType,omitempty"`
-    // 配置状态错误信息
+	// 配置状态错误信息
 	ConfigCommons *string `json:"configCommons,omitempty"`
-    // 创建时间
+	// 创建时间
 	CreateTime *string `json:"createTime,omitempty"`
-    // 域名
+	// 域名
 	DomainName *string `json:"domainName,omitempty"`
-    // CNAME
+	// CNAME
 	Cname *string `json:"cname,omitempty"`
-    // 域名状态
+	// 域名状态
 	DomainStatus *DescribeUserDomainsResponseListDomainStatusEnum `json:"domainStatus,omitempty"`
-    // 更新时间
+	// 更新时间
 	UpdateTime *string `json:"updateTime,omitempty"`
-    // 配置状态
+	// 配置状态
 	ConfigStatus *DescribeUserDomainsResponseListConfigStatusEnum `json:"configStatus,omitempty"`
-    // 用户Id
+	// 用户Id
 	UserId *string `json:"userId,omitempty"`
-    // 运行状态错误原因
+	// 运行状态错误原因
 	Commons *string `json:"commons,omitempty"`
-    // 域名Id
+	// 域名Id
 	DomainId *int32 `json:"domainId,omitempty"`
 }
 
@@ -149,7 +151,6 @@ func (s *DescribeUserDomainsResponseList) SetDomainId(v int32) *DescribeUserDoma
 	return s
 }
 
-
 type DescribeUserDomainsResponseListBuilder struct {
 	s *DescribeUserDomainsResponseList
 }
@@ -223,5 +224,3 @@ func (b *DescribeUserDomainsResponseListBuilder) DomainId(v int32) *DescribeUser
 func (b *DescribeUserDomainsResponseListBuilder) Build() *DescribeUserDomainsResponseList {
 	return b.s
 }
-
-

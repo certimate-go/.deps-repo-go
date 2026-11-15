@@ -5,34 +5,34 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
+
 type GetL7PolicyRespResponseStateEnum string
 
 // List of State
 const (
-    GetL7PolicyRespResponseStateEnumOk GetL7PolicyRespResponseStateEnum = "OK"
-    GetL7PolicyRespResponseStateEnumError GetL7PolicyRespResponseStateEnum = "ERROR"
-    GetL7PolicyRespResponseStateEnumException GetL7PolicyRespResponseStateEnum = "EXCEPTION"
-    GetL7PolicyRespResponseStateEnumAlarm GetL7PolicyRespResponseStateEnum = "ALARM"
-    GetL7PolicyRespResponseStateEnumForbidden GetL7PolicyRespResponseStateEnum = "FORBIDDEN"
+	GetL7PolicyRespResponseStateEnumOk        GetL7PolicyRespResponseStateEnum = "OK"
+	GetL7PolicyRespResponseStateEnumError     GetL7PolicyRespResponseStateEnum = "ERROR"
+	GetL7PolicyRespResponseStateEnumException GetL7PolicyRespResponseStateEnum = "EXCEPTION"
+	GetL7PolicyRespResponseStateEnumAlarm     GetL7PolicyRespResponseStateEnum = "ALARM"
+	GetL7PolicyRespResponseStateEnumForbidden GetL7PolicyRespResponseStateEnum = "FORBIDDEN"
 )
 
 type GetL7PolicyRespResponse struct {
-
-    // 异步流程跟踪ID
+	// 异步流程跟踪ID
 	AsyncKey *string `json:"asyncKey,omitempty"`
-    // 每个请求的序列号
+	// 每个请求的序列号
 	RequestId *string `json:"requestId,omitempty"`
-    // 页面国际化错误提示
+	// 页面国际化错误提示
 	ErrorMessage *string `json:"errorMessage,omitempty"`
-    // 统一错误码
+	// 统一错误码
 	ErrorCode *string `json:"errorCode,omitempty"`
-    // 返回状态码 OK（成功）,ERROR（错误）,EXCEPTION（异常）,ALARM（警告）,FORBIDDEN（禁止访问）
+	// 返回状态码 OK（成功）,ERROR（错误）,EXCEPTION（异常）,ALARM（警告）,FORBIDDEN（禁止访问）
 	State *GetL7PolicyRespResponseStateEnum `json:"state,omitempty"`
-    // 请求成功时返回的数据
+	// 请求成功时返回的数据
 	Body *GetL7PolicyRespResponseBody `json:"body,omitempty"`
-    // 统一错误码的自定义参数
+	// 统一错误码的自定义参数
 	ErrorParams []string `json:"errorParams,omitempty"`
 }
 
@@ -83,7 +83,6 @@ func (s *GetL7PolicyRespResponse) SetErrorParams(v []string) *GetL7PolicyRespRes
 	return s
 }
 
-
 type GetL7PolicyRespResponseBuilder struct {
 	s *GetL7PolicyRespResponse
 }
@@ -132,5 +131,3 @@ func (b *GetL7PolicyRespResponseBuilder) ErrorParams(v []string) *GetL7PolicyRes
 func (b *GetL7PolicyRespResponseBuilder) Build() *GetL7PolicyRespResponse {
 	return b.s
 }
-
-

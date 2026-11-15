@@ -4,9 +4,6 @@
 
 package model
 
-
-
 type DeleteDomainOpenapiRequest struct {
-
 	DeleteDomainOpenapiBody *DeleteDomainOpenapiBody `json:"deleteDomainOpenapiBody,omitempty"`
 }

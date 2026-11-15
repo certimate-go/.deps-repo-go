@@ -5,66 +5,67 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
+
 type GetPoolRespResponseL7PolicyRespsCompareTypeEnum string
 
 // List of CompareType
 const (
-    GetPoolRespResponseL7PolicyRespsCompareTypeEnumRegex GetPoolRespResponseL7PolicyRespsCompareTypeEnum = "REGEX"
-    GetPoolRespResponseL7PolicyRespsCompareTypeEnumStartsWith GetPoolRespResponseL7PolicyRespsCompareTypeEnum = "STARTS_WITH"
-    GetPoolRespResponseL7PolicyRespsCompareTypeEnumEndsWith GetPoolRespResponseL7PolicyRespsCompareTypeEnum = "ENDS_WITH"
-    GetPoolRespResponseL7PolicyRespsCompareTypeEnumContains GetPoolRespResponseL7PolicyRespsCompareTypeEnum = "CONTAINS"
-    GetPoolRespResponseL7PolicyRespsCompareTypeEnumEqualTo GetPoolRespResponseL7PolicyRespsCompareTypeEnum = "EQUAL_TO"
+	GetPoolRespResponseL7PolicyRespsCompareTypeEnumRegex      GetPoolRespResponseL7PolicyRespsCompareTypeEnum = "REGEX"
+	GetPoolRespResponseL7PolicyRespsCompareTypeEnumStartsWith GetPoolRespResponseL7PolicyRespsCompareTypeEnum = "STARTS_WITH"
+	GetPoolRespResponseL7PolicyRespsCompareTypeEnumEndsWith   GetPoolRespResponseL7PolicyRespsCompareTypeEnum = "ENDS_WITH"
+	GetPoolRespResponseL7PolicyRespsCompareTypeEnumContains   GetPoolRespResponseL7PolicyRespsCompareTypeEnum = "CONTAINS"
+	GetPoolRespResponseL7PolicyRespsCompareTypeEnumEqualTo    GetPoolRespResponseL7PolicyRespsCompareTypeEnum = "EQUAL_TO"
 )
+
 type GetPoolRespResponseL7PolicyRespsRuleTypeEnum string
 
 // List of RuleType
 const (
-    GetPoolRespResponseL7PolicyRespsRuleTypeEnumHostName GetPoolRespResponseL7PolicyRespsRuleTypeEnum = "HOST_NAME"
-    GetPoolRespResponseL7PolicyRespsRuleTypeEnumPath GetPoolRespResponseL7PolicyRespsRuleTypeEnum = "PATH"
-    GetPoolRespResponseL7PolicyRespsRuleTypeEnumFileType GetPoolRespResponseL7PolicyRespsRuleTypeEnum = "FILE_TYPE"
-    GetPoolRespResponseL7PolicyRespsRuleTypeEnumHeader GetPoolRespResponseL7PolicyRespsRuleTypeEnum = "HEADER"
-    GetPoolRespResponseL7PolicyRespsRuleTypeEnumCookie GetPoolRespResponseL7PolicyRespsRuleTypeEnum = "COOKIE"
+	GetPoolRespResponseL7PolicyRespsRuleTypeEnumHostName GetPoolRespResponseL7PolicyRespsRuleTypeEnum = "HOST_NAME"
+	GetPoolRespResponseL7PolicyRespsRuleTypeEnumPath     GetPoolRespResponseL7PolicyRespsRuleTypeEnum = "PATH"
+	GetPoolRespResponseL7PolicyRespsRuleTypeEnumFileType GetPoolRespResponseL7PolicyRespsRuleTypeEnum = "FILE_TYPE"
+	GetPoolRespResponseL7PolicyRespsRuleTypeEnumHeader   GetPoolRespResponseL7PolicyRespsRuleTypeEnum = "HEADER"
+	GetPoolRespResponseL7PolicyRespsRuleTypeEnumCookie   GetPoolRespResponseL7PolicyRespsRuleTypeEnum = "COOKIE"
 )
 
 type GetPoolRespResponseL7PolicyResps struct {
-
-    // 修改时间
+	// 修改时间
 	ModifiedTime *string `json:"modifiedTime,omitempty"`
-    // 描述
+	// 描述
 	Description *string `json:"description,omitempty"`
-    // 域名
+	// 域名
 	L7PolicyDomainName *string `json:"l7PolicyDomainName,omitempty"`
-    // 是否是多AZ场景
+	// 是否是多AZ场景
 	IsMultiAz *bool `json:"isMultiAz,omitempty"`
-    // 七层转发策略规则值，已弃用
+	// 七层转发策略规则值，已弃用
 	L7RuleValue *string `json:"l7RuleValue,omitempty"`
-    // 负载均衡监听器ID
+	// 负载均衡监听器ID
 	ListenerId *string `json:"listenerId,omitempty"`
-    // 匹配规格：REGEX（正则表达式匹配），STARTS_WITH（开头匹配），ENDS_WITH（结尾匹配），CONTAINS（包含匹配），EQUAL_TO（等于匹配）
+	// 匹配规格：REGEX（正则表达式匹配），STARTS_WITH（开头匹配），ENDS_WITH（结尾匹配），CONTAINS（包含匹配），EQUAL_TO（等于匹配）
 	CompareType *GetPoolRespResponseL7PolicyRespsCompareTypeEnum `json:"compareType,omitempty"`
-    // 是否删除
+	// 是否删除
 	Deleted *bool `json:"deleted,omitempty"`
-    // 七层转发策略URL
+	// 七层转发策略URL
 	L7PolicyUrl *string `json:"l7PolicyUrl,omitempty"`
-    // 七层转发策略名称
+	// 七层转发策略名称
 	L7PolicyName *string `json:"l7PolicyName,omitempty"`
-    // 七层转发策略规则类型，已弃用
+	// 七层转发策略规则类型，已弃用
 	RuleType *GetPoolRespResponseL7PolicyRespsRuleTypeEnum `json:"ruleType,omitempty"`
-    // 后端服务组ID
+	// 后端服务组ID
 	PoolId *string `json:"poolId,omitempty"`
-    // 创建时间
+	// 创建时间
 	CreatedTime *string `json:"createdTime,omitempty"`
-    // 七层转发策略ID
+	// 七层转发策略ID
 	L7PolicyId *string `json:"l7PolicyId,omitempty"`
-    // 七层转发策略的位置
+	// 七层转发策略的位置
 	Position *int32 `json:"position,omitempty"`
-    // 激活状态
+	// 激活状态
 	AdminStateUp *bool `json:"adminStateUp,omitempty"`
-    // 多AZ场景下创建请求的requestId唯一标志为uuid
+	// 多AZ场景下创建请求的requestId唯一标志为uuid
 	MultiAzUuid *string `json:"multiAzUuid,omitempty"`
-    // 后端服务组名称
+	// 后端服务组名称
 	PoolName *string `json:"poolName,omitempty"`
 }
 
@@ -170,7 +171,6 @@ func (s *GetPoolRespResponseL7PolicyResps) SetPoolName(v string) *GetPoolRespRes
 	return s
 }
 
-
 type GetPoolRespResponseL7PolicyRespsBuilder struct {
 	s *GetPoolRespResponseL7PolicyResps
 }
@@ -274,5 +274,3 @@ func (b *GetPoolRespResponseL7PolicyRespsBuilder) PoolName(v string) *GetPoolRes
 func (b *GetPoolRespResponseL7PolicyRespsBuilder) Build() *GetPoolRespResponseL7PolicyResps {
 	return b.s
 }
-
-

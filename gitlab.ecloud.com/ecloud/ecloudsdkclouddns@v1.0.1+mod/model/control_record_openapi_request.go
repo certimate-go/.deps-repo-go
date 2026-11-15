@@ -4,9 +4,6 @@
 
 package model
 
-
-
 type ControlRecordOpenapiRequest struct {
-
 	ControlRecordOpenapiBody *ControlRecordOpenapiBody `json:"controlRecordOpenapiBody,omitempty"`
 }

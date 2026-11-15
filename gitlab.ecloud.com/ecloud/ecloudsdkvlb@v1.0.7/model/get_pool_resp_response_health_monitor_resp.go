@@ -5,40 +5,40 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
+
 type GetPoolRespResponseHealthMonitorRespHealthTypeEnum string
 
 // List of HealthType
 const (
-    GetPoolRespResponseHealthMonitorRespHealthTypeEnumHttp GetPoolRespResponseHealthMonitorRespHealthTypeEnum = "HTTP"
-    GetPoolRespResponseHealthMonitorRespHealthTypeEnumHttps GetPoolRespResponseHealthMonitorRespHealthTypeEnum = "HTTPS"
-    GetPoolRespResponseHealthMonitorRespHealthTypeEnumTcp GetPoolRespResponseHealthMonitorRespHealthTypeEnum = "TCP"
-    GetPoolRespResponseHealthMonitorRespHealthTypeEnumPing GetPoolRespResponseHealthMonitorRespHealthTypeEnum = "PING"
-    GetPoolRespResponseHealthMonitorRespHealthTypeEnumUdp GetPoolRespResponseHealthMonitorRespHealthTypeEnum = "UDP"
-    GetPoolRespResponseHealthMonitorRespHealthTypeEnumHttp10 GetPoolRespResponseHealthMonitorRespHealthTypeEnum = "HTTP10"
-    GetPoolRespResponseHealthMonitorRespHealthTypeEnumHttp11 GetPoolRespResponseHealthMonitorRespHealthTypeEnum = "HTTP11"
+	GetPoolRespResponseHealthMonitorRespHealthTypeEnumHttp   GetPoolRespResponseHealthMonitorRespHealthTypeEnum = "HTTP"
+	GetPoolRespResponseHealthMonitorRespHealthTypeEnumHttps  GetPoolRespResponseHealthMonitorRespHealthTypeEnum = "HTTPS"
+	GetPoolRespResponseHealthMonitorRespHealthTypeEnumTcp    GetPoolRespResponseHealthMonitorRespHealthTypeEnum = "TCP"
+	GetPoolRespResponseHealthMonitorRespHealthTypeEnumPing   GetPoolRespResponseHealthMonitorRespHealthTypeEnum = "PING"
+	GetPoolRespResponseHealthMonitorRespHealthTypeEnumUdp    GetPoolRespResponseHealthMonitorRespHealthTypeEnum = "UDP"
+	GetPoolRespResponseHealthMonitorRespHealthTypeEnumHttp10 GetPoolRespResponseHealthMonitorRespHealthTypeEnum = "HTTP10"
+	GetPoolRespResponseHealthMonitorRespHealthTypeEnumHttp11 GetPoolRespResponseHealthMonitorRespHealthTypeEnum = "HTTP11"
 )
 
 type GetPoolRespResponseHealthMonitorResp struct {
-
-    // 健康监控时间间隔（单位：秒）
+	// 健康监控时间间隔（单位：秒）
 	HealthDelay *int32 `json:"healthDelay,omitempty"`
-    // 期望HTTP状态代码
+	// 期望HTTP状态代码
 	HealthExpectedCode *string `json:"healthExpectedCode,omitempty"`
-    // 监听器最大尝试次数
+	// 监听器最大尝试次数
 	HealthMaxRetries *int32 `json:"healthMaxRetries,omitempty"`
-    // 监听器绑定的检查方式为HTTP的用于检查的方法，取值范围：GET，POST，HEAD
+	// 监听器绑定的检查方式为HTTP的用于检查的方法，取值范围：GET，POST，HEAD
 	HealthHttpMethod *string `json:"healthHttpMethod,omitempty"`
-    // 健康检查的资源ID
+	// 健康检查的资源ID
 	HealthId *string `json:"healthId,omitempty"`
-    // 健康监控类型
+	// 健康监控类型
 	HealthType *GetPoolRespResponseHealthMonitorRespHealthTypeEnum `json:"healthType,omitempty"`
-    // 用于监控的URL，必须以“/”打头
+	// 用于监控的URL，必须以“/”打头
 	HealthUrlPath *string `json:"healthUrlPath,omitempty"`
-    // 健康检查开关
+	// 健康检查开关
 	AdminStateUp *bool `json:"adminStateUp,omitempty"`
-    // 最大等待时间（单位：秒）
+	// 最大等待时间（单位：秒）
 	HealthTimeout *int32 `json:"healthTimeout,omitempty"`
 }
 
@@ -99,7 +99,6 @@ func (s *GetPoolRespResponseHealthMonitorResp) SetHealthTimeout(v int32) *GetPoo
 	return s
 }
 
-
 type GetPoolRespResponseHealthMonitorRespBuilder struct {
 	s *GetPoolRespResponseHealthMonitorResp
 }
@@ -158,5 +157,3 @@ func (b *GetPoolRespResponseHealthMonitorRespBuilder) HealthTimeout(v int32) *Ge
 func (b *GetPoolRespResponseHealthMonitorRespBuilder) Build() *GetPoolRespResponseHealthMonitorResp {
 	return b.s
 }
-
-

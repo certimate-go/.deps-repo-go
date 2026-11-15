@@ -4,9 +4,6 @@
 
 package model
 
-
-
 type TakeOverRefreshDomainRequest struct {
-
 	TakeOverRefreshDomainQuery *TakeOverRefreshDomainQuery `json:"takeOverRefreshDomainQuery,omitempty"`
 }

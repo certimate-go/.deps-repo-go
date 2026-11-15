@@ -5,52 +5,53 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
+
 type ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsRelProductTypeEnum string
 
 // List of RelProductType
 const (
-    ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsRelProductTypeEnumRouter ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsRelProductTypeEnum = "router"
-    ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsRelProductTypeEnumNatgateway ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsRelProductTypeEnum = "natgateway"
-    ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsRelProductTypeEnumIpv6bandwidth ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsRelProductTypeEnum = "ipv6bandwidth"
-    ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsRelProductTypeEnumIp ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsRelProductTypeEnum = "ip"
-    ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsRelProductTypeEnumBandwidth ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsRelProductTypeEnum = "bandwidth"
-    ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsRelProductTypeEnumCbwp ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsRelProductTypeEnum = "cbwp"
-    ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsRelProductTypeEnumSharedfp ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsRelProductTypeEnum = "sharedfp"
-    ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsRelProductTypeEnumIpsecvpn ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsRelProductTypeEnum = "ipsecvpn"
-    ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsRelProductTypeEnumSslvpn ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsRelProductTypeEnum = "sslvpn"
-    ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsRelProductTypeEnumElb ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsRelProductTypeEnum = "elb"
+	ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsRelProductTypeEnumRouter        ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsRelProductTypeEnum = "router"
+	ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsRelProductTypeEnumNatgateway    ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsRelProductTypeEnum = "natgateway"
+	ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsRelProductTypeEnumIpv6bandwidth ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsRelProductTypeEnum = "ipv6bandwidth"
+	ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsRelProductTypeEnumIp            ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsRelProductTypeEnum = "ip"
+	ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsRelProductTypeEnumBandwidth     ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsRelProductTypeEnum = "bandwidth"
+	ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsRelProductTypeEnumCbwp          ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsRelProductTypeEnum = "cbwp"
+	ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsRelProductTypeEnumSharedfp      ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsRelProductTypeEnum = "sharedfp"
+	ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsRelProductTypeEnumIpsecvpn      ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsRelProductTypeEnum = "ipsecvpn"
+	ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsRelProductTypeEnumSslvpn        ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsRelProductTypeEnum = "sslvpn"
+	ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsRelProductTypeEnumElb           ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsRelProductTypeEnum = "elb"
 )
+
 type ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsProductTypeEnum string
 
 // List of ProductType
 const (
-    ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsProductTypeEnumRouter ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsProductTypeEnum = "router"
-    ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsProductTypeEnumNatgateway ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsProductTypeEnum = "natgateway"
-    ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsProductTypeEnumIpv6bandwidth ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsProductTypeEnum = "ipv6bandwidth"
-    ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsProductTypeEnumIp ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsProductTypeEnum = "ip"
-    ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsProductTypeEnumBandwidth ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsProductTypeEnum = "bandwidth"
-    ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsProductTypeEnumCbwp ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsProductTypeEnum = "cbwp"
-    ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsProductTypeEnumSharedfp ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsProductTypeEnum = "sharedfp"
-    ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsProductTypeEnumIpsecvpn ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsProductTypeEnum = "ipsecvpn"
-    ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsProductTypeEnumSslvpn ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsProductTypeEnum = "sslvpn"
-    ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsProductTypeEnumElb ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsProductTypeEnum = "elb"
+	ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsProductTypeEnumRouter        ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsProductTypeEnum = "router"
+	ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsProductTypeEnumNatgateway    ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsProductTypeEnum = "natgateway"
+	ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsProductTypeEnumIpv6bandwidth ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsProductTypeEnum = "ipv6bandwidth"
+	ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsProductTypeEnumIp            ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsProductTypeEnum = "ip"
+	ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsProductTypeEnumBandwidth     ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsProductTypeEnum = "bandwidth"
+	ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsProductTypeEnumCbwp          ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsProductTypeEnum = "cbwp"
+	ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsProductTypeEnumSharedfp      ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsProductTypeEnum = "sharedfp"
+	ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsProductTypeEnumIpsecvpn      ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsProductTypeEnum = "ipsecvpn"
+	ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsProductTypeEnumSslvpn        ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsProductTypeEnum = "sslvpn"
+	ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsProductTypeEnumElb           ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsProductTypeEnum = "elb"
 )
 
 type ElbOrderCreateAsyncWithHttpStatusResponseOrderExtResps struct {
-
-    // API订购的关联产品订单项ID, 如:公网ip产品关联的带宽产品订单项ID
+	// API订购的关联产品订单项ID, 如:公网ip产品关联的带宽产品订单项ID
 	RelOrderExtId *string `json:"relOrderExtId,omitempty"`
-    // API订购的产品订单项ID
+	// API订购的产品订单项ID
 	OrderExtId *string `json:"orderExtId,omitempty"`
-    // API订购的关联产品类型, 如:公网IP产品关联的带宽产品
+	// API订购的关联产品类型, 如:公网IP产品关联的带宽产品
 	RelProductType *ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsRelProductTypeEnum `json:"relProductType,omitempty"`
-    // API订购的关联产品订单项, 如:公网IP关联的带宽订单项状态
+	// API订购的关联产品订单项, 如:公网IP关联的带宽订单项状态
 	RelOrderExtStatus *int32 `json:"relOrderExtStatus,omitempty"`
-    // API订购的产品订单项状态
+	// API订购的产品订单项状态
 	OrderExtStatus *int32 `json:"orderExtStatus,omitempty"`
-    // API订购的产品类型
+	// API订购的产品类型
 	ProductType *ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsProductTypeEnum `json:"productType,omitempty"`
 }
 
@@ -96,7 +97,6 @@ func (s *ElbOrderCreateAsyncWithHttpStatusResponseOrderExtResps) SetProductType(
 	return s
 }
 
-
 type ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsBuilder struct {
 	s *ElbOrderCreateAsyncWithHttpStatusResponseOrderExtResps
 }
@@ -140,5 +140,3 @@ func (b *ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsBuilder) ProductT
 func (b *ElbOrderCreateAsyncWithHttpStatusResponseOrderExtRespsBuilder) Build() *ElbOrderCreateAsyncWithHttpStatusResponseOrderExtResps {
 	return b.s
 }
-
-

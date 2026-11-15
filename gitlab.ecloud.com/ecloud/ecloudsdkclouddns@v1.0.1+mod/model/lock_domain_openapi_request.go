@@ -4,9 +4,6 @@
 
 package model
 
-
-
 type LockDomainOpenapiRequest struct {
-
 	LockDomainOpenapiBody *LockDomainOpenapiBody `json:"lockDomainOpenapiBody,omitempty"`
 }

@@ -4,9 +4,6 @@
 
 package model
 
-
-
 type LockDomainRequest struct {
-
 	LockDomainBody *LockDomainBody `json:"lockDomainBody,omitempty"`
 }

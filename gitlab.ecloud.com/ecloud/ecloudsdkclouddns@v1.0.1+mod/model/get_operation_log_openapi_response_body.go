@@ -4,10 +4,7 @@
 
 package model
 
-
-
 type GetOperationLogOpenapiResponseBody struct {
-
 	// 当前页的具体数据列表
 	Data *[]GetOperationLogOpenapiResponseData `json:"data,omitempty"`
 

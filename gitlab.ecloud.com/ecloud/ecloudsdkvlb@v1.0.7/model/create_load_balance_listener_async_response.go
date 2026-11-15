@@ -5,34 +5,34 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
+
 type CreateLoadBalanceListenerAsyncResponseStateEnum string
 
 // List of State
 const (
-    CreateLoadBalanceListenerAsyncResponseStateEnumOk CreateLoadBalanceListenerAsyncResponseStateEnum = "OK"
-    CreateLoadBalanceListenerAsyncResponseStateEnumError CreateLoadBalanceListenerAsyncResponseStateEnum = "ERROR"
-    CreateLoadBalanceListenerAsyncResponseStateEnumException CreateLoadBalanceListenerAsyncResponseStateEnum = "EXCEPTION"
-    CreateLoadBalanceListenerAsyncResponseStateEnumAlarm CreateLoadBalanceListenerAsyncResponseStateEnum = "ALARM"
-    CreateLoadBalanceListenerAsyncResponseStateEnumForbidden CreateLoadBalanceListenerAsyncResponseStateEnum = "FORBIDDEN"
+	CreateLoadBalanceListenerAsyncResponseStateEnumOk        CreateLoadBalanceListenerAsyncResponseStateEnum = "OK"
+	CreateLoadBalanceListenerAsyncResponseStateEnumError     CreateLoadBalanceListenerAsyncResponseStateEnum = "ERROR"
+	CreateLoadBalanceListenerAsyncResponseStateEnumException CreateLoadBalanceListenerAsyncResponseStateEnum = "EXCEPTION"
+	CreateLoadBalanceListenerAsyncResponseStateEnumAlarm     CreateLoadBalanceListenerAsyncResponseStateEnum = "ALARM"
+	CreateLoadBalanceListenerAsyncResponseStateEnumForbidden CreateLoadBalanceListenerAsyncResponseStateEnum = "FORBIDDEN"
 )
 
 type CreateLoadBalanceListenerAsyncResponse struct {
-
-    // 异步流程跟踪ID
+	// 异步流程跟踪ID
 	AsyncKey *string `json:"asyncKey,omitempty"`
-    // 每个请求的序列号
+	// 每个请求的序列号
 	RequestId *string `json:"requestId,omitempty"`
-    // 页面国际化错误提示
+	// 页面国际化错误提示
 	ErrorMessage *string `json:"errorMessage,omitempty"`
-    // 统一错误码
+	// 统一错误码
 	ErrorCode *string `json:"errorCode,omitempty"`
-    // 返回状态码：OK（成功）, ERROR（错误）,EXCEPTION（异常）,ALARM（警告）, FORBIDDEN（禁止访问）
+	// 返回状态码：OK（成功）, ERROR（错误）,EXCEPTION（异常）,ALARM（警告）, FORBIDDEN（禁止访问）
 	State *CreateLoadBalanceListenerAsyncResponseStateEnum `json:"state,omitempty"`
-    // 请求成功后返回的监听器ID
+	// 请求成功后返回的监听器ID
 	Body *string `json:"body,omitempty"`
-    // 统一错误码的自定义参数
+	// 统一错误码的自定义参数
 	ErrorParams []string `json:"errorParams,omitempty"`
 }
 
@@ -83,7 +83,6 @@ func (s *CreateLoadBalanceListenerAsyncResponse) SetErrorParams(v []string) *Cre
 	return s
 }
 
-
 type CreateLoadBalanceListenerAsyncResponseBuilder struct {
 	s *CreateLoadBalanceListenerAsyncResponse
 }
@@ -132,5 +131,3 @@ func (b *CreateLoadBalanceListenerAsyncResponseBuilder) ErrorParams(v []string) 
 func (b *CreateLoadBalanceListenerAsyncResponseBuilder) Build() *CreateLoadBalanceListenerAsyncResponse {
 	return b.s
 }
-
-

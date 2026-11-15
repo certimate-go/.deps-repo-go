@@ -5,44 +5,43 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type GetLoadBalancePoolMemberRespResponseBody struct {
-
-    // 子网ID
+	// 子网ID
 	SubnetId *string `json:"subnetId,omitempty"`
-    // 后端服务器关联的业务主机的名称
+	// 后端服务器关联的业务主机的名称
 	VmName *string `json:"vmName,omitempty"`
-    // 是否删除
+	// 是否删除
 	IsDelete *int32 `json:"isDelete,omitempty"`
-    // 创建人，用户ID，例如：CICD-U-xxxxxx
+	// 创建人，用户ID，例如：CICD-U-xxxxxx
 	Proposer *string `json:"proposer,omitempty"`
-    // 业务主机的私有IP
+	// 业务主机的私有IP
 	Ip *string `json:"ip,omitempty"`
-    // 描述
+	// 描述
 	Description *string `json:"description,omitempty"`
-    // 业务主机负载均衡的权重，取值范围：1-100（取值越大，在所有业务主机中占的权重越高，承担的负载均衡的比例越大）
+	// 业务主机负载均衡的权重，取值范围：1-100（取值越大，在所有业务主机中占的权重越高，承担的负载均衡的比例越大）
 	Weight *int32 `json:"weight,omitempty"`
-    // 业务主机类型，取值如下： 0：IP类型，1：云主机，3：裸金属
+	// 业务主机类型，取值如下： 0：IP类型，1：云主机，3：裸金属
 	Type *int32 `json:"type,omitempty"`
-    // 是否是多AZ场景
+	// 是否是多AZ场景
 	IsMultiAz *bool `json:"isMultiAz,omitempty"`
-    // 后端服务器的底层状态，取值如下： up：正常 down：异常
+	// 后端服务器的底层状态，取值如下： up：正常 down：异常
 	HealthStatus *string `json:"healthStatus,omitempty"`
-    // 业务主机用来被监听的端口
+	// 业务主机用来被监听的端口
 	Port *int32 `json:"port,omitempty"`
-    // 主机绑定的后端服务器组的ID
+	// 主机绑定的后端服务器组的ID
 	PoolId *string `json:"poolId,omitempty"`
-    // 创建时间
+	// 创建时间
 	CreatedTime *string `json:"createdTime,omitempty"`
-    // 后端服务器ID
+	// 后端服务器ID
 	Id *string `json:"id,omitempty"`
-    // 后端服务器关联业务主机的ID
+	// 后端服务器关联业务主机的ID
 	VmHostId *string `json:"vmHostId,omitempty"`
-    // 多AZ场景下创建请求的requestId唯一标志为uuid
+	// 多AZ场景下创建请求的requestId唯一标志为uuid
 	MultiAzUuid *string `json:"multiAzUuid,omitempty"`
-    // 业务主机的底层状态
+	// 业务主机的底层状态
 	Status *string `json:"status,omitempty"`
 }
 
@@ -143,7 +142,6 @@ func (s *GetLoadBalancePoolMemberRespResponseBody) SetStatus(v string) *GetLoadB
 	return s
 }
 
-
 type GetLoadBalancePoolMemberRespResponseBodyBuilder struct {
 	s *GetLoadBalancePoolMemberRespResponseBody
 }
@@ -242,5 +240,3 @@ func (b *GetLoadBalancePoolMemberRespResponseBodyBuilder) Status(v string) *GetL
 func (b *GetLoadBalancePoolMemberRespResponseBodyBuilder) Build() *GetLoadBalancePoolMemberRespResponseBody {
 	return b.s
 }
-
-

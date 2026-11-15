@@ -4,9 +4,6 @@
 
 package model
 
-
-
 type CancelDnsOrderRequest struct {
-
 	CancelDnsOrderBody *CancelDnsOrderBody `json:"cancelDnsOrderBody,omitempty"`
 }

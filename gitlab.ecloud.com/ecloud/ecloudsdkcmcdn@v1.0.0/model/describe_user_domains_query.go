@@ -5,28 +5,29 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
+
 type DescribeUserDomainsQueryCdnTypeEnum string
 
 // List of CdnType
 const (
-    DescribeUserDomainsQueryCdnTypeEnumWeb DescribeUserDomainsQueryCdnTypeEnum = "web"
-    DescribeUserDomainsQueryCdnTypeEnumDownload DescribeUserDomainsQueryCdnTypeEnum = "download"
-    DescribeUserDomainsQueryCdnTypeEnumVideo DescribeUserDomainsQueryCdnTypeEnum = "video"
-    DescribeUserDomainsQueryCdnTypeEnumLivestream DescribeUserDomainsQueryCdnTypeEnum = "liveStream"
+	DescribeUserDomainsQueryCdnTypeEnumWeb        DescribeUserDomainsQueryCdnTypeEnum = "web"
+	DescribeUserDomainsQueryCdnTypeEnumDownload   DescribeUserDomainsQueryCdnTypeEnum = "download"
+	DescribeUserDomainsQueryCdnTypeEnumVideo      DescribeUserDomainsQueryCdnTypeEnum = "video"
+	DescribeUserDomainsQueryCdnTypeEnumLivestream DescribeUserDomainsQueryCdnTypeEnum = "liveStream"
 )
 
 type DescribeUserDomainsQuery struct {
-    position.Query
-    // 根据业务类型进行筛选
+	position.Query
+	// 根据业务类型进行筛选
 	CdnType *DescribeUserDomainsQueryCdnTypeEnum `json:"cdnType,omitempty"`
-    // 一页中个数，默认为10
+	// 一页中个数，默认为10
 	PageSize *string `json:"pageSize,omitempty"`
-    // 页数，默认为1
+	// 页数，默认为1
 	Page *string `json:"page,omitempty"`
-    // 模糊查询关键字
+	// 模糊查询关键字
 	QueryWord *string `json:"queryWord,omitempty"`
 }
 
@@ -62,7 +63,6 @@ func (s *DescribeUserDomainsQuery) SetQueryWord(v string) *DescribeUserDomainsQu
 	return s
 }
 
-
 type DescribeUserDomainsQueryBuilder struct {
 	s *DescribeUserDomainsQuery
 }
@@ -96,5 +96,3 @@ func (b *DescribeUserDomainsQueryBuilder) QueryWord(v string) *DescribeUserDomai
 func (b *DescribeUserDomainsQueryBuilder) Build() *DescribeUserDomainsQuery {
 	return b.s
 }
-
-

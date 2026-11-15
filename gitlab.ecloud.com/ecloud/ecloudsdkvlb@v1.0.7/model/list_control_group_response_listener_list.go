@@ -5,82 +5,83 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
+
 type ListControlGroupResponseListenerListProtocolEnum string
 
 // List of Protocol
 const (
-    ListControlGroupResponseListenerListProtocolEnumHttp ListControlGroupResponseListenerListProtocolEnum = "HTTP"
-    ListControlGroupResponseListenerListProtocolEnumHttps ListControlGroupResponseListenerListProtocolEnum = "HTTPS"
-    ListControlGroupResponseListenerListProtocolEnumTcp ListControlGroupResponseListenerListProtocolEnum = "TCP"
-    ListControlGroupResponseListenerListProtocolEnumUdp ListControlGroupResponseListenerListProtocolEnum = "UDP"
-    ListControlGroupResponseListenerListProtocolEnumTerminatedHttps ListControlGroupResponseListenerListProtocolEnum = "TERMINATED_HTTPS"
-    ListControlGroupResponseListenerListProtocolEnumSip ListControlGroupResponseListenerListProtocolEnum = "SIP"
+	ListControlGroupResponseListenerListProtocolEnumHttp            ListControlGroupResponseListenerListProtocolEnum = "HTTP"
+	ListControlGroupResponseListenerListProtocolEnumHttps           ListControlGroupResponseListenerListProtocolEnum = "HTTPS"
+	ListControlGroupResponseListenerListProtocolEnumTcp             ListControlGroupResponseListenerListProtocolEnum = "TCP"
+	ListControlGroupResponseListenerListProtocolEnumUdp             ListControlGroupResponseListenerListProtocolEnum = "UDP"
+	ListControlGroupResponseListenerListProtocolEnumTerminatedHttps ListControlGroupResponseListenerListProtocolEnum = "TERMINATED_HTTPS"
+	ListControlGroupResponseListenerListProtocolEnumSip             ListControlGroupResponseListenerListProtocolEnum = "SIP"
 )
+
 type ListControlGroupResponseListenerListRedirectProtocolEnum string
 
 // List of RedirectProtocol
 const (
-    ListControlGroupResponseListenerListRedirectProtocolEnumHttp ListControlGroupResponseListenerListRedirectProtocolEnum = "HTTP"
-    ListControlGroupResponseListenerListRedirectProtocolEnumHttps ListControlGroupResponseListenerListRedirectProtocolEnum = "HTTPS"
-    ListControlGroupResponseListenerListRedirectProtocolEnumTcp ListControlGroupResponseListenerListRedirectProtocolEnum = "TCP"
-    ListControlGroupResponseListenerListRedirectProtocolEnumUdp ListControlGroupResponseListenerListRedirectProtocolEnum = "UDP"
-    ListControlGroupResponseListenerListRedirectProtocolEnumTerminatedHttps ListControlGroupResponseListenerListRedirectProtocolEnum = "TERMINATED_HTTPS"
-    ListControlGroupResponseListenerListRedirectProtocolEnumSip ListControlGroupResponseListenerListRedirectProtocolEnum = "SIP"
+	ListControlGroupResponseListenerListRedirectProtocolEnumHttp            ListControlGroupResponseListenerListRedirectProtocolEnum = "HTTP"
+	ListControlGroupResponseListenerListRedirectProtocolEnumHttps           ListControlGroupResponseListenerListRedirectProtocolEnum = "HTTPS"
+	ListControlGroupResponseListenerListRedirectProtocolEnumTcp             ListControlGroupResponseListenerListRedirectProtocolEnum = "TCP"
+	ListControlGroupResponseListenerListRedirectProtocolEnumUdp             ListControlGroupResponseListenerListRedirectProtocolEnum = "UDP"
+	ListControlGroupResponseListenerListRedirectProtocolEnumTerminatedHttps ListControlGroupResponseListenerListRedirectProtocolEnum = "TERMINATED_HTTPS"
+	ListControlGroupResponseListenerListRedirectProtocolEnumSip             ListControlGroupResponseListenerListRedirectProtocolEnum = "SIP"
 )
 
 type ListControlGroupResponseListenerList struct {
-
-    // 租户ID
+	// 租户ID
 	TenantId *string `json:"tenant_id,omitempty"`
-    // 服务器证书信息
+	// 服务器证书信息
 	DefaultTlsContainerRef *string `json:"default_tls_container_ref,omitempty"`
-    // TLS安全策略协议
+	// TLS安全策略协议
 	TlsProtocols *string `json:"tls_protocols,omitempty"`
-    // 负载均衡ID
+	// 负载均衡ID
 	LoadbalancerId *string `json:"loadbalancer_id,omitempty"`
-    // 监听器是否开启pp类型的透传IP
+	// 监听器是否开启pp类型的透传IP
 	ProxyProtocol *bool `json:"proxy_protocol,omitempty"`
-    // 监听器描述
+	// 监听器描述
 	Description *string `json:"description,omitempty"`
-    // 是否透传源ID
+	// 是否透传源ID
 	Transparent *bool `json:"transparent,omitempty"`
-    // 监听器连接最大限制
+	// 监听器连接最大限制
 	ConnectionLimit *int32 `json:"connection_limit,omitempty"`
-    // 是否开启双向认证
+	// 是否开启双向认证
 	MutualAuthenticationUp *bool `json:"mutual_authentication_up,omitempty"`
-    // 监听器前后端使用的协议
+	// 监听器前后端使用的协议
 	Protocol *ListControlGroupResponseListenerListProtocolEnum `json:"protocol,omitempty"`
-    // 监听器是否可用
+	// 监听器是否可用
 	AdminStateUp *bool `json:"admin_state_up,omitempty"`
-    // 是否开启http2
+	// 是否开启http2
 	Http2 *bool `json:"http2,omitempty"`
-    // 重定向监听器前端协议的端口号
+	// 重定向监听器前端协议的端口号
 	RedirectPort *int32 `json:"redirect_port,omitempty"`
-    // 监听器ID
+	// 监听器ID
 	Id *string `json:"id,omitempty"`
-    // 默认后端服务器组ID
+	// 默认后端服务器组ID
 	DefaultPoolId *string `json:"default_pool_id,omitempty"`
-    // 服务器证书ID
+	// 服务器证书ID
 	DefaultTlsContainerId *string `json:"default_tls_container_id,omitempty"`
-    // 监听器前端协议的端口号
+	// 监听器前端协议的端口号
 	ProtocolPort *int32 `json:"protocol_port,omitempty"`
-    // 连接超时时长
+	// 连接超时时长
 	KeepaliveTimeout *int32 `json:"keepalive_timeout,omitempty"`
-    // SNI证书信息
+	// SNI证书信息
 	SniContainerRefs []string `json:"sni_container_refs,omitempty"`
-    // 加密套件
+	// 加密套件
 	CipherSuites *string `json:"cipher_suites,omitempty"`
-    // 重定向监听器前后端使用的协议
+	// 重定向监听器前后端使用的协议
 	RedirectProtocol *ListControlGroupResponseListenerListRedirectProtocolEnum `json:"redirect_protocol,omitempty"`
-    // 是否开启重定向
+	// 是否开启重定向
 	RedirectUp *bool `json:"redirect_up,omitempty"`
-    // 证书容器中的CA证书ID
+	// 证书容器中的CA证书ID
 	CaContainerId *string `json:"ca_container_id,omitempty"`
-    // 监听器名称
+	// 监听器名称
 	Name *string `json:"name,omitempty"`
-    // 负载均衡ID信息
+	// 负载均衡ID信息
 	Loadbalancers *[]ListControlGroupResponseLoadbalancers `json:"loadbalancers,omitempty"`
 }
 
@@ -221,7 +222,6 @@ func (s *ListControlGroupResponseListenerList) SetLoadbalancers(v []ListControlG
 	return s
 }
 
-
 type ListControlGroupResponseListenerListBuilder struct {
 	s *ListControlGroupResponseListenerList
 }
@@ -360,5 +360,3 @@ func (b *ListControlGroupResponseListenerListBuilder) Loadbalancers(v []ListCont
 func (b *ListControlGroupResponseListenerListBuilder) Build() *ListControlGroupResponseListenerList {
 	return b.s
 }
-
-

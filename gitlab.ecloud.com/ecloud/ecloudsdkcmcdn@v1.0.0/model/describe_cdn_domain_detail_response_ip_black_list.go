@@ -5,12 +5,11 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type DescribeCdnDomainDetailResponseIpBlackList struct {
-
-    // IP黑名单设置，上限为100条
+	// IP黑名单设置，上限为100条
 	IpList *string `json:"ip_list,omitempty"`
 }
 
@@ -31,7 +30,6 @@ func (s *DescribeCdnDomainDetailResponseIpBlackList) SetIpList(v string) *Descri
 	return s
 }
 
-
 type DescribeCdnDomainDetailResponseIpBlackListBuilder struct {
 	s *DescribeCdnDomainDetailResponseIpBlackList
 }
@@ -50,5 +48,3 @@ func (b *DescribeCdnDomainDetailResponseIpBlackListBuilder) IpList(v string) *De
 func (b *DescribeCdnDomainDetailResponseIpBlackListBuilder) Build() *DescribeCdnDomainDetailResponseIpBlackList {
 	return b.s
 }
-
-

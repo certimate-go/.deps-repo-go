@@ -5,12 +5,11 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type ListControlGroupDetailResponseLoadbalancers struct {
-
-    // 负载均衡ID信息
+	// 负载均衡ID信息
 	Id *string `json:"id,omitempty"`
 }
 
@@ -31,7 +30,6 @@ func (s *ListControlGroupDetailResponseLoadbalancers) SetId(v string) *ListContr
 	return s
 }
 
-
 type ListControlGroupDetailResponseLoadbalancersBuilder struct {
 	s *ListControlGroupDetailResponseLoadbalancers
 }
@@ -50,5 +48,3 @@ func (b *ListControlGroupDetailResponseLoadbalancersBuilder) Id(v string) *ListC
 func (b *ListControlGroupDetailResponseLoadbalancersBuilder) Build() *ListControlGroupDetailResponseLoadbalancers {
 	return b.s
 }
-
-

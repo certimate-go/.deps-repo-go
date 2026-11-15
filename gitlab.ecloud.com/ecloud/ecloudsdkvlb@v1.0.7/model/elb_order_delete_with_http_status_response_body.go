@@ -5,12 +5,11 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type ElbOrderDeleteWithHttpStatusResponseBody struct {
-
-    // 是否删除
+	// 是否删除
 	IsDeleted *bool `json:"isDeleted,omitempty"`
 }
 
@@ -31,7 +30,6 @@ func (s *ElbOrderDeleteWithHttpStatusResponseBody) SetIsDeleted(v bool) *ElbOrde
 	return s
 }
 
-
 type ElbOrderDeleteWithHttpStatusResponseBodyBuilder struct {
 	s *ElbOrderDeleteWithHttpStatusResponseBody
 }
@@ -50,5 +48,3 @@ func (b *ElbOrderDeleteWithHttpStatusResponseBodyBuilder) IsDeleted(v bool) *Elb
 func (b *ElbOrderDeleteWithHttpStatusResponseBodyBuilder) Build() *ElbOrderDeleteWithHttpStatusResponseBody {
 	return b.s
 }
-
-

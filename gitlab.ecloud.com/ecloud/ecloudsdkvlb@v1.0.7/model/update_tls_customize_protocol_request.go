@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type UpdateTLSCustomizeProtocolRequest struct {
-
-
 	UpdateTLSCustomizeProtocolBody *UpdateTLSCustomizeProtocolBody `json:"updateTLSCustomizeProtocolBody,omitempty"`
 }
 
@@ -31,7 +29,6 @@ func (s *UpdateTLSCustomizeProtocolRequest) SetUpdateTLSCustomizeProtocolBody(v 
 	return s
 }
 
-
 type UpdateTLSCustomizeProtocolRequestBuilder struct {
 	s *UpdateTLSCustomizeProtocolRequest
 }
@@ -50,5 +47,3 @@ func (b *UpdateTLSCustomizeProtocolRequestBuilder) UpdateTLSCustomizeProtocolBod
 func (b *UpdateTLSCustomizeProtocolRequestBuilder) Build() *UpdateTLSCustomizeProtocolRequest {
 	return b.s
 }
-
-

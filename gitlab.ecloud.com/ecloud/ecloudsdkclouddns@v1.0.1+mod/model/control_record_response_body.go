@@ -4,17 +4,15 @@
 
 package model
 
-
 type ControlRecordResponseBodyCodeEnum string
 
 // List of Code
 const (
-    ControlRecordResponseBodyCodeEnumError ControlRecordResponseBodyCodeEnum = "ERROR"
-    ControlRecordResponseBodyCodeEnumSuccess ControlRecordResponseBodyCodeEnum = "SUCCESS"
+	ControlRecordResponseBodyCodeEnumError   ControlRecordResponseBodyCodeEnum = "ERROR"
+	ControlRecordResponseBodyCodeEnumSuccess ControlRecordResponseBodyCodeEnum = "SUCCESS"
 )
 
 type ControlRecordResponseBody struct {
-
 	// 结果说明
 	Msg string `json:"msg,omitempty"`
 

@@ -4,9 +4,6 @@
 
 package model
 
-
-
 type SingleHostTagResolveRequest struct {
-
 	SingleHostTagResolveQuery *SingleHostTagResolveQuery `json:"singleHostTagResolveQuery,omitempty"`
 }

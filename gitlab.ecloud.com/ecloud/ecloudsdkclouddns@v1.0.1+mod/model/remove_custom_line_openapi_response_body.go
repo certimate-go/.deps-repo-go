@@ -4,17 +4,15 @@
 
 package model
 
-
 type RemoveCustomLineOpenapiResponseBodyCodeEnum string
 
 // List of Code
 const (
-    RemoveCustomLineOpenapiResponseBodyCodeEnumError RemoveCustomLineOpenapiResponseBodyCodeEnum = "ERROR"
-    RemoveCustomLineOpenapiResponseBodyCodeEnumSuccess RemoveCustomLineOpenapiResponseBodyCodeEnum = "SUCCESS"
+	RemoveCustomLineOpenapiResponseBodyCodeEnumError   RemoveCustomLineOpenapiResponseBodyCodeEnum = "ERROR"
+	RemoveCustomLineOpenapiResponseBodyCodeEnumSuccess RemoveCustomLineOpenapiResponseBodyCodeEnum = "SUCCESS"
 )
 
 type RemoveCustomLineOpenapiResponseBody struct {
-
 	// 结果说明
 	Msg string `json:"msg,omitempty"`
 

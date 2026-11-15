@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type DeletePolicyAsyncRequest struct {
-
-
 	DeletePolicyAsyncPath *DeletePolicyAsyncPath `json:"deletePolicyAsyncPath,omitempty"`
 }
 
@@ -31,7 +29,6 @@ func (s *DeletePolicyAsyncRequest) SetDeletePolicyAsyncPath(v *DeletePolicyAsync
 	return s
 }
 
-
 type DeletePolicyAsyncRequestBuilder struct {
 	s *DeletePolicyAsyncRequest
 }
@@ -50,5 +47,3 @@ func (b *DeletePolicyAsyncRequestBuilder) DeletePolicyAsyncPath(v *DeletePolicyA
 func (b *DeletePolicyAsyncRequestBuilder) Build() *DeletePolicyAsyncRequest {
 	return b.s
 }
-
-

@@ -5,19 +5,19 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type ListL7PolicyRespQuery struct {
-    position.Query
-    // 负载均衡监听器ID
+	position.Query
+	// 负载均衡监听器ID
 	ListenerId *string `json:"listenerId,omitempty"`
-    // 后端服务器组ID
+	// 后端服务器组ID
 	PoolId *string `json:"poolId,omitempty"`
-    // 列表分页每页大小，小于0将默认为10
+	// 列表分页每页大小，小于0将默认为10
 	PageSize *int32 `json:"pageSize,omitempty"`
-    // 列表分页页数，小于1会默认第1页
+	// 列表分页页数，小于1会默认第1页
 	Page *int32 `json:"page,omitempty"`
 }
 
@@ -53,7 +53,6 @@ func (s *ListL7PolicyRespQuery) SetPage(v int32) *ListL7PolicyRespQuery {
 	return s
 }
 
-
 type ListL7PolicyRespQueryBuilder struct {
 	s *ListL7PolicyRespQuery
 }
@@ -87,5 +86,3 @@ func (b *ListL7PolicyRespQueryBuilder) Page(v int32) *ListL7PolicyRespQueryBuild
 func (b *ListL7PolicyRespQueryBuilder) Build() *ListL7PolicyRespQuery {
 	return b.s
 }
-
-

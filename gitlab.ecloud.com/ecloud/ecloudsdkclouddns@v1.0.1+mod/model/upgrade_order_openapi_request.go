@@ -4,9 +4,6 @@
 
 package model
 
-
-
 type UpgradeOrderOpenapiRequest struct {
-
 	UpgradeOrderOpenapiBody *UpgradeOrderOpenapiBody `json:"upgradeOrderOpenapiBody,omitempty"`
 }

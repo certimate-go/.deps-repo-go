@@ -4,10 +4,7 @@
 
 package model
 
-
-
 type CreateOrderOpenapiResponseBody struct {
-
 	// 订单ID
 	OrderId string `json:"orderId"`
 

@@ -5,16 +5,15 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type GetBatchHealthStatusRespResponseBody struct {
-
-    // 主节点状态
+	// 主节点状态
 	AdminUpState *bool `json:"adminUpState,omitempty"`
-    // 后端服务器的底层状态，取值如下： up：正常 down：异常
+	// 后端服务器的底层状态，取值如下： up：正常 down：异常
 	HealthStatus *string `json:"healthStatus,omitempty"`
-    // 后端服务器ID
+	// 后端服务器ID
 	Id *string `json:"id,omitempty"`
 }
 
@@ -45,7 +44,6 @@ func (s *GetBatchHealthStatusRespResponseBody) SetId(v string) *GetBatchHealthSt
 	return s
 }
 
-
 type GetBatchHealthStatusRespResponseBodyBuilder struct {
 	s *GetBatchHealthStatusRespResponseBody
 }
@@ -74,5 +72,3 @@ func (b *GetBatchHealthStatusRespResponseBodyBuilder) Id(v string) *GetBatchHeal
 func (b *GetBatchHealthStatusRespResponseBodyBuilder) Build() *GetBatchHealthStatusRespResponseBody {
 	return b.s
 }
-
-

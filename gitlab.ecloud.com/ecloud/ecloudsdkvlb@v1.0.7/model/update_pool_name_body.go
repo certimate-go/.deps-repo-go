@@ -5,15 +5,15 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type UpdatePoolNameBody struct {
-    position.Body
-    // 后端服务器组ID
+	position.Body
+	// 后端服务器组ID
 	PoolId *string `json:"poolId,omitempty"`
-    // 后端服务器组名称为5~64位的英文、数字、下划线、中划线等的组合
+	// 后端服务器组名称为5~64位的英文、数字、下划线、中划线等的组合
 	PoolName *string `json:"poolName,omitempty"`
 }
 
@@ -39,7 +39,6 @@ func (s *UpdatePoolNameBody) SetPoolName(v string) *UpdatePoolNameBody {
 	return s
 }
 
-
 type UpdatePoolNameBodyBuilder struct {
 	s *UpdatePoolNameBody
 }
@@ -63,5 +62,3 @@ func (b *UpdatePoolNameBodyBuilder) PoolName(v string) *UpdatePoolNameBodyBuilde
 func (b *UpdatePoolNameBodyBuilder) Build() *UpdatePoolNameBody {
 	return b.s
 }
-
-

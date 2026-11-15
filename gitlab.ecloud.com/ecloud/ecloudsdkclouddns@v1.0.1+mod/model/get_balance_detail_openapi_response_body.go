@@ -4,25 +4,24 @@
 
 package model
 
-
 type GetBalanceDetailOpenapiResponseBodyStateEnum string
 
 // List of State
 const (
-    GetBalanceDetailOpenapiResponseBodyStateEnumDisabled GetBalanceDetailOpenapiResponseBodyStateEnum = "DISABLED"
-    GetBalanceDetailOpenapiResponseBodyStateEnumEnabled GetBalanceDetailOpenapiResponseBodyStateEnum = "ENABLED"
+	GetBalanceDetailOpenapiResponseBodyStateEnumDisabled GetBalanceDetailOpenapiResponseBodyStateEnum = "DISABLED"
+	GetBalanceDetailOpenapiResponseBodyStateEnumEnabled  GetBalanceDetailOpenapiResponseBodyStateEnum = "ENABLED"
 )
+
 type GetBalanceDetailOpenapiResponseBodyTypeEnum string
 
 // List of Type
 const (
-    GetBalanceDetailOpenapiResponseBodyTypeEnumA GetBalanceDetailOpenapiResponseBodyTypeEnum = "A"
-    GetBalanceDetailOpenapiResponseBodyTypeEnumAaaa GetBalanceDetailOpenapiResponseBodyTypeEnum = "AAAA"
-    GetBalanceDetailOpenapiResponseBodyTypeEnumCname GetBalanceDetailOpenapiResponseBodyTypeEnum = "CNAME"
+	GetBalanceDetailOpenapiResponseBodyTypeEnumA     GetBalanceDetailOpenapiResponseBodyTypeEnum = "A"
+	GetBalanceDetailOpenapiResponseBodyTypeEnumAaaa  GetBalanceDetailOpenapiResponseBodyTypeEnum = "AAAA"
+	GetBalanceDetailOpenapiResponseBodyTypeEnumCname GetBalanceDetailOpenapiResponseBodyTypeEnum = "CNAME"
 )
 
 type GetBalanceDetailOpenapiResponseBody struct {
-
 	// 解析记录ID
 	RecordId string `json:"recordId,omitempty"`
 

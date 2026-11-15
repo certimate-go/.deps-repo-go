@@ -4,10 +4,7 @@
 
 package model
 
-
-
 type ListDomainResponseFields struct {
-
 	// 该字段是否可见，默认可见
 	Visible *bool `json:"visible,omitempty"`
 

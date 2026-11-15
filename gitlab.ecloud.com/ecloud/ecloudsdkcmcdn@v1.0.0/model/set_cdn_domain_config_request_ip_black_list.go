@@ -5,14 +5,13 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type SetCdnDomainConfigRequestIpBlackList struct {
-
-    // 是否启用
+	// 是否启用
 	Enable *bool `json:"enable,omitempty"`
-    // IP黑名单设置，上限为100条
+	// IP黑名单设置，上限为100条
 	IpList *string `json:"ip_list,omitempty"`
 }
 
@@ -38,7 +37,6 @@ func (s *SetCdnDomainConfigRequestIpBlackList) SetIpList(v string) *SetCdnDomain
 	return s
 }
 
-
 type SetCdnDomainConfigRequestIpBlackListBuilder struct {
 	s *SetCdnDomainConfigRequestIpBlackList
 }
@@ -62,5 +60,3 @@ func (b *SetCdnDomainConfigRequestIpBlackListBuilder) IpList(v string) *SetCdnDo
 func (b *SetCdnDomainConfigRequestIpBlackListBuilder) Build() *SetCdnDomainConfigRequestIpBlackList {
 	return b.s
 }
-
-

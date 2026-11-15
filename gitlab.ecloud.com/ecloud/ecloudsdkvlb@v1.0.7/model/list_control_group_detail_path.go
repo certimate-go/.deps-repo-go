@@ -5,13 +5,13 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type ListControlGroupDetailPath struct {
-    position.Path
-    // 访问控制组ID（未填写时将重定向到查询访问控制组列表接口）
+	position.Path
+	// 访问控制组ID（未填写时将重定向到查询访问控制组列表接口）
 	AccessControlGroupId *string `json:"accessControlGroupId,omitempty"`
 }
 
@@ -32,7 +32,6 @@ func (s *ListControlGroupDetailPath) SetAccessControlGroupId(v string) *ListCont
 	return s
 }
 
-
 type ListControlGroupDetailPathBuilder struct {
 	s *ListControlGroupDetailPath
 }
@@ -51,5 +50,3 @@ func (b *ListControlGroupDetailPathBuilder) AccessControlGroupId(v string) *List
 func (b *ListControlGroupDetailPathBuilder) Build() *ListControlGroupDetailPath {
 	return b.s
 }
-
-

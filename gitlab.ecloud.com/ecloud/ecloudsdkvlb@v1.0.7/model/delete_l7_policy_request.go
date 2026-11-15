@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type DeleteL7PolicyRequest struct {
-
-
 	DeleteL7PolicyPath *DeleteL7PolicyPath `json:"deleteL7PolicyPath,omitempty"`
 }
 
@@ -31,7 +29,6 @@ func (s *DeleteL7PolicyRequest) SetDeleteL7PolicyPath(v *DeleteL7PolicyPath) *De
 	return s
 }
 
-
 type DeleteL7PolicyRequestBuilder struct {
 	s *DeleteL7PolicyRequest
 }
@@ -50,5 +47,3 @@ func (b *DeleteL7PolicyRequestBuilder) DeleteL7PolicyPath(v *DeleteL7PolicyPath)
 func (b *DeleteL7PolicyRequestBuilder) Build() *DeleteL7PolicyRequest {
 	return b.s
 }
-
-

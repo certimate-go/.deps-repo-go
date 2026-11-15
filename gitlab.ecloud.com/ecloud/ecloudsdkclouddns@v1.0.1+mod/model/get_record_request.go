@@ -4,9 +4,6 @@
 
 package model
 
-
-
 type GetRecordRequest struct {
-
 	GetRecordPath *GetRecordPath `json:"getRecordPath,omitempty"`
 }

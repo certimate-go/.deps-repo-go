@@ -4,9 +4,6 @@
 
 package model
 
-
-
 type UnlockDomainRequest struct {
-
 	UnlockDomainBody *UnlockDomainBody `json:"unlockDomainBody,omitempty"`
 }

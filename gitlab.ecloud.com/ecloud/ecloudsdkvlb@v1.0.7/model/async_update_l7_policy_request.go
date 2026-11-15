@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type AsyncUpdateL7PolicyRequest struct {
-
-
 	AsyncUpdateL7PolicyBody *AsyncUpdateL7PolicyBody `json:"asyncUpdateL7PolicyBody,omitempty"`
 }
 
@@ -31,7 +29,6 @@ func (s *AsyncUpdateL7PolicyRequest) SetAsyncUpdateL7PolicyBody(v *AsyncUpdateL7
 	return s
 }
 
-
 type AsyncUpdateL7PolicyRequestBuilder struct {
 	s *AsyncUpdateL7PolicyRequest
 }
@@ -50,5 +47,3 @@ func (b *AsyncUpdateL7PolicyRequestBuilder) AsyncUpdateL7PolicyBody(v *AsyncUpda
 func (b *AsyncUpdateL7PolicyRequestBuilder) Build() *AsyncUpdateL7PolicyRequest {
 	return b.s
 }
-
-

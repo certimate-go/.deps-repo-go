@@ -4,17 +4,15 @@
 
 package model
 
-
 type ListInstanceRequestOrderByDirectionEnum string
 
 // List of Direction
 const (
-    ListInstanceRequestOrderByDirectionEnumAsc ListInstanceRequestOrderByDirectionEnum = "ASC"
-    ListInstanceRequestOrderByDirectionEnumDesc ListInstanceRequestOrderByDirectionEnum = "DESC"
+	ListInstanceRequestOrderByDirectionEnumAsc  ListInstanceRequestOrderByDirectionEnum = "ASC"
+	ListInstanceRequestOrderByDirectionEnumDesc ListInstanceRequestOrderByDirectionEnum = "DESC"
 )
 
 type ListInstanceRequestOrderBy struct {
-
 	// 排序字段
 	Field string `json:"field,omitempty"`
 

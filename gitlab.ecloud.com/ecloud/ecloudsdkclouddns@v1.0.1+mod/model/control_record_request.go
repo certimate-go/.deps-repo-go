@@ -4,9 +4,6 @@
 
 package model
 
-
-
 type ControlRecordRequest struct {
-
 	ControlRecordBody *ControlRecordBody `json:"controlRecordBody,omitempty"`
 }

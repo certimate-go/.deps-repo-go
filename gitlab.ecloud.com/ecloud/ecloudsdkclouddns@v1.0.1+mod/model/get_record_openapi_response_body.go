@@ -4,40 +4,40 @@
 
 package model
 
-
 type GetRecordOpenapiResponseBodyTypeEnum string
 
 // List of Type
 const (
-    GetRecordOpenapiResponseBodyTypeEnumA GetRecordOpenapiResponseBodyTypeEnum = "A"
-    GetRecordOpenapiResponseBodyTypeEnumAaaa GetRecordOpenapiResponseBodyTypeEnum = "AAAA"
-    GetRecordOpenapiResponseBodyTypeEnumCname GetRecordOpenapiResponseBodyTypeEnum = "CNAME"
-    GetRecordOpenapiResponseBodyTypeEnumMx GetRecordOpenapiResponseBodyTypeEnum = "MX"
-    GetRecordOpenapiResponseBodyTypeEnumTxt GetRecordOpenapiResponseBodyTypeEnum = "TXT"
-    GetRecordOpenapiResponseBodyTypeEnumNs GetRecordOpenapiResponseBodyTypeEnum = "NS"
-    GetRecordOpenapiResponseBodyTypeEnumSpf GetRecordOpenapiResponseBodyTypeEnum = "SPF"
-    GetRecordOpenapiResponseBodyTypeEnumSrv GetRecordOpenapiResponseBodyTypeEnum = "SRV"
-    GetRecordOpenapiResponseBodyTypeEnumCaa GetRecordOpenapiResponseBodyTypeEnum = "CAA"
-    GetRecordOpenapiResponseBodyTypeEnumCmauth GetRecordOpenapiResponseBodyTypeEnum = "CMAUTH"
+	GetRecordOpenapiResponseBodyTypeEnumA      GetRecordOpenapiResponseBodyTypeEnum = "A"
+	GetRecordOpenapiResponseBodyTypeEnumAaaa   GetRecordOpenapiResponseBodyTypeEnum = "AAAA"
+	GetRecordOpenapiResponseBodyTypeEnumCname  GetRecordOpenapiResponseBodyTypeEnum = "CNAME"
+	GetRecordOpenapiResponseBodyTypeEnumMx     GetRecordOpenapiResponseBodyTypeEnum = "MX"
+	GetRecordOpenapiResponseBodyTypeEnumTxt    GetRecordOpenapiResponseBodyTypeEnum = "TXT"
+	GetRecordOpenapiResponseBodyTypeEnumNs     GetRecordOpenapiResponseBodyTypeEnum = "NS"
+	GetRecordOpenapiResponseBodyTypeEnumSpf    GetRecordOpenapiResponseBodyTypeEnum = "SPF"
+	GetRecordOpenapiResponseBodyTypeEnumSrv    GetRecordOpenapiResponseBodyTypeEnum = "SRV"
+	GetRecordOpenapiResponseBodyTypeEnumCaa    GetRecordOpenapiResponseBodyTypeEnum = "CAA"
+	GetRecordOpenapiResponseBodyTypeEnumCmauth GetRecordOpenapiResponseBodyTypeEnum = "CMAUTH"
 )
+
 type GetRecordOpenapiResponseBodyTimedStatusEnum string
 
 // List of TimedStatus
 const (
-    GetRecordOpenapiResponseBodyTimedStatusEnumDisabled GetRecordOpenapiResponseBodyTimedStatusEnum = "DISABLED"
-    GetRecordOpenapiResponseBodyTimedStatusEnumEnabled GetRecordOpenapiResponseBodyTimedStatusEnum = "ENABLED"
-    GetRecordOpenapiResponseBodyTimedStatusEnumTimed GetRecordOpenapiResponseBodyTimedStatusEnum = "TIMED"
+	GetRecordOpenapiResponseBodyTimedStatusEnumDisabled GetRecordOpenapiResponseBodyTimedStatusEnum = "DISABLED"
+	GetRecordOpenapiResponseBodyTimedStatusEnumEnabled  GetRecordOpenapiResponseBodyTimedStatusEnum = "ENABLED"
+	GetRecordOpenapiResponseBodyTimedStatusEnumTimed    GetRecordOpenapiResponseBodyTimedStatusEnum = "TIMED"
 )
+
 type GetRecordOpenapiResponseBodyStateEnum string
 
 // List of State
 const (
-    GetRecordOpenapiResponseBodyStateEnumDisabled GetRecordOpenapiResponseBodyStateEnum = "DISABLED"
-    GetRecordOpenapiResponseBodyStateEnumEnabled GetRecordOpenapiResponseBodyStateEnum = "ENABLED"
+	GetRecordOpenapiResponseBodyStateEnumDisabled GetRecordOpenapiResponseBodyStateEnum = "DISABLED"
+	GetRecordOpenapiResponseBodyStateEnumEnabled  GetRecordOpenapiResponseBodyStateEnum = "ENABLED"
 )
 
 type GetRecordOpenapiResponseBody struct {
-
 	// 主机头
 	Rr string `json:"rr,omitempty"`
 

@@ -4,9 +4,6 @@
 
 package model
 
-
-
 type TakeOverRefreshDomainOpenapiRequest struct {
-
 	TakeOverRefreshDomainOpenapiQuery *TakeOverRefreshDomainOpenapiQuery `json:"takeOverRefreshDomainOpenapiQuery,omitempty"`
 }

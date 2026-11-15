@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type ElbOrderDeleteRequest struct {
-
-
 	ElbOrderDeleteQuery *ElbOrderDeleteQuery `json:"elbOrderDeleteQuery,omitempty"`
 }
 
@@ -31,7 +29,6 @@ func (s *ElbOrderDeleteRequest) SetElbOrderDeleteQuery(v *ElbOrderDeleteQuery) *
 	return s
 }
 
-
 type ElbOrderDeleteRequestBuilder struct {
 	s *ElbOrderDeleteRequest
 }
@@ -50,5 +47,3 @@ func (b *ElbOrderDeleteRequestBuilder) ElbOrderDeleteQuery(v *ElbOrderDeleteQuer
 func (b *ElbOrderDeleteRequestBuilder) Build() *ElbOrderDeleteRequest {
 	return b.s
 }
-
-

@@ -5,12 +5,13 @@ import (
 	"crypto/tls"
 	"crypto/x509"
 	"fmt"
-	"gitlab.ecloud.com/ecloud/ecloudsdkcore/errs"
 	"io/ioutil"
 	"net"
 	"net/http"
 	"net/url"
 	"time"
+
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/errs"
 )
 
 type NetHttpClientBuilder struct {

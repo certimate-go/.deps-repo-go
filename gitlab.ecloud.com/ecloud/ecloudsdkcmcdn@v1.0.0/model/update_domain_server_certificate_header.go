@@ -5,13 +5,13 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type UpdateDomainServerCertificateHeader struct {
-    position.Header
-    // 移动云官网用户user_id
+	position.Header
+	// 移动云官网用户user_id
 	UserId *string `json:"user_Id,omitempty"`
 }
 
@@ -32,7 +32,6 @@ func (s *UpdateDomainServerCertificateHeader) SetUserId(v string) *UpdateDomainS
 	return s
 }
 
-
 type UpdateDomainServerCertificateHeaderBuilder struct {
 	s *UpdateDomainServerCertificateHeader
 }
@@ -51,5 +50,3 @@ func (b *UpdateDomainServerCertificateHeaderBuilder) UserId(v string) *UpdateDom
 func (b *UpdateDomainServerCertificateHeaderBuilder) Build() *UpdateDomainServerCertificateHeader {
 	return b.s
 }
-
-

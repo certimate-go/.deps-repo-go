@@ -4,10 +4,7 @@
 
 package model
 
-
-
 type ListLineGroupResponseResults struct {
-
 	// 占用线路分组的主机头
 	Rrs string `json:"rrs,omitempty"`
 

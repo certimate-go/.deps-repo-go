@@ -5,19 +5,19 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type CreateControlGroupRuleBody struct {
-    position.Body
-    // 地址类型（IPv4或IPv6）
+	position.Body
+	// 地址类型（IPv4或IPv6）
 	IpVersion *string `json:"ipVersion,omitempty"`
-    // IP地址
+	// IP地址
 	IpAddress *string `json:"ipAddress,omitempty"`
-    // 访问控制组规则描述
+	// 访问控制组规则描述
 	Description *string `json:"description,omitempty"`
-    // 所属控制组ID
+	// 所属控制组ID
 	ControlGroupId *string `json:"controlGroupId,omitempty"`
 }
 
@@ -53,7 +53,6 @@ func (s *CreateControlGroupRuleBody) SetControlGroupId(v string) *CreateControlG
 	return s
 }
 
-
 type CreateControlGroupRuleBodyBuilder struct {
 	s *CreateControlGroupRuleBody
 }
@@ -87,5 +86,3 @@ func (b *CreateControlGroupRuleBodyBuilder) ControlGroupId(v string) *CreateCont
 func (b *CreateControlGroupRuleBodyBuilder) Build() *CreateControlGroupRuleBody {
 	return b.s
 }
-
-

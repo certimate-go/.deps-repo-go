@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type DeleteCdnDomainsRequest struct {
-
-
 	DeleteCdnDomainsQuery *DeleteCdnDomainsQuery `json:"deleteCdnDomainsQuery,omitempty"`
 }
 
@@ -31,7 +29,6 @@ func (s *DeleteCdnDomainsRequest) SetDeleteCdnDomainsQuery(v *DeleteCdnDomainsQu
 	return s
 }
 
-
 type DeleteCdnDomainsRequestBuilder struct {
 	s *DeleteCdnDomainsRequest
 }
@@ -50,5 +47,3 @@ func (b *DeleteCdnDomainsRequestBuilder) DeleteCdnDomainsQuery(v *DeleteCdnDomai
 func (b *DeleteCdnDomainsRequestBuilder) Build() *DeleteCdnDomainsRequest {
 	return b.s
 }
-
-

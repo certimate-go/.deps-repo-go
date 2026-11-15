@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type DeleteListenerAsyncRequest struct {
-
-
 	DeleteListenerAsyncPath *DeleteListenerAsyncPath `json:"deleteListenerAsyncPath,omitempty"`
 }
 
@@ -31,7 +29,6 @@ func (s *DeleteListenerAsyncRequest) SetDeleteListenerAsyncPath(v *DeleteListene
 	return s
 }
 
-
 type DeleteListenerAsyncRequestBuilder struct {
 	s *DeleteListenerAsyncRequest
 }
@@ -50,5 +47,3 @@ func (b *DeleteListenerAsyncRequestBuilder) DeleteListenerAsyncPath(v *DeleteLis
 func (b *DeleteListenerAsyncRequestBuilder) Build() *DeleteListenerAsyncRequest {
 	return b.s
 }
-
-

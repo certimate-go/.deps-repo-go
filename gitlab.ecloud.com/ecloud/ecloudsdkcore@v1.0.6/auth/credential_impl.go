@@ -4,14 +4,15 @@ import (
 	"crypto/rand"
 	"crypto/rsa"
 	"crypto/x509"
-	"gitlab.ecloud.com/ecloud/ecloudsdkcore/consts"
-	"gitlab.ecloud.com/ecloud/ecloudsdkcore/errs"
-	"gitlab.ecloud.com/ecloud/ecloudsdkcore/request"
-	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 	"net/url"
 	"sort"
 	"strings"
 	"time"
+
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/consts"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/errs"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/request"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type ICredential interface {
@@ -20,14 +21,11 @@ type ICredential interface {
 	Decrypt(originStr string, privateKey string) (string, error)
 }
 
-type MopCredential struct {
-}
+type MopCredential struct{}
 
-type NoneCredential struct {
-}
+type NoneCredential struct{}
 
-type AKSKCredential struct {
-}
+type AKSKCredential struct{}
 
 func NewMopCredential() *MopCredential {
 	return &MopCredential{}
@@ -41,9 +39,11 @@ func NewNoneCredential() *NoneCredential {
 	return &NoneCredential{}
 }
 
-var MopCredentialInstance = NewMopCredential()
-var NoneCredentialInstance = NewNoneCredential()
-var AKSKCredentialInstance = NewAKSKCredential()
+var (
+	MopCredentialInstance  = NewMopCredential()
+	NoneCredentialInstance = NewNoneCredential()
+	AKSKCredentialInstance = NewAKSKCredential()
+)
 
 func GetCredentialManager(credType CredentialType) ICredential {
 	switch credType {
@@ -72,7 +72,6 @@ func (none *NoneCredential) Decrypt(originStr string, privateKey string) (string
 }
 
 func (mop *MopCredential) Sign(request *request.HttpRequest, credential *Credential) error {
-
 	if utils.IsUnSet(credential.PrivateKey) {
 		return errs.NewInvalidParameterError("RSA private key can not be null", nil)
 	}

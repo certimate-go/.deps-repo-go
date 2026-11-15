@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type CertificationBindTagsRequest struct {
-
-
 	CertificationBindTagsBody *CertificationBindTagsBody `json:"certificationBindTagsBody,omitempty"`
 }
 
@@ -31,7 +29,6 @@ func (s *CertificationBindTagsRequest) SetCertificationBindTagsBody(v *Certifica
 	return s
 }
 
-
 type CertificationBindTagsRequestBuilder struct {
 	s *CertificationBindTagsRequest
 }
@@ -50,5 +47,3 @@ func (b *CertificationBindTagsRequestBuilder) CertificationBindTagsBody(v *Certi
 func (b *CertificationBindTagsRequestBuilder) Build() *CertificationBindTagsRequest {
 	return b.s
 }
-
-

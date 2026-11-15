@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type OpenCdnServiceFromApiRequest struct {
-
-
 	OpenCdnServiceFromApiBody *OpenCdnServiceFromApiBody `json:"openCdnServiceFromApiBody,omitempty"`
 }
 
@@ -31,7 +29,6 @@ func (s *OpenCdnServiceFromApiRequest) SetOpenCdnServiceFromApiBody(v *OpenCdnSe
 	return s
 }
 
-
 type OpenCdnServiceFromApiRequestBuilder struct {
 	s *OpenCdnServiceFromApiRequest
 }
@@ -50,5 +47,3 @@ func (b *OpenCdnServiceFromApiRequestBuilder) OpenCdnServiceFromApiBody(v *OpenC
 func (b *OpenCdnServiceFromApiRequestBuilder) Build() *OpenCdnServiceFromApiRequest {
 	return b.s
 }
-
-

@@ -4,10 +4,7 @@
 
 package model
 
-
-
 type ListInstanceRequest struct {
-
 	ListInstanceQuery *ListInstanceQuery `json:"listInstanceQuery,omitempty"`
 
 	ListInstanceBody *ListInstanceBody `json:"listInstanceBody,omitempty"`

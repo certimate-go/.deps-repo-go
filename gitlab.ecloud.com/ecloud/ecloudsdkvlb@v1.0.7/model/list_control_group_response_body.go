@@ -5,14 +5,13 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type ListControlGroupResponseBody struct {
-
-    // 满足查询条件的总个数
+	// 满足查询条件的总个数
 	Total *int32 `json:"total,omitempty"`
-    // 分页查询返回的具体结构体
+	// 分页查询返回的具体结构体
 	Content *[]ListControlGroupResponseContent `json:"content,omitempty"`
 }
 
@@ -38,7 +37,6 @@ func (s *ListControlGroupResponseBody) SetContent(v []ListControlGroupResponseCo
 	return s
 }
 
-
 type ListControlGroupResponseBodyBuilder struct {
 	s *ListControlGroupResponseBody
 }
@@ -62,5 +60,3 @@ func (b *ListControlGroupResponseBodyBuilder) Content(v []ListControlGroupRespon
 func (b *ListControlGroupResponseBodyBuilder) Build() *ListControlGroupResponseBody {
 	return b.s
 }
-
-

@@ -5,15 +5,15 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type DeleteLoadBalancePoolMemberPath struct {
-    position.Path
-    // 负载均衡后端服务器组ID
+	position.Path
+	// 负载均衡后端服务器组ID
 	PoolId *string `json:"poolId,omitempty"`
-    // 负载均衡后端服务器ID
+	// 负载均衡后端服务器ID
 	MemberId *string `json:"memberId,omitempty"`
 }
 
@@ -39,7 +39,6 @@ func (s *DeleteLoadBalancePoolMemberPath) SetMemberId(v string) *DeleteLoadBalan
 	return s
 }
 
-
 type DeleteLoadBalancePoolMemberPathBuilder struct {
 	s *DeleteLoadBalancePoolMemberPath
 }
@@ -63,5 +62,3 @@ func (b *DeleteLoadBalancePoolMemberPathBuilder) MemberId(v string) *DeleteLoadB
 func (b *DeleteLoadBalancePoolMemberPathBuilder) Build() *DeleteLoadBalancePoolMemberPath {
 	return b.s
 }
-
-

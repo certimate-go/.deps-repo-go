@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type ListLoadBalanceHTTPSListenerRequest struct {
-
-
 	ListLoadBalanceHTTPSListenerQuery *ListLoadBalanceHTTPSListenerQuery `json:"listLoadBalanceHTTPSListenerQuery,omitempty"`
 
 	ListLoadBalanceHTTPSListenerPath *ListLoadBalanceHTTPSListenerPath `json:"listLoadBalanceHTTPSListenerPath,omitempty"`
@@ -38,7 +36,6 @@ func (s *ListLoadBalanceHTTPSListenerRequest) SetListLoadBalanceHTTPSListenerPat
 	return s
 }
 
-
 type ListLoadBalanceHTTPSListenerRequestBuilder struct {
 	s *ListLoadBalanceHTTPSListenerRequest
 }
@@ -62,5 +59,3 @@ func (b *ListLoadBalanceHTTPSListenerRequestBuilder) ListLoadBalanceHTTPSListene
 func (b *ListLoadBalanceHTTPSListenerRequestBuilder) Build() *ListLoadBalanceHTTPSListenerRequest {
 	return b.s
 }
-
-

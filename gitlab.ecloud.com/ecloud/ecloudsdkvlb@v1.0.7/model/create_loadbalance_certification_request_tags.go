@@ -5,14 +5,13 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type CreateLoadbalanceCertificationRequestTags struct {
-
-    // 标签value
+	// 标签value
 	TagValue *string `json:"tagValue,omitempty"`
-    // 标签key
+	// 标签key
 	TagKey *string `json:"tagKey,omitempty"`
 }
 
@@ -38,7 +37,6 @@ func (s *CreateLoadbalanceCertificationRequestTags) SetTagKey(v string) *CreateL
 	return s
 }
 
-
 type CreateLoadbalanceCertificationRequestTagsBuilder struct {
 	s *CreateLoadbalanceCertificationRequestTags
 }
@@ -62,5 +60,3 @@ func (b *CreateLoadbalanceCertificationRequestTagsBuilder) TagKey(v string) *Cre
 func (b *CreateLoadbalanceCertificationRequestTagsBuilder) Build() *CreateLoadbalanceCertificationRequestTags {
 	return b.s
 }
-
-

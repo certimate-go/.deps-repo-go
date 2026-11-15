@@ -5,17 +5,17 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type BindTagsBody struct {
-    position.Body
-    // 资源ID列表
+	position.Body
+	// 资源ID列表
 	ResourceIds []string `json:"resourceIds,omitempty"`
-    // 资源所属类型，弹性负载均衡实例类型为CIDC-RT-SLB
+	// 资源所属类型，弹性负载均衡实例类型为CIDC-RT-SLB
 	ResourceType *string `json:"resourceType,omitempty"`
-    // 标签
+	// 标签
 	Tags *[]BindTagsRequestTags `json:"tags,omitempty"`
 }
 
@@ -46,7 +46,6 @@ func (s *BindTagsBody) SetTags(v []BindTagsRequestTags) *BindTagsBody {
 	return s
 }
 
-
 type BindTagsBodyBuilder struct {
 	s *BindTagsBody
 }
@@ -75,5 +74,3 @@ func (b *BindTagsBodyBuilder) Tags(v []BindTagsRequestTags) *BindTagsBodyBuilder
 func (b *BindTagsBodyBuilder) Build() *BindTagsBody {
 	return b.s
 }
-
-

@@ -5,19 +5,19 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type ListTLSCustomizeProtocolRespQuery struct {
-    position.Query
-    // 是否是默认策略，默认为false
+	position.Query
+	// 是否是默认策略，默认为false
 	IsDefault *bool `json:"isDefault,omitempty"`
-    // 列表分页每页大小，小于0将默认为10
+	// 列表分页每页大小，小于0将默认为10
 	Size *int32 `json:"size,omitempty"`
-    // 列表分页页数，小于1会默认第1页
+	// 列表分页页数，小于1会默认第1页
 	Page *int32 `json:"page,omitempty"`
-    // 虚拟可用区
+	// 虚拟可用区
 	Vaz *string `json:"vaz,omitempty"`
 }
 
@@ -53,7 +53,6 @@ func (s *ListTLSCustomizeProtocolRespQuery) SetVaz(v string) *ListTLSCustomizePr
 	return s
 }
 
-
 type ListTLSCustomizeProtocolRespQueryBuilder struct {
 	s *ListTLSCustomizeProtocolRespQuery
 }
@@ -87,5 +86,3 @@ func (b *ListTLSCustomizeProtocolRespQueryBuilder) Vaz(v string) *ListTLSCustomi
 func (b *ListTLSCustomizeProtocolRespQueryBuilder) Build() *ListTLSCustomizeProtocolRespQuery {
 	return b.s
 }
-
-

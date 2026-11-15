@@ -4,9 +4,6 @@
 
 package model
 
-
-
 type ListCustomLineOpenapiRequest struct {
-
 	ListCustomLineOpenapiQuery *ListCustomLineOpenapiQuery `json:"listCustomLineOpenapiQuery,omitempty"`
 }

@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type ElbOrderCreateAsyncWithHttpStatusRequest struct {
-
-
 	ElbOrderCreateAsyncWithHttpStatusBody *ElbOrderCreateAsyncWithHttpStatusBody `json:"elbOrderCreateAsyncWithHttpStatusBody,omitempty"`
 }
 
@@ -31,7 +29,6 @@ func (s *ElbOrderCreateAsyncWithHttpStatusRequest) SetElbOrderCreateAsyncWithHtt
 	return s
 }
 
-
 type ElbOrderCreateAsyncWithHttpStatusRequestBuilder struct {
 	s *ElbOrderCreateAsyncWithHttpStatusRequest
 }
@@ -50,5 +47,3 @@ func (b *ElbOrderCreateAsyncWithHttpStatusRequestBuilder) ElbOrderCreateAsyncWit
 func (b *ElbOrderCreateAsyncWithHttpStatusRequestBuilder) Build() *ElbOrderCreateAsyncWithHttpStatusRequest {
 	return b.s
 }
-
-

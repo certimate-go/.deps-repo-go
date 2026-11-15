@@ -5,14 +5,13 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type DescribeCdnDomainDetailResponseReqHeaderDetails struct {
-
-    // 参数类型
+	// 参数类型
 	Type *int32 `json:"type,omitempty"`
-    // 取值
+	// 取值
 	Value *string `json:"value,omitempty"`
 }
 
@@ -38,7 +37,6 @@ func (s *DescribeCdnDomainDetailResponseReqHeaderDetails) SetValue(v string) *De
 	return s
 }
 
-
 type DescribeCdnDomainDetailResponseReqHeaderDetailsBuilder struct {
 	s *DescribeCdnDomainDetailResponseReqHeaderDetails
 }
@@ -62,5 +60,3 @@ func (b *DescribeCdnDomainDetailResponseReqHeaderDetailsBuilder) Value(v string)
 func (b *DescribeCdnDomainDetailResponseReqHeaderDetailsBuilder) Build() *DescribeCdnDomainDetailResponseReqHeaderDetails {
 	return b.s
 }
-
-

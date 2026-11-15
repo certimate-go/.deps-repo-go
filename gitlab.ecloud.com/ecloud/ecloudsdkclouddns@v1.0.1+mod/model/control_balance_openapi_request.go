@@ -4,9 +4,6 @@
 
 package model
 
-
-
 type ControlBalanceOpenapiRequest struct {
-
 	ControlBalanceOpenapiBody *ControlBalanceOpenapiBody `json:"controlBalanceOpenapiBody,omitempty"`
 }

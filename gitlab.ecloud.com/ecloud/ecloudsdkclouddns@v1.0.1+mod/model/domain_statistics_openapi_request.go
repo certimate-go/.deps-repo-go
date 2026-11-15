@@ -4,9 +4,6 @@
 
 package model
 
-
-
 type DomainStatisticsOpenapiRequest struct {
-
 	DomainStatisticsOpenapiBody *DomainStatisticsOpenapiBody `json:"domainStatisticsOpenapiBody,omitempty"`
 }

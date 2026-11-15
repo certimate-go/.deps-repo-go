@@ -4,37 +4,37 @@
 
 package model
 
-
 type CreateDomainResponseBodyServiceTypeEnum string
 
 // List of ServiceType
 const (
-    CreateDomainResponseBodyServiceTypeEnumBasic CreateDomainResponseBodyServiceTypeEnum = "BASIC"
-    CreateDomainResponseBodyServiceTypeEnumFree CreateDomainResponseBodyServiceTypeEnum = "FREE"
-    CreateDomainResponseBodyServiceTypeEnumPremium CreateDomainResponseBodyServiceTypeEnum = "PREMIUM"
-    CreateDomainResponseBodyServiceTypeEnumStandard CreateDomainResponseBodyServiceTypeEnum = "STANDARD"
-    CreateDomainResponseBodyServiceTypeEnumUltimate CreateDomainResponseBodyServiceTypeEnum = "ULTIMATE"
+	CreateDomainResponseBodyServiceTypeEnumBasic    CreateDomainResponseBodyServiceTypeEnum = "BASIC"
+	CreateDomainResponseBodyServiceTypeEnumFree     CreateDomainResponseBodyServiceTypeEnum = "FREE"
+	CreateDomainResponseBodyServiceTypeEnumPremium  CreateDomainResponseBodyServiceTypeEnum = "PREMIUM"
+	CreateDomainResponseBodyServiceTypeEnumStandard CreateDomainResponseBodyServiceTypeEnum = "STANDARD"
+	CreateDomainResponseBodyServiceTypeEnumUltimate CreateDomainResponseBodyServiceTypeEnum = "ULTIMATE"
 )
+
 type CreateDomainResponseBodyAdoptStateEnum string
 
 // List of AdoptState
 const (
-    CreateDomainResponseBodyAdoptStateEnumUncertain CreateDomainResponseBodyAdoptStateEnum = "UNCERTAIN"
-    CreateDomainResponseBodyAdoptStateEnumUnused CreateDomainResponseBodyAdoptStateEnum = "UNUSED"
-    CreateDomainResponseBodyAdoptStateEnumUsing CreateDomainResponseBodyAdoptStateEnum = "USING"
+	CreateDomainResponseBodyAdoptStateEnumUncertain CreateDomainResponseBodyAdoptStateEnum = "UNCERTAIN"
+	CreateDomainResponseBodyAdoptStateEnumUnused    CreateDomainResponseBodyAdoptStateEnum = "UNUSED"
+	CreateDomainResponseBodyAdoptStateEnumUsing     CreateDomainResponseBodyAdoptStateEnum = "USING"
 )
+
 type CreateDomainResponseBodyInstanceStatusEnum string
 
 // List of InstanceStatus
 const (
-    CreateDomainResponseBodyInstanceStatusEnumCanceling CreateDomainResponseBodyInstanceStatusEnum = "CANCELING"
-    CreateDomainResponseBodyInstanceStatusEnumDisabled CreateDomainResponseBodyInstanceStatusEnum = "DISABLED"
-    CreateDomainResponseBodyInstanceStatusEnumEnabled CreateDomainResponseBodyInstanceStatusEnum = "ENABLED"
-    CreateDomainResponseBodyInstanceStatusEnumExpired CreateDomainResponseBodyInstanceStatusEnum = "EXPIRED"
+	CreateDomainResponseBodyInstanceStatusEnumCanceling CreateDomainResponseBodyInstanceStatusEnum = "CANCELING"
+	CreateDomainResponseBodyInstanceStatusEnumDisabled  CreateDomainResponseBodyInstanceStatusEnum = "DISABLED"
+	CreateDomainResponseBodyInstanceStatusEnumEnabled   CreateDomainResponseBodyInstanceStatusEnum = "ENABLED"
+	CreateDomainResponseBodyInstanceStatusEnumExpired   CreateDomainResponseBodyInstanceStatusEnum = "EXPIRED"
 )
 
 type CreateDomainResponseBody struct {
-
 	// 套餐类型
 	ServiceType CreateDomainResponseBodyServiceTypeEnum `json:"serviceType,omitempty"`
 

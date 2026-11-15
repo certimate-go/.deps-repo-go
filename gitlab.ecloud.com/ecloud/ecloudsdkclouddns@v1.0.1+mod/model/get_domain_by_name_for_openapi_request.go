@@ -4,9 +4,6 @@
 
 package model
 
-
-
 type GetDomainByNameForOpenapiRequest struct {
-
 	GetDomainByNameForOpenapiQuery *GetDomainByNameForOpenapiQuery `json:"getDomainByNameForOpenapiQuery,omitempty"`
 }

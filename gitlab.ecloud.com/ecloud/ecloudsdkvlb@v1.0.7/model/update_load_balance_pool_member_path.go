@@ -5,15 +5,15 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type UpdateLoadBalancePoolMemberPath struct {
-    position.Path
-    // 负载均衡后端服务器组ID
+	position.Path
+	// 负载均衡后端服务器组ID
 	PoolId *string `json:"poolId,omitempty"`
-    // 后端服务器组下需更新的后端服务器ID
+	// 后端服务器组下需更新的后端服务器ID
 	MemberId *string `json:"memberId,omitempty"`
 }
 
@@ -39,7 +39,6 @@ func (s *UpdateLoadBalancePoolMemberPath) SetMemberId(v string) *UpdateLoadBalan
 	return s
 }
 
-
 type UpdateLoadBalancePoolMemberPathBuilder struct {
 	s *UpdateLoadBalancePoolMemberPath
 }
@@ -63,5 +62,3 @@ func (b *UpdateLoadBalancePoolMemberPathBuilder) MemberId(v string) *UpdateLoadB
 func (b *UpdateLoadBalancePoolMemberPathBuilder) Build() *UpdateLoadBalancePoolMemberPath {
 	return b.s
 }
-
-

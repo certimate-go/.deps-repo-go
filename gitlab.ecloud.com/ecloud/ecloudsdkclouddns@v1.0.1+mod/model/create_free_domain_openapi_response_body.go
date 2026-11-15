@@ -4,36 +4,36 @@
 
 package model
 
-
 type CreateFreeDomainOpenapiResponseBodyServiceTypeEnum string
 
 // List of ServiceType
 const (
-    CreateFreeDomainOpenapiResponseBodyServiceTypeEnumBasic CreateFreeDomainOpenapiResponseBodyServiceTypeEnum = "BASIC"
-    CreateFreeDomainOpenapiResponseBodyServiceTypeEnumPremium CreateFreeDomainOpenapiResponseBodyServiceTypeEnum = "PREMIUM"
-    CreateFreeDomainOpenapiResponseBodyServiceTypeEnumStandard CreateFreeDomainOpenapiResponseBodyServiceTypeEnum = "STANDARD"
-    CreateFreeDomainOpenapiResponseBodyServiceTypeEnumUltimate CreateFreeDomainOpenapiResponseBodyServiceTypeEnum = "ULTIMATE"
+	CreateFreeDomainOpenapiResponseBodyServiceTypeEnumBasic    CreateFreeDomainOpenapiResponseBodyServiceTypeEnum = "BASIC"
+	CreateFreeDomainOpenapiResponseBodyServiceTypeEnumPremium  CreateFreeDomainOpenapiResponseBodyServiceTypeEnum = "PREMIUM"
+	CreateFreeDomainOpenapiResponseBodyServiceTypeEnumStandard CreateFreeDomainOpenapiResponseBodyServiceTypeEnum = "STANDARD"
+	CreateFreeDomainOpenapiResponseBodyServiceTypeEnumUltimate CreateFreeDomainOpenapiResponseBodyServiceTypeEnum = "ULTIMATE"
 )
+
 type CreateFreeDomainOpenapiResponseBodyAdoptStateEnum string
 
 // List of AdoptState
 const (
-    CreateFreeDomainOpenapiResponseBodyAdoptStateEnumUncertain CreateFreeDomainOpenapiResponseBodyAdoptStateEnum = "UNCERTAIN"
-    CreateFreeDomainOpenapiResponseBodyAdoptStateEnumUnused CreateFreeDomainOpenapiResponseBodyAdoptStateEnum = "UNUSED"
-    CreateFreeDomainOpenapiResponseBodyAdoptStateEnumUsing CreateFreeDomainOpenapiResponseBodyAdoptStateEnum = "USING"
+	CreateFreeDomainOpenapiResponseBodyAdoptStateEnumUncertain CreateFreeDomainOpenapiResponseBodyAdoptStateEnum = "UNCERTAIN"
+	CreateFreeDomainOpenapiResponseBodyAdoptStateEnumUnused    CreateFreeDomainOpenapiResponseBodyAdoptStateEnum = "UNUSED"
+	CreateFreeDomainOpenapiResponseBodyAdoptStateEnumUsing     CreateFreeDomainOpenapiResponseBodyAdoptStateEnum = "USING"
 )
+
 type CreateFreeDomainOpenapiResponseBodyInstanceStatusEnum string
 
 // List of InstanceStatus
 const (
-    CreateFreeDomainOpenapiResponseBodyInstanceStatusEnumCanceling CreateFreeDomainOpenapiResponseBodyInstanceStatusEnum = "CANCELING"
-    CreateFreeDomainOpenapiResponseBodyInstanceStatusEnumDisabled CreateFreeDomainOpenapiResponseBodyInstanceStatusEnum = "DISABLED"
-    CreateFreeDomainOpenapiResponseBodyInstanceStatusEnumEnabled CreateFreeDomainOpenapiResponseBodyInstanceStatusEnum = "ENABLED"
-    CreateFreeDomainOpenapiResponseBodyInstanceStatusEnumExpired CreateFreeDomainOpenapiResponseBodyInstanceStatusEnum = "EXPIRED"
+	CreateFreeDomainOpenapiResponseBodyInstanceStatusEnumCanceling CreateFreeDomainOpenapiResponseBodyInstanceStatusEnum = "CANCELING"
+	CreateFreeDomainOpenapiResponseBodyInstanceStatusEnumDisabled  CreateFreeDomainOpenapiResponseBodyInstanceStatusEnum = "DISABLED"
+	CreateFreeDomainOpenapiResponseBodyInstanceStatusEnumEnabled   CreateFreeDomainOpenapiResponseBodyInstanceStatusEnum = "ENABLED"
+	CreateFreeDomainOpenapiResponseBodyInstanceStatusEnumExpired   CreateFreeDomainOpenapiResponseBodyInstanceStatusEnum = "EXPIRED"
 )
 
 type CreateFreeDomainOpenapiResponseBody struct {
-
 	// 套餐类型
 	ServiceType CreateFreeDomainOpenapiResponseBodyServiceTypeEnum `json:"serviceType,omitempty"`
 

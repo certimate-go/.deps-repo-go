@@ -21,6 +21,7 @@ func NewSdkError(errorType string, msg string, err error) *SdkError {
 func (err *SdkError) Error() string {
 	return fmt.Sprintf("{\"errorType\": \"%s\", \"error-message\": \"%s\"}", err.ErrorType, err.ErrorMessage)
 }
+
 func (err *SdkError) DetailError() string {
 	return fmt.Sprintf("{\"errorType\": \"%s\", \"error-message\": \"%s\", \"error\": \"%s\"}", err.ErrorType, err.ErrorMessage, err.error)
 }

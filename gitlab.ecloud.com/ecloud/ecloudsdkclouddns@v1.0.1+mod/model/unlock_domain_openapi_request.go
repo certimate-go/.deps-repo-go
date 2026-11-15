@@ -4,9 +4,6 @@
 
 package model
 
-
-
 type UnlockDomainOpenapiRequest struct {
-
 	UnlockDomainOpenapiBody *UnlockDomainOpenapiBody `json:"unlockDomainOpenapiBody,omitempty"`
 }

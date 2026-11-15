@@ -5,14 +5,14 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type IsPoolDeletablesBody struct {
-    position.Body
-    // 后端服务器组ID列表
-	PoolIds []string 
+	position.Body
+	// 后端服务器组ID列表
+	PoolIds []string
 }
 
 func (s IsPoolDeletablesBody) String() string {
@@ -32,7 +32,6 @@ func (s *IsPoolDeletablesBody) SetPoolIds(v []string) *IsPoolDeletablesBody {
 	return s
 }
 
-
 type IsPoolDeletablesBodyBuilder struct {
 	s *IsPoolDeletablesBody
 }
@@ -51,5 +50,3 @@ func (b *IsPoolDeletablesBodyBuilder) PoolIds(v []string) *IsPoolDeletablesBodyB
 func (b *IsPoolDeletablesBodyBuilder) Build() *IsPoolDeletablesBody {
 	return b.s
 }
-
-

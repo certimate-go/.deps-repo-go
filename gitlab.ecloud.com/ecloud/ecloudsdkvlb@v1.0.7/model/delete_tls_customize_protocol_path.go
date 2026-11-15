@@ -5,13 +5,13 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type DeleteTLSCustomizeProtocolPath struct {
-    position.Path
-    // TLS安全策略ID
+	position.Path
+	// TLS安全策略ID
 	TlsCustomizeProtocolId *int64 `json:"tlsCustomizeProtocolId,omitempty"`
 }
 
@@ -32,7 +32,6 @@ func (s *DeleteTLSCustomizeProtocolPath) SetTlsCustomizeProtocolId(v int64) *Del
 	return s
 }
 
-
 type DeleteTLSCustomizeProtocolPathBuilder struct {
 	s *DeleteTLSCustomizeProtocolPath
 }
@@ -51,5 +50,3 @@ func (b *DeleteTLSCustomizeProtocolPathBuilder) TlsCustomizeProtocolId(v int64) 
 func (b *DeleteTLSCustomizeProtocolPathBuilder) Build() *DeleteTLSCustomizeProtocolPath {
 	return b.s
 }
-
-

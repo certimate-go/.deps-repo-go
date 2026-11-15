@@ -4,17 +4,15 @@
 
 package model
 
-
 type LockDomainOpenapiResponseBodyCodeEnum string
 
 // List of Code
 const (
-    LockDomainOpenapiResponseBodyCodeEnumError LockDomainOpenapiResponseBodyCodeEnum = "ERROR"
-    LockDomainOpenapiResponseBodyCodeEnumSuccess LockDomainOpenapiResponseBodyCodeEnum = "SUCCESS"
+	LockDomainOpenapiResponseBodyCodeEnumError   LockDomainOpenapiResponseBodyCodeEnum = "ERROR"
+	LockDomainOpenapiResponseBodyCodeEnumSuccess LockDomainOpenapiResponseBodyCodeEnum = "SUCCESS"
 )
 
 type LockDomainOpenapiResponseBody struct {
-
 	// 结果说明
 	Msg string `json:"msg,omitempty"`
 

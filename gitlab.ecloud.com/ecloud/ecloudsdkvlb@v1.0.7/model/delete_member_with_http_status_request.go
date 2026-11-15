@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type DeleteMemberWithHttpStatusRequest struct {
-
-
 	DeleteMemberWithHttpStatusHeader *DeleteMemberWithHttpStatusHeader `json:"deleteMemberWithHttpStatusHeader,omitempty"`
 
 	DeleteMemberWithHttpStatusPath *DeleteMemberWithHttpStatusPath `json:"deleteMemberWithHttpStatusPath,omitempty"`
@@ -38,7 +36,6 @@ func (s *DeleteMemberWithHttpStatusRequest) SetDeleteMemberWithHttpStatusPath(v 
 	return s
 }
 
-
 type DeleteMemberWithHttpStatusRequestBuilder struct {
 	s *DeleteMemberWithHttpStatusRequest
 }
@@ -62,5 +59,3 @@ func (b *DeleteMemberWithHttpStatusRequestBuilder) DeleteMemberWithHttpStatusPat
 func (b *DeleteMemberWithHttpStatusRequestBuilder) Build() *DeleteMemberWithHttpStatusRequest {
 	return b.s
 }
-
-

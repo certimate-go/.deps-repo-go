@@ -4,10 +4,7 @@
 
 package model
 
-
-
 type ListNsResponseBody struct {
-
 	// 套餐类型
 	PackageType string `json:"packageType,omitempty"`
 

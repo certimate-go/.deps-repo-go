@@ -4,29 +4,28 @@
 
 package model
 
-
 type ListInstanceResponseResultsPackageTypeEnum string
 
 // List of PackageType
 const (
-    ListInstanceResponseResultsPackageTypeEnumBasic ListInstanceResponseResultsPackageTypeEnum = "BASIC"
-    ListInstanceResponseResultsPackageTypeEnumFree ListInstanceResponseResultsPackageTypeEnum = "FREE"
-    ListInstanceResponseResultsPackageTypeEnumPremium ListInstanceResponseResultsPackageTypeEnum = "PREMIUM"
-    ListInstanceResponseResultsPackageTypeEnumStandard ListInstanceResponseResultsPackageTypeEnum = "STANDARD"
-    ListInstanceResponseResultsPackageTypeEnumUltimate ListInstanceResponseResultsPackageTypeEnum = "ULTIMATE"
+	ListInstanceResponseResultsPackageTypeEnumBasic    ListInstanceResponseResultsPackageTypeEnum = "BASIC"
+	ListInstanceResponseResultsPackageTypeEnumFree     ListInstanceResponseResultsPackageTypeEnum = "FREE"
+	ListInstanceResponseResultsPackageTypeEnumPremium  ListInstanceResponseResultsPackageTypeEnum = "PREMIUM"
+	ListInstanceResponseResultsPackageTypeEnumStandard ListInstanceResponseResultsPackageTypeEnum = "STANDARD"
+	ListInstanceResponseResultsPackageTypeEnumUltimate ListInstanceResponseResultsPackageTypeEnum = "ULTIMATE"
 )
+
 type ListInstanceResponseResultsStatusEnum string
 
 // List of Status
 const (
-    ListInstanceResponseResultsStatusEnumCanceling ListInstanceResponseResultsStatusEnum = "CANCELING"
-    ListInstanceResponseResultsStatusEnumDisabled ListInstanceResponseResultsStatusEnum = "DISABLED"
-    ListInstanceResponseResultsStatusEnumEnabled ListInstanceResponseResultsStatusEnum = "ENABLED"
-    ListInstanceResponseResultsStatusEnumExpired ListInstanceResponseResultsStatusEnum = "EXPIRED"
+	ListInstanceResponseResultsStatusEnumCanceling ListInstanceResponseResultsStatusEnum = "CANCELING"
+	ListInstanceResponseResultsStatusEnumDisabled  ListInstanceResponseResultsStatusEnum = "DISABLED"
+	ListInstanceResponseResultsStatusEnumEnabled   ListInstanceResponseResultsStatusEnum = "ENABLED"
+	ListInstanceResponseResultsStatusEnumExpired   ListInstanceResponseResultsStatusEnum = "EXPIRED"
 )
 
 type ListInstanceResponseResults struct {
-
 	// 订单项ID
 	OrderExtId string `json:"orderExtId,omitempty"`
 

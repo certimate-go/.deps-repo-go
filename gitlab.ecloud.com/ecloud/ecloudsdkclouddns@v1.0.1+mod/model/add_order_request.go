@@ -4,9 +4,6 @@
 
 package model
 
-
-
 type AddOrderRequest struct {
-
 	AddOrderBody *AddOrderBody `json:"addOrderBody,omitempty"`
 }

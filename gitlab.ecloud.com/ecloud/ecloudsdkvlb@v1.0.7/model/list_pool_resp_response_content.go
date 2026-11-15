@@ -5,93 +5,96 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
+
 type ListPoolRespResponseContentLbAlgorithmEnum string
 
 // List of LbAlgorithm
 const (
-    ListPoolRespResponseContentLbAlgorithmEnumRoundRobin ListPoolRespResponseContentLbAlgorithmEnum = "ROUND_ROBIN"
-    ListPoolRespResponseContentLbAlgorithmEnumLeastConnections ListPoolRespResponseContentLbAlgorithmEnum = "LEAST_CONNECTIONS"
-    ListPoolRespResponseContentLbAlgorithmEnumSourceIp ListPoolRespResponseContentLbAlgorithmEnum = "SOURCE_IP"
+	ListPoolRespResponseContentLbAlgorithmEnumRoundRobin       ListPoolRespResponseContentLbAlgorithmEnum = "ROUND_ROBIN"
+	ListPoolRespResponseContentLbAlgorithmEnumLeastConnections ListPoolRespResponseContentLbAlgorithmEnum = "LEAST_CONNECTIONS"
+	ListPoolRespResponseContentLbAlgorithmEnumSourceIp         ListPoolRespResponseContentLbAlgorithmEnum = "SOURCE_IP"
 )
+
 type ListPoolRespResponseContentProtocolEnum string
 
 // List of Protocol
 const (
-    ListPoolRespResponseContentProtocolEnumHttp ListPoolRespResponseContentProtocolEnum = "HTTP"
-    ListPoolRespResponseContentProtocolEnumHttps ListPoolRespResponseContentProtocolEnum = "HTTPS"
-    ListPoolRespResponseContentProtocolEnumTcp ListPoolRespResponseContentProtocolEnum = "TCP"
-    ListPoolRespResponseContentProtocolEnumUdp ListPoolRespResponseContentProtocolEnum = "UDP"
-    ListPoolRespResponseContentProtocolEnumTerminatedHttps ListPoolRespResponseContentProtocolEnum = "TERMINATED_HTTPS"
-    ListPoolRespResponseContentProtocolEnumSip ListPoolRespResponseContentProtocolEnum = "SIP"
+	ListPoolRespResponseContentProtocolEnumHttp            ListPoolRespResponseContentProtocolEnum = "HTTP"
+	ListPoolRespResponseContentProtocolEnumHttps           ListPoolRespResponseContentProtocolEnum = "HTTPS"
+	ListPoolRespResponseContentProtocolEnumTcp             ListPoolRespResponseContentProtocolEnum = "TCP"
+	ListPoolRespResponseContentProtocolEnumUdp             ListPoolRespResponseContentProtocolEnum = "UDP"
+	ListPoolRespResponseContentProtocolEnumTerminatedHttps ListPoolRespResponseContentProtocolEnum = "TERMINATED_HTTPS"
+	ListPoolRespResponseContentProtocolEnumSip             ListPoolRespResponseContentProtocolEnum = "SIP"
 )
+
 type ListPoolRespResponseContentProvisioningStatusEnum string
 
 // List of ProvisioningStatus
 const (
-    ListPoolRespResponseContentProvisioningStatusEnumActive ListPoolRespResponseContentProvisioningStatusEnum = "ACTIVE"
-    ListPoolRespResponseContentProvisioningStatusEnumBuild ListPoolRespResponseContentProvisioningStatusEnum = "BUILD"
-    ListPoolRespResponseContentProvisioningStatusEnumDown ListPoolRespResponseContentProvisioningStatusEnum = "DOWN"
-    ListPoolRespResponseContentProvisioningStatusEnumError ListPoolRespResponseContentProvisioningStatusEnum = "ERROR"
-    ListPoolRespResponseContentProvisioningStatusEnumPendingCreate ListPoolRespResponseContentProvisioningStatusEnum = "PENDING_CREATE"
-    ListPoolRespResponseContentProvisioningStatusEnumPendingUpdate ListPoolRespResponseContentProvisioningStatusEnum = "PENDING_UPDATE"
-    ListPoolRespResponseContentProvisioningStatusEnumPendingDelete ListPoolRespResponseContentProvisioningStatusEnum = "PENDING_DELETE"
-    ListPoolRespResponseContentProvisioningStatusEnumMigrating ListPoolRespResponseContentProvisioningStatusEnum = "MIGRATING"
-    ListPoolRespResponseContentProvisioningStatusEnumDeleted ListPoolRespResponseContentProvisioningStatusEnum = "DELETED"
-    ListPoolRespResponseContentProvisioningStatusEnumUnrecognized ListPoolRespResponseContentProvisioningStatusEnum = "UNRECOGNIZED"
+	ListPoolRespResponseContentProvisioningStatusEnumActive        ListPoolRespResponseContentProvisioningStatusEnum = "ACTIVE"
+	ListPoolRespResponseContentProvisioningStatusEnumBuild         ListPoolRespResponseContentProvisioningStatusEnum = "BUILD"
+	ListPoolRespResponseContentProvisioningStatusEnumDown          ListPoolRespResponseContentProvisioningStatusEnum = "DOWN"
+	ListPoolRespResponseContentProvisioningStatusEnumError         ListPoolRespResponseContentProvisioningStatusEnum = "ERROR"
+	ListPoolRespResponseContentProvisioningStatusEnumPendingCreate ListPoolRespResponseContentProvisioningStatusEnum = "PENDING_CREATE"
+	ListPoolRespResponseContentProvisioningStatusEnumPendingUpdate ListPoolRespResponseContentProvisioningStatusEnum = "PENDING_UPDATE"
+	ListPoolRespResponseContentProvisioningStatusEnumPendingDelete ListPoolRespResponseContentProvisioningStatusEnum = "PENDING_DELETE"
+	ListPoolRespResponseContentProvisioningStatusEnumMigrating     ListPoolRespResponseContentProvisioningStatusEnum = "MIGRATING"
+	ListPoolRespResponseContentProvisioningStatusEnumDeleted       ListPoolRespResponseContentProvisioningStatusEnum = "DELETED"
+	ListPoolRespResponseContentProvisioningStatusEnumUnrecognized  ListPoolRespResponseContentProvisioningStatusEnum = "UNRECOGNIZED"
 )
+
 type ListPoolRespResponseContentSessionPersistenceEnum string
 
 // List of SessionPersistence
 const (
-    ListPoolRespResponseContentSessionPersistenceEnumNone ListPoolRespResponseContentSessionPersistenceEnum = "NONE"
-    ListPoolRespResponseContentSessionPersistenceEnumAppCookie ListPoolRespResponseContentSessionPersistenceEnum = "APP_COOKIE"
-    ListPoolRespResponseContentSessionPersistenceEnumHttpCookie ListPoolRespResponseContentSessionPersistenceEnum = "HTTP_COOKIE"
-    ListPoolRespResponseContentSessionPersistenceEnumSourceIp ListPoolRespResponseContentSessionPersistenceEnum = "SOURCE_IP"
-    ListPoolRespResponseContentSessionPersistenceEnumSourceIpPort ListPoolRespResponseContentSessionPersistenceEnum = "SOURCE_IP_PORT"
-    ListPoolRespResponseContentSessionPersistenceEnumCallId ListPoolRespResponseContentSessionPersistenceEnum = "CALL_ID"
+	ListPoolRespResponseContentSessionPersistenceEnumNone         ListPoolRespResponseContentSessionPersistenceEnum = "NONE"
+	ListPoolRespResponseContentSessionPersistenceEnumAppCookie    ListPoolRespResponseContentSessionPersistenceEnum = "APP_COOKIE"
+	ListPoolRespResponseContentSessionPersistenceEnumHttpCookie   ListPoolRespResponseContentSessionPersistenceEnum = "HTTP_COOKIE"
+	ListPoolRespResponseContentSessionPersistenceEnumSourceIp     ListPoolRespResponseContentSessionPersistenceEnum = "SOURCE_IP"
+	ListPoolRespResponseContentSessionPersistenceEnumSourceIpPort ListPoolRespResponseContentSessionPersistenceEnum = "SOURCE_IP_PORT"
+	ListPoolRespResponseContentSessionPersistenceEnumCallId       ListPoolRespResponseContentSessionPersistenceEnum = "CALL_ID"
 )
 
 type ListPoolRespResponseContent struct {
-
-    // 修改时间
+	// 修改时间
 	ModifiedTime *string `json:"modifiedTime,omitempty"`
-    // 监听器的调度算法：ROUND_ROBIN（轮询算法），LEAST_CONNECTIONS（最小连接算法），SOURCE_IP（源IP地址算法）
+	// 监听器的调度算法：ROUND_ROBIN（轮询算法），LEAST_CONNECTIONS（最小连接算法），SOURCE_IP（源IP地址算法）
 	LbAlgorithm *ListPoolRespResponseContentLbAlgorithmEnum `json:"lbAlgorithm,omitempty"`
-    // 描述
+	// 描述
 	Description *string `json:"description,omitempty"`
-    // 负载均衡ID
+	// 负载均衡ID
 	LoadBalanceId *string `json:"loadBalanceId,omitempty"`
-    // 是否是多AZ场景
+	// 是否是多AZ场景
 	IsMultiAz *bool `json:"isMultiAz,omitempty"`
-    // 负载均衡监听器ID
+	// 负载均衡监听器ID
 	ListenerId *string `json:"listenerId,omitempty"`
-    // 健康检查相关信息
+	// 健康检查相关信息
 	HealthMonitorResp *ListPoolRespResponseHealthMonitorResp `json:"healthMonitorResp,omitempty"`
-    // 监听器协议类型
+	// 监听器协议类型
 	Protocol *ListPoolRespResponseContentProtocolEnum `json:"protocol,omitempty"`
-    // 绑定的主机数量
+	// 绑定的主机数量
 	CountBindMember *int32 `json:"countBindMember,omitempty"`
-    // 是否删除
+	// 是否删除
 	Deleted *bool `json:"deleted,omitempty"`
-    // 后端服务器组状态：ACTIVE（运行），BUILD（创建），DOWN（停止），ERROR（错误），PENDING_CREATE（创建挂起），PENDING_UPDATE（更新挂起），PENDING_DELETE（删除挂起），DELETED（已删除），MIGRATING（迁移中），UPGRADING（升级中），PART_DELETED（部分删除），UNRECOGNIZED（未识别状态）
+	// 后端服务器组状态：ACTIVE（运行），BUILD（创建），DOWN（停止），ERROR（错误），PENDING_CREATE（创建挂起），PENDING_UPDATE（更新挂起），PENDING_DELETE（删除挂起），DELETED（已删除），MIGRATING（迁移中），UPGRADING（升级中），PART_DELETED（部分删除），UNRECOGNIZED（未识别状态）
 	ProvisioningStatus *ListPoolRespResponseContentProvisioningStatusEnum `json:"provisioningStatus,omitempty"`
-    // 绑定的转发策略
+	// 绑定的转发策略
 	L7PolicyResps *[]ListPoolRespResponseL7PolicyResps `json:"l7PolicyResps,omitempty"`
-    // 负载均衡监听器名称
+	// 负载均衡监听器名称
 	ListenerName *string `json:"listenerName,omitempty"`
-    // 服务器组ID
+	// 服务器组ID
 	PoolId *string `json:"poolId,omitempty"`
-    // 会话保持类型：NONE（无会话保持），APP_COOKIE（基于应用程序Cookie的会话保持），HTTP_COOKIE（基于负载均衡器植入Cookie的会话保持），SOURCE_IP（基于源IP地址的会话保持），SOURCE_IP_PORT（基于源IP地址和源端口的会话保持），CALL_ID（基于呼叫ID的会话保持-特定场景）
+	// 会话保持类型：NONE（无会话保持），APP_COOKIE（基于应用程序Cookie的会话保持），HTTP_COOKIE（基于负载均衡器植入Cookie的会话保持），SOURCE_IP（基于源IP地址的会话保持），SOURCE_IP_PORT（基于源IP地址和源端口的会话保持），CALL_ID（基于呼叫ID的会话保持-特定场景）
 	SessionPersistence *ListPoolRespResponseContentSessionPersistenceEnum `json:"sessionPersistence,omitempty"`
-    // 创建时间
+	// 创建时间
 	CreatedTime *string `json:"createdTime,omitempty"`
-    // 多AZ场景下创建请求的requestId唯一标志为UUID
+	// 多AZ场景下创建请求的requestId唯一标志为UUID
 	MultiAzUuid *string `json:"multiAzUuid,omitempty"`
-    // cookie名称
+	// cookie名称
 	CookieName *string `json:"cookieName,omitempty"`
-    // 服务器组名称
+	// 服务器组名称
 	PoolName *string `json:"poolName,omitempty"`
 }
 
@@ -202,7 +205,6 @@ func (s *ListPoolRespResponseContent) SetPoolName(v string) *ListPoolRespRespons
 	return s
 }
 
-
 type ListPoolRespResponseContentBuilder struct {
 	s *ListPoolRespResponseContent
 }
@@ -311,5 +313,3 @@ func (b *ListPoolRespResponseContentBuilder) PoolName(v string) *ListPoolRespRes
 func (b *ListPoolRespResponseContentBuilder) Build() *ListPoolRespResponseContent {
 	return b.s
 }
-
-

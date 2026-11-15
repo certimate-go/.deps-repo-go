@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type ListTLSCustomizeProtocolRespRequest struct {
-
-
 	ListTLSCustomizeProtocolRespQuery *ListTLSCustomizeProtocolRespQuery `json:"listTLSCustomizeProtocolRespQuery,omitempty"`
 }
 
@@ -31,7 +29,6 @@ func (s *ListTLSCustomizeProtocolRespRequest) SetListTLSCustomizeProtocolRespQue
 	return s
 }
 
-
 type ListTLSCustomizeProtocolRespRequestBuilder struct {
 	s *ListTLSCustomizeProtocolRespRequest
 }
@@ -50,5 +47,3 @@ func (b *ListTLSCustomizeProtocolRespRequestBuilder) ListTLSCustomizeProtocolRes
 func (b *ListTLSCustomizeProtocolRespRequestBuilder) Build() *ListTLSCustomizeProtocolRespRequest {
 	return b.s
 }
-
-

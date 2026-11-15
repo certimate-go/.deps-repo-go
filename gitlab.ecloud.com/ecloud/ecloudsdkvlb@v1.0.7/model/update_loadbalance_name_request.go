@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type UpdateLoadbalanceNameRequest struct {
-
-
 	UpdateLoadbalanceNameBody *UpdateLoadbalanceNameBody `json:"updateLoadbalanceNameBody,omitempty"`
 }
 
@@ -31,7 +29,6 @@ func (s *UpdateLoadbalanceNameRequest) SetUpdateLoadbalanceNameBody(v *UpdateLoa
 	return s
 }
 
-
 type UpdateLoadbalanceNameRequestBuilder struct {
 	s *UpdateLoadbalanceNameRequest
 }
@@ -50,5 +47,3 @@ func (b *UpdateLoadbalanceNameRequestBuilder) UpdateLoadbalanceNameBody(v *Updat
 func (b *UpdateLoadbalanceNameRequestBuilder) Build() *UpdateLoadbalanceNameRequest {
 	return b.s
 }
-
-

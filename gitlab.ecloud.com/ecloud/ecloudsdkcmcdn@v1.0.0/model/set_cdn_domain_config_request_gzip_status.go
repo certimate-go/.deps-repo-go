@@ -5,12 +5,11 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type SetCdnDomainConfigRequestGzipStatus struct {
-
-    // 是否启用
+	// 是否启用
 	Enable *bool `json:"enable,omitempty"`
 }
 
@@ -31,7 +30,6 @@ func (s *SetCdnDomainConfigRequestGzipStatus) SetEnable(v bool) *SetCdnDomainCon
 	return s
 }
 
-
 type SetCdnDomainConfigRequestGzipStatusBuilder struct {
 	s *SetCdnDomainConfigRequestGzipStatus
 }
@@ -50,5 +48,3 @@ func (b *SetCdnDomainConfigRequestGzipStatusBuilder) Enable(v bool) *SetCdnDomai
 func (b *SetCdnDomainConfigRequestGzipStatusBuilder) Build() *SetCdnDomainConfigRequestGzipStatus {
 	return b.s
 }
-
-

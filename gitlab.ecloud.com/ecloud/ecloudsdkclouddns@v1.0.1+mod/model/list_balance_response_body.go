@@ -4,10 +4,7 @@
 
 package model
 
-
-
 type ListBalanceResponseBody struct {
-
 	// 总页数
 	TotalPages *int32 `json:"totalPages,omitempty"`
 

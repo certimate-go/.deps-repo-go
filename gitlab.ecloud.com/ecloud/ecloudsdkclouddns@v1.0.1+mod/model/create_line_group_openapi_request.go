@@ -4,9 +4,6 @@
 
 package model
 
-
-
 type CreateLineGroupOpenapiRequest struct {
-
 	CreateLineGroupOpenapiBody *CreateLineGroupOpenapiBody `json:"createLineGroupOpenapiBody,omitempty"`
 }

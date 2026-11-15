@@ -4,19 +4,17 @@
 
 package model
 
-
 type RenewProductOpenapiResponseStateEnum string
 
 // List of State
 const (
-    RenewProductOpenapiResponseStateEnumError RenewProductOpenapiResponseStateEnum = "ERROR"
-    RenewProductOpenapiResponseStateEnumException RenewProductOpenapiResponseStateEnum = "EXCEPTION"
-    RenewProductOpenapiResponseStateEnumForbidden RenewProductOpenapiResponseStateEnum = "FORBIDDEN"
-    RenewProductOpenapiResponseStateEnumOk RenewProductOpenapiResponseStateEnum = "OK"
+	RenewProductOpenapiResponseStateEnumError     RenewProductOpenapiResponseStateEnum = "ERROR"
+	RenewProductOpenapiResponseStateEnumException RenewProductOpenapiResponseStateEnum = "EXCEPTION"
+	RenewProductOpenapiResponseStateEnumForbidden RenewProductOpenapiResponseStateEnum = "FORBIDDEN"
+	RenewProductOpenapiResponseStateEnumOk        RenewProductOpenapiResponseStateEnum = "OK"
 )
 
 type RenewProductOpenapiResponse struct {
-
 	RequestId string `json:"requestId,omitempty"`
 
 	ErrorMessage string `json:"errorMessage,omitempty"`

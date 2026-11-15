@@ -4,28 +4,27 @@
 
 package model
 
-
 type ListInstanceForOpenapiResponseDataPackageTypeEnum string
 
 // List of PackageType
 const (
-    ListInstanceForOpenapiResponseDataPackageTypeEnumBasic ListInstanceForOpenapiResponseDataPackageTypeEnum = "BASIC"
-    ListInstanceForOpenapiResponseDataPackageTypeEnumPremium ListInstanceForOpenapiResponseDataPackageTypeEnum = "PREMIUM"
-    ListInstanceForOpenapiResponseDataPackageTypeEnumStandard ListInstanceForOpenapiResponseDataPackageTypeEnum = "STANDARD"
-    ListInstanceForOpenapiResponseDataPackageTypeEnumUltimate ListInstanceForOpenapiResponseDataPackageTypeEnum = "ULTIMATE"
+	ListInstanceForOpenapiResponseDataPackageTypeEnumBasic    ListInstanceForOpenapiResponseDataPackageTypeEnum = "BASIC"
+	ListInstanceForOpenapiResponseDataPackageTypeEnumPremium  ListInstanceForOpenapiResponseDataPackageTypeEnum = "PREMIUM"
+	ListInstanceForOpenapiResponseDataPackageTypeEnumStandard ListInstanceForOpenapiResponseDataPackageTypeEnum = "STANDARD"
+	ListInstanceForOpenapiResponseDataPackageTypeEnumUltimate ListInstanceForOpenapiResponseDataPackageTypeEnum = "ULTIMATE"
 )
+
 type ListInstanceForOpenapiResponseDataStatusEnum string
 
 // List of Status
 const (
-    ListInstanceForOpenapiResponseDataStatusEnumCanceling ListInstanceForOpenapiResponseDataStatusEnum = "CANCELING"
-    ListInstanceForOpenapiResponseDataStatusEnumDisabled ListInstanceForOpenapiResponseDataStatusEnum = "DISABLED"
-    ListInstanceForOpenapiResponseDataStatusEnumEnabled ListInstanceForOpenapiResponseDataStatusEnum = "ENABLED"
-    ListInstanceForOpenapiResponseDataStatusEnumExpired ListInstanceForOpenapiResponseDataStatusEnum = "EXPIRED"
+	ListInstanceForOpenapiResponseDataStatusEnumCanceling ListInstanceForOpenapiResponseDataStatusEnum = "CANCELING"
+	ListInstanceForOpenapiResponseDataStatusEnumDisabled  ListInstanceForOpenapiResponseDataStatusEnum = "DISABLED"
+	ListInstanceForOpenapiResponseDataStatusEnumEnabled   ListInstanceForOpenapiResponseDataStatusEnum = "ENABLED"
+	ListInstanceForOpenapiResponseDataStatusEnumExpired   ListInstanceForOpenapiResponseDataStatusEnum = "EXPIRED"
 )
 
 type ListInstanceForOpenapiResponseData struct {
-
 	// 订单ID
 	OrderId string `json:"orderId,omitempty"`
 

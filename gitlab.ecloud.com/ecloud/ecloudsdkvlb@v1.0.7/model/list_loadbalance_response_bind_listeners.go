@@ -5,52 +5,53 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
+
 type ListLoadbalanceResponseBindListenersProtocolEnum string
 
 // List of Protocol
 const (
-    ListLoadbalanceResponseBindListenersProtocolEnumHttp ListLoadbalanceResponseBindListenersProtocolEnum = "HTTP"
-    ListLoadbalanceResponseBindListenersProtocolEnumHttps ListLoadbalanceResponseBindListenersProtocolEnum = "HTTPS"
-    ListLoadbalanceResponseBindListenersProtocolEnumTcp ListLoadbalanceResponseBindListenersProtocolEnum = "TCP"
-    ListLoadbalanceResponseBindListenersProtocolEnumUdp ListLoadbalanceResponseBindListenersProtocolEnum = "UDP"
-    ListLoadbalanceResponseBindListenersProtocolEnumTerminatedHttps ListLoadbalanceResponseBindListenersProtocolEnum = "TERMINATED_HTTPS"
-    ListLoadbalanceResponseBindListenersProtocolEnumSip ListLoadbalanceResponseBindListenersProtocolEnum = "SIP"
+	ListLoadbalanceResponseBindListenersProtocolEnumHttp            ListLoadbalanceResponseBindListenersProtocolEnum = "HTTP"
+	ListLoadbalanceResponseBindListenersProtocolEnumHttps           ListLoadbalanceResponseBindListenersProtocolEnum = "HTTPS"
+	ListLoadbalanceResponseBindListenersProtocolEnumTcp             ListLoadbalanceResponseBindListenersProtocolEnum = "TCP"
+	ListLoadbalanceResponseBindListenersProtocolEnumUdp             ListLoadbalanceResponseBindListenersProtocolEnum = "UDP"
+	ListLoadbalanceResponseBindListenersProtocolEnumTerminatedHttps ListLoadbalanceResponseBindListenersProtocolEnum = "TERMINATED_HTTPS"
+	ListLoadbalanceResponseBindListenersProtocolEnumSip             ListLoadbalanceResponseBindListenersProtocolEnum = "SIP"
 )
+
 type ListLoadbalanceResponseBindListenersOpStatusEnum string
 
 // List of OpStatus
 const (
-    ListLoadbalanceResponseBindListenersOpStatusEnumInactive ListLoadbalanceResponseBindListenersOpStatusEnum = "INACTIVE"
-    ListLoadbalanceResponseBindListenersOpStatusEnumActive ListLoadbalanceResponseBindListenersOpStatusEnum = "ACTIVE"
-    ListLoadbalanceResponseBindListenersOpStatusEnumCreating ListLoadbalanceResponseBindListenersOpStatusEnum = "CREATING"
-    ListLoadbalanceResponseBindListenersOpStatusEnumDeleting ListLoadbalanceResponseBindListenersOpStatusEnum = "DELETING"
-    ListLoadbalanceResponseBindListenersOpStatusEnumUpdating ListLoadbalanceResponseBindListenersOpStatusEnum = "UPDATING"
-    ListLoadbalanceResponseBindListenersOpStatusEnumError ListLoadbalanceResponseBindListenersOpStatusEnum = "ERROR"
+	ListLoadbalanceResponseBindListenersOpStatusEnumInactive ListLoadbalanceResponseBindListenersOpStatusEnum = "INACTIVE"
+	ListLoadbalanceResponseBindListenersOpStatusEnumActive   ListLoadbalanceResponseBindListenersOpStatusEnum = "ACTIVE"
+	ListLoadbalanceResponseBindListenersOpStatusEnumCreating ListLoadbalanceResponseBindListenersOpStatusEnum = "CREATING"
+	ListLoadbalanceResponseBindListenersOpStatusEnumDeleting ListLoadbalanceResponseBindListenersOpStatusEnum = "DELETING"
+	ListLoadbalanceResponseBindListenersOpStatusEnumUpdating ListLoadbalanceResponseBindListenersOpStatusEnum = "UPDATING"
+	ListLoadbalanceResponseBindListenersOpStatusEnumError    ListLoadbalanceResponseBindListenersOpStatusEnum = "ERROR"
 )
 
 type ListLoadbalanceResponseBindListeners struct {
-
-    // 弹性负载均衡规格
+	// 弹性负载均衡规格
 	Flavor *string `json:"flavor,omitempty"`
-    // 绑定的访问控制组类型: 黑名单，白名单
+	// 绑定的访问控制组类型: 黑名单，白名单
 	GroupType *string `json:"groupType,omitempty"`
-    // 监听器协议
+	// 监听器协议
 	Protocol *ListLoadbalanceResponseBindListenersProtocolEnum `json:"protocol,omitempty"`
-    // 弹性负载均衡厂商
+	// 弹性负载均衡厂商
 	Provider *string `json:"provider,omitempty"`
-    // 监听器名称
+	// 监听器名称
 	Name *string `json:"name,omitempty"`
-    // 访问控制是否生效
+	// 访问控制是否生效
 	Active *bool `json:"active,omitempty"`
-    // 监听器ID
+	// 监听器ID
 	Id *string `json:"id,omitempty"`
-    // 监听器状态
+	// 监听器状态
 	OpStatus *ListLoadbalanceResponseBindListenersOpStatusEnum `json:"opStatus,omitempty"`
-    // 弹性负载均衡的ID
+	// 弹性负载均衡的ID
 	LoadBalanceId *string `json:"loadBalanceId,omitempty"`
-    // 协议端口号
+	// 协议端口号
 	ProtocolPort *int32 `json:"protocolPort,omitempty"`
 }
 
@@ -116,7 +117,6 @@ func (s *ListLoadbalanceResponseBindListeners) SetProtocolPort(v int32) *ListLoa
 	return s
 }
 
-
 type ListLoadbalanceResponseBindListenersBuilder struct {
 	s *ListLoadbalanceResponseBindListeners
 }
@@ -180,5 +180,3 @@ func (b *ListLoadbalanceResponseBindListenersBuilder) ProtocolPort(v int32) *Lis
 func (b *ListLoadbalanceResponseBindListenersBuilder) Build() *ListLoadbalanceResponseBindListeners {
 	return b.s
 }
-
-

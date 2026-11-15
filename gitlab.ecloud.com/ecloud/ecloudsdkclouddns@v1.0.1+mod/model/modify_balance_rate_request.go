@@ -4,9 +4,6 @@
 
 package model
 
-
-
 type ModifyBalanceRateRequest struct {
-
 	ModifyBalanceRateBody *ModifyBalanceRateBody `json:"modifyBalanceRateBody,omitempty"`
 }

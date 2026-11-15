@@ -5,13 +5,13 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type UnbindFipPath struct {
-    position.Path
-    // 绑定的负载均衡ID
+	position.Path
+	// 绑定的负载均衡ID
 	LoadBalanceId *string `json:"loadBalanceId,omitempty"`
 }
 
@@ -32,7 +32,6 @@ func (s *UnbindFipPath) SetLoadBalanceId(v string) *UnbindFipPath {
 	return s
 }
 
-
 type UnbindFipPathBuilder struct {
 	s *UnbindFipPath
 }
@@ -51,5 +50,3 @@ func (b *UnbindFipPathBuilder) LoadBalanceId(v string) *UnbindFipPathBuilder {
 func (b *UnbindFipPathBuilder) Build() *UnbindFipPath {
 	return b.s
 }
-
-

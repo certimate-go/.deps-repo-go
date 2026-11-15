@@ -5,14 +5,14 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type BatchDeleteControlGroupBody struct {
-    position.Body
-    // 访问控制组ID
-	AccessControlGroupIds []string 
+	position.Body
+	// 访问控制组ID
+	AccessControlGroupIds []string
 }
 
 func (s BatchDeleteControlGroupBody) String() string {
@@ -32,7 +32,6 @@ func (s *BatchDeleteControlGroupBody) SetAccessControlGroupIds(v []string) *Batc
 	return s
 }
 
-
 type BatchDeleteControlGroupBodyBuilder struct {
 	s *BatchDeleteControlGroupBody
 }
@@ -51,5 +50,3 @@ func (b *BatchDeleteControlGroupBodyBuilder) AccessControlGroupIds(v []string) *
 func (b *BatchDeleteControlGroupBodyBuilder) Build() *BatchDeleteControlGroupBody {
 	return b.s
 }
-
-

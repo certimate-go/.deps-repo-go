@@ -4,10 +4,7 @@
 
 package model
 
-
-
 type GetOperationLogRequestOperationTime struct {
-
 	// 结束时间
 	Until string `json:"until"`
 

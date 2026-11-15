@@ -5,25 +5,26 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
+
 type BindFipBodyTypeEnum string
 
 // List of Type
 const (
-    BindFipBodyTypeEnumElb BindFipBodyTypeEnum = "elb"
+	BindFipBodyTypeEnumElb BindFipBodyTypeEnum = "elb"
 )
 
 type BindFipBody struct {
-    position.Body
-    // 要绑定的资源ID
+	position.Body
+	// 要绑定的资源ID
 	ResourceId *string `json:"resourceId,omitempty"`
-    // 公网IP ID
+	// 公网IP ID
 	IpId *string `json:"ipId,omitempty"`
-    // 网卡ID
+	// 网卡ID
 	PortId *string `json:"portId,omitempty"`
-    // 公网IP绑定类型,负载均衡:elb
+	// 公网IP绑定类型,负载均衡:elb
 	Type *BindFipBodyTypeEnum `json:"type,omitempty"`
 }
 
@@ -59,7 +60,6 @@ func (s *BindFipBody) SetType(v BindFipBodyTypeEnum) *BindFipBody {
 	return s
 }
 
-
 type BindFipBodyBuilder struct {
 	s *BindFipBody
 }
@@ -93,5 +93,3 @@ func (b *BindFipBodyBuilder) Type(v BindFipBodyTypeEnum) *BindFipBodyBuilder {
 func (b *BindFipBodyBuilder) Build() *BindFipBody {
 	return b.s
 }
-
-

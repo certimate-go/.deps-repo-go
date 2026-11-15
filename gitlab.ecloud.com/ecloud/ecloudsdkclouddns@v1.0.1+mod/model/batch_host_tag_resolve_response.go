@@ -4,9 +4,6 @@
 
 package model
 
-
-
 type BatchHostTagResolveResponse struct {
-
 	Dns *[]BatchHostTagResolveResponseDns `json:"dns,omitempty"`
 }

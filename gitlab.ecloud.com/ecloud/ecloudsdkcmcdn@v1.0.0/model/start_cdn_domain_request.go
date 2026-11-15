@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type StartCdnDomainRequest struct {
-
-
 	StartCdnDomainQuery *StartCdnDomainQuery `json:"startCdnDomainQuery,omitempty"`
 }
 
@@ -31,7 +29,6 @@ func (s *StartCdnDomainRequest) SetStartCdnDomainQuery(v *StartCdnDomainQuery) *
 	return s
 }
 
-
 type StartCdnDomainRequestBuilder struct {
 	s *StartCdnDomainRequest
 }
@@ -50,5 +47,3 @@ func (b *StartCdnDomainRequestBuilder) StartCdnDomainQuery(v *StartCdnDomainQuer
 func (b *StartCdnDomainRequestBuilder) Build() *StartCdnDomainRequest {
 	return b.s
 }
-
-

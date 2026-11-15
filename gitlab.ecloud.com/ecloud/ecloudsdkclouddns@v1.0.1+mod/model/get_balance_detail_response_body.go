@@ -4,35 +4,34 @@
 
 package model
 
-
 type GetBalanceDetailResponseBodyStateEnum string
 
 // List of State
 const (
-    GetBalanceDetailResponseBodyStateEnumDisabled GetBalanceDetailResponseBodyStateEnum = "DISABLED"
-    GetBalanceDetailResponseBodyStateEnumEnabled GetBalanceDetailResponseBodyStateEnum = "ENABLED"
+	GetBalanceDetailResponseBodyStateEnumDisabled GetBalanceDetailResponseBodyStateEnum = "DISABLED"
+	GetBalanceDetailResponseBodyStateEnumEnabled  GetBalanceDetailResponseBodyStateEnum = "ENABLED"
 )
+
 type GetBalanceDetailResponseBodyTypeEnum string
 
 // List of Type
 const (
-    GetBalanceDetailResponseBodyTypeEnumA GetBalanceDetailResponseBodyTypeEnum = "A"
-    GetBalanceDetailResponseBodyTypeEnumAaaa GetBalanceDetailResponseBodyTypeEnum = "AAAA"
-    GetBalanceDetailResponseBodyTypeEnumCaa GetBalanceDetailResponseBodyTypeEnum = "CAA"
-    GetBalanceDetailResponseBodyTypeEnumCmauth GetBalanceDetailResponseBodyTypeEnum = "CMAUTH"
-    GetBalanceDetailResponseBodyTypeEnumCname GetBalanceDetailResponseBodyTypeEnum = "CNAME"
-    GetBalanceDetailResponseBodyTypeEnumMx GetBalanceDetailResponseBodyTypeEnum = "MX"
-    GetBalanceDetailResponseBodyTypeEnumNs GetBalanceDetailResponseBodyTypeEnum = "NS"
-    GetBalanceDetailResponseBodyTypeEnumPtr GetBalanceDetailResponseBodyTypeEnum = "PTR"
-    GetBalanceDetailResponseBodyTypeEnumRp GetBalanceDetailResponseBodyTypeEnum = "RP"
-    GetBalanceDetailResponseBodyTypeEnumSpf GetBalanceDetailResponseBodyTypeEnum = "SPF"
-    GetBalanceDetailResponseBodyTypeEnumSrv GetBalanceDetailResponseBodyTypeEnum = "SRV"
-    GetBalanceDetailResponseBodyTypeEnumTxt GetBalanceDetailResponseBodyTypeEnum = "TXT"
-    GetBalanceDetailResponseBodyTypeEnumUrl GetBalanceDetailResponseBodyTypeEnum = "URL"
+	GetBalanceDetailResponseBodyTypeEnumA      GetBalanceDetailResponseBodyTypeEnum = "A"
+	GetBalanceDetailResponseBodyTypeEnumAaaa   GetBalanceDetailResponseBodyTypeEnum = "AAAA"
+	GetBalanceDetailResponseBodyTypeEnumCaa    GetBalanceDetailResponseBodyTypeEnum = "CAA"
+	GetBalanceDetailResponseBodyTypeEnumCmauth GetBalanceDetailResponseBodyTypeEnum = "CMAUTH"
+	GetBalanceDetailResponseBodyTypeEnumCname  GetBalanceDetailResponseBodyTypeEnum = "CNAME"
+	GetBalanceDetailResponseBodyTypeEnumMx     GetBalanceDetailResponseBodyTypeEnum = "MX"
+	GetBalanceDetailResponseBodyTypeEnumNs     GetBalanceDetailResponseBodyTypeEnum = "NS"
+	GetBalanceDetailResponseBodyTypeEnumPtr    GetBalanceDetailResponseBodyTypeEnum = "PTR"
+	GetBalanceDetailResponseBodyTypeEnumRp     GetBalanceDetailResponseBodyTypeEnum = "RP"
+	GetBalanceDetailResponseBodyTypeEnumSpf    GetBalanceDetailResponseBodyTypeEnum = "SPF"
+	GetBalanceDetailResponseBodyTypeEnumSrv    GetBalanceDetailResponseBodyTypeEnum = "SRV"
+	GetBalanceDetailResponseBodyTypeEnumTxt    GetBalanceDetailResponseBodyTypeEnum = "TXT"
+	GetBalanceDetailResponseBodyTypeEnumUrl    GetBalanceDetailResponseBodyTypeEnum = "URL"
 )
 
 type GetBalanceDetailResponseBody struct {
-
 	// 解析记录ID
 	RecordId string `json:"recordId,omitempty"`
 

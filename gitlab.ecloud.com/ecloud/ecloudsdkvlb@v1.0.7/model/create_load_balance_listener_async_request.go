@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type CreateLoadBalanceListenerAsyncRequest struct {
-
-
 	CreateLoadBalanceListenerAsyncBody *CreateLoadBalanceListenerAsyncBody `json:"createLoadBalanceListenerAsyncBody,omitempty"`
 }
 
@@ -31,7 +29,6 @@ func (s *CreateLoadBalanceListenerAsyncRequest) SetCreateLoadBalanceListenerAsyn
 	return s
 }
 
-
 type CreateLoadBalanceListenerAsyncRequestBuilder struct {
 	s *CreateLoadBalanceListenerAsyncRequest
 }
@@ -50,5 +47,3 @@ func (b *CreateLoadBalanceListenerAsyncRequestBuilder) CreateLoadBalanceListener
 func (b *CreateLoadBalanceListenerAsyncRequestBuilder) Build() *CreateLoadBalanceListenerAsyncRequest {
 	return b.s
 }
-
-

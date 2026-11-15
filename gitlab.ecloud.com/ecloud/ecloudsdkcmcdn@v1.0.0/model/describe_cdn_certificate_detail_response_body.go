@@ -5,32 +5,31 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type DescribeCdnCertificateDetailResponseBody struct {
-
-    // 证书联系人手机号
+	// 证书联系人手机号
 	ContactMobile *string `json:"contactMobile,omitempty"`
-    // 绑定的域名id
+	// 绑定的域名id
 	DomainIds *string `json:"domainIds,omitempty"`
-    // 证书私钥
+	// 证书私钥
 	PrivateKey *string `json:"privateKey,omitempty"`
-    // 证书联系人邮箱
+	// 证书联系人邮箱
 	ContactEmail *string `json:"contactEmail,omitempty"`
-    // 创建时间
+	// 创建时间
 	CreateTime *string `json:"createTime,omitempty"`
-    // 证书联系人
+	// 证书联系人
 	ContactName *string `json:"contactName,omitempty"`
-    // 过期时间
+	// 过期时间
 	ExpirationTime *string `json:"expirationTime,omitempty"`
-    // 证书公钥
+	// 证书公钥
 	Certificate *string `json:"certificate,omitempty"`
-    // 证书名称
+	// 证书名称
 	CrtName *string `json:"crtName,omitempty"`
-    // 绑定的域名名称
+	// 绑定的域名名称
 	DomainNames *string `json:"domainNames,omitempty"`
-    // 证书唯一id
+	// 证书唯一id
 	UniqueId *string `json:"uniqueId,omitempty"`
 }
 
@@ -101,7 +100,6 @@ func (s *DescribeCdnCertificateDetailResponseBody) SetUniqueId(v string) *Descri
 	return s
 }
 
-
 type DescribeCdnCertificateDetailResponseBodyBuilder struct {
 	s *DescribeCdnCertificateDetailResponseBody
 }
@@ -170,5 +168,3 @@ func (b *DescribeCdnCertificateDetailResponseBodyBuilder) UniqueId(v string) *De
 func (b *DescribeCdnCertificateDetailResponseBodyBuilder) Build() *DescribeCdnCertificateDetailResponseBody {
 	return b.s
 }
-
-

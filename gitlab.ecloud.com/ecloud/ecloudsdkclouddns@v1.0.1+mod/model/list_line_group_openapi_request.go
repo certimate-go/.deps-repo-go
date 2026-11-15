@@ -4,9 +4,6 @@
 
 package model
 
-
-
 type ListLineGroupOpenapiRequest struct {
-
 	ListLineGroupOpenapiQuery *ListLineGroupOpenapiQuery `json:"listLineGroupOpenapiQuery,omitempty"`
 }

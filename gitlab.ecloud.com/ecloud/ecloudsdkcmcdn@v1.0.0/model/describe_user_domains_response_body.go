@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type DescribeUserDomainsResponseBody struct {
-
-
 	PageSize *int32 `json:"pageSize,omitempty"`
 
 	Page *int32 `json:"page,omitempty"`
@@ -45,7 +43,6 @@ func (s *DescribeUserDomainsResponseBody) SetList(v []DescribeUserDomainsRespons
 	return s
 }
 
-
 type DescribeUserDomainsResponseBodyBuilder struct {
 	s *DescribeUserDomainsResponseBody
 }
@@ -74,5 +71,3 @@ func (b *DescribeUserDomainsResponseBodyBuilder) List(v []DescribeUserDomainsRes
 func (b *DescribeUserDomainsResponseBodyBuilder) Build() *DescribeUserDomainsResponseBody {
 	return b.s
 }
-
-

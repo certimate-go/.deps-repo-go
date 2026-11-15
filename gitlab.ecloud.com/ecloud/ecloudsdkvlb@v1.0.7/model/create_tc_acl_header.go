@@ -5,13 +5,13 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type CreateTCAclHeader struct {
-    position.Header
-    // 请求头部,region值
+	position.Header
+	// 请求头部,region值
 	Region *string `json:"region,omitempty"`
 }
 
@@ -32,7 +32,6 @@ func (s *CreateTCAclHeader) SetRegion(v string) *CreateTCAclHeader {
 	return s
 }
 
-
 type CreateTCAclHeaderBuilder struct {
 	s *CreateTCAclHeader
 }
@@ -51,5 +50,3 @@ func (b *CreateTCAclHeaderBuilder) Region(v string) *CreateTCAclHeaderBuilder {
 func (b *CreateTCAclHeaderBuilder) Build() *CreateTCAclHeader {
 	return b.s
 }
-
-

@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type ListNewServerPortsForMemberRequest struct {
-
-
 	ListNewServerPortsForMemberQuery *ListNewServerPortsForMemberQuery `json:"listNewServerPortsForMemberQuery,omitempty"`
 }
 
@@ -31,7 +29,6 @@ func (s *ListNewServerPortsForMemberRequest) SetListNewServerPortsForMemberQuery
 	return s
 }
 
-
 type ListNewServerPortsForMemberRequestBuilder struct {
 	s *ListNewServerPortsForMemberRequest
 }
@@ -50,5 +47,3 @@ func (b *ListNewServerPortsForMemberRequestBuilder) ListNewServerPortsForMemberQ
 func (b *ListNewServerPortsForMemberRequestBuilder) Build() *ListNewServerPortsForMemberRequest {
 	return b.s
 }
-
-

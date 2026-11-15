@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type ElbOrderDeleteWithHttpStatusRequest struct {
-
-
 	ElbOrderDeleteWithHttpStatusQuery *ElbOrderDeleteWithHttpStatusQuery `json:"elbOrderDeleteWithHttpStatusQuery,omitempty"`
 }
 
@@ -31,7 +29,6 @@ func (s *ElbOrderDeleteWithHttpStatusRequest) SetElbOrderDeleteWithHttpStatusQue
 	return s
 }
 
-
 type ElbOrderDeleteWithHttpStatusRequestBuilder struct {
 	s *ElbOrderDeleteWithHttpStatusRequest
 }
@@ -50,5 +47,3 @@ func (b *ElbOrderDeleteWithHttpStatusRequestBuilder) ElbOrderDeleteWithHttpStatu
 func (b *ElbOrderDeleteWithHttpStatusRequestBuilder) Build() *ElbOrderDeleteWithHttpStatusRequest {
 	return b.s
 }
-
-

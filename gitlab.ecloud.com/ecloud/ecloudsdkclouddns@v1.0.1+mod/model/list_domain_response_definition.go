@@ -4,10 +4,7 @@
 
 package model
 
-
-
 type ListDomainResponseDefinition struct {
-
 	// 静态字段
 	StaticFields *[]ListDomainResponseStaticFields `json:"staticFields,omitempty"`
 

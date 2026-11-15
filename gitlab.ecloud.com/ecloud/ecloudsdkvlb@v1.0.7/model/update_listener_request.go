@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type UpdateListenerRequest struct {
-
-
 	UpdateListenerBody *UpdateListenerBody `json:"updateListenerBody,omitempty"`
 }
 
@@ -31,7 +29,6 @@ func (s *UpdateListenerRequest) SetUpdateListenerBody(v *UpdateListenerBody) *Up
 	return s
 }
 
-
 type UpdateListenerRequestBuilder struct {
 	s *UpdateListenerRequest
 }
@@ -50,5 +47,3 @@ func (b *UpdateListenerRequestBuilder) UpdateListenerBody(v *UpdateListenerBody)
 func (b *UpdateListenerRequestBuilder) Build() *UpdateListenerRequest {
 	return b.s
 }
-
-

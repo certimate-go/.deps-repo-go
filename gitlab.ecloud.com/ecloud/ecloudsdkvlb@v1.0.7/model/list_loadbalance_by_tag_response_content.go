@@ -5,188 +5,192 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
+
 type ListLoadbalanceByTagResponseContentProviderEnum string
 
 // List of Provider
 const (
-    ListLoadbalanceByTagResponseContentProviderEnumBrocade ListLoadbalanceByTagResponseContentProviderEnum = "brocade"
-    ListLoadbalanceByTagResponseContentProviderEnumF5hardware ListLoadbalanceByTagResponseContentProviderEnum = "f5hardware"
-    ListLoadbalanceByTagResponseContentProviderEnumNokia ListLoadbalanceByTagResponseContentProviderEnum = "nokia"
-    ListLoadbalanceByTagResponseContentProviderEnumBcslb ListLoadbalanceByTagResponseContentProviderEnum = "bcslb"
-    ListLoadbalanceByTagResponseContentProviderEnumF5networksS ListLoadbalanceByTagResponseContentProviderEnum = "f5networks_s"
-    ListLoadbalanceByTagResponseContentProviderEnumNsb ListLoadbalanceByTagResponseContentProviderEnum = "nsb"
-    ListLoadbalanceByTagResponseContentProviderEnumEslb ListLoadbalanceByTagResponseContentProviderEnum = "eslb"
-    ListLoadbalanceByTagResponseContentProviderEnumRjhardf5 ListLoadbalanceByTagResponseContentProviderEnum = "rjhardf5"
-    ListLoadbalanceByTagResponseContentProviderEnumVirtual ListLoadbalanceByTagResponseContentProviderEnum = "virtual"
-    ListLoadbalanceByTagResponseContentProviderEnumH3clb ListLoadbalanceByTagResponseContentProviderEnum = "h3clb"
-    ListLoadbalanceByTagResponseContentProviderEnumH3virtual ListLoadbalanceByTagResponseContentProviderEnum = "h3virtual"
-    ListLoadbalanceByTagResponseContentProviderEnumAliyun ListLoadbalanceByTagResponseContentProviderEnum = "aliyun"
-    ListLoadbalanceByTagResponseContentProviderEnumNfvslb ListLoadbalanceByTagResponseContentProviderEnum = "nfvslb"
+	ListLoadbalanceByTagResponseContentProviderEnumBrocade     ListLoadbalanceByTagResponseContentProviderEnum = "brocade"
+	ListLoadbalanceByTagResponseContentProviderEnumF5hardware  ListLoadbalanceByTagResponseContentProviderEnum = "f5hardware"
+	ListLoadbalanceByTagResponseContentProviderEnumNokia       ListLoadbalanceByTagResponseContentProviderEnum = "nokia"
+	ListLoadbalanceByTagResponseContentProviderEnumBcslb       ListLoadbalanceByTagResponseContentProviderEnum = "bcslb"
+	ListLoadbalanceByTagResponseContentProviderEnumF5networksS ListLoadbalanceByTagResponseContentProviderEnum = "f5networks_s"
+	ListLoadbalanceByTagResponseContentProviderEnumNsb         ListLoadbalanceByTagResponseContentProviderEnum = "nsb"
+	ListLoadbalanceByTagResponseContentProviderEnumEslb        ListLoadbalanceByTagResponseContentProviderEnum = "eslb"
+	ListLoadbalanceByTagResponseContentProviderEnumRjhardf5    ListLoadbalanceByTagResponseContentProviderEnum = "rjhardf5"
+	ListLoadbalanceByTagResponseContentProviderEnumVirtual     ListLoadbalanceByTagResponseContentProviderEnum = "virtual"
+	ListLoadbalanceByTagResponseContentProviderEnumH3clb       ListLoadbalanceByTagResponseContentProviderEnum = "h3clb"
+	ListLoadbalanceByTagResponseContentProviderEnumH3virtual   ListLoadbalanceByTagResponseContentProviderEnum = "h3virtual"
+	ListLoadbalanceByTagResponseContentProviderEnumAliyun      ListLoadbalanceByTagResponseContentProviderEnum = "aliyun"
+	ListLoadbalanceByTagResponseContentProviderEnumNfvslb      ListLoadbalanceByTagResponseContentProviderEnum = "nfvslb"
 )
+
 type ListLoadbalanceByTagResponseContentProductTypeEnum string
 
 // List of ProductType
 const (
-    ListLoadbalanceByTagResponseContentProductTypeEnumNormal ListLoadbalanceByTagResponseContentProductTypeEnum = "NORMAL"
-    ListLoadbalanceByTagResponseContentProductTypeEnumDeCloud ListLoadbalanceByTagResponseContentProductTypeEnum = "DE_CLOUD"
-    ListLoadbalanceByTagResponseContentProductTypeEnumAutoscaling ListLoadbalanceByTagResponseContentProductTypeEnum = "AUTOSCALING"
-    ListLoadbalanceByTagResponseContentProductTypeEnumVo ListLoadbalanceByTagResponseContentProductTypeEnum = "VO"
-    ListLoadbalanceByTagResponseContentProductTypeEnumCdn ListLoadbalanceByTagResponseContentProductTypeEnum = "CDN"
-    ListLoadbalanceByTagResponseContentProductTypeEnumPaasMaster ListLoadbalanceByTagResponseContentProductTypeEnum = "PAAS_MASTER"
-    ListLoadbalanceByTagResponseContentProductTypeEnumPaasSlave ListLoadbalanceByTagResponseContentProductTypeEnum = "PAAS_SLAVE"
-    ListLoadbalanceByTagResponseContentProductTypeEnumVcpe ListLoadbalanceByTagResponseContentProductTypeEnum = "VCPE"
-    ListLoadbalanceByTagResponseContentProductTypeEnumEmr ListLoadbalanceByTagResponseContentProductTypeEnum = "EMR"
-    ListLoadbalanceByTagResponseContentProductTypeEnumLogaudit ListLoadbalanceByTagResponseContentProductTypeEnum = "LOGAUDIT"
-    ListLoadbalanceByTagResponseContentProductTypeEnumMse ListLoadbalanceByTagResponseContentProductTypeEnum = "MSE"
-    ListLoadbalanceByTagResponseContentProductTypeEnumVirtual ListLoadbalanceByTagResponseContentProductTypeEnum = "VIRTUAL"
-    ListLoadbalanceByTagResponseContentProductTypeEnumBastion ListLoadbalanceByTagResponseContentProductTypeEnum = "BASTION"
-    ListLoadbalanceByTagResponseContentProductTypeEnumNextGenerationFirewall ListLoadbalanceByTagResponseContentProductTypeEnum = "NEXT_GENERATION_FIREWALL"
+	ListLoadbalanceByTagResponseContentProductTypeEnumNormal                 ListLoadbalanceByTagResponseContentProductTypeEnum = "NORMAL"
+	ListLoadbalanceByTagResponseContentProductTypeEnumDeCloud                ListLoadbalanceByTagResponseContentProductTypeEnum = "DE_CLOUD"
+	ListLoadbalanceByTagResponseContentProductTypeEnumAutoscaling            ListLoadbalanceByTagResponseContentProductTypeEnum = "AUTOSCALING"
+	ListLoadbalanceByTagResponseContentProductTypeEnumVo                     ListLoadbalanceByTagResponseContentProductTypeEnum = "VO"
+	ListLoadbalanceByTagResponseContentProductTypeEnumCdn                    ListLoadbalanceByTagResponseContentProductTypeEnum = "CDN"
+	ListLoadbalanceByTagResponseContentProductTypeEnumPaasMaster             ListLoadbalanceByTagResponseContentProductTypeEnum = "PAAS_MASTER"
+	ListLoadbalanceByTagResponseContentProductTypeEnumPaasSlave              ListLoadbalanceByTagResponseContentProductTypeEnum = "PAAS_SLAVE"
+	ListLoadbalanceByTagResponseContentProductTypeEnumVcpe                   ListLoadbalanceByTagResponseContentProductTypeEnum = "VCPE"
+	ListLoadbalanceByTagResponseContentProductTypeEnumEmr                    ListLoadbalanceByTagResponseContentProductTypeEnum = "EMR"
+	ListLoadbalanceByTagResponseContentProductTypeEnumLogaudit               ListLoadbalanceByTagResponseContentProductTypeEnum = "LOGAUDIT"
+	ListLoadbalanceByTagResponseContentProductTypeEnumMse                    ListLoadbalanceByTagResponseContentProductTypeEnum = "MSE"
+	ListLoadbalanceByTagResponseContentProductTypeEnumVirtual                ListLoadbalanceByTagResponseContentProductTypeEnum = "VIRTUAL"
+	ListLoadbalanceByTagResponseContentProductTypeEnumBastion                ListLoadbalanceByTagResponseContentProductTypeEnum = "BASTION"
+	ListLoadbalanceByTagResponseContentProductTypeEnumNextGenerationFirewall ListLoadbalanceByTagResponseContentProductTypeEnum = "NEXT_GENERATION_FIREWALL"
 )
+
 type ListLoadbalanceByTagResponseContentEcStatusEnum string
 
 // List of EcStatus
 const (
-    ListLoadbalanceByTagResponseContentEcStatusEnumActive ListLoadbalanceByTagResponseContentEcStatusEnum = "ACTIVE"
-    ListLoadbalanceByTagResponseContentEcStatusEnumBuild ListLoadbalanceByTagResponseContentEcStatusEnum = "BUILD"
-    ListLoadbalanceByTagResponseContentEcStatusEnumDown ListLoadbalanceByTagResponseContentEcStatusEnum = "DOWN"
-    ListLoadbalanceByTagResponseContentEcStatusEnumError ListLoadbalanceByTagResponseContentEcStatusEnum = "ERROR"
-    ListLoadbalanceByTagResponseContentEcStatusEnumPendingCreate ListLoadbalanceByTagResponseContentEcStatusEnum = "PENDING_CREATE"
-    ListLoadbalanceByTagResponseContentEcStatusEnumPendingUpdate ListLoadbalanceByTagResponseContentEcStatusEnum = "PENDING_UPDATE"
-    ListLoadbalanceByTagResponseContentEcStatusEnumPendingDelete ListLoadbalanceByTagResponseContentEcStatusEnum = "PENDING_DELETE"
-    ListLoadbalanceByTagResponseContentEcStatusEnumMigrating ListLoadbalanceByTagResponseContentEcStatusEnum = "MIGRATING"
-    ListLoadbalanceByTagResponseContentEcStatusEnumDeleted ListLoadbalanceByTagResponseContentEcStatusEnum = "DELETED"
-    ListLoadbalanceByTagResponseContentEcStatusEnumUnrecognized ListLoadbalanceByTagResponseContentEcStatusEnum = "UNRECOGNIZED"
+	ListLoadbalanceByTagResponseContentEcStatusEnumActive        ListLoadbalanceByTagResponseContentEcStatusEnum = "ACTIVE"
+	ListLoadbalanceByTagResponseContentEcStatusEnumBuild         ListLoadbalanceByTagResponseContentEcStatusEnum = "BUILD"
+	ListLoadbalanceByTagResponseContentEcStatusEnumDown          ListLoadbalanceByTagResponseContentEcStatusEnum = "DOWN"
+	ListLoadbalanceByTagResponseContentEcStatusEnumError         ListLoadbalanceByTagResponseContentEcStatusEnum = "ERROR"
+	ListLoadbalanceByTagResponseContentEcStatusEnumPendingCreate ListLoadbalanceByTagResponseContentEcStatusEnum = "PENDING_CREATE"
+	ListLoadbalanceByTagResponseContentEcStatusEnumPendingUpdate ListLoadbalanceByTagResponseContentEcStatusEnum = "PENDING_UPDATE"
+	ListLoadbalanceByTagResponseContentEcStatusEnumPendingDelete ListLoadbalanceByTagResponseContentEcStatusEnum = "PENDING_DELETE"
+	ListLoadbalanceByTagResponseContentEcStatusEnumMigrating     ListLoadbalanceByTagResponseContentEcStatusEnum = "MIGRATING"
+	ListLoadbalanceByTagResponseContentEcStatusEnumDeleted       ListLoadbalanceByTagResponseContentEcStatusEnum = "DELETED"
+	ListLoadbalanceByTagResponseContentEcStatusEnumUnrecognized  ListLoadbalanceByTagResponseContentEcStatusEnum = "UNRECOGNIZED"
 )
+
 type ListLoadbalanceByTagResponseContentIpVersionEnum int32
 
 // List of IpVersion
 const (
-    ListLoadbalanceByTagResponseContentIpVersionEnum4 ListLoadbalanceByTagResponseContentIpVersionEnum = 4
-    ListLoadbalanceByTagResponseContentIpVersionEnum6 ListLoadbalanceByTagResponseContentIpVersionEnum = 6
+	ListLoadbalanceByTagResponseContentIpVersionEnum4 ListLoadbalanceByTagResponseContentIpVersionEnum = 4
+	ListLoadbalanceByTagResponseContentIpVersionEnum6 ListLoadbalanceByTagResponseContentIpVersionEnum = 6
 )
+
 type ListLoadbalanceByTagResponseContentOpStatusEnum string
 
 // List of OpStatus
 const (
-    ListLoadbalanceByTagResponseContentOpStatusEnumNewBuilt ListLoadbalanceByTagResponseContentOpStatusEnum = "NEW_BUILT"
-    ListLoadbalanceByTagResponseContentOpStatusEnumWaitToCreate ListLoadbalanceByTagResponseContentOpStatusEnum = "WAIT_TO_CREATE"
-    ListLoadbalanceByTagResponseContentOpStatusEnumCreating ListLoadbalanceByTagResponseContentOpStatusEnum = "CREATING"
-    ListLoadbalanceByTagResponseContentOpStatusEnumCreatedToSynchronize ListLoadbalanceByTagResponseContentOpStatusEnum = "CREATED_TO_SYNCHRONIZE"
-    ListLoadbalanceByTagResponseContentOpStatusEnumCreated ListLoadbalanceByTagResponseContentOpStatusEnum = "CREATED"
-    ListLoadbalanceByTagResponseContentOpStatusEnumCreateFailed ListLoadbalanceByTagResponseContentOpStatusEnum = "CREATE_FAILED"
-    ListLoadbalanceByTagResponseContentOpStatusEnumFreezing ListLoadbalanceByTagResponseContentOpStatusEnum = "FREEZING"
-    ListLoadbalanceByTagResponseContentOpStatusEnumFrozen ListLoadbalanceByTagResponseContentOpStatusEnum = "FROZEN"
-    ListLoadbalanceByTagResponseContentOpStatusEnumFreezeFailed ListLoadbalanceByTagResponseContentOpStatusEnum = "FREEZE_FAILED"
-    ListLoadbalanceByTagResponseContentOpStatusEnumClosing ListLoadbalanceByTagResponseContentOpStatusEnum = "CLOSING"
-    ListLoadbalanceByTagResponseContentOpStatusEnumClosed ListLoadbalanceByTagResponseContentOpStatusEnum = "CLOSED"
-    ListLoadbalanceByTagResponseContentOpStatusEnumCloseFailed ListLoadbalanceByTagResponseContentOpStatusEnum = "CLOSE_FAILED"
-    ListLoadbalanceByTagResponseContentOpStatusEnumResuming ListLoadbalanceByTagResponseContentOpStatusEnum = "RESUMING"
-    ListLoadbalanceByTagResponseContentOpStatusEnumResumeFailed ListLoadbalanceByTagResponseContentOpStatusEnum = "RESUME_FAILED"
-    ListLoadbalanceByTagResponseContentOpStatusEnumCanceled ListLoadbalanceByTagResponseContentOpStatusEnum = "CANCELED"
-    ListLoadbalanceByTagResponseContentOpStatusEnumWaitToChange ListLoadbalanceByTagResponseContentOpStatusEnum = "WAIT_TO_CHANGE"
-    ListLoadbalanceByTagResponseContentOpStatusEnumChanging ListLoadbalanceByTagResponseContentOpStatusEnum = "CHANGING"
-    ListLoadbalanceByTagResponseContentOpStatusEnumRenewed ListLoadbalanceByTagResponseContentOpStatusEnum = "RENEWED"
-    ListLoadbalanceByTagResponseContentOpStatusEnumCloseToDelete ListLoadbalanceByTagResponseContentOpStatusEnum = "CLOSE_TO_DELETE"
-    ListLoadbalanceByTagResponseContentOpStatusEnumFrozenToRenew ListLoadbalanceByTagResponseContentOpStatusEnum = "FROZEN_TO_RENEW"
-    ListLoadbalanceByTagResponseContentOpStatusEnumCancelToSynchronize ListLoadbalanceByTagResponseContentOpStatusEnum = "CANCEL_TO_SYNCHRONIZE"
-    ListLoadbalanceByTagResponseContentOpStatusEnumRenewing ListLoadbalanceByTagResponseContentOpStatusEnum = "RENEWING"
-    ListLoadbalanceByTagResponseContentOpStatusEnumChangeClosing ListLoadbalanceByTagResponseContentOpStatusEnum = "CHANGE_CLOSING"
-    ListLoadbalanceByTagResponseContentOpStatusEnumChanged ListLoadbalanceByTagResponseContentOpStatusEnum = "CHANGED"
-    ListLoadbalanceByTagResponseContentOpStatusEnumChangeFailed ListLoadbalanceByTagResponseContentOpStatusEnum = "CHANGE_FAILED"
-    ListLoadbalanceByTagResponseContentOpStatusEnumWaitToDelete ListLoadbalanceByTagResponseContentOpStatusEnum = "WAIT_TO_DELETE"
+	ListLoadbalanceByTagResponseContentOpStatusEnumNewBuilt             ListLoadbalanceByTagResponseContentOpStatusEnum = "NEW_BUILT"
+	ListLoadbalanceByTagResponseContentOpStatusEnumWaitToCreate         ListLoadbalanceByTagResponseContentOpStatusEnum = "WAIT_TO_CREATE"
+	ListLoadbalanceByTagResponseContentOpStatusEnumCreating             ListLoadbalanceByTagResponseContentOpStatusEnum = "CREATING"
+	ListLoadbalanceByTagResponseContentOpStatusEnumCreatedToSynchronize ListLoadbalanceByTagResponseContentOpStatusEnum = "CREATED_TO_SYNCHRONIZE"
+	ListLoadbalanceByTagResponseContentOpStatusEnumCreated              ListLoadbalanceByTagResponseContentOpStatusEnum = "CREATED"
+	ListLoadbalanceByTagResponseContentOpStatusEnumCreateFailed         ListLoadbalanceByTagResponseContentOpStatusEnum = "CREATE_FAILED"
+	ListLoadbalanceByTagResponseContentOpStatusEnumFreezing             ListLoadbalanceByTagResponseContentOpStatusEnum = "FREEZING"
+	ListLoadbalanceByTagResponseContentOpStatusEnumFrozen               ListLoadbalanceByTagResponseContentOpStatusEnum = "FROZEN"
+	ListLoadbalanceByTagResponseContentOpStatusEnumFreezeFailed         ListLoadbalanceByTagResponseContentOpStatusEnum = "FREEZE_FAILED"
+	ListLoadbalanceByTagResponseContentOpStatusEnumClosing              ListLoadbalanceByTagResponseContentOpStatusEnum = "CLOSING"
+	ListLoadbalanceByTagResponseContentOpStatusEnumClosed               ListLoadbalanceByTagResponseContentOpStatusEnum = "CLOSED"
+	ListLoadbalanceByTagResponseContentOpStatusEnumCloseFailed          ListLoadbalanceByTagResponseContentOpStatusEnum = "CLOSE_FAILED"
+	ListLoadbalanceByTagResponseContentOpStatusEnumResuming             ListLoadbalanceByTagResponseContentOpStatusEnum = "RESUMING"
+	ListLoadbalanceByTagResponseContentOpStatusEnumResumeFailed         ListLoadbalanceByTagResponseContentOpStatusEnum = "RESUME_FAILED"
+	ListLoadbalanceByTagResponseContentOpStatusEnumCanceled             ListLoadbalanceByTagResponseContentOpStatusEnum = "CANCELED"
+	ListLoadbalanceByTagResponseContentOpStatusEnumWaitToChange         ListLoadbalanceByTagResponseContentOpStatusEnum = "WAIT_TO_CHANGE"
+	ListLoadbalanceByTagResponseContentOpStatusEnumChanging             ListLoadbalanceByTagResponseContentOpStatusEnum = "CHANGING"
+	ListLoadbalanceByTagResponseContentOpStatusEnumRenewed              ListLoadbalanceByTagResponseContentOpStatusEnum = "RENEWED"
+	ListLoadbalanceByTagResponseContentOpStatusEnumCloseToDelete        ListLoadbalanceByTagResponseContentOpStatusEnum = "CLOSE_TO_DELETE"
+	ListLoadbalanceByTagResponseContentOpStatusEnumFrozenToRenew        ListLoadbalanceByTagResponseContentOpStatusEnum = "FROZEN_TO_RENEW"
+	ListLoadbalanceByTagResponseContentOpStatusEnumCancelToSynchronize  ListLoadbalanceByTagResponseContentOpStatusEnum = "CANCEL_TO_SYNCHRONIZE"
+	ListLoadbalanceByTagResponseContentOpStatusEnumRenewing             ListLoadbalanceByTagResponseContentOpStatusEnum = "RENEWING"
+	ListLoadbalanceByTagResponseContentOpStatusEnumChangeClosing        ListLoadbalanceByTagResponseContentOpStatusEnum = "CHANGE_CLOSING"
+	ListLoadbalanceByTagResponseContentOpStatusEnumChanged              ListLoadbalanceByTagResponseContentOpStatusEnum = "CHANGED"
+	ListLoadbalanceByTagResponseContentOpStatusEnumChangeFailed         ListLoadbalanceByTagResponseContentOpStatusEnum = "CHANGE_FAILED"
+	ListLoadbalanceByTagResponseContentOpStatusEnumWaitToDelete         ListLoadbalanceByTagResponseContentOpStatusEnum = "WAIT_TO_DELETE"
 )
 
 type ListLoadbalanceByTagResponseContent struct {
-
-    // 子网ID
+	// 子网ID
 	SubnetId *string `json:"subnetId,omitempty"`
-    // VPC名称
+	// VPC名称
 	VpcName *string `json:"vpcName,omitempty"`
-    // 绑定后端服务组数量
+	// 绑定后端服务组数量
 	BindedPools *int32 `json:"bindedPools,omitempty"`
-    // 订单ID
+	// 订单ID
 	OrderId *string `json:"orderId,omitempty"`
-    // 弹性负载均衡VIP内网地址
+	// 弹性负载均衡VIP内网地址
 	PrivateIp *string `json:"privateIp,omitempty"`
-    // 公网IP的带宽,单位:Mb
+	// 公网IP的带宽,单位:Mb
 	BandwidthSize *int32 `json:"bandwidthSize,omitempty"`
-    // 描述，存放负载均衡实地址
+	// 描述，存放负载均衡实地址
 	Description *string `json:"description,omitempty"`
-    // 需要绑定的独享设备IP地址，仅在isExclusive为true时生效，多个地址以“,”分隔例如：1.2.3.4,1.2.3.5
+	// 需要绑定的独享设备IP地址，仅在isExclusive为true时生效，多个地址以“,”分隔例如：1.2.3.4,1.2.3.5
 	NodeIp *string `json:"nodeIp,omitempty"`
-    // 所绑定的监听器详情
+	// 所绑定的监听器详情
 	BindListeners *[]ListLoadbalanceByTagResponseBindListeners `json:"bindListeners,omitempty"`
-    // 弹性负载均衡VIP网卡ID
+	// 弹性负载均衡VIP网卡ID
 	VipPortId *string `json:"vipPortId,omitempty"`
-    // 规格为NFV托管平台订购时选择的云主机核数
+	// 规格为NFV托管平台订购时选择的云主机核数
 	ServerCores *int32 `json:"serverCores,omitempty"`
-    // 子网名称
+	// 子网名称
 	SubnetName *string `json:"subnetName,omitempty"`
-    // 是否多AZ场景，true：是，false：不是
+	// 是否多AZ场景，true：是，false：不是
 	IsMultiAz *bool `json:"isMultiAz,omitempty"`
-    // 是否独享设备，true：是，false：不是
+	// 是否独享设备，true：是，false：不是
 	IsExclusive *bool `json:"isExclusive,omitempty"`
-    // 公网IP的ID
+	// 公网IP的ID
 	IpId *string `json:"ipId,omitempty"`
-    // 弹性负载均衡厂商
+	// 弹性负载均衡厂商
 	Provider *ListLoadbalanceByTagResponseContentProviderEnum `json:"provider,omitempty"`
-    // 路由器ID
+	// 路由器ID
 	RouterId *string `json:"routerId,omitempty"`
-    // 创建时间
+	// 创建时间
 	CreatedTime *string `json:"createdTime,omitempty"`
-    // 弹性负载均衡关联子网的网络ID
+	// 弹性负载均衡关联子网的网络ID
 	NetworkId *string `json:"networkId,omitempty"`
-    // 弹性负载均衡ID
+	// 弹性负载均衡ID
 	Id *string `json:"id,omitempty"`
-    // 弹性负载均衡是否可用,true:可用;false:不可用
+	// 弹性负载均衡是否可用,true:可用;false:不可用
 	AdminStateUp *bool `json:"adminStateUp,omitempty"`
-    // 双AZ子弹性负载均衡详情
+	// 双AZ子弹性负载均衡详情
 	AzMappings []interface{} `json:"azMappings,omitempty"`
-    // 产品类型，客户订购默认为NORMAL类型
+	// 产品类型，客户订购默认为NORMAL类型
 	ProductType *ListLoadbalanceByTagResponseContentProductTypeEnum `json:"productType,omitempty"`
-    // 计费方式
+	// 计费方式
 	MeasureType *string `json:"measureType,omitempty"`
-    // 底层状态
+	// 底层状态
 	EcStatus *ListLoadbalanceByTagResponseContentEcStatusEnum `json:"ecStatus,omitempty"`
-    // 绑定监听器数量
+	// 绑定监听器数量
 	BindedListeners *int32 `json:"bindedListeners,omitempty"`
-    // 是否已可见,true:可见;false:不可见
+	// 是否已可见,true:可见;false:不可见
 	Visible *bool `json:"visible,omitempty"`
-    // 是否开启了IPv6带宽，true：开通，false：未开通
+	// 是否开启了IPv6带宽，true：开通，false：未开通
 	Ipv6Status *bool `json:"ipv6Status,omitempty"`
-    // 是否是双az情况下的展示条目，true：是，false：不是
+	// 是否是双az情况下的展示条目，true：是，false：不是
 	IsMain *bool `json:"isMain,omitempty"`
-    // 弹性负载均衡状态
+	// 弹性负载均衡状态
 	LoadbalancerStatus *string `json:"loadbalancerStatus,omitempty"`
-    // 创建人，用户ID，例如：CICD-U-xxx
+	// 创建人，用户ID，例如：CICD-U-xxx
 	Proposer *string `json:"proposer,omitempty"`
-    // 公网IP地址
+	// 公网IP地址
 	PublicIp *string `json:"publicIp,omitempty"`
-    // 订购用户
+	// 订购用户
 	UserName *string `json:"userName,omitempty"`
-    // 数据版本
+	// 数据版本
 	Version *int32 `json:"version,omitempty"`
-    // 双AZ弹性负载均衡的主实例ID
+	// 双AZ弹性负载均衡的主实例ID
 	ParentId *string `json:"parentId,omitempty"`
-    // 边缘云标识
+	// 边缘云标识
 	Vaz *string `json:"vaz,omitempty"`
-    // 标签信息
+	// 标签信息
 	Tags *[]ListLoadbalanceByTagResponseTags `json:"tags,omitempty"`
-    // 弹性负载均衡规格
+	// 弹性负载均衡规格
 	Flavor *int32 `json:"flavor,omitempty"`
-    // 设备配置
+	// 设备配置
 	EquipmentConfig *string `json:"equipmentConfig,omitempty"`
-    // 是否已删除
+	// 是否已删除
 	Deleted *bool `json:"deleted,omitempty"`
-    // 子网类型
+	// 子网类型
 	IpVersion *ListLoadbalanceByTagResponseContentIpVersionEnum `json:"ipVersion,omitempty"`
-    // 弹性负载均衡名称
+	// 弹性负载均衡名称
 	Name *string `json:"name,omitempty"`
-    // 订单状态
+	// 订单状态
 	OpStatus *ListLoadbalanceByTagResponseContentOpStatusEnum `json:"opStatus,omitempty"`
-    // 可用区
+	// 可用区
 	Region *string `json:"region,omitempty"`
 }
 
@@ -422,7 +426,6 @@ func (s *ListLoadbalanceByTagResponseContent) SetRegion(v string) *ListLoadbalan
 	return s
 }
 
-
 type ListLoadbalanceByTagResponseContentBuilder struct {
 	s *ListLoadbalanceByTagResponseContent
 }
@@ -656,5 +659,3 @@ func (b *ListLoadbalanceByTagResponseContentBuilder) Region(v string) *ListLoadb
 func (b *ListLoadbalanceByTagResponseContentBuilder) Build() *ListLoadbalanceByTagResponseContent {
 	return b.s
 }
-
-

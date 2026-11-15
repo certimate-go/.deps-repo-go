@@ -4,19 +4,17 @@
 
 package model
 
-
 type ModifyLineGroupResponseStateEnum string
 
 // List of State
 const (
-    ModifyLineGroupResponseStateEnumError ModifyLineGroupResponseStateEnum = "ERROR"
-    ModifyLineGroupResponseStateEnumException ModifyLineGroupResponseStateEnum = "EXCEPTION"
-    ModifyLineGroupResponseStateEnumForbidden ModifyLineGroupResponseStateEnum = "FORBIDDEN"
-    ModifyLineGroupResponseStateEnumOk ModifyLineGroupResponseStateEnum = "OK"
+	ModifyLineGroupResponseStateEnumError     ModifyLineGroupResponseStateEnum = "ERROR"
+	ModifyLineGroupResponseStateEnumException ModifyLineGroupResponseStateEnum = "EXCEPTION"
+	ModifyLineGroupResponseStateEnumForbidden ModifyLineGroupResponseStateEnum = "FORBIDDEN"
+	ModifyLineGroupResponseStateEnumOk        ModifyLineGroupResponseStateEnum = "OK"
 )
 
 type ModifyLineGroupResponse struct {
-
 	RequestId string `json:"requestId,omitempty"`
 
 	ErrorMessage string `json:"errorMessage,omitempty"`

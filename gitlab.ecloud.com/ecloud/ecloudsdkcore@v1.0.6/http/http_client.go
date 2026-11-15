@@ -6,21 +6,21 @@ import (
 	"encoding/xml"
 	"errors"
 	"fmt"
+	"io/ioutil"
+	"net/http"
+	"net/url"
+	"strings"
+	"sync"
+
 	"gitlab.ecloud.com/ecloud/ecloudsdkcore/auth"
 	"gitlab.ecloud.com/ecloud/ecloudsdkcore/auth/provider"
 	"gitlab.ecloud.com/ecloud/ecloudsdkcore/errs"
 	"gitlab.ecloud.com/ecloud/ecloudsdkcore/request"
 	"gitlab.ecloud.com/ecloud/ecloudsdkcore/response"
 	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
-	"io/ioutil"
-	"net/http"
-	"net/url"
-	"strings"
-	"sync"
 )
 
-type NetHttpClient struct {
-}
+type NetHttpClient struct{}
 
 type RetryFunc func(request *request.HttpRequest,
 	returnType *interface{}) (*response.HttpResponse, error)

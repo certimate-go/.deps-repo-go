@@ -4,36 +4,36 @@
 
 package model
 
-
 type GetDomainByNameForOpenapiResponseBodyServiceTypeEnum string
 
 // List of ServiceType
 const (
-    GetDomainByNameForOpenapiResponseBodyServiceTypeEnumBasic GetDomainByNameForOpenapiResponseBodyServiceTypeEnum = "BASIC"
-    GetDomainByNameForOpenapiResponseBodyServiceTypeEnumPremium GetDomainByNameForOpenapiResponseBodyServiceTypeEnum = "PREMIUM"
-    GetDomainByNameForOpenapiResponseBodyServiceTypeEnumStandard GetDomainByNameForOpenapiResponseBodyServiceTypeEnum = "STANDARD"
-    GetDomainByNameForOpenapiResponseBodyServiceTypeEnumUltimate GetDomainByNameForOpenapiResponseBodyServiceTypeEnum = "ULTIMATE"
+	GetDomainByNameForOpenapiResponseBodyServiceTypeEnumBasic    GetDomainByNameForOpenapiResponseBodyServiceTypeEnum = "BASIC"
+	GetDomainByNameForOpenapiResponseBodyServiceTypeEnumPremium  GetDomainByNameForOpenapiResponseBodyServiceTypeEnum = "PREMIUM"
+	GetDomainByNameForOpenapiResponseBodyServiceTypeEnumStandard GetDomainByNameForOpenapiResponseBodyServiceTypeEnum = "STANDARD"
+	GetDomainByNameForOpenapiResponseBodyServiceTypeEnumUltimate GetDomainByNameForOpenapiResponseBodyServiceTypeEnum = "ULTIMATE"
 )
+
 type GetDomainByNameForOpenapiResponseBodyAdoptStateEnum string
 
 // List of AdoptState
 const (
-    GetDomainByNameForOpenapiResponseBodyAdoptStateEnumUncertain GetDomainByNameForOpenapiResponseBodyAdoptStateEnum = "UNCERTAIN"
-    GetDomainByNameForOpenapiResponseBodyAdoptStateEnumUnused GetDomainByNameForOpenapiResponseBodyAdoptStateEnum = "UNUSED"
-    GetDomainByNameForOpenapiResponseBodyAdoptStateEnumUsing GetDomainByNameForOpenapiResponseBodyAdoptStateEnum = "USING"
+	GetDomainByNameForOpenapiResponseBodyAdoptStateEnumUncertain GetDomainByNameForOpenapiResponseBodyAdoptStateEnum = "UNCERTAIN"
+	GetDomainByNameForOpenapiResponseBodyAdoptStateEnumUnused    GetDomainByNameForOpenapiResponseBodyAdoptStateEnum = "UNUSED"
+	GetDomainByNameForOpenapiResponseBodyAdoptStateEnumUsing     GetDomainByNameForOpenapiResponseBodyAdoptStateEnum = "USING"
 )
+
 type GetDomainByNameForOpenapiResponseBodyInstanceStatusEnum string
 
 // List of InstanceStatus
 const (
-    GetDomainByNameForOpenapiResponseBodyInstanceStatusEnumCanceling GetDomainByNameForOpenapiResponseBodyInstanceStatusEnum = "CANCELING"
-    GetDomainByNameForOpenapiResponseBodyInstanceStatusEnumDisabled GetDomainByNameForOpenapiResponseBodyInstanceStatusEnum = "DISABLED"
-    GetDomainByNameForOpenapiResponseBodyInstanceStatusEnumEnabled GetDomainByNameForOpenapiResponseBodyInstanceStatusEnum = "ENABLED"
-    GetDomainByNameForOpenapiResponseBodyInstanceStatusEnumExpired GetDomainByNameForOpenapiResponseBodyInstanceStatusEnum = "EXPIRED"
+	GetDomainByNameForOpenapiResponseBodyInstanceStatusEnumCanceling GetDomainByNameForOpenapiResponseBodyInstanceStatusEnum = "CANCELING"
+	GetDomainByNameForOpenapiResponseBodyInstanceStatusEnumDisabled  GetDomainByNameForOpenapiResponseBodyInstanceStatusEnum = "DISABLED"
+	GetDomainByNameForOpenapiResponseBodyInstanceStatusEnumEnabled   GetDomainByNameForOpenapiResponseBodyInstanceStatusEnum = "ENABLED"
+	GetDomainByNameForOpenapiResponseBodyInstanceStatusEnumExpired   GetDomainByNameForOpenapiResponseBodyInstanceStatusEnum = "EXPIRED"
 )
 
 type GetDomainByNameForOpenapiResponseBody struct {
-
 	// 套餐类型
 	ServiceType GetDomainByNameForOpenapiResponseBodyServiceTypeEnum `json:"serviceType,omitempty"`
 

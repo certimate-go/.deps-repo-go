@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type ElbOrderRenewRequest struct {
-
-
 	ElbOrderRenewBody *ElbOrderRenewBody `json:"elbOrderRenewBody,omitempty"`
 }
 
@@ -31,7 +29,6 @@ func (s *ElbOrderRenewRequest) SetElbOrderRenewBody(v *ElbOrderRenewBody) *ElbOr
 	return s
 }
 
-
 type ElbOrderRenewRequestBuilder struct {
 	s *ElbOrderRenewRequest
 }
@@ -50,5 +47,3 @@ func (b *ElbOrderRenewRequestBuilder) ElbOrderRenewBody(v *ElbOrderRenewBody) *E
 func (b *ElbOrderRenewRequestBuilder) Build() *ElbOrderRenewRequest {
 	return b.s
 }
-
-

@@ -4,9 +4,6 @@
 
 package model
 
-
-
 type ModifyDomainOpenapiRequest struct {
-
 	ModifyDomainOpenapiBody *ModifyDomainOpenapiBody `json:"modifyDomainOpenapiBody,omitempty"`
 }

@@ -4,10 +4,7 @@
 
 package model
 
-
-
 type AddOrderResponseBody struct {
-
 	// 订单ID
 	OrderId string `json:"orderId,omitempty"`
 

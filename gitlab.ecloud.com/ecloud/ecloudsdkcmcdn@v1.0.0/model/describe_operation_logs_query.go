@@ -5,37 +5,39 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
+
 type DescribeOperationLogsQueryOperateTypeEnum string
 
 // List of OperateType
 const (
-    DescribeOperationLogsQueryOperateTypeEnumRefresh DescribeOperationLogsQueryOperateTypeEnum = "REFRESH"
-    DescribeOperationLogsQueryOperateTypeEnumReload DescribeOperationLogsQueryOperateTypeEnum = "RELOAD"
+	DescribeOperationLogsQueryOperateTypeEnumRefresh DescribeOperationLogsQueryOperateTypeEnum = "REFRESH"
+	DescribeOperationLogsQueryOperateTypeEnumReload  DescribeOperationLogsQueryOperateTypeEnum = "RELOAD"
 )
+
 type DescribeOperationLogsQueryRefreshTypeEnum string
 
 // List of RefreshType
 const (
-    DescribeOperationLogsQueryRefreshTypeEnumFile DescribeOperationLogsQueryRefreshTypeEnum = "FILE"
-    DescribeOperationLogsQueryRefreshTypeEnumCatalog DescribeOperationLogsQueryRefreshTypeEnum = "CATALOG"
+	DescribeOperationLogsQueryRefreshTypeEnumFile    DescribeOperationLogsQueryRefreshTypeEnum = "FILE"
+	DescribeOperationLogsQueryRefreshTypeEnumCatalog DescribeOperationLogsQueryRefreshTypeEnum = "CATALOG"
 )
 
 type DescribeOperationLogsQuery struct {
-    position.Query
-    // 操作类型，预热或刷新
+	position.Query
+	// 操作类型，预热或刷新
 	OperateType *DescribeOperationLogsQueryOperateTypeEnum `json:"operateType,omitempty"`
-    // 一页中个数，默认为10
+	// 一页中个数，默认为10
 	PageSize *string `json:"pageSize,omitempty"`
-    // 刷新类型，URL或目录
+	// 刷新类型，URL或目录
 	RefreshType *DescribeOperationLogsQueryRefreshTypeEnum `json:"refreshType,omitempty"`
-    // 开始时间，格式yyyy-MM-dd HH:mm:ss
+	// 开始时间，格式yyyy-MM-dd HH:mm:ss
 	StartTime *string `json:"startTime,omitempty"`
-    // 结束时间，格式yyyy-MM-dd HH:mm:ss
+	// 结束时间，格式yyyy-MM-dd HH:mm:ss
 	EndTime *string `json:"endTime,omitempty"`
-    // 页数，默认为1
+	// 页数，默认为1
 	Page *string `json:"page,omitempty"`
 }
 
@@ -81,7 +83,6 @@ func (s *DescribeOperationLogsQuery) SetPage(v string) *DescribeOperationLogsQue
 	return s
 }
 
-
 type DescribeOperationLogsQueryBuilder struct {
 	s *DescribeOperationLogsQuery
 }
@@ -125,5 +126,3 @@ func (b *DescribeOperationLogsQueryBuilder) Page(v string) *DescribeOperationLog
 func (b *DescribeOperationLogsQueryBuilder) Build() *DescribeOperationLogsQuery {
 	return b.s
 }
-
-

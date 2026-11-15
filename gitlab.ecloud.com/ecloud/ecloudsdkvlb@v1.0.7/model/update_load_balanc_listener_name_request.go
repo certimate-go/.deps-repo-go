@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type UpdateLoadBalancListenerNameRequest struct {
-
-
 	UpdateLoadBalancListenerNameBody *UpdateLoadBalancListenerNameBody `json:"updateLoadBalancListenerNameBody,omitempty"`
 }
 
@@ -31,7 +29,6 @@ func (s *UpdateLoadBalancListenerNameRequest) SetUpdateLoadBalancListenerNameBod
 	return s
 }
 
-
 type UpdateLoadBalancListenerNameRequestBuilder struct {
 	s *UpdateLoadBalancListenerNameRequest
 }
@@ -50,5 +47,3 @@ func (b *UpdateLoadBalancListenerNameRequestBuilder) UpdateLoadBalancListenerNam
 func (b *UpdateLoadBalancListenerNameRequestBuilder) Build() *UpdateLoadBalancListenerNameRequest {
 	return b.s
 }
-
-

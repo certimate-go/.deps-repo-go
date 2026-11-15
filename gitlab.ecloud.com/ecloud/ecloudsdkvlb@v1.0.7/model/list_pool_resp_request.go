@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type ListPoolRespRequest struct {
-
-
 	ListPoolRespPath *ListPoolRespPath `json:"listPoolRespPath,omitempty"`
 
 	ListPoolRespQuery *ListPoolRespQuery `json:"listPoolRespQuery,omitempty"`
@@ -38,7 +36,6 @@ func (s *ListPoolRespRequest) SetListPoolRespQuery(v *ListPoolRespQuery) *ListPo
 	return s
 }
 
-
 type ListPoolRespRequestBuilder struct {
 	s *ListPoolRespRequest
 }
@@ -62,5 +59,3 @@ func (b *ListPoolRespRequestBuilder) ListPoolRespQuery(v *ListPoolRespQuery) *Li
 func (b *ListPoolRespRequestBuilder) Build() *ListPoolRespRequest {
 	return b.s
 }
-
-

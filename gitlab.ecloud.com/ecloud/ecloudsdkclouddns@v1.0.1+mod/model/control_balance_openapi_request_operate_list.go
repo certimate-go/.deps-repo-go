@@ -4,25 +4,24 @@
 
 package model
 
-
 type ControlBalanceOpenapiRequestOperateListOperateEnum string
 
 // List of Operate
 const (
-    ControlBalanceOpenapiRequestOperateListOperateEnumDisable ControlBalanceOpenapiRequestOperateListOperateEnum = "DISABLE"
-    ControlBalanceOpenapiRequestOperateListOperateEnumEnable ControlBalanceOpenapiRequestOperateListOperateEnum = "ENABLE"
+	ControlBalanceOpenapiRequestOperateListOperateEnumDisable ControlBalanceOpenapiRequestOperateListOperateEnum = "DISABLE"
+	ControlBalanceOpenapiRequestOperateListOperateEnumEnable  ControlBalanceOpenapiRequestOperateListOperateEnum = "ENABLE"
 )
+
 type ControlBalanceOpenapiRequestOperateListTypeEnum string
 
 // List of Type
 const (
-    ControlBalanceOpenapiRequestOperateListTypeEnumA ControlBalanceOpenapiRequestOperateListTypeEnum = "A"
-    ControlBalanceOpenapiRequestOperateListTypeEnumAaaa ControlBalanceOpenapiRequestOperateListTypeEnum = "AAAA"
-    ControlBalanceOpenapiRequestOperateListTypeEnumCname ControlBalanceOpenapiRequestOperateListTypeEnum = "CNAME"
+	ControlBalanceOpenapiRequestOperateListTypeEnumA     ControlBalanceOpenapiRequestOperateListTypeEnum = "A"
+	ControlBalanceOpenapiRequestOperateListTypeEnumAaaa  ControlBalanceOpenapiRequestOperateListTypeEnum = "AAAA"
+	ControlBalanceOpenapiRequestOperateListTypeEnumCname ControlBalanceOpenapiRequestOperateListTypeEnum = "CNAME"
 )
 
 type ControlBalanceOpenapiRequestOperateList struct {
-
 	// 主机头
 	Rr string `json:"rr"`
 

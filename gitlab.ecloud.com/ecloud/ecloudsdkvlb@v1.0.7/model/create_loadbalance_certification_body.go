@@ -5,31 +5,32 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
+
 type CreateLoadbalanceCertificationBodyTypeEnum string
 
 // List of Type
 const (
-    CreateLoadbalanceCertificationBodyTypeEnumServer CreateLoadbalanceCertificationBodyTypeEnum = "SERVER"
-    CreateLoadbalanceCertificationBodyTypeEnumCa CreateLoadbalanceCertificationBodyTypeEnum = "CA"
-    CreateLoadbalanceCertificationBodyTypeEnumSni CreateLoadbalanceCertificationBodyTypeEnum = "SNI"
+	CreateLoadbalanceCertificationBodyTypeEnumServer CreateLoadbalanceCertificationBodyTypeEnum = "SERVER"
+	CreateLoadbalanceCertificationBodyTypeEnumCa     CreateLoadbalanceCertificationBodyTypeEnum = "CA"
+	CreateLoadbalanceCertificationBodyTypeEnumSni    CreateLoadbalanceCertificationBodyTypeEnum = "SNI"
 )
 
 type CreateLoadbalanceCertificationBody struct {
-    position.Body
-    // 私钥内容，私钥内容，参考控制台换行用“\n”表示
+	position.Body
+	// 私钥内容，私钥内容，参考控制台换行用“\n”表示
 	PrivateKey *string `json:"privateKey,omitempty"`
-    // 证书名称，5~64个字符，以英文大小写字母开头，可包含数字、下划线（_）和连字符（-）
+	// 证书名称，5~64个字符，以英文大小写字母开头，可包含数字、下划线（_）和连字符（-）
 	Name *string `json:"name,omitempty"`
-    // 证书描述
+	// 证书描述
 	Description *string `json:"description,omitempty"`
-    // 证书内容，参考控制台换行用“\n”表示
+	// 证书内容，参考控制台换行用“\n”表示
 	PublicKey *string `json:"publicKey,omitempty"`
-    // 证书类型
+	// 证书类型
 	Type *CreateLoadbalanceCertificationBodyTypeEnum `json:"type,omitempty"`
-    // 证书标签
+	// 证书标签
 	Tags *[]CreateLoadbalanceCertificationRequestTags `json:"tags,omitempty"`
 }
 
@@ -75,7 +76,6 @@ func (s *CreateLoadbalanceCertificationBody) SetTags(v []CreateLoadbalanceCertif
 	return s
 }
 
-
 type CreateLoadbalanceCertificationBodyBuilder struct {
 	s *CreateLoadbalanceCertificationBody
 }
@@ -119,5 +119,3 @@ func (b *CreateLoadbalanceCertificationBodyBuilder) Tags(v []CreateLoadbalanceCe
 func (b *CreateLoadbalanceCertificationBodyBuilder) Build() *CreateLoadbalanceCertificationBody {
 	return b.s
 }
-
-

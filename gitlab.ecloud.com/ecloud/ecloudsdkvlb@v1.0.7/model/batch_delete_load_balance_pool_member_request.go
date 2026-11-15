@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type BatchDeleteLoadBalancePoolMemberRequest struct {
-
-
 	BatchDeleteLoadBalancePoolMemberPath *BatchDeleteLoadBalancePoolMemberPath `json:"batchDeleteLoadBalancePoolMemberPath,omitempty"`
 
 	BatchDeleteLoadBalancePoolMemberBody *BatchDeleteLoadBalancePoolMemberBody `json:"batchDeleteLoadBalancePoolMemberBody,omitempty"`
@@ -38,7 +36,6 @@ func (s *BatchDeleteLoadBalancePoolMemberRequest) SetBatchDeleteLoadBalancePoolM
 	return s
 }
 
-
 type BatchDeleteLoadBalancePoolMemberRequestBuilder struct {
 	s *BatchDeleteLoadBalancePoolMemberRequest
 }
@@ -62,5 +59,3 @@ func (b *BatchDeleteLoadBalancePoolMemberRequestBuilder) BatchDeleteLoadBalanceP
 func (b *BatchDeleteLoadBalancePoolMemberRequestBuilder) Build() *BatchDeleteLoadBalancePoolMemberRequest {
 	return b.s
 }
-
-

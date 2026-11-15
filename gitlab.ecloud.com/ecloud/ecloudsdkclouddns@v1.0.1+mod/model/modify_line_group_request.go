@@ -4,10 +4,7 @@
 
 package model
 
-
-
 type ModifyLineGroupRequest struct {
-
 	ModifyLineGroupBody *ModifyLineGroupBody `json:"modifyLineGroupBody,omitempty"`
 
 	ModifyLineGroupPath *ModifyLineGroupPath `json:"modifyLineGroupPath,omitempty"`

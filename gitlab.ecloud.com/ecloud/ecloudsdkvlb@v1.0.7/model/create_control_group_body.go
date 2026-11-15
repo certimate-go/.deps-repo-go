@@ -5,21 +5,21 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type CreateControlGroupBody struct {
-    position.Body
-    // 访问控制规则地址类型（IPv4或IPv6）
+	position.Body
+	// 访问控制规则地址类型（IPv4或IPv6）
 	IpVersion *string `json:"ipVersion,omitempty"`
-    // 访问控制规则IP地址
+	// 访问控制规则IP地址
 	IpAddress *string `json:"ipAddress,omitempty"`
-    // 访问控制组名称，5~64个字符，以英文大小写字母开头，可包含数字、下划线（_）和连字符（-）；不填则自动设置默认值
+	// 访问控制组名称，5~64个字符，以英文大小写字母开头，可包含数字、下划线（_）和连字符（-）；不填则自动设置默认值
 	Name *string `json:"name,omitempty"`
-    // 访问控制组描述
+	// 访问控制组描述
 	Description *string `json:"description,omitempty"`
-    // 访问控制组规则描述
+	// 访问控制组规则描述
 	RuleDescription *string `json:"ruleDescription,omitempty"`
 }
 
@@ -60,7 +60,6 @@ func (s *CreateControlGroupBody) SetRuleDescription(v string) *CreateControlGrou
 	return s
 }
 
-
 type CreateControlGroupBodyBuilder struct {
 	s *CreateControlGroupBody
 }
@@ -99,5 +98,3 @@ func (b *CreateControlGroupBodyBuilder) RuleDescription(v string) *CreateControl
 func (b *CreateControlGroupBodyBuilder) Build() *CreateControlGroupBody {
 	return b.s
 }
-
-

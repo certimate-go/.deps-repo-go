@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type UpdateLoadbalanceCertificationRequest struct {
-
-
 	UpdateLoadbalanceCertificationBody *UpdateLoadbalanceCertificationBody `json:"updateLoadbalanceCertificationBody,omitempty"`
 }
 
@@ -31,7 +29,6 @@ func (s *UpdateLoadbalanceCertificationRequest) SetUpdateLoadbalanceCertificatio
 	return s
 }
 
-
 type UpdateLoadbalanceCertificationRequestBuilder struct {
 	s *UpdateLoadbalanceCertificationRequest
 }
@@ -50,5 +47,3 @@ func (b *UpdateLoadbalanceCertificationRequestBuilder) UpdateLoadbalanceCertific
 func (b *UpdateLoadbalanceCertificationRequestBuilder) Build() *UpdateLoadbalanceCertificationRequest {
 	return b.s
 }
-
-

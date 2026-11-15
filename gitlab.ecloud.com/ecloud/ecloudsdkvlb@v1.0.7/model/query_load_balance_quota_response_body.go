@@ -5,14 +5,13 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type QueryLoadBalanceQuotaResponseBody struct {
-
-    // 总配额
+	// 总配额
 	TotalQuota *int32 `json:"totalQuota,omitempty"`
-    // 已使用配额
+	// 已使用配额
 	UsedQuota *int32 `json:"usedQuota,omitempty"`
 }
 
@@ -38,7 +37,6 @@ func (s *QueryLoadBalanceQuotaResponseBody) SetUsedQuota(v int32) *QueryLoadBala
 	return s
 }
 
-
 type QueryLoadBalanceQuotaResponseBodyBuilder struct {
 	s *QueryLoadBalanceQuotaResponseBody
 }
@@ -62,5 +60,3 @@ func (b *QueryLoadBalanceQuotaResponseBodyBuilder) UsedQuota(v int32) *QueryLoad
 func (b *QueryLoadBalanceQuotaResponseBodyBuilder) Build() *QueryLoadBalanceQuotaResponseBody {
 	return b.s
 }
-
-

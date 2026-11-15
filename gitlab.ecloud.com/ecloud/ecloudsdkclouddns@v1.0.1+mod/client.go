@@ -51,7 +51,7 @@ const (
 func (c *Client) UnlockDomain(request *model.UnlockDomainRequest) (*model.UnlockDomainResponse, error) {
 	c.httpRequest.Action = "unlockDomain"
 	c.httpRequest.Body = request
-	var returnValue = &model.UnlockDomainResponse{}
+	returnValue := &model.UnlockDomainResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -63,7 +63,7 @@ func (c *Client) UnlockDomain(request *model.UnlockDomainRequest) (*model.Unlock
 func (c *Client) LockDomain(request *model.LockDomainRequest) (*model.LockDomainResponse, error) {
 	c.httpRequest.Action = "lockDomain"
 	c.httpRequest.Body = request
-	var returnValue = &model.LockDomainResponse{}
+	returnValue := &model.LockDomainResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -75,7 +75,7 @@ func (c *Client) LockDomain(request *model.LockDomainRequest) (*model.LockDomain
 func (c *Client) HostSingleResolve(request *model.HostSingleResolveRequest) (*model.HostSingleResolveResponse, error) {
 	c.httpRequest.Action = "hostSingleResolve"
 	c.httpRequest.Body = request
-	var returnValue = &model.HostSingleResolveResponse{}
+	returnValue := &model.HostSingleResolveResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -87,7 +87,7 @@ func (c *Client) HostSingleResolve(request *model.HostSingleResolveRequest) (*mo
 func (c *Client) ControlRecord(request *model.ControlRecordRequest) (*model.ControlRecordResponse, error) {
 	c.httpRequest.Action = "controlRecord"
 	c.httpRequest.Body = request
-	var returnValue = &model.ControlRecordResponse{}
+	returnValue := &model.ControlRecordResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -99,7 +99,7 @@ func (c *Client) ControlRecord(request *model.ControlRecordRequest) (*model.Cont
 func (c *Client) HostBatchResolve(request *model.HostBatchResolveRequest) (*model.HostBatchResolveResponse, error) {
 	c.httpRequest.Action = "hostBatchResolve"
 	c.httpRequest.Body = request
-	var returnValue = &model.HostBatchResolveResponse{}
+	returnValue := &model.HostBatchResolveResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -111,7 +111,7 @@ func (c *Client) HostBatchResolve(request *model.HostBatchResolveRequest) (*mode
 func (c *Client) DomainStatistics(request *model.DomainStatisticsRequest) (*model.DomainStatisticsResponse, error) {
 	c.httpRequest.Action = "domainStatistics"
 	c.httpRequest.Body = request
-	var returnValue = &model.DomainStatisticsResponse{}
+	returnValue := &model.DomainStatisticsResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -123,7 +123,7 @@ func (c *Client) DomainStatistics(request *model.DomainStatisticsRequest) (*mode
 func (c *Client) DeleteDomain(request *model.DeleteDomainRequest) (*model.DeleteDomainResponse, error) {
 	c.httpRequest.Action = "deleteDomain"
 	c.httpRequest.Body = request
-	var returnValue = &model.DeleteDomainResponse{}
+	returnValue := &model.DeleteDomainResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -135,7 +135,7 @@ func (c *Client) DeleteDomain(request *model.DeleteDomainRequest) (*model.Delete
 func (c *Client) DeleteRecord(request *model.DeleteRecordRequest) (*model.DeleteRecordResponse, error) {
 	c.httpRequest.Action = "deleteRecord"
 	c.httpRequest.Body = request
-	var returnValue = &model.DeleteRecordResponse{}
+	returnValue := &model.DeleteRecordResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -147,7 +147,7 @@ func (c *Client) DeleteRecord(request *model.DeleteRecordRequest) (*model.Delete
 func (c *Client) CreateDomain(request *model.CreateDomainRequest) (*model.CreateDomainResponse, error) {
 	c.httpRequest.Action = "createDomain"
 	c.httpRequest.Body = request
-	var returnValue = &model.CreateDomainResponse{}
+	returnValue := &model.CreateDomainResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -159,7 +159,7 @@ func (c *Client) CreateDomain(request *model.CreateDomainRequest) (*model.Create
 func (c *Client) SingleHostResolve(request *model.SingleHostResolveRequest) (*model.SingleHostResolveResponse, error) {
 	c.httpRequest.Action = "singleHostResolve"
 	c.httpRequest.Body = request
-	var returnValue = &model.SingleHostResolveResponse{}
+	returnValue := &model.SingleHostResolveResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -171,7 +171,7 @@ func (c *Client) SingleHostResolve(request *model.SingleHostResolveRequest) (*mo
 func (c *Client) ControlRecordOpenapi(request *model.ControlRecordOpenapiRequest) (*model.ControlRecordOpenapiResponse, error) {
 	c.httpRequest.Action = "controlRecordOpenapi"
 	c.httpRequest.Body = request
-	var returnValue = &model.ControlRecordOpenapiResponse{}
+	returnValue := &model.ControlRecordOpenapiResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -183,7 +183,7 @@ func (c *Client) ControlRecordOpenapi(request *model.ControlRecordOpenapiRequest
 func (c *Client) BatchHostResolve(request *model.BatchHostResolveRequest) (*model.BatchHostResolveResponse, error) {
 	c.httpRequest.Action = "batchHostResolve"
 	c.httpRequest.Body = request
-	var returnValue = &model.BatchHostResolveResponse{}
+	returnValue := &model.BatchHostResolveResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -195,7 +195,7 @@ func (c *Client) BatchHostResolve(request *model.BatchHostResolveRequest) (*mode
 func (c *Client) ModifyRecordOpenapi(request *model.ModifyRecordOpenapiRequest) (*model.ModifyRecordOpenapiResponse, error) {
 	c.httpRequest.Action = "modifyRecordOpenapi"
 	c.httpRequest.Body = request
-	var returnValue = &model.ModifyRecordOpenapiResponse{}
+	returnValue := &model.ModifyRecordOpenapiResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -207,7 +207,7 @@ func (c *Client) ModifyRecordOpenapi(request *model.ModifyRecordOpenapiRequest) 
 func (c *Client) DeleteRecordOpenapi(request *model.DeleteRecordOpenapiRequest) (*model.DeleteRecordOpenapiResponse, error) {
 	c.httpRequest.Action = "deleteRecordOpenapi"
 	c.httpRequest.Body = request
-	var returnValue = &model.DeleteRecordOpenapiResponse{}
+	returnValue := &model.DeleteRecordOpenapiResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -219,7 +219,7 @@ func (c *Client) DeleteRecordOpenapi(request *model.DeleteRecordOpenapiRequest) 
 func (c *Client) ListNewRecordLineOpenapi(request *model.ListNewRecordLineOpenapiRequest) (*model.ListNewRecordLineOpenapiResponse, error) {
 	c.httpRequest.Action = "listNewRecordLineOpenapi"
 	c.httpRequest.Body = request
-	var returnValue = &model.ListNewRecordLineOpenapiResponse{}
+	returnValue := &model.ListNewRecordLineOpenapiResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -231,7 +231,7 @@ func (c *Client) ListNewRecordLineOpenapi(request *model.ListNewRecordLineOpenap
 func (c *Client) SingleHostTagResolve(request *model.SingleHostTagResolveRequest) (*model.SingleHostTagResolveResponse, error) {
 	c.httpRequest.Action = "singleHostTagResolve"
 	c.httpRequest.Body = request
-	var returnValue = &model.SingleHostTagResolveResponse{}
+	returnValue := &model.SingleHostTagResolveResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -243,7 +243,7 @@ func (c *Client) SingleHostTagResolve(request *model.SingleHostTagResolveRequest
 func (c *Client) ListRecordOpenapi(request *model.ListRecordOpenapiRequest) (*model.ListRecordOpenapiResponse, error) {
 	c.httpRequest.Action = "listRecordOpenapi"
 	c.httpRequest.Body = request
-	var returnValue = &model.ListRecordOpenapiResponse{}
+	returnValue := &model.ListRecordOpenapiResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -255,7 +255,7 @@ func (c *Client) ListRecordOpenapi(request *model.ListRecordOpenapiRequest) (*mo
 func (c *Client) BatchHostTagResolve(request *model.BatchHostTagResolveRequest) (*model.BatchHostTagResolveResponse, error) {
 	c.httpRequest.Action = "batchHostTagResolve"
 	c.httpRequest.Body = request
-	var returnValue = &model.BatchHostTagResolveResponse{}
+	returnValue := &model.BatchHostTagResolveResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -267,7 +267,7 @@ func (c *Client) BatchHostTagResolve(request *model.BatchHostTagResolveRequest) 
 func (c *Client) GetRecordOpenapi(request *model.GetRecordOpenapiRequest) (*model.GetRecordOpenapiResponse, error) {
 	c.httpRequest.Action = "getRecordOpenapi"
 	c.httpRequest.Body = request
-	var returnValue = &model.GetRecordOpenapiResponse{}
+	returnValue := &model.GetRecordOpenapiResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -279,7 +279,7 @@ func (c *Client) GetRecordOpenapi(request *model.GetRecordOpenapiRequest) (*mode
 func (c *Client) ModifyBalanceRateOpenapi(request *model.ModifyBalanceRateOpenapiRequest) (*model.ModifyBalanceRateOpenapiResponse, error) {
 	c.httpRequest.Action = "modifyBalanceRateOpenapi"
 	c.httpRequest.Body = request
-	var returnValue = &model.ModifyBalanceRateOpenapiResponse{}
+	returnValue := &model.ModifyBalanceRateOpenapiResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -291,7 +291,7 @@ func (c *Client) ModifyBalanceRateOpenapi(request *model.ModifyBalanceRateOpenap
 func (c *Client) ControlBalanceOpenapi(request *model.ControlBalanceOpenapiRequest) (*model.ControlBalanceOpenapiResponse, error) {
 	c.httpRequest.Action = "controlBalanceOpenapi"
 	c.httpRequest.Body = request
-	var returnValue = &model.ControlBalanceOpenapiResponse{}
+	returnValue := &model.ControlBalanceOpenapiResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -303,7 +303,7 @@ func (c *Client) ControlBalanceOpenapi(request *model.ControlBalanceOpenapiReque
 func (c *Client) ListBalanceOpenapi(request *model.ListBalanceOpenapiRequest) (*model.ListBalanceOpenapiResponse, error) {
 	c.httpRequest.Action = "listBalanceOpenapi"
 	c.httpRequest.Body = request
-	var returnValue = &model.ListBalanceOpenapiResponse{}
+	returnValue := &model.ListBalanceOpenapiResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -315,7 +315,7 @@ func (c *Client) ListBalanceOpenapi(request *model.ListBalanceOpenapiRequest) (*
 func (c *Client) GetDomainByNameForOpenapi(request *model.GetDomainByNameForOpenapiRequest) (*model.GetDomainByNameForOpenapiResponse, error) {
 	c.httpRequest.Action = "getDomainByNameForOpenapi"
 	c.httpRequest.Body = request
-	var returnValue = &model.GetDomainByNameForOpenapiResponse{}
+	returnValue := &model.GetDomainByNameForOpenapiResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -327,7 +327,7 @@ func (c *Client) GetDomainByNameForOpenapi(request *model.GetDomainByNameForOpen
 func (c *Client) AddOrder(request *model.AddOrderRequest) (*model.AddOrderResponse, error) {
 	c.httpRequest.Action = "addOrder"
 	c.httpRequest.Body = request
-	var returnValue = &model.AddOrderResponse{}
+	returnValue := &model.AddOrderResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -339,7 +339,7 @@ func (c *Client) AddOrder(request *model.AddOrderRequest) (*model.AddOrderRespon
 func (c *Client) GetDomainByName(request *model.GetDomainByNameRequest) (*model.GetDomainByNameResponse, error) {
 	c.httpRequest.Action = "getDomainByName"
 	c.httpRequest.Body = request
-	var returnValue = &model.GetDomainByNameResponse{}
+	returnValue := &model.GetDomainByNameResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -351,7 +351,7 @@ func (c *Client) GetDomainByName(request *model.GetDomainByNameRequest) (*model.
 func (c *Client) GetBalanceDetailOpenapi(request *model.GetBalanceDetailOpenapiRequest) (*model.GetBalanceDetailOpenapiResponse, error) {
 	c.httpRequest.Action = "getBalanceDetailOpenapi"
 	c.httpRequest.Body = request
-	var returnValue = &model.GetBalanceDetailOpenapiResponse{}
+	returnValue := &model.GetBalanceDetailOpenapiResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -363,7 +363,7 @@ func (c *Client) GetBalanceDetailOpenapi(request *model.GetBalanceDetailOpenapiR
 func (c *Client) CreateDomainOpenapi(request *model.CreateDomainOpenapiRequest) (*model.CreateDomainOpenapiResponse, error) {
 	c.httpRequest.Action = "createDomainOpenapi"
 	c.httpRequest.Body = request
-	var returnValue = &model.CreateDomainOpenapiResponse{}
+	returnValue := &model.CreateDomainOpenapiResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -375,7 +375,7 @@ func (c *Client) CreateDomainOpenapi(request *model.CreateDomainOpenapiRequest) 
 func (c *Client) ListNs() (*model.ListNsResponse, error) {
 	c.httpRequest.Action = "listNs"
 
-	var returnValue = &model.ListNsResponse{}
+	returnValue := &model.ListNsResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -387,7 +387,7 @@ func (c *Client) ListNs() (*model.ListNsResponse, error) {
 func (c *Client) CancelDnsOrder(request *model.CancelDnsOrderRequest) (*model.CancelDnsOrderResponse, error) {
 	c.httpRequest.Action = "cancelDnsOrder"
 	c.httpRequest.Body = request
-	var returnValue = &model.CancelDnsOrderResponse{}
+	returnValue := &model.CancelDnsOrderResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -399,7 +399,7 @@ func (c *Client) CancelDnsOrder(request *model.CancelDnsOrderRequest) (*model.Ca
 func (c *Client) DomainStatisticsOpenapi(request *model.DomainStatisticsOpenapiRequest) (*model.DomainStatisticsOpenapiResponse, error) {
 	c.httpRequest.Action = "domainStatisticsOpenapi"
 	c.httpRequest.Body = request
-	var returnValue = &model.DomainStatisticsOpenapiResponse{}
+	returnValue := &model.DomainStatisticsOpenapiResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -411,7 +411,7 @@ func (c *Client) DomainStatisticsOpenapi(request *model.DomainStatisticsOpenapiR
 func (c *Client) ControlDomainOpenapi(request *model.ControlDomainOpenapiRequest) (*model.ControlDomainOpenapiResponse, error) {
 	c.httpRequest.Action = "controlDomainOpenapi"
 	c.httpRequest.Body = request
-	var returnValue = &model.ControlDomainOpenapiResponse{}
+	returnValue := &model.ControlDomainOpenapiResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -423,7 +423,7 @@ func (c *Client) ControlDomainOpenapi(request *model.ControlDomainOpenapiRequest
 func (c *Client) RenewDnsOrder(request *model.RenewDnsOrderRequest) (*model.RenewDnsOrderResponse, error) {
 	c.httpRequest.Action = "renewDnsOrder"
 	c.httpRequest.Body = request
-	var returnValue = &model.RenewDnsOrderResponse{}
+	returnValue := &model.RenewDnsOrderResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -435,7 +435,7 @@ func (c *Client) RenewDnsOrder(request *model.RenewDnsOrderRequest) (*model.Rene
 func (c *Client) CreateFreeDomain(request *model.CreateFreeDomainRequest) (*model.CreateFreeDomainResponse, error) {
 	c.httpRequest.Action = "createFreeDomain"
 	c.httpRequest.Body = request
-	var returnValue = &model.CreateFreeDomainResponse{}
+	returnValue := &model.CreateFreeDomainResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -447,7 +447,7 @@ func (c *Client) CreateFreeDomain(request *model.CreateFreeDomainRequest) (*mode
 func (c *Client) DeleteDomainOpenapi(request *model.DeleteDomainOpenapiRequest) (*model.DeleteDomainOpenapiResponse, error) {
 	c.httpRequest.Action = "deleteDomainOpenapi"
 	c.httpRequest.Body = request
-	var returnValue = &model.DeleteDomainOpenapiResponse{}
+	returnValue := &model.DeleteDomainOpenapiResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -459,7 +459,7 @@ func (c *Client) DeleteDomainOpenapi(request *model.DeleteDomainOpenapiRequest) 
 func (c *Client) ModifyOrder(request *model.ModifyOrderRequest) (*model.ModifyOrderResponse, error) {
 	c.httpRequest.Action = "modifyOrder"
 	c.httpRequest.Body = request
-	var returnValue = &model.ModifyOrderResponse{}
+	returnValue := &model.ModifyOrderResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -471,7 +471,7 @@ func (c *Client) ModifyOrder(request *model.ModifyOrderRequest) (*model.ModifyOr
 func (c *Client) ModifyDomainDesc(request *model.ModifyDomainDescRequest) (*model.ModifyDomainDescResponse, error) {
 	c.httpRequest.Action = "modifyDomainDesc"
 	c.httpRequest.Body = request
-	var returnValue = &model.ModifyDomainDescResponse{}
+	returnValue := &model.ModifyDomainDescResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -483,7 +483,7 @@ func (c *Client) ModifyDomainDesc(request *model.ModifyDomainDescRequest) (*mode
 func (c *Client) ModifyDomainDescOpenapi(request *model.ModifyDomainDescOpenapiRequest) (*model.ModifyDomainDescOpenapiResponse, error) {
 	c.httpRequest.Action = "modifyDomainDescOpenapi"
 	c.httpRequest.Body = request
-	var returnValue = &model.ModifyDomainDescOpenapiResponse{}
+	returnValue := &model.ModifyDomainDescOpenapiResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -495,7 +495,7 @@ func (c *Client) ModifyDomainDescOpenapi(request *model.ModifyDomainDescOpenapiR
 func (c *Client) ListInstance(request *model.ListInstanceRequest) (*model.ListInstanceResponse, error) {
 	c.httpRequest.Action = "listInstance"
 	c.httpRequest.Body = request
-	var returnValue = &model.ListInstanceResponse{}
+	returnValue := &model.ListInstanceResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -507,7 +507,7 @@ func (c *Client) ListInstance(request *model.ListInstanceRequest) (*model.ListIn
 func (c *Client) CreateFreeDomainOpenapi(request *model.CreateFreeDomainOpenapiRequest) (*model.CreateFreeDomainOpenapiResponse, error) {
 	c.httpRequest.Action = "createFreeDomainOpenapi"
 	c.httpRequest.Body = request
-	var returnValue = &model.CreateFreeDomainOpenapiResponse{}
+	returnValue := &model.CreateFreeDomainOpenapiResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -519,7 +519,7 @@ func (c *Client) CreateFreeDomainOpenapi(request *model.CreateFreeDomainOpenapiR
 func (c *Client) ListNsOpenapi() (*model.ListNsOpenapiResponse, error) {
 	c.httpRequest.Action = "listNsOpenapi"
 
-	var returnValue = &model.ListNsOpenapiResponse{}
+	returnValue := &model.ListNsOpenapiResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -531,7 +531,7 @@ func (c *Client) ListNsOpenapi() (*model.ListNsOpenapiResponse, error) {
 func (c *Client) ModifyDomainOpenapi(request *model.ModifyDomainOpenapiRequest) (*model.ModifyDomainOpenapiResponse, error) {
 	c.httpRequest.Action = "modifyDomainOpenapi"
 	c.httpRequest.Body = request
-	var returnValue = &model.ModifyDomainOpenapiResponse{}
+	returnValue := &model.ModifyDomainOpenapiResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -543,7 +543,7 @@ func (c *Client) ModifyDomainOpenapi(request *model.ModifyDomainOpenapiRequest) 
 func (c *Client) CreateOrderOpenapi(request *model.CreateOrderOpenapiRequest) (*model.CreateOrderOpenapiResponse, error) {
 	c.httpRequest.Action = "createOrderOpenapi"
 	c.httpRequest.Body = request
-	var returnValue = &model.CreateOrderOpenapiResponse{}
+	returnValue := &model.CreateOrderOpenapiResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -555,7 +555,7 @@ func (c *Client) CreateOrderOpenapi(request *model.CreateOrderOpenapiRequest) (*
 func (c *Client) GetOperationLog(request *model.GetOperationLogRequest) (*model.GetOperationLogResponse, error) {
 	c.httpRequest.Action = "getOperationLog"
 	c.httpRequest.Body = request
-	var returnValue = &model.GetOperationLogResponse{}
+	returnValue := &model.GetOperationLogResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -567,7 +567,7 @@ func (c *Client) GetOperationLog(request *model.GetOperationLogRequest) (*model.
 func (c *Client) ListDomainForOpenapi(request *model.ListDomainForOpenapiRequest) (*model.ListDomainForOpenapiResponse, error) {
 	c.httpRequest.Action = "listDomainForOpenapi"
 	c.httpRequest.Body = request
-	var returnValue = &model.ListDomainForOpenapiResponse{}
+	returnValue := &model.ListDomainForOpenapiResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -579,7 +579,7 @@ func (c *Client) ListDomainForOpenapi(request *model.ListDomainForOpenapiRequest
 func (c *Client) CancelOrderForOpenapi(request *model.CancelOrderForOpenapiRequest) (*model.CancelOrderForOpenapiResponse, error) {
 	c.httpRequest.Action = "cancelOrderForOpenapi"
 	c.httpRequest.Body = request
-	var returnValue = &model.CancelOrderForOpenapiResponse{}
+	returnValue := &model.CancelOrderForOpenapiResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -591,7 +591,7 @@ func (c *Client) CancelOrderForOpenapi(request *model.CancelOrderForOpenapiReque
 func (c *Client) ModifyDomain(request *model.ModifyDomainRequest) (*model.ModifyDomainResponse, error) {
 	c.httpRequest.Action = "modifyDomain"
 	c.httpRequest.Body = request
-	var returnValue = &model.ModifyDomainResponse{}
+	returnValue := &model.ModifyDomainResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -603,7 +603,7 @@ func (c *Client) ModifyDomain(request *model.ModifyDomainRequest) (*model.Modify
 func (c *Client) LockDomainOpenapi(request *model.LockDomainOpenapiRequest) (*model.LockDomainOpenapiResponse, error) {
 	c.httpRequest.Action = "lockDomainOpenapi"
 	c.httpRequest.Body = request
-	var returnValue = &model.LockDomainOpenapiResponse{}
+	returnValue := &model.LockDomainOpenapiResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -615,7 +615,7 @@ func (c *Client) LockDomainOpenapi(request *model.LockDomainOpenapiRequest) (*mo
 func (c *Client) ListDomain(request *model.ListDomainRequest) (*model.ListDomainResponse, error) {
 	c.httpRequest.Action = "listDomain"
 	c.httpRequest.Body = request
-	var returnValue = &model.ListDomainResponse{}
+	returnValue := &model.ListDomainResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -627,7 +627,7 @@ func (c *Client) ListDomain(request *model.ListDomainRequest) (*model.ListDomain
 func (c *Client) RenewProductOpenapi(request *model.RenewProductOpenapiRequest) (*model.RenewProductOpenapiResponse, error) {
 	c.httpRequest.Action = "renewProductOpenapi"
 	c.httpRequest.Body = request
-	var returnValue = &model.RenewProductOpenapiResponse{}
+	returnValue := &model.RenewProductOpenapiResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -639,7 +639,7 @@ func (c *Client) RenewProductOpenapi(request *model.RenewProductOpenapiRequest) 
 func (c *Client) GetOperationLogOpenapi(request *model.GetOperationLogOpenapiRequest) (*model.GetOperationLogOpenapiResponse, error) {
 	c.httpRequest.Action = "getOperationLogOpenapi"
 	c.httpRequest.Body = request
-	var returnValue = &model.GetOperationLogOpenapiResponse{}
+	returnValue := &model.GetOperationLogOpenapiResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -651,7 +651,7 @@ func (c *Client) GetOperationLogOpenapi(request *model.GetOperationLogOpenapiReq
 func (c *Client) TakeOverRefreshDomain(request *model.TakeOverRefreshDomainRequest) (*model.TakeOverRefreshDomainResponse, error) {
 	c.httpRequest.Action = "takeOverRefreshDomain"
 	c.httpRequest.Body = request
-	var returnValue = &model.TakeOverRefreshDomainResponse{}
+	returnValue := &model.TakeOverRefreshDomainResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -663,7 +663,7 @@ func (c *Client) TakeOverRefreshDomain(request *model.TakeOverRefreshDomainReque
 func (c *Client) ListInstanceForOpenapi(request *model.ListInstanceForOpenapiRequest) (*model.ListInstanceForOpenapiResponse, error) {
 	c.httpRequest.Action = "listInstanceForOpenapi"
 	c.httpRequest.Body = request
-	var returnValue = &model.ListInstanceForOpenapiResponse{}
+	returnValue := &model.ListInstanceForOpenapiResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -675,7 +675,7 @@ func (c *Client) ListInstanceForOpenapi(request *model.ListInstanceForOpenapiReq
 func (c *Client) TakeOverRefreshDomainOpenapi(request *model.TakeOverRefreshDomainOpenapiRequest) (*model.TakeOverRefreshDomainOpenapiResponse, error) {
 	c.httpRequest.Action = "takeOverRefreshDomainOpenapi"
 	c.httpRequest.Body = request
-	var returnValue = &model.TakeOverRefreshDomainOpenapiResponse{}
+	returnValue := &model.TakeOverRefreshDomainOpenapiResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -687,7 +687,7 @@ func (c *Client) TakeOverRefreshDomainOpenapi(request *model.TakeOverRefreshDoma
 func (c *Client) UpgradeOrderOpenapi(request *model.UpgradeOrderOpenapiRequest) (*model.UpgradeOrderOpenapiResponse, error) {
 	c.httpRequest.Action = "upgradeOrderOpenapi"
 	c.httpRequest.Body = request
-	var returnValue = &model.UpgradeOrderOpenapiResponse{}
+	returnValue := &model.UpgradeOrderOpenapiResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -699,7 +699,7 @@ func (c *Client) UpgradeOrderOpenapi(request *model.UpgradeOrderOpenapiRequest) 
 func (c *Client) UnlockDomainOpenapi(request *model.UnlockDomainOpenapiRequest) (*model.UnlockDomainOpenapiResponse, error) {
 	c.httpRequest.Action = "unlockDomainOpenapi"
 	c.httpRequest.Body = request
-	var returnValue = &model.UnlockDomainOpenapiResponse{}
+	returnValue := &model.UnlockDomainOpenapiResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -711,7 +711,7 @@ func (c *Client) UnlockDomainOpenapi(request *model.UnlockDomainOpenapiRequest) 
 func (c *Client) ModifyRecord(request *model.ModifyRecordRequest) (*model.ModifyRecordResponse, error) {
 	c.httpRequest.Action = "modifyRecord"
 	c.httpRequest.Body = request
-	var returnValue = &model.ModifyRecordResponse{}
+	returnValue := &model.ModifyRecordResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -723,7 +723,7 @@ func (c *Client) ModifyRecord(request *model.ModifyRecordRequest) (*model.Modify
 func (c *Client) CreateRecordOpenapi(request *model.CreateRecordOpenapiRequest) (*model.CreateRecordOpenapiResponse, error) {
 	c.httpRequest.Action = "createRecordOpenapi"
 	c.httpRequest.Body = request
-	var returnValue = &model.CreateRecordOpenapiResponse{}
+	returnValue := &model.CreateRecordOpenapiResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -735,7 +735,7 @@ func (c *Client) CreateRecordOpenapi(request *model.CreateRecordOpenapiRequest) 
 func (c *Client) CreateCustomLineOpenapi(request *model.CreateCustomLineOpenapiRequest) (*model.CreateCustomLineOpenapiResponse, error) {
 	c.httpRequest.Action = "createCustomLineOpenapi"
 	c.httpRequest.Body = request
-	var returnValue = &model.CreateCustomLineOpenapiResponse{}
+	returnValue := &model.CreateCustomLineOpenapiResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -747,7 +747,7 @@ func (c *Client) CreateCustomLineOpenapi(request *model.CreateCustomLineOpenapiR
 func (c *Client) CreateRecord(request *model.CreateRecordRequest) (*model.CreateRecordResponse, error) {
 	c.httpRequest.Action = "createRecord"
 	c.httpRequest.Body = request
-	var returnValue = &model.CreateRecordResponse{}
+	returnValue := &model.CreateRecordResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -759,7 +759,7 @@ func (c *Client) CreateRecord(request *model.CreateRecordRequest) (*model.Create
 func (c *Client) RemoveCustomLineOpenapi(request *model.RemoveCustomLineOpenapiRequest) (*model.RemoveCustomLineOpenapiResponse, error) {
 	c.httpRequest.Action = "removeCustomLineOpenapi"
 	c.httpRequest.Body = request
-	var returnValue = &model.RemoveCustomLineOpenapiResponse{}
+	returnValue := &model.RemoveCustomLineOpenapiResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -771,7 +771,7 @@ func (c *Client) RemoveCustomLineOpenapi(request *model.RemoveCustomLineOpenapiR
 func (c *Client) ListCustomLineOpenapi(request *model.ListCustomLineOpenapiRequest) (*model.ListCustomLineOpenapiResponse, error) {
 	c.httpRequest.Action = "listCustomLineOpenapi"
 	c.httpRequest.Body = request
-	var returnValue = &model.ListCustomLineOpenapiResponse{}
+	returnValue := &model.ListCustomLineOpenapiResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -783,7 +783,7 @@ func (c *Client) ListCustomLineOpenapi(request *model.ListCustomLineOpenapiReque
 func (c *Client) ListNewRecordLine(request *model.ListNewRecordLineRequest) (*model.ListNewRecordLineResponse, error) {
 	c.httpRequest.Action = "listNewRecordLine"
 	c.httpRequest.Body = request
-	var returnValue = &model.ListNewRecordLineResponse{}
+	returnValue := &model.ListNewRecordLineResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -795,7 +795,7 @@ func (c *Client) ListNewRecordLine(request *model.ListNewRecordLineRequest) (*mo
 func (c *Client) CreateLineGroupOpenapi(request *model.CreateLineGroupOpenapiRequest) (*model.CreateLineGroupOpenapiResponse, error) {
 	c.httpRequest.Action = "createLineGroupOpenapi"
 	c.httpRequest.Body = request
-	var returnValue = &model.CreateLineGroupOpenapiResponse{}
+	returnValue := &model.CreateLineGroupOpenapiResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -807,7 +807,7 @@ func (c *Client) CreateLineGroupOpenapi(request *model.CreateLineGroupOpenapiReq
 func (c *Client) ListRecord(request *model.ListRecordRequest) (*model.ListRecordResponse, error) {
 	c.httpRequest.Action = "listRecord"
 	c.httpRequest.Body = request
-	var returnValue = &model.ListRecordResponse{}
+	returnValue := &model.ListRecordResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -819,7 +819,7 @@ func (c *Client) ListRecord(request *model.ListRecordRequest) (*model.ListRecord
 func (c *Client) RemoveLineGroupOpenapi(request *model.RemoveLineGroupOpenapiRequest) (*model.RemoveLineGroupOpenapiResponse, error) {
 	c.httpRequest.Action = "removeLineGroupOpenapi"
 	c.httpRequest.Body = request
-	var returnValue = &model.RemoveLineGroupOpenapiResponse{}
+	returnValue := &model.RemoveLineGroupOpenapiResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -831,7 +831,7 @@ func (c *Client) RemoveLineGroupOpenapi(request *model.RemoveLineGroupOpenapiReq
 func (c *Client) GetRecord(request *model.GetRecordRequest) (*model.GetRecordResponse, error) {
 	c.httpRequest.Action = "getRecord"
 	c.httpRequest.Body = request
-	var returnValue = &model.GetRecordResponse{}
+	returnValue := &model.GetRecordResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -843,7 +843,7 @@ func (c *Client) GetRecord(request *model.GetRecordRequest) (*model.GetRecordRes
 func (c *Client) ListLineGroupOpenapi(request *model.ListLineGroupOpenapiRequest) (*model.ListLineGroupOpenapiResponse, error) {
 	c.httpRequest.Action = "listLineGroupOpenapi"
 	c.httpRequest.Body = request
-	var returnValue = &model.ListLineGroupOpenapiResponse{}
+	returnValue := &model.ListLineGroupOpenapiResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -855,7 +855,7 @@ func (c *Client) ListLineGroupOpenapi(request *model.ListLineGroupOpenapiRequest
 func (c *Client) ModifyLineGroupOpenapi(request *model.ModifyLineGroupOpenapiRequest) (*model.ModifyLineGroupOpenapiResponse, error) {
 	c.httpRequest.Action = "modifyLineGroupOpenapi"
 	c.httpRequest.Body = request
-	var returnValue = &model.ModifyLineGroupOpenapiResponse{}
+	returnValue := &model.ModifyLineGroupOpenapiResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -867,7 +867,7 @@ func (c *Client) ModifyLineGroupOpenapi(request *model.ModifyLineGroupOpenapiReq
 func (c *Client) ModifyBalanceRate(request *model.ModifyBalanceRateRequest) (*model.ModifyBalanceRateResponse, error) {
 	c.httpRequest.Action = "modifyBalanceRate"
 	c.httpRequest.Body = request
-	var returnValue = &model.ModifyBalanceRateResponse{}
+	returnValue := &model.ModifyBalanceRateResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -879,7 +879,7 @@ func (c *Client) ModifyBalanceRate(request *model.ModifyBalanceRateRequest) (*mo
 func (c *Client) ControlBalance(request *model.ControlBalanceRequest) (*model.ControlBalanceResponse, error) {
 	c.httpRequest.Action = "controlBalance"
 	c.httpRequest.Body = request
-	var returnValue = &model.ControlBalanceResponse{}
+	returnValue := &model.ControlBalanceResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -891,7 +891,7 @@ func (c *Client) ControlBalance(request *model.ControlBalanceRequest) (*model.Co
 func (c *Client) GetBalanceDetail(request *model.GetBalanceDetailRequest) (*model.GetBalanceDetailResponse, error) {
 	c.httpRequest.Action = "getBalanceDetail"
 	c.httpRequest.Body = request
-	var returnValue = &model.GetBalanceDetailResponse{}
+	returnValue := &model.GetBalanceDetailResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -903,7 +903,7 @@ func (c *Client) GetBalanceDetail(request *model.GetBalanceDetailRequest) (*mode
 func (c *Client) RemoveLineGroup(request *model.RemoveLineGroupRequest) (*model.RemoveLineGroupResponse, error) {
 	c.httpRequest.Action = "removeLineGroup"
 	c.httpRequest.Body = request
-	var returnValue = &model.RemoveLineGroupResponse{}
+	returnValue := &model.RemoveLineGroupResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -915,7 +915,7 @@ func (c *Client) RemoveLineGroup(request *model.RemoveLineGroupRequest) (*model.
 func (c *Client) ListBalance(request *model.ListBalanceRequest) (*model.ListBalanceResponse, error) {
 	c.httpRequest.Action = "listBalance"
 	c.httpRequest.Body = request
-	var returnValue = &model.ListBalanceResponse{}
+	returnValue := &model.ListBalanceResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -927,7 +927,7 @@ func (c *Client) ListBalance(request *model.ListBalanceRequest) (*model.ListBala
 func (c *Client) CreateLineGroup(request *model.CreateLineGroupRequest) (*model.CreateLineGroupResponse, error) {
 	c.httpRequest.Action = "createLineGroup"
 	c.httpRequest.Body = request
-	var returnValue = &model.CreateLineGroupResponse{}
+	returnValue := &model.CreateLineGroupResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -939,7 +939,7 @@ func (c *Client) CreateLineGroup(request *model.CreateLineGroupRequest) (*model.
 func (c *Client) ListLineGroup(request *model.ListLineGroupRequest) (*model.ListLineGroupResponse, error) {
 	c.httpRequest.Action = "listLineGroup"
 	c.httpRequest.Body = request
-	var returnValue = &model.ListLineGroupResponse{}
+	returnValue := &model.ListLineGroupResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -951,7 +951,7 @@ func (c *Client) ListLineGroup(request *model.ListLineGroupRequest) (*model.List
 func (c *Client) ModifyLineGroup(request *model.ModifyLineGroupRequest) (*model.ModifyLineGroupResponse, error) {
 	c.httpRequest.Action = "modifyLineGroup"
 	c.httpRequest.Body = request
-	var returnValue = &model.ModifyLineGroupResponse{}
+	returnValue := &model.ModifyLineGroupResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {
@@ -963,7 +963,7 @@ func (c *Client) ModifyLineGroup(request *model.ModifyLineGroupRequest) (*model.
 func (c *Client) ControlDomain(request *model.ControlDomainRequest) (*model.ControlDomainResponse, error) {
 	c.httpRequest.Action = "controlDomain"
 	c.httpRequest.Body = request
-	var returnValue = &model.ControlDomainResponse{}
+	returnValue := &model.ControlDomainResponse{}
 	if _, err := c.APIClient.Excute(c.httpRequest, c.config, returnValue); err != nil {
 		return nil, err
 	} else {

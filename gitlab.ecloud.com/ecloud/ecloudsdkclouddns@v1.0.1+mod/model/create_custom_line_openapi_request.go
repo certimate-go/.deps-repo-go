@@ -4,9 +4,6 @@
 
 package model
 
-
-
 type CreateCustomLineOpenapiRequest struct {
-
 	CreateCustomLineOpenapiBody *CreateCustomLineOpenapiBody `json:"createCustomLineOpenapiBody,omitempty"`
 }

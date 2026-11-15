@@ -4,17 +4,15 @@
 
 package model
 
-
 type ListBalanceRequestOrderByDirectionEnum string
 
 // List of Direction
 const (
-    ListBalanceRequestOrderByDirectionEnumAsc ListBalanceRequestOrderByDirectionEnum = "ASC"
-    ListBalanceRequestOrderByDirectionEnumDesc ListBalanceRequestOrderByDirectionEnum = "DESC"
+	ListBalanceRequestOrderByDirectionEnumAsc  ListBalanceRequestOrderByDirectionEnum = "ASC"
+	ListBalanceRequestOrderByDirectionEnumDesc ListBalanceRequestOrderByDirectionEnum = "DESC"
 )
 
 type ListBalanceRequestOrderBy struct {
-
 	// 排序字段
 	Field string `json:"field,omitempty"`
 

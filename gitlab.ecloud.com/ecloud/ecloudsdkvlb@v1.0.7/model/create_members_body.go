@@ -5,14 +5,14 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type CreateMembersBody struct {
-    position.Body
-    // 后端服务器创建请求体
-	PoolMemberCreateReqs *[]CreateMembersRequestPoolMemberCreateReqs 
+	position.Body
+	// 后端服务器创建请求体
+	PoolMemberCreateReqs *[]CreateMembersRequestPoolMemberCreateReqs
 }
 
 func (s CreateMembersBody) String() string {
@@ -32,7 +32,6 @@ func (s *CreateMembersBody) SetPoolMemberCreateReqs(v []CreateMembersRequestPool
 	return s
 }
 
-
 type CreateMembersBodyBuilder struct {
 	s *CreateMembersBody
 }
@@ -51,5 +50,3 @@ func (b *CreateMembersBodyBuilder) PoolMemberCreateReqs(v []CreateMembersRequest
 func (b *CreateMembersBodyBuilder) Build() *CreateMembersBody {
 	return b.s
 }
-
-

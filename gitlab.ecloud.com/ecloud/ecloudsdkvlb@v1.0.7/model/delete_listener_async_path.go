@@ -5,13 +5,13 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type DeleteListenerAsyncPath struct {
-    position.Path
-    // 负载均衡监听器ID
+	position.Path
+	// 负载均衡监听器ID
 	ListenerId *string `json:"listenerId,omitempty"`
 }
 
@@ -32,7 +32,6 @@ func (s *DeleteListenerAsyncPath) SetListenerId(v string) *DeleteListenerAsyncPa
 	return s
 }
 
-
 type DeleteListenerAsyncPathBuilder struct {
 	s *DeleteListenerAsyncPath
 }
@@ -51,5 +50,3 @@ func (b *DeleteListenerAsyncPathBuilder) ListenerId(v string) *DeleteListenerAsy
 func (b *DeleteListenerAsyncPathBuilder) Build() *DeleteListenerAsyncPath {
 	return b.s
 }
-
-

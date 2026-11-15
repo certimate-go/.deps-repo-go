@@ -5,34 +5,35 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
+
 type ModifyCdnDomainRequestSourcesBackProtocolEnum string
 
 // List of BackProtocol
 const (
-    ModifyCdnDomainRequestSourcesBackProtocolEnumFlow ModifyCdnDomainRequestSourcesBackProtocolEnum = "FLOW"
-    ModifyCdnDomainRequestSourcesBackProtocolEnumHttp ModifyCdnDomainRequestSourcesBackProtocolEnum = "HTTP"
-    ModifyCdnDomainRequestSourcesBackProtocolEnumHttps ModifyCdnDomainRequestSourcesBackProtocolEnum = "HTTPS"
+	ModifyCdnDomainRequestSourcesBackProtocolEnumFlow  ModifyCdnDomainRequestSourcesBackProtocolEnum = "FLOW"
+	ModifyCdnDomainRequestSourcesBackProtocolEnumHttp  ModifyCdnDomainRequestSourcesBackProtocolEnum = "HTTP"
+	ModifyCdnDomainRequestSourcesBackProtocolEnumHttps ModifyCdnDomainRequestSourcesBackProtocolEnum = "HTTPS"
 )
+
 type ModifyCdnDomainRequestSourcesBackTypeEnum string
 
 // List of BackType
 const (
-    ModifyCdnDomainRequestSourcesBackTypeEnumIp ModifyCdnDomainRequestSourcesBackTypeEnum = "ip"
-    ModifyCdnDomainRequestSourcesBackTypeEnumDomain ModifyCdnDomainRequestSourcesBackTypeEnum = "domain"
-    ModifyCdnDomainRequestSourcesBackTypeEnumEos ModifyCdnDomainRequestSourcesBackTypeEnum = "eos"
+	ModifyCdnDomainRequestSourcesBackTypeEnumIp     ModifyCdnDomainRequestSourcesBackTypeEnum = "ip"
+	ModifyCdnDomainRequestSourcesBackTypeEnumDomain ModifyCdnDomainRequestSourcesBackTypeEnum = "domain"
+	ModifyCdnDomainRequestSourcesBackTypeEnumEos    ModifyCdnDomainRequestSourcesBackTypeEnum = "eos"
 )
 
 type ModifyCdnDomainRequestSources struct {
-
-    // 回源协议
+	// 回源协议
 	BackProtocol *ModifyCdnDomainRequestSourcesBackProtocolEnum `json:"backProtocol,omitempty"`
-    // 回源地址，ip或域名
+	// 回源地址，ip或域名
 	BackAddr *string `json:"backAddr,omitempty"`
-    // 回源地址类型
+	// 回源地址类型
 	BackType *ModifyCdnDomainRequestSourcesBackTypeEnum `json:"backType,omitempty"`
-    // 是否为主站
+	// 是否为主站
 	Primary *bool `json:"primary,omitempty"`
 }
 
@@ -68,7 +69,6 @@ func (s *ModifyCdnDomainRequestSources) SetPrimary(v bool) *ModifyCdnDomainReque
 	return s
 }
 
-
 type ModifyCdnDomainRequestSourcesBuilder struct {
 	s *ModifyCdnDomainRequestSources
 }
@@ -102,5 +102,3 @@ func (b *ModifyCdnDomainRequestSourcesBuilder) Primary(v bool) *ModifyCdnDomainR
 func (b *ModifyCdnDomainRequestSourcesBuilder) Build() *ModifyCdnDomainRequestSources {
 	return b.s
 }
-
-

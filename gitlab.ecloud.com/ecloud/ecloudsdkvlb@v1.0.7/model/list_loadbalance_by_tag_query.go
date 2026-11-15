@@ -5,17 +5,17 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type ListLoadbalanceByTagQuery struct {
-    position.Query
-    // 标签值，不为空时，标签键不能为空
+	position.Query
+	// 标签值，不为空时，标签键不能为空
 	TagValue *string `json:"tagValue,omitempty"`
-    // 是否返回标签内容
+	// 是否返回标签内容
 	IsDescribeTags *bool `json:"isDescribeTags,omitempty"`
-    // 标签键，不为空时，标签值不能为空
+	// 标签键，不为空时，标签值不能为空
 	TagKey *string `json:"tagKey,omitempty"`
 }
 
@@ -46,7 +46,6 @@ func (s *ListLoadbalanceByTagQuery) SetTagKey(v string) *ListLoadbalanceByTagQue
 	return s
 }
 
-
 type ListLoadbalanceByTagQueryBuilder struct {
 	s *ListLoadbalanceByTagQuery
 }
@@ -75,5 +74,3 @@ func (b *ListLoadbalanceByTagQueryBuilder) TagKey(v string) *ListLoadbalanceByTa
 func (b *ListLoadbalanceByTagQueryBuilder) Build() *ListLoadbalanceByTagQuery {
 	return b.s
 }
-
-

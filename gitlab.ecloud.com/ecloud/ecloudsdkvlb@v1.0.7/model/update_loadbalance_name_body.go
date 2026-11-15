@@ -5,17 +5,17 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type UpdateLoadbalanceNameBody struct {
-    position.Body
-    // 负载均衡备注
+	position.Body
+	// 负载均衡备注
 	Notes *string `json:"notes,omitempty"`
-    // 弹性负载均衡名称，5~64位的英文、数字、下划线、中划线等的组合
+	// 弹性负载均衡名称，5~64位的英文、数字、下划线、中划线等的组合
 	Name *string `json:"name,omitempty"`
-    // 弹性负载均衡ID
+	// 弹性负载均衡ID
 	Id *string `json:"id,omitempty"`
 }
 
@@ -46,7 +46,6 @@ func (s *UpdateLoadbalanceNameBody) SetId(v string) *UpdateLoadbalanceNameBody {
 	return s
 }
 
-
 type UpdateLoadbalanceNameBodyBuilder struct {
 	s *UpdateLoadbalanceNameBody
 }
@@ -75,5 +74,3 @@ func (b *UpdateLoadbalanceNameBodyBuilder) Id(v string) *UpdateLoadbalanceNameBo
 func (b *UpdateLoadbalanceNameBodyBuilder) Build() *UpdateLoadbalanceNameBody {
 	return b.s
 }
-
-

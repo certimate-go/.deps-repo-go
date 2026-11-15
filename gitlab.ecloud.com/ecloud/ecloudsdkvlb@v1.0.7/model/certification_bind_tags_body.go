@@ -5,17 +5,17 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type CertificationBindTagsBody struct {
-    position.Body
-    // 资源ID, 当资源所属类型不为空时 不可为空
+	position.Body
+	// 资源ID, 当资源所属类型不为空时 不可为空
 	ResourceIds []string `json:"resourceIds,omitempty"`
-    // 资源所属类型，证书类型为CIDC-RT-BARBICAN
+	// 资源所属类型，证书类型为CIDC-RT-BARBICAN
 	ResourceType *string `json:"resourceType,omitempty"`
-    // 标签
+	// 标签
 	Tags *[]CertificationBindTagsRequestTags `json:"tags,omitempty"`
 }
 
@@ -46,7 +46,6 @@ func (s *CertificationBindTagsBody) SetTags(v []CertificationBindTagsRequestTags
 	return s
 }
 
-
 type CertificationBindTagsBodyBuilder struct {
 	s *CertificationBindTagsBody
 }
@@ -75,5 +74,3 @@ func (b *CertificationBindTagsBodyBuilder) Tags(v []CertificationBindTagsRequest
 func (b *CertificationBindTagsBodyBuilder) Build() *CertificationBindTagsBody {
 	return b.s
 }
-
-

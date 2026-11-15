@@ -5,13 +5,13 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type StartCdnDomainQuery struct {
-    position.Query
-    // 域名Id列表
+	position.Query
+	// 域名Id列表
 	DomainIds *string `json:"domainIds,omitempty"`
 }
 
@@ -32,7 +32,6 @@ func (s *StartCdnDomainQuery) SetDomainIds(v string) *StartCdnDomainQuery {
 	return s
 }
 
-
 type StartCdnDomainQueryBuilder struct {
 	s *StartCdnDomainQuery
 }
@@ -51,5 +50,3 @@ func (b *StartCdnDomainQueryBuilder) DomainIds(v string) *StartCdnDomainQueryBui
 func (b *StartCdnDomainQueryBuilder) Build() *StartCdnDomainQuery {
 	return b.s
 }
-
-

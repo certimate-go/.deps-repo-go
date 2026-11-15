@@ -5,60 +5,62 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
+
 type OpenCdnServiceFromApiRequestUserInfoReqIdTypeEnum string
 
 // List of IdType
 const (
-    OpenCdnServiceFromApiRequestUserInfoReqIdTypeEnumIdCard OpenCdnServiceFromApiRequestUserInfoReqIdTypeEnum = "ID_CARD"
-    OpenCdnServiceFromApiRequestUserInfoReqIdTypeEnumPassport OpenCdnServiceFromApiRequestUserInfoReqIdTypeEnum = "PASSPORT"
-    OpenCdnServiceFromApiRequestUserInfoReqIdTypeEnumOfficerCard OpenCdnServiceFromApiRequestUserInfoReqIdTypeEnum = "OFFICER_CARD"
-    OpenCdnServiceFromApiRequestUserInfoReqIdTypeEnumMtps OpenCdnServiceFromApiRequestUserInfoReqIdTypeEnum = "MTPS"
+	OpenCdnServiceFromApiRequestUserInfoReqIdTypeEnumIdCard      OpenCdnServiceFromApiRequestUserInfoReqIdTypeEnum = "ID_CARD"
+	OpenCdnServiceFromApiRequestUserInfoReqIdTypeEnumPassport    OpenCdnServiceFromApiRequestUserInfoReqIdTypeEnum = "PASSPORT"
+	OpenCdnServiceFromApiRequestUserInfoReqIdTypeEnumOfficerCard OpenCdnServiceFromApiRequestUserInfoReqIdTypeEnum = "OFFICER_CARD"
+	OpenCdnServiceFromApiRequestUserInfoReqIdTypeEnumMtps        OpenCdnServiceFromApiRequestUserInfoReqIdTypeEnum = "MTPS"
 )
+
 type OpenCdnServiceFromApiRequestUserInfoReqUnitNatureEnum string
 
 // List of UnitNature
 const (
-    OpenCdnServiceFromApiRequestUserInfoReqUnitNatureEnumArmy OpenCdnServiceFromApiRequestUserInfoReqUnitNatureEnum = "ARMY"
-    OpenCdnServiceFromApiRequestUserInfoReqUnitNatureEnumGovernment OpenCdnServiceFromApiRequestUserInfoReqUnitNatureEnum = "GOVERNMENT"
-    OpenCdnServiceFromApiRequestUserInfoReqUnitNatureEnumInstitution OpenCdnServiceFromApiRequestUserInfoReqUnitNatureEnum = "INSTITUTION"
-    OpenCdnServiceFromApiRequestUserInfoReqUnitNatureEnumEnterprise OpenCdnServiceFromApiRequestUserInfoReqUnitNatureEnum = "ENTERPRISE"
-    OpenCdnServiceFromApiRequestUserInfoReqUnitNatureEnumPersonal OpenCdnServiceFromApiRequestUserInfoReqUnitNatureEnum = "PERSONAL"
-    OpenCdnServiceFromApiRequestUserInfoReqUnitNatureEnumComminity OpenCdnServiceFromApiRequestUserInfoReqUnitNatureEnum = "COMMINITY"
-    OpenCdnServiceFromApiRequestUserInfoReqUnitNatureEnumOther OpenCdnServiceFromApiRequestUserInfoReqUnitNatureEnum = "OTHER"
+	OpenCdnServiceFromApiRequestUserInfoReqUnitNatureEnumArmy        OpenCdnServiceFromApiRequestUserInfoReqUnitNatureEnum = "ARMY"
+	OpenCdnServiceFromApiRequestUserInfoReqUnitNatureEnumGovernment  OpenCdnServiceFromApiRequestUserInfoReqUnitNatureEnum = "GOVERNMENT"
+	OpenCdnServiceFromApiRequestUserInfoReqUnitNatureEnumInstitution OpenCdnServiceFromApiRequestUserInfoReqUnitNatureEnum = "INSTITUTION"
+	OpenCdnServiceFromApiRequestUserInfoReqUnitNatureEnumEnterprise  OpenCdnServiceFromApiRequestUserInfoReqUnitNatureEnum = "ENTERPRISE"
+	OpenCdnServiceFromApiRequestUserInfoReqUnitNatureEnumPersonal    OpenCdnServiceFromApiRequestUserInfoReqUnitNatureEnum = "PERSONAL"
+	OpenCdnServiceFromApiRequestUserInfoReqUnitNatureEnumComminity   OpenCdnServiceFromApiRequestUserInfoReqUnitNatureEnum = "COMMINITY"
+	OpenCdnServiceFromApiRequestUserInfoReqUnitNatureEnumOther       OpenCdnServiceFromApiRequestUserInfoReqUnitNatureEnum = "OTHER"
 )
+
 type OpenCdnServiceFromApiRequestUserInfoReqOfficerIdTypeEnum string
 
 // List of OfficerIdType
 const (
-    OpenCdnServiceFromApiRequestUserInfoReqOfficerIdTypeEnumIdCard OpenCdnServiceFromApiRequestUserInfoReqOfficerIdTypeEnum = "ID_CARD"
-    OpenCdnServiceFromApiRequestUserInfoReqOfficerIdTypeEnumPassport OpenCdnServiceFromApiRequestUserInfoReqOfficerIdTypeEnum = "PASSPORT"
-    OpenCdnServiceFromApiRequestUserInfoReqOfficerIdTypeEnumOfficerCard OpenCdnServiceFromApiRequestUserInfoReqOfficerIdTypeEnum = "OFFICER_CARD"
-    OpenCdnServiceFromApiRequestUserInfoReqOfficerIdTypeEnumMtps OpenCdnServiceFromApiRequestUserInfoReqOfficerIdTypeEnum = "MTPS"
+	OpenCdnServiceFromApiRequestUserInfoReqOfficerIdTypeEnumIdCard      OpenCdnServiceFromApiRequestUserInfoReqOfficerIdTypeEnum = "ID_CARD"
+	OpenCdnServiceFromApiRequestUserInfoReqOfficerIdTypeEnumPassport    OpenCdnServiceFromApiRequestUserInfoReqOfficerIdTypeEnum = "PASSPORT"
+	OpenCdnServiceFromApiRequestUserInfoReqOfficerIdTypeEnumOfficerCard OpenCdnServiceFromApiRequestUserInfoReqOfficerIdTypeEnum = "OFFICER_CARD"
+	OpenCdnServiceFromApiRequestUserInfoReqOfficerIdTypeEnumMtps        OpenCdnServiceFromApiRequestUserInfoReqOfficerIdTypeEnum = "MTPS"
 )
 
 type OpenCdnServiceFromApiRequestUserInfoReq struct {
-
-    // 网络信息安全责任人姓名
+	// 网络信息安全责任人姓名
 	OfficerEmployee *string `json:"officerEmployee,omitempty"`
-    // 客户单位地址
+	// 客户单位地址
 	Address *string `json:"address,omitempty"`
-    // 证件类型
+	// 证件类型
 	IdType *OpenCdnServiceFromApiRequestUserInfoReqIdTypeEnum `json:"idType,omitempty"`
-    // 客户单位名称,企业名称，包括中文、英文字母、数字
+	// 客户单位名称,企业名称，包括中文、英文字母、数字
 	UnitName *string `json:"unitName,omitempty"`
-    // 网络信息安全责任人证件号码
+	// 网络信息安全责任人证件号码
 	OfficerIdNo *string `json:"officerIdNo,omitempty"`
-    // 客户单位属性
+	// 客户单位属性
 	UnitNature *OpenCdnServiceFromApiRequestUserInfoReqUnitNatureEnum `json:"unitNature,omitempty"`
-    // 客户手机号
+	// 客户手机号
 	Mobile *string `json:"mobile,omitempty"`
-    // 证件号码
+	// 证件号码
 	IdNumber *string `json:"idNumber,omitempty"`
-    // 客户邮箱
+	// 客户邮箱
 	Email *string `json:"email,omitempty"`
-    // 网络信息安全责任人证件类型
+	// 网络信息安全责任人证件类型
 	OfficerIdType *OpenCdnServiceFromApiRequestUserInfoReqOfficerIdTypeEnum `json:"officerIdType,omitempty"`
 }
 
@@ -124,7 +126,6 @@ func (s *OpenCdnServiceFromApiRequestUserInfoReq) SetOfficerIdType(v OpenCdnServ
 	return s
 }
 
-
 type OpenCdnServiceFromApiRequestUserInfoReqBuilder struct {
 	s *OpenCdnServiceFromApiRequestUserInfoReq
 }
@@ -188,5 +189,3 @@ func (b *OpenCdnServiceFromApiRequestUserInfoReqBuilder) OfficerIdType(v OpenCdn
 func (b *OpenCdnServiceFromApiRequestUserInfoReqBuilder) Build() *OpenCdnServiceFromApiRequestUserInfoReq {
 	return b.s
 }
-
-

@@ -5,110 +5,116 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
+
 type CreateLoadBalanceHTTPListenerBodyGroupTypeEnum string
 
 // List of GroupType
 const (
-    CreateLoadBalanceHTTPListenerBodyGroupTypeEnumBlacklist CreateLoadBalanceHTTPListenerBodyGroupTypeEnum = "blacklist"
-    CreateLoadBalanceHTTPListenerBodyGroupTypeEnumWhitelist CreateLoadBalanceHTTPListenerBodyGroupTypeEnum = "whitelist"
+	CreateLoadBalanceHTTPListenerBodyGroupTypeEnumBlacklist CreateLoadBalanceHTTPListenerBodyGroupTypeEnum = "blacklist"
+	CreateLoadBalanceHTTPListenerBodyGroupTypeEnumWhitelist CreateLoadBalanceHTTPListenerBodyGroupTypeEnum = "whitelist"
 )
+
 type CreateLoadBalanceHTTPListenerBodyLbAlgorithmEnum string
 
 // List of LbAlgorithm
 const (
-    CreateLoadBalanceHTTPListenerBodyLbAlgorithmEnumRoundRobin CreateLoadBalanceHTTPListenerBodyLbAlgorithmEnum = "ROUND_ROBIN"
-    CreateLoadBalanceHTTPListenerBodyLbAlgorithmEnumLeastConnections CreateLoadBalanceHTTPListenerBodyLbAlgorithmEnum = "LEAST_CONNECTIONS"
-    CreateLoadBalanceHTTPListenerBodyLbAlgorithmEnumSourceIp CreateLoadBalanceHTTPListenerBodyLbAlgorithmEnum = "SOURCE_IP"
+	CreateLoadBalanceHTTPListenerBodyLbAlgorithmEnumRoundRobin       CreateLoadBalanceHTTPListenerBodyLbAlgorithmEnum = "ROUND_ROBIN"
+	CreateLoadBalanceHTTPListenerBodyLbAlgorithmEnumLeastConnections CreateLoadBalanceHTTPListenerBodyLbAlgorithmEnum = "LEAST_CONNECTIONS"
+	CreateLoadBalanceHTTPListenerBodyLbAlgorithmEnumSourceIp         CreateLoadBalanceHTTPListenerBodyLbAlgorithmEnum = "SOURCE_IP"
 )
+
 type CreateLoadBalanceHTTPListenerBodyHealthTypeEnum string
 
 // List of HealthType
 const (
-    CreateLoadBalanceHTTPListenerBodyHealthTypeEnumHttp CreateLoadBalanceHTTPListenerBodyHealthTypeEnum = "HTTP"
-    CreateLoadBalanceHTTPListenerBodyHealthTypeEnumHttp10 CreateLoadBalanceHTTPListenerBodyHealthTypeEnum = "HTTP10"
-    CreateLoadBalanceHTTPListenerBodyHealthTypeEnumHttp11 CreateLoadBalanceHTTPListenerBodyHealthTypeEnum = "HTTP11"
-    CreateLoadBalanceHTTPListenerBodyHealthTypeEnumHttps CreateLoadBalanceHTTPListenerBodyHealthTypeEnum = "HTTPS"
-    CreateLoadBalanceHTTPListenerBodyHealthTypeEnumTcp CreateLoadBalanceHTTPListenerBodyHealthTypeEnum = "TCP"
-    CreateLoadBalanceHTTPListenerBodyHealthTypeEnumPing CreateLoadBalanceHTTPListenerBodyHealthTypeEnum = "PING"
+	CreateLoadBalanceHTTPListenerBodyHealthTypeEnumHttp   CreateLoadBalanceHTTPListenerBodyHealthTypeEnum = "HTTP"
+	CreateLoadBalanceHTTPListenerBodyHealthTypeEnumHttp10 CreateLoadBalanceHTTPListenerBodyHealthTypeEnum = "HTTP10"
+	CreateLoadBalanceHTTPListenerBodyHealthTypeEnumHttp11 CreateLoadBalanceHTTPListenerBodyHealthTypeEnum = "HTTP11"
+	CreateLoadBalanceHTTPListenerBodyHealthTypeEnumHttps  CreateLoadBalanceHTTPListenerBodyHealthTypeEnum = "HTTPS"
+	CreateLoadBalanceHTTPListenerBodyHealthTypeEnumTcp    CreateLoadBalanceHTTPListenerBodyHealthTypeEnum = "TCP"
+	CreateLoadBalanceHTTPListenerBodyHealthTypeEnumPing   CreateLoadBalanceHTTPListenerBodyHealthTypeEnum = "PING"
 )
+
 type CreateLoadBalanceHTTPListenerBodyProtocolEnum string
 
 // List of Protocol
 const (
-    CreateLoadBalanceHTTPListenerBodyProtocolEnumHttp CreateLoadBalanceHTTPListenerBodyProtocolEnum = "HTTP"
+	CreateLoadBalanceHTTPListenerBodyProtocolEnumHttp CreateLoadBalanceHTTPListenerBodyProtocolEnum = "HTTP"
 )
+
 type CreateLoadBalanceHTTPListenerBodySessionPersistenceEnum string
 
 // List of SessionPersistence
 const (
-    CreateLoadBalanceHTTPListenerBodySessionPersistenceEnumNone CreateLoadBalanceHTTPListenerBodySessionPersistenceEnum = "NONE"
-    CreateLoadBalanceHTTPListenerBodySessionPersistenceEnumAppCookie CreateLoadBalanceHTTPListenerBodySessionPersistenceEnum = "APP_COOKIE"
-    CreateLoadBalanceHTTPListenerBodySessionPersistenceEnumHttpCookie CreateLoadBalanceHTTPListenerBodySessionPersistenceEnum = "HTTP_COOKIE"
-    CreateLoadBalanceHTTPListenerBodySessionPersistenceEnumSourceIp CreateLoadBalanceHTTPListenerBodySessionPersistenceEnum = "SOURCE_IP"
+	CreateLoadBalanceHTTPListenerBodySessionPersistenceEnumNone       CreateLoadBalanceHTTPListenerBodySessionPersistenceEnum = "NONE"
+	CreateLoadBalanceHTTPListenerBodySessionPersistenceEnumAppCookie  CreateLoadBalanceHTTPListenerBodySessionPersistenceEnum = "APP_COOKIE"
+	CreateLoadBalanceHTTPListenerBodySessionPersistenceEnumHttpCookie CreateLoadBalanceHTTPListenerBodySessionPersistenceEnum = "HTTP_COOKIE"
+	CreateLoadBalanceHTTPListenerBodySessionPersistenceEnumSourceIp   CreateLoadBalanceHTTPListenerBodySessionPersistenceEnum = "SOURCE_IP"
 )
+
 type CreateLoadBalanceHTTPListenerBodyProductTypeEnum string
 
 // List of ProductType
 const (
-    CreateLoadBalanceHTTPListenerBodyProductTypeEnumNormal CreateLoadBalanceHTTPListenerBodyProductTypeEnum = "NORMAL"
-    CreateLoadBalanceHTTPListenerBodyProductTypeEnumDeCloud CreateLoadBalanceHTTPListenerBodyProductTypeEnum = "DE_CLOUD"
-    CreateLoadBalanceHTTPListenerBodyProductTypeEnumAutoscaling CreateLoadBalanceHTTPListenerBodyProductTypeEnum = "AUTOSCALING"
-    CreateLoadBalanceHTTPListenerBodyProductTypeEnumVo CreateLoadBalanceHTTPListenerBodyProductTypeEnum = "VO"
-    CreateLoadBalanceHTTPListenerBodyProductTypeEnumCdn CreateLoadBalanceHTTPListenerBodyProductTypeEnum = "CDN"
-    CreateLoadBalanceHTTPListenerBodyProductTypeEnumPaasMaster CreateLoadBalanceHTTPListenerBodyProductTypeEnum = "PAAS_MASTER"
-    CreateLoadBalanceHTTPListenerBodyProductTypeEnumPaasSlave CreateLoadBalanceHTTPListenerBodyProductTypeEnum = "PAAS_SLAVE"
+	CreateLoadBalanceHTTPListenerBodyProductTypeEnumNormal      CreateLoadBalanceHTTPListenerBodyProductTypeEnum = "NORMAL"
+	CreateLoadBalanceHTTPListenerBodyProductTypeEnumDeCloud     CreateLoadBalanceHTTPListenerBodyProductTypeEnum = "DE_CLOUD"
+	CreateLoadBalanceHTTPListenerBodyProductTypeEnumAutoscaling CreateLoadBalanceHTTPListenerBodyProductTypeEnum = "AUTOSCALING"
+	CreateLoadBalanceHTTPListenerBodyProductTypeEnumVo          CreateLoadBalanceHTTPListenerBodyProductTypeEnum = "VO"
+	CreateLoadBalanceHTTPListenerBodyProductTypeEnumCdn         CreateLoadBalanceHTTPListenerBodyProductTypeEnum = "CDN"
+	CreateLoadBalanceHTTPListenerBodyProductTypeEnumPaasMaster  CreateLoadBalanceHTTPListenerBodyProductTypeEnum = "PAAS_MASTER"
+	CreateLoadBalanceHTTPListenerBodyProductTypeEnumPaasSlave   CreateLoadBalanceHTTPListenerBodyProductTypeEnum = "PAAS_SLAVE"
 )
 
 type CreateLoadBalanceHTTPListenerBody struct {
-    position.Body
-    // 监听器绑定的健康检查的时间间隔，单位为秒，取值为1-100的整数
+	position.Body
+	// 监听器绑定的健康检查的时间间隔，单位为秒，取值为1-100的整数
 	HealthDelay *int32 `json:"healthDelay,omitempty"`
-    // 绑定的访问控制组类型: blacklist:黑名单，whitelist:白名单
+	// 绑定的访问控制组类型: blacklist:黑名单，whitelist:白名单
 	GroupType *CreateLoadBalanceHTTPListenerBodyGroupTypeEnum `json:"groupType,omitempty"`
-    // 空闲超时时间，取值为10-300
+	// 空闲超时时间，取值为10-300
 	KeepAliveTimeout *int32 `json:"keepAliveTimeout,omitempty"`
-    // 监听器的调度算法：ROUND_ROBIN（轮询算法）,LEAST_CONNECTIONS（最小连接算法）,SOURCE_IP（源IP地址算法） （lbAlgorithm字段设置的有默认值，如果填写其他非法值会默认选择ROUND_ROBIN）
+	// 监听器的调度算法：ROUND_ROBIN（轮询算法）,LEAST_CONNECTIONS（最小连接算法）,SOURCE_IP（源IP地址算法） （lbAlgorithm字段设置的有默认值，如果填写其他非法值会默认选择ROUND_ROBIN）
 	LbAlgorithm *CreateLoadBalanceHTTPListenerBodyLbAlgorithmEnum `json:"lbAlgorithm,omitempty"`
-    // 监听器备注
+	// 监听器备注
 	Notes *string `json:"notes,omitempty"`
-    // 监听器绑定的检查方式为HTTP或HTTPS的用于检查的方法，取值范围：GET，POST，HEAD
+	// 监听器绑定的检查方式为HTTP或HTTPS的用于检查的方法，取值范围：GET，POST，HEAD
 	HealthHttpMethod *string `json:"healthHttpMethod,omitempty"`
-    // 重定向到的监听器ID，不是Null，说明该监听器开启了重定向
+	// 重定向到的监听器ID，不是Null，说明该监听器开启了重定向
 	RedirectToListenerId *string `json:"redirectToListenerId,omitempty"`
-    // 监听器绑定的健康检查的检查方式
+	// 监听器绑定的健康检查的检查方式
 	HealthType *CreateLoadBalanceHTTPListenerBodyHealthTypeEnum `json:"healthType,omitempty"`
-    // 负载均衡的ID
+	// 负载均衡的ID
 	LoadBalanceId *string `json:"loadBalanceId,omitempty"`
-    // 监听器前端协议的端口号，取值为1-65535
+	// 监听器前端协议的端口号，取值为1-65535
 	ProtocolPort *int32 `json:"protocolPort,omitempty"`
-    // 是否开启获取真实IP
+	// 是否开启获取真实IP
 	Transparent *bool `json:"transparent,omitempty"`
-    // 监听器绑定的检查方式为HTTP的健康检查的期望HTTP状态代码
+	// 监听器绑定的检查方式为HTTP的健康检查的期望HTTP状态代码
 	HealthExpectedCode *string `json:"healthExpectedCode,omitempty"`
-    // 监听器前后端使用的协议
+	// 监听器前后端使用的协议
 	Protocol *CreateLoadBalanceHTTPListenerBodyProtocolEnum `json:"protocol,omitempty"`
-    // 监听器绑定的健康检查检查失败后的最大尝试检查次数，取值为1-10
+	// 监听器绑定的健康检查检查失败后的最大尝试检查次数，取值为1-10
 	HealthMaxRetries *int32 `json:"healthMaxRetries,omitempty"`
-    // 监听器名称为5~64位的英文、数字、下划线、中划线等的组合
+	// 监听器名称为5~64位的英文、数字、下划线、中划线等的组合
 	Name *string `json:"name,omitempty"`
-    // 后端服务器组ID, 不为Null，说明使用该后端服务器组ID，不新建后端服务器组
+	// 后端服务器组ID, 不为Null，说明使用该后端服务器组ID，不新建后端服务器组
 	PoolId *string `json:"poolId,omitempty"`
-    // 会话保持方式：NONE,APP_COOKIE,HTTP_COOKIE,SOURCE_IP（sessionPersistence参数存在默认值，当取值错误或者不填是默认值为NONE）
+	// 会话保持方式：NONE,APP_COOKIE,HTTP_COOKIE,SOURCE_IP（sessionPersistence参数存在默认值，当取值错误或者不填是默认值为NONE）
 	SessionPersistence *CreateLoadBalanceHTTPListenerBodySessionPersistenceEnum `json:"sessionPersistence,omitempty"`
-    // 是否开启访问控制
+	// 是否开启访问控制
 	GroupEnabled *bool `json:"groupEnabled,omitempty"`
-    // 监听器绑定的检查方式为HTTP或HTTPS的用于监控的URL，必须以“/”开头
+	// 监听器绑定的检查方式为HTTP或HTTPS的用于监控的URL，必须以“/”开头
 	HealthUrlPath *string `json:"healthUrlPath,omitempty"`
-    // 访问控制组的ID
+	// 访问控制组的ID
 	ControlGroupId *string `json:"controlGroupId,omitempty"`
-    // 监听器绑定的健康检查每次检查的超时时间，以秒为单位，取值为1-100的整数
+	// 监听器绑定的健康检查每次检查的超时时间，以秒为单位，取值为1-100的整数
 	HealthTimeout *int32 `json:"healthTimeout,omitempty"`
-    // 产品类型，客户订购默认为NORMAL类型
+	// 产品类型，客户订购默认为NORMAL类型
 	ProductType *CreateLoadBalanceHTTPListenerBodyProductTypeEnum `json:"productType,omitempty"`
-    // 后端服务器组名称
+	// 后端服务器组名称
 	PoolName *string `json:"poolName,omitempty"`
 }
 
@@ -239,7 +245,6 @@ func (s *CreateLoadBalanceHTTPListenerBody) SetPoolName(v string) *CreateLoadBal
 	return s
 }
 
-
 type CreateLoadBalanceHTTPListenerBodyBuilder struct {
 	s *CreateLoadBalanceHTTPListenerBody
 }
@@ -368,5 +373,3 @@ func (b *CreateLoadBalanceHTTPListenerBodyBuilder) PoolName(v string) *CreateLoa
 func (b *CreateLoadBalanceHTTPListenerBodyBuilder) Build() *CreateLoadBalanceHTTPListenerBody {
 	return b.s
 }
-
-

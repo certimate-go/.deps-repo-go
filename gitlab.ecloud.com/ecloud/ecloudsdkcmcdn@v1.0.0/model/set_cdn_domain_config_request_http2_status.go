@@ -5,12 +5,11 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type SetCdnDomainConfigRequestHttp2Status struct {
-
-    // 是否启用
+	// 是否启用
 	Enable *bool `json:"enable,omitempty"`
 }
 
@@ -31,7 +30,6 @@ func (s *SetCdnDomainConfigRequestHttp2Status) SetEnable(v bool) *SetCdnDomainCo
 	return s
 }
 
-
 type SetCdnDomainConfigRequestHttp2StatusBuilder struct {
 	s *SetCdnDomainConfigRequestHttp2Status
 }
@@ -50,5 +48,3 @@ func (b *SetCdnDomainConfigRequestHttp2StatusBuilder) Enable(v bool) *SetCdnDoma
 func (b *SetCdnDomainConfigRequestHttp2StatusBuilder) Build() *SetCdnDomainConfigRequestHttp2Status {
 	return b.s
 }
-
-

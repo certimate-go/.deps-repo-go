@@ -60,7 +60,8 @@ func InitConfig(c *config.Config) {
 
 // Excute entry for http call
 func (c *APIClient) Excute(params *param.Params, rc *config.RuntimeConfig,
-	returnType interface{}) (*response.HttpResponse, error) {
+	returnType interface{},
+) (*response.HttpResponse, error) {
 	httpReq := c.HttpRequest
 	httpReq = new(request.HttpRequest)
 	if err := utils.DeepCopy(httpReq, c.HttpRequest); err != nil {
@@ -98,7 +99,7 @@ func (c *APIClient) buildRetryTemplate(cm map[string]interface{}) *retry.Templat
 		templateBuilder.SetRetryTimes(utils.Int32Value(cm["MaxRetryTimes"].(*int32)))
 	}
 	if utils.IsSet(cm["RetryPeriod"]) {
-		templateBuilder.SetRetryPolicy(retry.WaitRetryPolicy(utils.Int64Value((cm["RetryPeriod"].(*int64)))))
+		templateBuilder.SetRetryPolicy(retry.WaitRetryPolicy(utils.Int64Value(cm["RetryPeriod"].(*int64))))
 	} else {
 		templateBuilder.SetRetryPolicy(retry.NoWait())
 	}
@@ -139,8 +140,8 @@ func (c *APIClient) buildHttpRequest(params *param.Params, cm map[string]interfa
 		credential.CopyValues(otherCredential)
 	}
 	if utils.IsUnSet(credential.AccessKey) || utils.IsUnSet(credential.SecretKey) {
-		credential.AccessKey = (c.Config.AccessKey)
-		credential.SecretKey = (c.Config.SecretKey)
+		credential.AccessKey = c.Config.AccessKey
+		credential.SecretKey = c.Config.SecretKey
 	}
 	err = auth.GetCredentialManager(*credential.CredentialType).Sign(httpReq, credential)
 	if err != nil {

@@ -4,10 +4,7 @@
 
 package model
 
-
-
 type AddOrderResponseProducts struct {
-
 	// 资源ID，订购时不返回
 	InstanceId string `json:"instanceId,omitempty"`
 

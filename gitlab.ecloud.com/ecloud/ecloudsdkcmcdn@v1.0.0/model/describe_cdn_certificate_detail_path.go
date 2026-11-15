@@ -5,13 +5,13 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type DescribeCdnCertificateDetailPath struct {
-    position.Path
-    // 证书唯一编号
+	position.Path
+	// 证书唯一编号
 	UniqueId *string `json:"uniqueId,omitempty"`
 }
 
@@ -32,7 +32,6 @@ func (s *DescribeCdnCertificateDetailPath) SetUniqueId(v string) *DescribeCdnCer
 	return s
 }
 
-
 type DescribeCdnCertificateDetailPathBuilder struct {
 	s *DescribeCdnCertificateDetailPath
 }
@@ -51,5 +50,3 @@ func (b *DescribeCdnCertificateDetailPathBuilder) UniqueId(v string) *DescribeCd
 func (b *DescribeCdnCertificateDetailPathBuilder) Build() *DescribeCdnCertificateDetailPath {
 	return b.s
 }
-
-

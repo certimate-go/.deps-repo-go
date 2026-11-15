@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type CreateLoadBalancePoolMembersRequest struct {
-
-
 	CreateLoadBalancePoolMembersBody *CreateLoadBalancePoolMembersBody `json:"createLoadBalancePoolMembersBody,omitempty"`
 
 	CreateLoadBalancePoolMembersPath *CreateLoadBalancePoolMembersPath `json:"createLoadBalancePoolMembersPath,omitempty"`
@@ -38,7 +36,6 @@ func (s *CreateLoadBalancePoolMembersRequest) SetCreateLoadBalancePoolMembersPat
 	return s
 }
 
-
 type CreateLoadBalancePoolMembersRequestBuilder struct {
 	s *CreateLoadBalancePoolMembersRequest
 }
@@ -62,5 +59,3 @@ func (b *CreateLoadBalancePoolMembersRequestBuilder) CreateLoadBalancePoolMember
 func (b *CreateLoadBalancePoolMembersRequestBuilder) Build() *CreateLoadBalancePoolMembersRequest {
 	return b.s
 }
-
-

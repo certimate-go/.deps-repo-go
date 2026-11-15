@@ -5,40 +5,40 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
+
 type AsyncCreatePolicyRequestHealthMonitorCreateReqHealthTypeEnum string
 
 // List of HealthType
 const (
-    AsyncCreatePolicyRequestHealthMonitorCreateReqHealthTypeEnumHttp10 AsyncCreatePolicyRequestHealthMonitorCreateReqHealthTypeEnum = "HTTP10"
-    AsyncCreatePolicyRequestHealthMonitorCreateReqHealthTypeEnumHttp11 AsyncCreatePolicyRequestHealthMonitorCreateReqHealthTypeEnum = "HTTP11"
-    AsyncCreatePolicyRequestHealthMonitorCreateReqHealthTypeEnumHttps AsyncCreatePolicyRequestHealthMonitorCreateReqHealthTypeEnum = "HTTPS"
-    AsyncCreatePolicyRequestHealthMonitorCreateReqHealthTypeEnumTcp AsyncCreatePolicyRequestHealthMonitorCreateReqHealthTypeEnum = "TCP"
-    AsyncCreatePolicyRequestHealthMonitorCreateReqHealthTypeEnumPing AsyncCreatePolicyRequestHealthMonitorCreateReqHealthTypeEnum = "PING"
+	AsyncCreatePolicyRequestHealthMonitorCreateReqHealthTypeEnumHttp10 AsyncCreatePolicyRequestHealthMonitorCreateReqHealthTypeEnum = "HTTP10"
+	AsyncCreatePolicyRequestHealthMonitorCreateReqHealthTypeEnumHttp11 AsyncCreatePolicyRequestHealthMonitorCreateReqHealthTypeEnum = "HTTP11"
+	AsyncCreatePolicyRequestHealthMonitorCreateReqHealthTypeEnumHttps  AsyncCreatePolicyRequestHealthMonitorCreateReqHealthTypeEnum = "HTTPS"
+	AsyncCreatePolicyRequestHealthMonitorCreateReqHealthTypeEnumTcp    AsyncCreatePolicyRequestHealthMonitorCreateReqHealthTypeEnum = "TCP"
+	AsyncCreatePolicyRequestHealthMonitorCreateReqHealthTypeEnumPing   AsyncCreatePolicyRequestHealthMonitorCreateReqHealthTypeEnum = "PING"
 )
 
 type AsyncCreatePolicyRequestHealthMonitorCreateReq struct {
-
-    // 监听器的检查间隔（单位：秒）
+	// 监听器的检查间隔（单位：秒）
 	HealthDelay *int32 `json:"healthDelay,omitempty"`
-    // 期望HTTP状态代码
+	// 期望HTTP状态代码
 	HealthExpectedCode *string `json:"healthExpectedCode,omitempty"`
-    // 监听器的尝试次数
+	// 监听器的尝试次数
 	HealthMaxRetries *int32 `json:"healthMaxRetries,omitempty"`
-    // 监听器绑定的检查方式为HTTP的用于检查的方法，取值范围：GET，POST，HEAD
+	// 监听器绑定的检查方式为HTTP的用于检查的方法，取值范围：GET，POST，HEAD
 	HealthHttpMethod *string `json:"healthHttpMethod,omitempty"`
-    // 后端服务器组ID，若为Null，则新建后端服务器组，poolCreateReq则必填
+	// 后端服务器组ID，若为Null，则新建后端服务器组，poolCreateReq则必填
 	PoolId *string `json:"poolId,omitempty"`
-    // 监听器健康检查方式
+	// 监听器健康检查方式
 	HealthType *AsyncCreatePolicyRequestHealthMonitorCreateReqHealthTypeEnum `json:"healthType,omitempty"`
-    // 用于监控的URL
+	// 用于监控的URL
 	HealthUrlPath *string `json:"healthUrlPath,omitempty"`
-    // 健康检查开关
+	// 健康检查开关
 	AdminStateUp *bool `json:"adminStateUp,omitempty"`
-    // 监听器的超时时间（单位：秒）
+	// 监听器的超时时间（单位：秒）
 	HealthTimeout *int32 `json:"healthTimeout,omitempty"`
-    // 是否是多AZ场景
+	// 是否是多AZ场景
 	IsMultiAz *bool `json:"isMultiAz,omitempty"`
 }
 
@@ -104,7 +104,6 @@ func (s *AsyncCreatePolicyRequestHealthMonitorCreateReq) SetIsMultiAz(v bool) *A
 	return s
 }
 
-
 type AsyncCreatePolicyRequestHealthMonitorCreateReqBuilder struct {
 	s *AsyncCreatePolicyRequestHealthMonitorCreateReq
 }
@@ -168,5 +167,3 @@ func (b *AsyncCreatePolicyRequestHealthMonitorCreateReqBuilder) IsMultiAz(v bool
 func (b *AsyncCreatePolicyRequestHealthMonitorCreateReqBuilder) Build() *AsyncCreatePolicyRequestHealthMonitorCreateReq {
 	return b.s
 }
-
-

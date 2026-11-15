@@ -5,18 +5,17 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type ElbOrderCreateAsyncResponseBody struct {
-
-    // 资源ID
+	// 资源ID
 	ResourceId *string `json:"resourceId,omitempty"`
-    // API订购返回的订单ID
+	// API订购返回的订单ID
 	OrderId *string `json:"orderId,omitempty"`
-    // API订购返回订单包含的订单项列表(包含批量订购)
+	// API订购返回订单包含的订单项列表(包含批量订购)
 	OrderExtResps *[]ElbOrderCreateAsyncResponseOrderExtResps `json:"orderExtResps,omitempty"`
-    // API预付费流程返回的支付链接
+	// API预付费流程返回的支付链接
 	PayUrl *string `json:"payUrl,omitempty"`
 }
 
@@ -52,7 +51,6 @@ func (s *ElbOrderCreateAsyncResponseBody) SetPayUrl(v string) *ElbOrderCreateAsy
 	return s
 }
 
-
 type ElbOrderCreateAsyncResponseBodyBuilder struct {
 	s *ElbOrderCreateAsyncResponseBody
 }
@@ -86,5 +84,3 @@ func (b *ElbOrderCreateAsyncResponseBodyBuilder) PayUrl(v string) *ElbOrderCreat
 func (b *ElbOrderCreateAsyncResponseBodyBuilder) Build() *ElbOrderCreateAsyncResponseBody {
 	return b.s
 }
-
-

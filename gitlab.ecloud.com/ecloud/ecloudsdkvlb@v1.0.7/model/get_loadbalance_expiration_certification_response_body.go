@@ -5,62 +5,64 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
+
 type GetLoadbalanceExpirationCertificationResponseBodyContainerTypeEnum string
 
 // List of ContainerType
 const (
-    GetLoadbalanceExpirationCertificationResponseBodyContainerTypeEnumGeneric GetLoadbalanceExpirationCertificationResponseBodyContainerTypeEnum = "generic"
-    GetLoadbalanceExpirationCertificationResponseBodyContainerTypeEnumRsa GetLoadbalanceExpirationCertificationResponseBodyContainerTypeEnum = "rsa"
-    GetLoadbalanceExpirationCertificationResponseBodyContainerTypeEnumCertificate GetLoadbalanceExpirationCertificationResponseBodyContainerTypeEnum = "certificate"
+	GetLoadbalanceExpirationCertificationResponseBodyContainerTypeEnumGeneric     GetLoadbalanceExpirationCertificationResponseBodyContainerTypeEnum = "generic"
+	GetLoadbalanceExpirationCertificationResponseBodyContainerTypeEnumRsa         GetLoadbalanceExpirationCertificationResponseBodyContainerTypeEnum = "rsa"
+	GetLoadbalanceExpirationCertificationResponseBodyContainerTypeEnumCertificate GetLoadbalanceExpirationCertificationResponseBodyContainerTypeEnum = "certificate"
 )
+
 type GetLoadbalanceExpirationCertificationResponseBodyTypeEnum string
 
 // List of Type
 const (
-    GetLoadbalanceExpirationCertificationResponseBodyTypeEnumServer GetLoadbalanceExpirationCertificationResponseBodyTypeEnum = "SERVER"
-    GetLoadbalanceExpirationCertificationResponseBodyTypeEnumCa GetLoadbalanceExpirationCertificationResponseBodyTypeEnum = "CA"
-    GetLoadbalanceExpirationCertificationResponseBodyTypeEnumSni GetLoadbalanceExpirationCertificationResponseBodyTypeEnum = "SNI"
+	GetLoadbalanceExpirationCertificationResponseBodyTypeEnumServer GetLoadbalanceExpirationCertificationResponseBodyTypeEnum = "SERVER"
+	GetLoadbalanceExpirationCertificationResponseBodyTypeEnumCa     GetLoadbalanceExpirationCertificationResponseBodyTypeEnum = "CA"
+	GetLoadbalanceExpirationCertificationResponseBodyTypeEnumSni    GetLoadbalanceExpirationCertificationResponseBodyTypeEnum = "SNI"
 )
+
 type GetLoadbalanceExpirationCertificationResponseBodyStatusEnum string
 
 // List of Status
 const (
-    GetLoadbalanceExpirationCertificationResponseBodyStatusEnumPending GetLoadbalanceExpirationCertificationResponseBodyStatusEnum = "PENDING"
-    GetLoadbalanceExpirationCertificationResponseBodyStatusEnumActive GetLoadbalanceExpirationCertificationResponseBodyStatusEnum = "ACTIVE"
-    GetLoadbalanceExpirationCertificationResponseBodyStatusEnumError GetLoadbalanceExpirationCertificationResponseBodyStatusEnum = "ERROR"
+	GetLoadbalanceExpirationCertificationResponseBodyStatusEnumPending GetLoadbalanceExpirationCertificationResponseBodyStatusEnum = "PENDING"
+	GetLoadbalanceExpirationCertificationResponseBodyStatusEnumActive  GetLoadbalanceExpirationCertificationResponseBodyStatusEnum = "ACTIVE"
+	GetLoadbalanceExpirationCertificationResponseBodyStatusEnumError   GetLoadbalanceExpirationCertificationResponseBodyStatusEnum = "ERROR"
 )
 
 type GetLoadbalanceExpirationCertificationResponseBody struct {
-
-    // 证书所在容器的ID
+	// 证书所在容器的ID
 	ContainerUuid *string `json:"containerUuid,omitempty"`
-    // 证书绑定监听器数量
+	// 证书绑定监听器数量
 	BindedListeners *int32 `json:"bindedListeners,omitempty"`
-    // 证书所在容器的类型，默认均为certificate
+	// 证书所在容器的类型，默认均为certificate
 	ContainerType *GetLoadbalanceExpirationCertificationResponseBodyContainerTypeEnum `json:"containerType,omitempty"`
-    // 证书描述
+	// 证书描述
 	Description *string `json:"description,omitempty"`
-    // 证书类型
+	// 证书类型
 	Type *GetLoadbalanceExpirationCertificationResponseBodyTypeEnum `json:"type,omitempty"`
-    // 证书是否被删除，true：已删除，false：未删除
+	// 证书是否被删除，true：已删除，false：未删除
 	Delete *bool `json:"delete,omitempty"`
-    // 边缘云字段
+	// 边缘云字段
 	Vaz *string `json:"vaz,omitempty"`
-    // 证书所在容器的访问地址
+	// 证书所在容器的访问地址
 	ContainerRef *string `json:"containerRef,omitempty"`
-    // 证书过期时间
+	// 证书过期时间
 	ExpirationTime *string `json:"expirationTime,omitempty"`
-    // 证书名称
+	// 证书名称
 	Name *string `json:"name,omitempty"`
-    // 证书创建时间
+	// 证书创建时间
 	CreatedTime *string `json:"createdTime,omitempty"`
-    // 证书ID
+	// 证书ID
 	Id *string `json:"id,omitempty"`
-    // 边缘云可用区
+	// 边缘云可用区
 	Region *string `json:"region,omitempty"`
-    // 容器状态
+	// 容器状态
 	Status *GetLoadbalanceExpirationCertificationResponseBodyStatusEnum `json:"status,omitempty"`
 }
 
@@ -146,7 +148,6 @@ func (s *GetLoadbalanceExpirationCertificationResponseBody) SetStatus(v GetLoadb
 	return s
 }
 
-
 type GetLoadbalanceExpirationCertificationResponseBodyBuilder struct {
 	s *GetLoadbalanceExpirationCertificationResponseBody
 }
@@ -230,5 +231,3 @@ func (b *GetLoadbalanceExpirationCertificationResponseBodyBuilder) Status(v GetL
 func (b *GetLoadbalanceExpirationCertificationResponseBodyBuilder) Build() *GetLoadbalanceExpirationCertificationResponseBody {
 	return b.s
 }
-
-

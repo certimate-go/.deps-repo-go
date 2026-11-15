@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type DescribeOperationLogsRequest struct {
-
-
 	DescribeOperationLogsQuery *DescribeOperationLogsQuery `json:"describeOperationLogsQuery,omitempty"`
 }
 
@@ -31,7 +29,6 @@ func (s *DescribeOperationLogsRequest) SetDescribeOperationLogsQuery(v *Describe
 	return s
 }
 
-
 type DescribeOperationLogsRequestBuilder struct {
 	s *DescribeOperationLogsRequest
 }
@@ -50,5 +47,3 @@ func (b *DescribeOperationLogsRequestBuilder) DescribeOperationLogsQuery(v *Desc
 func (b *DescribeOperationLogsRequestBuilder) Build() *DescribeOperationLogsRequest {
 	return b.s
 }
-
-

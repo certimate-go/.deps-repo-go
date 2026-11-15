@@ -5,13 +5,13 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type ValidateControlGroupPath struct {
-    position.Path
-    // 访问控制组ID
+	position.Path
+	// 访问控制组ID
 	AccessControlGroupId *string `json:"accessControlGroupId,omitempty"`
 }
 
@@ -32,7 +32,6 @@ func (s *ValidateControlGroupPath) SetAccessControlGroupId(v string) *ValidateCo
 	return s
 }
 
-
 type ValidateControlGroupPathBuilder struct {
 	s *ValidateControlGroupPath
 }
@@ -51,5 +50,3 @@ func (b *ValidateControlGroupPathBuilder) AccessControlGroupId(v string) *Valida
 func (b *ValidateControlGroupPathBuilder) Build() *ValidateControlGroupPath {
 	return b.s
 }
-
-

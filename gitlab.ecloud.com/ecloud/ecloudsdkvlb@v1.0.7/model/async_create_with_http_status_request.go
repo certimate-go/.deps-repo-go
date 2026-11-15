@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type AsyncCreateWithHttpStatusRequest struct {
-
-
 	AsyncCreateWithHttpStatusBody *AsyncCreateWithHttpStatusBody `json:"asyncCreateWithHttpStatusBody,omitempty"`
 }
 
@@ -31,7 +29,6 @@ func (s *AsyncCreateWithHttpStatusRequest) SetAsyncCreateWithHttpStatusBody(v *A
 	return s
 }
 
-
 type AsyncCreateWithHttpStatusRequestBuilder struct {
 	s *AsyncCreateWithHttpStatusRequest
 }
@@ -50,5 +47,3 @@ func (b *AsyncCreateWithHttpStatusRequestBuilder) AsyncCreateWithHttpStatusBody(
 func (b *AsyncCreateWithHttpStatusRequestBuilder) Build() *AsyncCreateWithHttpStatusRequest {
 	return b.s
 }
-
-

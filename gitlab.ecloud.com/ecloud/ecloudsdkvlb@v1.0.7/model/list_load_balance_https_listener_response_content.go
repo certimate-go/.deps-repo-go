@@ -5,192 +5,197 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
+
 type ListLoadBalanceHTTPSListenerResponseContentProtocolEnum string
 
 // List of Protocol
 const (
-    ListLoadBalanceHTTPSListenerResponseContentProtocolEnumHttp ListLoadBalanceHTTPSListenerResponseContentProtocolEnum = "HTTP"
-    ListLoadBalanceHTTPSListenerResponseContentProtocolEnumHttps ListLoadBalanceHTTPSListenerResponseContentProtocolEnum = "HTTPS"
-    ListLoadBalanceHTTPSListenerResponseContentProtocolEnumTcp ListLoadBalanceHTTPSListenerResponseContentProtocolEnum = "TCP"
-    ListLoadBalanceHTTPSListenerResponseContentProtocolEnumUdp ListLoadBalanceHTTPSListenerResponseContentProtocolEnum = "UDP"
-    ListLoadBalanceHTTPSListenerResponseContentProtocolEnumTerminatedHttps ListLoadBalanceHTTPSListenerResponseContentProtocolEnum = "TERMINATED_HTTPS"
-    ListLoadBalanceHTTPSListenerResponseContentProtocolEnumSip ListLoadBalanceHTTPSListenerResponseContentProtocolEnum = "SIP"
+	ListLoadBalanceHTTPSListenerResponseContentProtocolEnumHttp            ListLoadBalanceHTTPSListenerResponseContentProtocolEnum = "HTTP"
+	ListLoadBalanceHTTPSListenerResponseContentProtocolEnumHttps           ListLoadBalanceHTTPSListenerResponseContentProtocolEnum = "HTTPS"
+	ListLoadBalanceHTTPSListenerResponseContentProtocolEnumTcp             ListLoadBalanceHTTPSListenerResponseContentProtocolEnum = "TCP"
+	ListLoadBalanceHTTPSListenerResponseContentProtocolEnumUdp             ListLoadBalanceHTTPSListenerResponseContentProtocolEnum = "UDP"
+	ListLoadBalanceHTTPSListenerResponseContentProtocolEnumTerminatedHttps ListLoadBalanceHTTPSListenerResponseContentProtocolEnum = "TERMINATED_HTTPS"
+	ListLoadBalanceHTTPSListenerResponseContentProtocolEnumSip             ListLoadBalanceHTTPSListenerResponseContentProtocolEnum = "SIP"
 )
+
 type ListLoadBalanceHTTPSListenerResponseContentHealthTypeEnum string
 
 // List of HealthType
 const (
-    ListLoadBalanceHTTPSListenerResponseContentHealthTypeEnumHttp ListLoadBalanceHTTPSListenerResponseContentHealthTypeEnum = "HTTP"
-    ListLoadBalanceHTTPSListenerResponseContentHealthTypeEnumHttps ListLoadBalanceHTTPSListenerResponseContentHealthTypeEnum = "HTTPS"
-    ListLoadBalanceHTTPSListenerResponseContentHealthTypeEnumTcp ListLoadBalanceHTTPSListenerResponseContentHealthTypeEnum = "TCP"
-    ListLoadBalanceHTTPSListenerResponseContentHealthTypeEnumPing ListLoadBalanceHTTPSListenerResponseContentHealthTypeEnum = "PING"
-    ListLoadBalanceHTTPSListenerResponseContentHealthTypeEnumUdp ListLoadBalanceHTTPSListenerResponseContentHealthTypeEnum = "UDP"
-    ListLoadBalanceHTTPSListenerResponseContentHealthTypeEnumHttp10 ListLoadBalanceHTTPSListenerResponseContentHealthTypeEnum = "HTTP10"
-    ListLoadBalanceHTTPSListenerResponseContentHealthTypeEnumHttp11 ListLoadBalanceHTTPSListenerResponseContentHealthTypeEnum = "HTTP11"
+	ListLoadBalanceHTTPSListenerResponseContentHealthTypeEnumHttp   ListLoadBalanceHTTPSListenerResponseContentHealthTypeEnum = "HTTP"
+	ListLoadBalanceHTTPSListenerResponseContentHealthTypeEnumHttps  ListLoadBalanceHTTPSListenerResponseContentHealthTypeEnum = "HTTPS"
+	ListLoadBalanceHTTPSListenerResponseContentHealthTypeEnumTcp    ListLoadBalanceHTTPSListenerResponseContentHealthTypeEnum = "TCP"
+	ListLoadBalanceHTTPSListenerResponseContentHealthTypeEnumPing   ListLoadBalanceHTTPSListenerResponseContentHealthTypeEnum = "PING"
+	ListLoadBalanceHTTPSListenerResponseContentHealthTypeEnumUdp    ListLoadBalanceHTTPSListenerResponseContentHealthTypeEnum = "UDP"
+	ListLoadBalanceHTTPSListenerResponseContentHealthTypeEnumHttp10 ListLoadBalanceHTTPSListenerResponseContentHealthTypeEnum = "HTTP10"
+	ListLoadBalanceHTTPSListenerResponseContentHealthTypeEnumHttp11 ListLoadBalanceHTTPSListenerResponseContentHealthTypeEnum = "HTTP11"
 )
+
 type ListLoadBalanceHTTPSListenerResponseContentSessionPersistenceEnum string
 
 // List of SessionPersistence
 const (
-    ListLoadBalanceHTTPSListenerResponseContentSessionPersistenceEnumNone ListLoadBalanceHTTPSListenerResponseContentSessionPersistenceEnum = "NONE"
-    ListLoadBalanceHTTPSListenerResponseContentSessionPersistenceEnumAppCookie ListLoadBalanceHTTPSListenerResponseContentSessionPersistenceEnum = "APP_COOKIE"
-    ListLoadBalanceHTTPSListenerResponseContentSessionPersistenceEnumHttpCookie ListLoadBalanceHTTPSListenerResponseContentSessionPersistenceEnum = "HTTP_COOKIE"
-    ListLoadBalanceHTTPSListenerResponseContentSessionPersistenceEnumSourceIp ListLoadBalanceHTTPSListenerResponseContentSessionPersistenceEnum = "SOURCE_IP"
-    ListLoadBalanceHTTPSListenerResponseContentSessionPersistenceEnumSourceIpPort ListLoadBalanceHTTPSListenerResponseContentSessionPersistenceEnum = "SOURCE_IP_PORT"
-    ListLoadBalanceHTTPSListenerResponseContentSessionPersistenceEnumCallId ListLoadBalanceHTTPSListenerResponseContentSessionPersistenceEnum = "CALL_ID"
+	ListLoadBalanceHTTPSListenerResponseContentSessionPersistenceEnumNone         ListLoadBalanceHTTPSListenerResponseContentSessionPersistenceEnum = "NONE"
+	ListLoadBalanceHTTPSListenerResponseContentSessionPersistenceEnumAppCookie    ListLoadBalanceHTTPSListenerResponseContentSessionPersistenceEnum = "APP_COOKIE"
+	ListLoadBalanceHTTPSListenerResponseContentSessionPersistenceEnumHttpCookie   ListLoadBalanceHTTPSListenerResponseContentSessionPersistenceEnum = "HTTP_COOKIE"
+	ListLoadBalanceHTTPSListenerResponseContentSessionPersistenceEnumSourceIp     ListLoadBalanceHTTPSListenerResponseContentSessionPersistenceEnum = "SOURCE_IP"
+	ListLoadBalanceHTTPSListenerResponseContentSessionPersistenceEnumSourceIpPort ListLoadBalanceHTTPSListenerResponseContentSessionPersistenceEnum = "SOURCE_IP_PORT"
+	ListLoadBalanceHTTPSListenerResponseContentSessionPersistenceEnumCallId       ListLoadBalanceHTTPSListenerResponseContentSessionPersistenceEnum = "CALL_ID"
 )
+
 type ListLoadBalanceHTTPSListenerResponseContentOpStatusEnum string
 
 // List of OpStatus
 const (
-    ListLoadBalanceHTTPSListenerResponseContentOpStatusEnumInactive ListLoadBalanceHTTPSListenerResponseContentOpStatusEnum = "INACTIVE"
-    ListLoadBalanceHTTPSListenerResponseContentOpStatusEnumActive ListLoadBalanceHTTPSListenerResponseContentOpStatusEnum = "ACTIVE"
-    ListLoadBalanceHTTPSListenerResponseContentOpStatusEnumCreating ListLoadBalanceHTTPSListenerResponseContentOpStatusEnum = "CREATING"
-    ListLoadBalanceHTTPSListenerResponseContentOpStatusEnumDeleting ListLoadBalanceHTTPSListenerResponseContentOpStatusEnum = "DELETING"
-    ListLoadBalanceHTTPSListenerResponseContentOpStatusEnumUpdating ListLoadBalanceHTTPSListenerResponseContentOpStatusEnum = "UPDATING"
-    ListLoadBalanceHTTPSListenerResponseContentOpStatusEnumError ListLoadBalanceHTTPSListenerResponseContentOpStatusEnum = "ERROR"
+	ListLoadBalanceHTTPSListenerResponseContentOpStatusEnumInactive ListLoadBalanceHTTPSListenerResponseContentOpStatusEnum = "INACTIVE"
+	ListLoadBalanceHTTPSListenerResponseContentOpStatusEnumActive   ListLoadBalanceHTTPSListenerResponseContentOpStatusEnum = "ACTIVE"
+	ListLoadBalanceHTTPSListenerResponseContentOpStatusEnumCreating ListLoadBalanceHTTPSListenerResponseContentOpStatusEnum = "CREATING"
+	ListLoadBalanceHTTPSListenerResponseContentOpStatusEnumDeleting ListLoadBalanceHTTPSListenerResponseContentOpStatusEnum = "DELETING"
+	ListLoadBalanceHTTPSListenerResponseContentOpStatusEnumUpdating ListLoadBalanceHTTPSListenerResponseContentOpStatusEnum = "UPDATING"
+	ListLoadBalanceHTTPSListenerResponseContentOpStatusEnumError    ListLoadBalanceHTTPSListenerResponseContentOpStatusEnum = "ERROR"
 )
+
 type ListLoadBalanceHTTPSListenerResponseContentProvisioningStatusEnum string
 
 // List of ProvisioningStatus
 const (
-    ListLoadBalanceHTTPSListenerResponseContentProvisioningStatusEnumActive ListLoadBalanceHTTPSListenerResponseContentProvisioningStatusEnum = "ACTIVE"
-    ListLoadBalanceHTTPSListenerResponseContentProvisioningStatusEnumBuild ListLoadBalanceHTTPSListenerResponseContentProvisioningStatusEnum = "BUILD"
-    ListLoadBalanceHTTPSListenerResponseContentProvisioningStatusEnumDown ListLoadBalanceHTTPSListenerResponseContentProvisioningStatusEnum = "DOWN"
-    ListLoadBalanceHTTPSListenerResponseContentProvisioningStatusEnumError ListLoadBalanceHTTPSListenerResponseContentProvisioningStatusEnum = "ERROR"
-    ListLoadBalanceHTTPSListenerResponseContentProvisioningStatusEnumPendingCreate ListLoadBalanceHTTPSListenerResponseContentProvisioningStatusEnum = "PENDING_CREATE"
-    ListLoadBalanceHTTPSListenerResponseContentProvisioningStatusEnumPendingUpdate ListLoadBalanceHTTPSListenerResponseContentProvisioningStatusEnum = "PENDING_UPDATE"
-    ListLoadBalanceHTTPSListenerResponseContentProvisioningStatusEnumPendingDelete ListLoadBalanceHTTPSListenerResponseContentProvisioningStatusEnum = "PENDING_DELETE"
-    ListLoadBalanceHTTPSListenerResponseContentProvisioningStatusEnumMigrating ListLoadBalanceHTTPSListenerResponseContentProvisioningStatusEnum = "MIGRATING"
-    ListLoadBalanceHTTPSListenerResponseContentProvisioningStatusEnumDeleted ListLoadBalanceHTTPSListenerResponseContentProvisioningStatusEnum = "DELETED"
-    ListLoadBalanceHTTPSListenerResponseContentProvisioningStatusEnumUpgrading ListLoadBalanceHTTPSListenerResponseContentProvisioningStatusEnum = "UPGRADING"
-    ListLoadBalanceHTTPSListenerResponseContentProvisioningStatusEnumPartDeleted ListLoadBalanceHTTPSListenerResponseContentProvisioningStatusEnum = "PART_DELETED"
-    ListLoadBalanceHTTPSListenerResponseContentProvisioningStatusEnumUnrecognized ListLoadBalanceHTTPSListenerResponseContentProvisioningStatusEnum = "UNRECOGNIZED"
+	ListLoadBalanceHTTPSListenerResponseContentProvisioningStatusEnumActive        ListLoadBalanceHTTPSListenerResponseContentProvisioningStatusEnum = "ACTIVE"
+	ListLoadBalanceHTTPSListenerResponseContentProvisioningStatusEnumBuild         ListLoadBalanceHTTPSListenerResponseContentProvisioningStatusEnum = "BUILD"
+	ListLoadBalanceHTTPSListenerResponseContentProvisioningStatusEnumDown          ListLoadBalanceHTTPSListenerResponseContentProvisioningStatusEnum = "DOWN"
+	ListLoadBalanceHTTPSListenerResponseContentProvisioningStatusEnumError         ListLoadBalanceHTTPSListenerResponseContentProvisioningStatusEnum = "ERROR"
+	ListLoadBalanceHTTPSListenerResponseContentProvisioningStatusEnumPendingCreate ListLoadBalanceHTTPSListenerResponseContentProvisioningStatusEnum = "PENDING_CREATE"
+	ListLoadBalanceHTTPSListenerResponseContentProvisioningStatusEnumPendingUpdate ListLoadBalanceHTTPSListenerResponseContentProvisioningStatusEnum = "PENDING_UPDATE"
+	ListLoadBalanceHTTPSListenerResponseContentProvisioningStatusEnumPendingDelete ListLoadBalanceHTTPSListenerResponseContentProvisioningStatusEnum = "PENDING_DELETE"
+	ListLoadBalanceHTTPSListenerResponseContentProvisioningStatusEnumMigrating     ListLoadBalanceHTTPSListenerResponseContentProvisioningStatusEnum = "MIGRATING"
+	ListLoadBalanceHTTPSListenerResponseContentProvisioningStatusEnumDeleted       ListLoadBalanceHTTPSListenerResponseContentProvisioningStatusEnum = "DELETED"
+	ListLoadBalanceHTTPSListenerResponseContentProvisioningStatusEnumUpgrading     ListLoadBalanceHTTPSListenerResponseContentProvisioningStatusEnum = "UPGRADING"
+	ListLoadBalanceHTTPSListenerResponseContentProvisioningStatusEnumPartDeleted   ListLoadBalanceHTTPSListenerResponseContentProvisioningStatusEnum = "PART_DELETED"
+	ListLoadBalanceHTTPSListenerResponseContentProvisioningStatusEnumUnrecognized  ListLoadBalanceHTTPSListenerResponseContentProvisioningStatusEnum = "UNRECOGNIZED"
 )
+
 type ListLoadBalanceHTTPSListenerResponseContentLbAlgorithmEnum string
 
 // List of LbAlgorithm
 const (
-    ListLoadBalanceHTTPSListenerResponseContentLbAlgorithmEnumRoundRobin ListLoadBalanceHTTPSListenerResponseContentLbAlgorithmEnum = "ROUND_ROBIN"
-    ListLoadBalanceHTTPSListenerResponseContentLbAlgorithmEnumLeastConnections ListLoadBalanceHTTPSListenerResponseContentLbAlgorithmEnum = "LEAST_CONNECTIONS"
-    ListLoadBalanceHTTPSListenerResponseContentLbAlgorithmEnumSourceIp ListLoadBalanceHTTPSListenerResponseContentLbAlgorithmEnum = "SOURCE_IP"
+	ListLoadBalanceHTTPSListenerResponseContentLbAlgorithmEnumRoundRobin       ListLoadBalanceHTTPSListenerResponseContentLbAlgorithmEnum = "ROUND_ROBIN"
+	ListLoadBalanceHTTPSListenerResponseContentLbAlgorithmEnumLeastConnections ListLoadBalanceHTTPSListenerResponseContentLbAlgorithmEnum = "LEAST_CONNECTIONS"
+	ListLoadBalanceHTTPSListenerResponseContentLbAlgorithmEnumSourceIp         ListLoadBalanceHTTPSListenerResponseContentLbAlgorithmEnum = "SOURCE_IP"
 )
 
 type ListLoadBalanceHTTPSListenerResponseContent struct {
-
-    // 健康监控时间间隔（单位：秒）
+	// 健康监控时间间隔（单位：秒）
 	HealthDelay *int32 `json:"healthDelay,omitempty"`
-    // 修改时间
+	// 修改时间
 	ModifiedTime *string `json:"modifiedTime,omitempty"`
-    // 监听器备注
+	// 监听器备注
 	Notes *string `json:"notes,omitempty"`
-    // 证书容器中的SNI证书ID
+	// 证书容器中的SNI证书ID
 	SniContainerIds *string `json:"sniContainerIds,omitempty"`
-    // 是否是多AZ场景
+	// 是否是多AZ场景
 	IsMultiAz *bool `json:"isMultiAz,omitempty"`
-    // 重定到的listener名称
+	// 重定到的listener名称
 	RedirectToListenerName *string `json:"redirectToListenerName,omitempty"`
-    // 协议
+	// 协议
 	Protocol *ListLoadBalanceHTTPSListenerResponseContentProtocolEnum `json:"protocol,omitempty"`
-    // 证书容器中的SNI证书IDList
+	// 证书容器中的SNI证书IDList
 	SniContainerIdList []string `json:"sniContainerIdList,omitempty"`
-    // 创建时间
+	// 创建时间
 	CreatedTime *string `json:"createdTime,omitempty"`
-    // 监听器ID
+	// 监听器ID
 	Id *string `json:"id,omitempty"`
-    // 开启双向认证
+	// 开启双向认证
 	MutualAuthenticationUp *bool `json:"mutualAuthenticationUp,omitempty"`
-    // 响应超时
+	// 响应超时
 	ResponseTimeout *int32 `json:"responseTimeout,omitempty"`
-    // 后端服务器组名称
+	// 后端服务器组名称
 	PoolName *string `json:"poolName,omitempty"`
-    // 是否开启SNI证书
+	// 是否开启SNI证书
 	SniUp *bool `json:"sniUp,omitempty"`
-    // TCP长连接超时时间
+	// TCP长连接超时时间
 	KeepAliveTimeout *int32 `json:"keepAliveTimeout,omitempty"`
-    // 用于监控的HTTP方法
+	// 用于监控的HTTP方法
 	HealthHttpMethod *string `json:"healthHttpMethod,omitempty"`
-    // 健康监控类型
+	// 健康监控类型
 	HealthType *ListLoadBalanceHTTPSListenerResponseContentHealthTypeEnum `json:"healthType,omitempty"`
-    // 负载均衡规格
+	// 负载均衡规格
 	LoadBalanceFlavor *int32 `json:"loadBalanceFlavor,omitempty"`
-    // 负载均衡ID
+	// 负载均衡ID
 	LoadBalanceId *string `json:"loadBalanceId,omitempty"`
-    // 协议端口号
+	// 协议端口号
 	ProtocolPort *int32 `json:"protocolPort,omitempty"`
-    // 期望HTTP状态代码
+	// 期望HTTP状态代码
 	HealthExpectedCode *string `json:"healthExpectedCode,omitempty"`
-    // 访问控制组名称
+	// 访问控制组名称
 	GroupName *string `json:"groupName,omitempty"`
-    // TLS安全策略Name
+	// TLS安全策略Name
 	TlsCustomizeProtocolName *string `json:"tlsCustomizeProtocolName,omitempty"`
-    // 名称
+	// 名称
 	Name *string `json:"name,omitempty"`
-    // 后端服务器组ID
+	// 后端服务器组ID
 	PoolId *string `json:"poolId,omitempty"`
-    // 会话保持
+	// 会话保持
 	SessionPersistence *ListLoadBalanceHTTPSListenerResponseContentSessionPersistenceEnum `json:"sessionPersistence,omitempty"`
-    // 用于监控的URL，必须以/打头
+	// 用于监控的URL，必须以/打头
 	HealthUrlPath *string `json:"healthUrlPath,omitempty"`
-    // 健康检查开关
+	// 健康检查开关
 	HealthAdminStateUp *bool `json:"healthAdminStateUp,omitempty"`
-    // 监听器状态
+	// 监听器状态
 	OpStatus *ListLoadBalanceHTTPSListenerResponseContentOpStatusEnum `json:"opStatus,omitempty"`
-    // 最大等待时间
+	// 最大等待时间
 	HealthTimeout *int32 `json:"healthTimeout,omitempty"`
-    // 多AZ场景下创建请求的requestId唯一标志为Uuid
+	// 多AZ场景下创建请求的requestId唯一标志为Uuid
 	MultiAzUuid *string `json:"multiAzUuid,omitempty"`
-    // 控制Host内容是否保持不变
+	// 控制Host内容是否保持不变
 	HostHeadMode *string `json:"hostHeadMode,omitempty"`
-    // 黑名单，白名单
+	// 黑名单，白名单
 	GroupType *string `json:"groupType,omitempty"`
-    // 重定到listenerId，不为Null，说明该listener开启了重定向
+	// 重定到listenerId，不为Null，说明该listener开启了重定向
 	RedirectToListenerId *string `json:"redirectToListenerId,omitempty"`
-    // 描述
+	// 描述
 	Description *string `json:"description,omitempty"`
-    // 是否透传源ID
+	// 是否透传源ID
 	Transparent *bool `json:"transparent,omitempty"`
-    // 最大并发数
+	// 最大并发数
 	MaxConcurrency *int32 `json:"maxConcurrency,omitempty"`
-    // 新建连接数
+	// 新建连接数
 	NewConnection *int32 `json:"newConnection,omitempty"`
-    // 监听器底层状态
+	// 监听器底层状态
 	ProvisioningStatus *ListLoadBalanceHTTPSListenerResponseContentProvisioningStatusEnum `json:"provisioningStatus,omitempty"`
-    // 是否是HTTP2
+	// 是否是HTTP2
 	Http2 *bool `json:"http2,omitempty"`
-    // 监听器启停状态
+	// 监听器启停状态
 	AdminStateUp *bool `json:"adminStateUp,omitempty"`
-    // 证书（容器）Uuid
+	// 证书（容器）Uuid
 	DefaultTlsContainerId *string `json:"defaultTlsContainerId,omitempty"`
-    // Cookie名称
+	// Cookie名称
 	CookieName *string `json:"cookieName,omitempty"`
-    // 请求超时时间
+	// 请求超时时间
 	RequestTimeout *int32 `json:"requestTimeout,omitempty"`
-    // TLS安全策略ID
+	// TLS安全策略ID
 	TlsCustomizeProtocolId *int64 `json:"tlsCustomizeProtocolId,omitempty"`
-    // LB算法，轮询模式
+	// LB算法，轮询模式
 	LbAlgorithm *ListLoadBalanceHTTPSListenerResponseContentLbAlgorithmEnum `json:"lbAlgorithm,omitempty"`
-    // 是否开启TLS安全策略
+	// 是否开启TLS安全策略
 	TlsUp *bool `json:"tlsUp,omitempty"`
-    // 监听器是否支持proxy_protocol
+	// 监听器是否支持proxy_protocol
 	ProxyProtocol *bool `json:"proxyProtocol,omitempty"`
-    // 健康检查的资源ID
+	// 健康检查的资源ID
 	HealthId *string `json:"healthId,omitempty"`
-    // 是否支持数据压缩 true：支持 false：不支持
+	// 是否支持数据压缩 true：支持 false：不支持
 	DataCompression *bool `json:"dataCompression,omitempty"`
-    // 最大连接数
+	// 最大连接数
 	ConnectionLimit *int32 `json:"connectionLimit,omitempty"`
-    // 是否删除
+	// 是否删除
 	Deleted *bool `json:"deleted,omitempty"`
-    // 最大尝试次数
+	// 最大尝试次数
 	HealthMaxRetries *int32 `json:"healthMaxRetries,omitempty"`
-    // 是否开启访问控制
+	// 是否开启访问控制
 	GroupEnabled *bool `json:"groupEnabled,omitempty"`
-    // Ca容器ID
+	// Ca容器ID
 	CaContainerId *string `json:"caContainerId,omitempty"`
-    // 访问控制组ID
+	// 访问控制组ID
 	ControlGroupId *string `json:"controlGroupId,omitempty"`
 }
 
@@ -486,7 +491,6 @@ func (s *ListLoadBalanceHTTPSListenerResponseContent) SetControlGroupId(v string
 	return s
 }
 
-
 type ListLoadBalanceHTTPSListenerResponseContentBuilder struct {
 	s *ListLoadBalanceHTTPSListenerResponseContent
 }
@@ -780,5 +784,3 @@ func (b *ListLoadBalanceHTTPSListenerResponseContentBuilder) ControlGroupId(v st
 func (b *ListLoadBalanceHTTPSListenerResponseContentBuilder) Build() *ListLoadBalanceHTTPSListenerResponseContent {
 	return b.s
 }
-
-

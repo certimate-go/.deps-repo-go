@@ -9,8 +9,9 @@ import (
 	"crypto/sha1"
 	"crypto/sha256"
 	"encoding/base64"
-	"github.com/google/uuid"
 	"strings"
+
+	"github.com/google/uuid"
 )
 
 const (

@@ -5,18 +5,17 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type GetTLSCustomizeProtocolRespResponseListenerInfoList struct {
-
-    // 绑定监听器协议
+	// 绑定监听器协议
 	Protocol *string `json:"protocol,omitempty"`
-    // 绑定监听器名称
+	// 绑定监听器名称
 	Name *string `json:"name,omitempty"`
-    // 绑定监听器ID
+	// 绑定监听器ID
 	Id *string `json:"id,omitempty"`
-    // 绑定监听器协议端口
+	// 绑定监听器协议端口
 	ProtocolPort *int32 `json:"protocolPort,omitempty"`
 }
 
@@ -52,7 +51,6 @@ func (s *GetTLSCustomizeProtocolRespResponseListenerInfoList) SetProtocolPort(v 
 	return s
 }
 
-
 type GetTLSCustomizeProtocolRespResponseListenerInfoListBuilder struct {
 	s *GetTLSCustomizeProtocolRespResponseListenerInfoList
 }
@@ -86,5 +84,3 @@ func (b *GetTLSCustomizeProtocolRespResponseListenerInfoListBuilder) ProtocolPor
 func (b *GetTLSCustomizeProtocolRespResponseListenerInfoListBuilder) Build() *GetTLSCustomizeProtocolRespResponseListenerInfoList {
 	return b.s
 }
-
-

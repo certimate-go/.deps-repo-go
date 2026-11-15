@@ -5,13 +5,13 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type GetLoadBalanceDetailRespPath struct {
-    position.Path
-    // 弹性负载均衡的ID或调用API创建弹性负载均衡接口返回的orderId，例如MOP-O-XXX
+	position.Path
+	// 弹性负载均衡的ID或调用API创建弹性负载均衡接口返回的orderId，例如MOP-O-XXX
 	LoadBalanceId *string `json:"loadBalanceId,omitempty"`
 }
 
@@ -32,7 +32,6 @@ func (s *GetLoadBalanceDetailRespPath) SetLoadBalanceId(v string) *GetLoadBalanc
 	return s
 }
 
-
 type GetLoadBalanceDetailRespPathBuilder struct {
 	s *GetLoadBalanceDetailRespPath
 }
@@ -51,5 +50,3 @@ func (b *GetLoadBalanceDetailRespPathBuilder) LoadBalanceId(v string) *GetLoadBa
 func (b *GetLoadBalanceDetailRespPathBuilder) Build() *GetLoadBalanceDetailRespPath {
 	return b.s
 }
-
-

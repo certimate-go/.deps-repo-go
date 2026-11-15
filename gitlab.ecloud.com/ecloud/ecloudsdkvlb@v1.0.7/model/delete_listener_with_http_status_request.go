@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type DeleteListenerWithHttpStatusRequest struct {
-
-
 	DeleteListenerWithHttpStatusHeader *DeleteListenerWithHttpStatusHeader `json:"deleteListenerWithHttpStatusHeader,omitempty"`
 
 	DeleteListenerWithHttpStatusPath *DeleteListenerWithHttpStatusPath `json:"deleteListenerWithHttpStatusPath,omitempty"`
@@ -38,7 +36,6 @@ func (s *DeleteListenerWithHttpStatusRequest) SetDeleteListenerWithHttpStatusPat
 	return s
 }
 
-
 type DeleteListenerWithHttpStatusRequestBuilder struct {
 	s *DeleteListenerWithHttpStatusRequest
 }
@@ -62,5 +59,3 @@ func (b *DeleteListenerWithHttpStatusRequestBuilder) DeleteListenerWithHttpStatu
 func (b *DeleteListenerWithHttpStatusRequestBuilder) Build() *DeleteListenerWithHttpStatusRequest {
 	return b.s
 }
-
-

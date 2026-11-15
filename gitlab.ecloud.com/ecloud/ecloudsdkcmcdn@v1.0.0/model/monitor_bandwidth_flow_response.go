@@ -5,20 +5,19 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type MonitorBandwidthFlowResponse struct {
-
-    // 请求Id
+	// 请求Id
 	RequestId *string `json:"requestId,omitempty"`
-    // 页面国际化错误提示
+	// 页面国际化错误提示
 	ErrorMessage *string `json:"errorMessage,omitempty"`
-    // 统一错误码
+	// 统一错误码
 	ErrorCode *string `json:"errorCode,omitempty"`
-    // 状态是否正常
+	// 状态是否正常
 	State *string `json:"state,omitempty"`
-    // 响应结果数据
+	// 响应结果数据
 	Body *MonitorBandwidthFlowResponseBody `json:"body,omitempty"`
 }
 
@@ -59,7 +58,6 @@ func (s *MonitorBandwidthFlowResponse) SetBody(v *MonitorBandwidthFlowResponseBo
 	return s
 }
 
-
 type MonitorBandwidthFlowResponseBuilder struct {
 	s *MonitorBandwidthFlowResponse
 }
@@ -98,5 +96,3 @@ func (b *MonitorBandwidthFlowResponseBuilder) Body(v *MonitorBandwidthFlowRespon
 func (b *MonitorBandwidthFlowResponseBuilder) Build() *MonitorBandwidthFlowResponse {
 	return b.s
 }
-
-

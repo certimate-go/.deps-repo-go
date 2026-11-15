@@ -5,34 +5,35 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
+
 type AddCdnDomainRequestCdnSrcDetailsBackProtocolEnum string
 
 // List of BackProtocol
 const (
-    AddCdnDomainRequestCdnSrcDetailsBackProtocolEnumFlow AddCdnDomainRequestCdnSrcDetailsBackProtocolEnum = "FLOW"
-    AddCdnDomainRequestCdnSrcDetailsBackProtocolEnumHttp AddCdnDomainRequestCdnSrcDetailsBackProtocolEnum = "HTTP"
-    AddCdnDomainRequestCdnSrcDetailsBackProtocolEnumHttps AddCdnDomainRequestCdnSrcDetailsBackProtocolEnum = "HTTPS"
+	AddCdnDomainRequestCdnSrcDetailsBackProtocolEnumFlow  AddCdnDomainRequestCdnSrcDetailsBackProtocolEnum = "FLOW"
+	AddCdnDomainRequestCdnSrcDetailsBackProtocolEnumHttp  AddCdnDomainRequestCdnSrcDetailsBackProtocolEnum = "HTTP"
+	AddCdnDomainRequestCdnSrcDetailsBackProtocolEnumHttps AddCdnDomainRequestCdnSrcDetailsBackProtocolEnum = "HTTPS"
 )
+
 type AddCdnDomainRequestCdnSrcDetailsBackTypeEnum string
 
 // List of BackType
 const (
-    AddCdnDomainRequestCdnSrcDetailsBackTypeEnumIp AddCdnDomainRequestCdnSrcDetailsBackTypeEnum = "ip"
-    AddCdnDomainRequestCdnSrcDetailsBackTypeEnumDomain AddCdnDomainRequestCdnSrcDetailsBackTypeEnum = "domain"
-    AddCdnDomainRequestCdnSrcDetailsBackTypeEnumEos AddCdnDomainRequestCdnSrcDetailsBackTypeEnum = "eos"
+	AddCdnDomainRequestCdnSrcDetailsBackTypeEnumIp     AddCdnDomainRequestCdnSrcDetailsBackTypeEnum = "ip"
+	AddCdnDomainRequestCdnSrcDetailsBackTypeEnumDomain AddCdnDomainRequestCdnSrcDetailsBackTypeEnum = "domain"
+	AddCdnDomainRequestCdnSrcDetailsBackTypeEnumEos    AddCdnDomainRequestCdnSrcDetailsBackTypeEnum = "eos"
 )
 
 type AddCdnDomainRequestCdnSrcDetails struct {
-
-    // 回源协议
+	// 回源协议
 	BackProtocol *AddCdnDomainRequestCdnSrcDetailsBackProtocolEnum `json:"backProtocol,omitempty"`
-    // 回源地址，ip或域名
+	// 回源地址，ip或域名
 	BackAddr *string `json:"backAddr,omitempty"`
-    // 回源地址类型
+	// 回源地址类型
 	BackType *AddCdnDomainRequestCdnSrcDetailsBackTypeEnum `json:"backType,omitempty"`
-    // 是否为主站
+	// 是否为主站
 	Primary *bool `json:"primary,omitempty"`
 }
 
@@ -68,7 +69,6 @@ func (s *AddCdnDomainRequestCdnSrcDetails) SetPrimary(v bool) *AddCdnDomainReque
 	return s
 }
 
-
 type AddCdnDomainRequestCdnSrcDetailsBuilder struct {
 	s *AddCdnDomainRequestCdnSrcDetails
 }
@@ -102,5 +102,3 @@ func (b *AddCdnDomainRequestCdnSrcDetailsBuilder) Primary(v bool) *AddCdnDomainR
 func (b *AddCdnDomainRequestCdnSrcDetailsBuilder) Build() *AddCdnDomainRequestCdnSrcDetails {
 	return b.s
 }
-
-

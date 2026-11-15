@@ -5,13 +5,13 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type DeleteL7PolicyPath struct {
-    position.Path
-    // 七层转发策略ID
+	position.Path
+	// 七层转发策略ID
 	L7PolicyId *string `json:"l7PolicyId,omitempty"`
 }
 
@@ -32,7 +32,6 @@ func (s *DeleteL7PolicyPath) SetL7PolicyId(v string) *DeleteL7PolicyPath {
 	return s
 }
 
-
 type DeleteL7PolicyPathBuilder struct {
 	s *DeleteL7PolicyPath
 }
@@ -51,5 +50,3 @@ func (b *DeleteL7PolicyPathBuilder) L7PolicyId(v string) *DeleteL7PolicyPathBuil
 func (b *DeleteL7PolicyPathBuilder) Build() *DeleteL7PolicyPath {
 	return b.s
 }
-
-

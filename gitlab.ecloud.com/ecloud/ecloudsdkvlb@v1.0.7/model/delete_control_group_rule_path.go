@@ -5,13 +5,13 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type DeleteControlGroupRulePath struct {
-    position.Path
-    // 访问控制组ID
+	position.Path
+	// 访问控制组ID
 	AccessControlGroupId *string `json:"accessControlGroupId,omitempty"`
 }
 
@@ -32,7 +32,6 @@ func (s *DeleteControlGroupRulePath) SetAccessControlGroupId(v string) *DeleteCo
 	return s
 }
 
-
 type DeleteControlGroupRulePathBuilder struct {
 	s *DeleteControlGroupRulePath
 }
@@ -51,5 +50,3 @@ func (b *DeleteControlGroupRulePathBuilder) AccessControlGroupId(v string) *Dele
 func (b *DeleteControlGroupRulePathBuilder) Build() *DeleteControlGroupRulePath {
 	return b.s
 }
-
-

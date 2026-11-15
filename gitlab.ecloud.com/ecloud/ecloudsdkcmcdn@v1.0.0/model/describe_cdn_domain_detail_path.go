@@ -5,13 +5,13 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type DescribeCdnDomainDetailPath struct {
-    position.Path
-    // 域名id
+	position.Path
+	// 域名id
 	DomainId *string `json:"domainId,omitempty"`
 }
 
@@ -32,7 +32,6 @@ func (s *DescribeCdnDomainDetailPath) SetDomainId(v string) *DescribeCdnDomainDe
 	return s
 }
 
-
 type DescribeCdnDomainDetailPathBuilder struct {
 	s *DescribeCdnDomainDetailPath
 }
@@ -51,5 +50,3 @@ func (b *DescribeCdnDomainDetailPathBuilder) DomainId(v string) *DescribeCdnDoma
 func (b *DescribeCdnDomainDetailPathBuilder) Build() *DescribeCdnDomainDetailPath {
 	return b.s
 }
-
-

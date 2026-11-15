@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type CreateMembersWithHttpStatusRequest struct {
-
-
 	CreateMembersWithHttpStatusBody *CreateMembersWithHttpStatusBody `json:"createMembersWithHttpStatusBody,omitempty"`
 
 	CreateMembersWithHttpStatusPath *CreateMembersWithHttpStatusPath `json:"createMembersWithHttpStatusPath,omitempty"`
@@ -38,7 +36,6 @@ func (s *CreateMembersWithHttpStatusRequest) SetCreateMembersWithHttpStatusPath(
 	return s
 }
 
-
 type CreateMembersWithHttpStatusRequestBuilder struct {
 	s *CreateMembersWithHttpStatusRequest
 }
@@ -62,5 +59,3 @@ func (b *CreateMembersWithHttpStatusRequestBuilder) CreateMembersWithHttpStatusP
 func (b *CreateMembersWithHttpStatusRequestBuilder) Build() *CreateMembersWithHttpStatusRequest {
 	return b.s
 }
-
-

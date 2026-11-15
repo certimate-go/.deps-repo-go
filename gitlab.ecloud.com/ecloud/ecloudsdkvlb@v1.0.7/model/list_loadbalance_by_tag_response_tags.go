@@ -5,16 +5,15 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type ListLoadbalanceByTagResponseTags struct {
-
-    // 标签ID
+	// 标签ID
 	TagId *string `json:"tagId,omitempty"`
-    // 标签值
+	// 标签值
 	TagValue *string `json:"tagValue,omitempty"`
-    // 标签键
+	// 标签键
 	TagKey *string `json:"tagKey,omitempty"`
 }
 
@@ -45,7 +44,6 @@ func (s *ListLoadbalanceByTagResponseTags) SetTagKey(v string) *ListLoadbalanceB
 	return s
 }
 
-
 type ListLoadbalanceByTagResponseTagsBuilder struct {
 	s *ListLoadbalanceByTagResponseTags
 }
@@ -74,5 +72,3 @@ func (b *ListLoadbalanceByTagResponseTagsBuilder) TagKey(v string) *ListLoadbala
 func (b *ListLoadbalanceByTagResponseTagsBuilder) Build() *ListLoadbalanceByTagResponseTags {
 	return b.s
 }
-
-

@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type UpdateLoadBalanceTCPListenerRequest struct {
-
-
 	UpdateLoadBalanceTCPListenerBody *UpdateLoadBalanceTCPListenerBody `json:"updateLoadBalanceTCPListenerBody,omitempty"`
 }
 
@@ -31,7 +29,6 @@ func (s *UpdateLoadBalanceTCPListenerRequest) SetUpdateLoadBalanceTCPListenerBod
 	return s
 }
 
-
 type UpdateLoadBalanceTCPListenerRequestBuilder struct {
 	s *UpdateLoadBalanceTCPListenerRequest
 }
@@ -50,5 +47,3 @@ func (b *UpdateLoadBalanceTCPListenerRequestBuilder) UpdateLoadBalanceTCPListene
 func (b *UpdateLoadBalanceTCPListenerRequestBuilder) Build() *UpdateLoadBalanceTCPListenerRequest {
 	return b.s
 }
-
-

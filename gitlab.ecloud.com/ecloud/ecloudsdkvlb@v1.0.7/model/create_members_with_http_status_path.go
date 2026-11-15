@@ -5,13 +5,13 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type CreateMembersWithHttpStatusPath struct {
-    position.Path
-    // 负载均衡后端服务器组ID
+	position.Path
+	// 负载均衡后端服务器组ID
 	PoolId *string `json:"poolId,omitempty"`
 }
 
@@ -32,7 +32,6 @@ func (s *CreateMembersWithHttpStatusPath) SetPoolId(v string) *CreateMembersWith
 	return s
 }
 
-
 type CreateMembersWithHttpStatusPathBuilder struct {
 	s *CreateMembersWithHttpStatusPath
 }
@@ -51,5 +50,3 @@ func (b *CreateMembersWithHttpStatusPathBuilder) PoolId(v string) *CreateMembers
 func (b *CreateMembersWithHttpStatusPathBuilder) Build() *CreateMembersWithHttpStatusPath {
 	return b.s
 }
-
-

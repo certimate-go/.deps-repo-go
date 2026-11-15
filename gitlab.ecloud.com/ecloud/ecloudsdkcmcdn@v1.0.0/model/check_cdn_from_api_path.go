@@ -5,19 +5,20 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
+
 type CheckCdnFromApiPathProductTypeEnum string
 
 // List of ProductType
 const (
-    CheckCdnFromApiPathProductTypeEnumEcdn CheckCdnFromApiPathProductTypeEnum = "ECDN"
+	CheckCdnFromApiPathProductTypeEnumEcdn CheckCdnFromApiPathProductTypeEnum = "ECDN"
 )
 
 type CheckCdnFromApiPath struct {
-    position.Path
-    // 产品类型
+	position.Path
+	// 产品类型
 	ProductType *CheckCdnFromApiPathProductTypeEnum `json:"productType,omitempty"`
 }
 
@@ -38,7 +39,6 @@ func (s *CheckCdnFromApiPath) SetProductType(v CheckCdnFromApiPathProductTypeEnu
 	return s
 }
 
-
 type CheckCdnFromApiPathBuilder struct {
 	s *CheckCdnFromApiPath
 }
@@ -57,5 +57,3 @@ func (b *CheckCdnFromApiPathBuilder) ProductType(v CheckCdnFromApiPathProductTyp
 func (b *CheckCdnFromApiPathBuilder) Build() *CheckCdnFromApiPath {
 	return b.s
 }
-
-

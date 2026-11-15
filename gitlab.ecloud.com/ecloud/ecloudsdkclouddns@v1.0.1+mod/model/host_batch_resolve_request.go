@@ -4,9 +4,6 @@
 
 package model
 
-
-
 type HostBatchResolveRequest struct {
-
 	HostBatchResolveQuery *HostBatchResolveQuery `json:"hostBatchResolveQuery,omitempty"`
 }

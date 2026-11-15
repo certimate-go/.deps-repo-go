@@ -5,34 +5,34 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
+
 type UnbindFipResponseStateEnum string
 
 // List of State
 const (
-    UnbindFipResponseStateEnumOk UnbindFipResponseStateEnum = "OK"
-    UnbindFipResponseStateEnumError UnbindFipResponseStateEnum = "ERROR"
-    UnbindFipResponseStateEnumException UnbindFipResponseStateEnum = "EXCEPTION"
-    UnbindFipResponseStateEnumAlarm UnbindFipResponseStateEnum = "ALARM"
-    UnbindFipResponseStateEnumForbidden UnbindFipResponseStateEnum = "FORBIDDEN"
+	UnbindFipResponseStateEnumOk        UnbindFipResponseStateEnum = "OK"
+	UnbindFipResponseStateEnumError     UnbindFipResponseStateEnum = "ERROR"
+	UnbindFipResponseStateEnumException UnbindFipResponseStateEnum = "EXCEPTION"
+	UnbindFipResponseStateEnumAlarm     UnbindFipResponseStateEnum = "ALARM"
+	UnbindFipResponseStateEnumForbidden UnbindFipResponseStateEnum = "FORBIDDEN"
 )
 
 type UnbindFipResponse struct {
-
-    // 异步流程跟踪ID
+	// 异步流程跟踪ID
 	AsyncKey *string `json:"asyncKey,omitempty"`
-    // 每个请求的序列号
+	// 每个请求的序列号
 	RequestId *string `json:"requestId,omitempty"`
-    // 页面国际化错误提示
+	// 页面国际化错误提示
 	ErrorMessage *string `json:"errorMessage,omitempty"`
-    // 统一错误码
+	// 统一错误码
 	ErrorCode *string `json:"errorCode,omitempty"`
-    // 返回状态码
+	// 返回状态码
 	State *UnbindFipResponseStateEnum `json:"state,omitempty"`
-    // 请求成功时返回的数据
+	// 请求成功时返回的数据
 	Body *bool `json:"body,omitempty"`
-    // 统一错误码的自定义参数
+	// 统一错误码的自定义参数
 	ErrorParams []string `json:"errorParams,omitempty"`
 }
 
@@ -83,7 +83,6 @@ func (s *UnbindFipResponse) SetErrorParams(v []string) *UnbindFipResponse {
 	return s
 }
 
-
 type UnbindFipResponseBuilder struct {
 	s *UnbindFipResponse
 }
@@ -132,5 +131,3 @@ func (b *UnbindFipResponseBuilder) ErrorParams(v []string) *UnbindFipResponseBui
 func (b *UnbindFipResponseBuilder) Build() *UnbindFipResponse {
 	return b.s
 }
-
-

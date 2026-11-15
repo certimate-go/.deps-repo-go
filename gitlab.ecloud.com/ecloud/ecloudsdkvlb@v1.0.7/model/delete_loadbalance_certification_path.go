@@ -5,13 +5,13 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type DeleteLoadbalanceCertificationPath struct {
-    position.Path
-    // 证书ID
+	position.Path
+	// 证书ID
 	ContainerUuid *string `json:"containerUuid,omitempty"`
 }
 
@@ -32,7 +32,6 @@ func (s *DeleteLoadbalanceCertificationPath) SetContainerUuid(v string) *DeleteL
 	return s
 }
 
-
 type DeleteLoadbalanceCertificationPathBuilder struct {
 	s *DeleteLoadbalanceCertificationPath
 }
@@ -51,5 +50,3 @@ func (b *DeleteLoadbalanceCertificationPathBuilder) ContainerUuid(v string) *Del
 func (b *DeleteLoadbalanceCertificationPathBuilder) Build() *DeleteLoadbalanceCertificationPath {
 	return b.s
 }
-
-

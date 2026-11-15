@@ -4,17 +4,15 @@
 
 package model
 
-
 type DeleteDomainOpenapiResponseBodyCodeEnum string
 
 // List of Code
 const (
-    DeleteDomainOpenapiResponseBodyCodeEnumError DeleteDomainOpenapiResponseBodyCodeEnum = "ERROR"
-    DeleteDomainOpenapiResponseBodyCodeEnumSuccess DeleteDomainOpenapiResponseBodyCodeEnum = "SUCCESS"
+	DeleteDomainOpenapiResponseBodyCodeEnumError   DeleteDomainOpenapiResponseBodyCodeEnum = "ERROR"
+	DeleteDomainOpenapiResponseBodyCodeEnumSuccess DeleteDomainOpenapiResponseBodyCodeEnum = "SUCCESS"
 )
 
 type DeleteDomainOpenapiResponseBody struct {
-
 	// 结果说明
 	Msg string `json:"msg,omitempty"`
 

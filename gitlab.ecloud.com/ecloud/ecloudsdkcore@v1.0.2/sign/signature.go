@@ -4,14 +4,15 @@ import (
 	"crypto/hmac"
 	"crypto/sha1"
 	"crypto/sha256"
-	"github.com/google/uuid"
-	"gitlab.ecloud.com/ecloud/ecloudsdkcore/errs"
-	"gitlab.ecloud.com/ecloud/ecloudsdkcore/request"
-	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 	"net/url"
 	"sort"
 	"strings"
 	"time"
+
+	"github.com/google/uuid"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/errs"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/request"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 const (

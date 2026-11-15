@@ -5,13 +5,13 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type GetAsyncResultQuery struct {
-    position.Query
-    // 获取异步执行结果的Key
+	position.Query
+	// 获取异步执行结果的Key
 	RedisKey *string `json:"redisKey,omitempty"`
 }
 
@@ -32,7 +32,6 @@ func (s *GetAsyncResultQuery) SetRedisKey(v string) *GetAsyncResultQuery {
 	return s
 }
 
-
 type GetAsyncResultQueryBuilder struct {
 	s *GetAsyncResultQuery
 }
@@ -51,5 +50,3 @@ func (b *GetAsyncResultQueryBuilder) RedisKey(v string) *GetAsyncResultQueryBuil
 func (b *GetAsyncResultQueryBuilder) Build() *GetAsyncResultQuery {
 	return b.s
 }
-
-

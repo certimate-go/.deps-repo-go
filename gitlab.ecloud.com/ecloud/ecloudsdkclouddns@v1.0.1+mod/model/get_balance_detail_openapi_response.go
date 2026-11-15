@@ -4,19 +4,17 @@
 
 package model
 
-
 type GetBalanceDetailOpenapiResponseStateEnum string
 
 // List of State
 const (
-    GetBalanceDetailOpenapiResponseStateEnumError GetBalanceDetailOpenapiResponseStateEnum = "ERROR"
-    GetBalanceDetailOpenapiResponseStateEnumException GetBalanceDetailOpenapiResponseStateEnum = "EXCEPTION"
-    GetBalanceDetailOpenapiResponseStateEnumForbidden GetBalanceDetailOpenapiResponseStateEnum = "FORBIDDEN"
-    GetBalanceDetailOpenapiResponseStateEnumOk GetBalanceDetailOpenapiResponseStateEnum = "OK"
+	GetBalanceDetailOpenapiResponseStateEnumError     GetBalanceDetailOpenapiResponseStateEnum = "ERROR"
+	GetBalanceDetailOpenapiResponseStateEnumException GetBalanceDetailOpenapiResponseStateEnum = "EXCEPTION"
+	GetBalanceDetailOpenapiResponseStateEnumForbidden GetBalanceDetailOpenapiResponseStateEnum = "FORBIDDEN"
+	GetBalanceDetailOpenapiResponseStateEnumOk        GetBalanceDetailOpenapiResponseStateEnum = "OK"
 )
 
 type GetBalanceDetailOpenapiResponse struct {
-
 	RequestId string `json:"requestId,omitempty"`
 
 	ErrorMessage string `json:"errorMessage,omitempty"`

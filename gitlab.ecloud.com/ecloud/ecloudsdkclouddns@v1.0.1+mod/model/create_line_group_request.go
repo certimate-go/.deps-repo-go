@@ -4,9 +4,6 @@
 
 package model
 
-
-
 type CreateLineGroupRequest struct {
-
 	CreateLineGroupBody *CreateLineGroupBody `json:"createLineGroupBody,omitempty"`
 }

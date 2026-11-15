@@ -5,13 +5,13 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type IDeleteListenerDeletablesHeader struct {
-    position.Header
-    // 请求头部,region值
+	position.Header
+	// 请求头部,region值
 	Region *string `json:"region,omitempty"`
 }
 
@@ -32,7 +32,6 @@ func (s *IDeleteListenerDeletablesHeader) SetRegion(v string) *IDeleteListenerDe
 	return s
 }
 
-
 type IDeleteListenerDeletablesHeaderBuilder struct {
 	s *IDeleteListenerDeletablesHeader
 }
@@ -51,5 +50,3 @@ func (b *IDeleteListenerDeletablesHeaderBuilder) Region(v string) *IDeleteListen
 func (b *IDeleteListenerDeletablesHeaderBuilder) Build() *IDeleteListenerDeletablesHeader {
 	return b.s
 }
-
-

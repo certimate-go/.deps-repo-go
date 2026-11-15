@@ -5,33 +5,33 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type SetCdnDomainConfigBody struct {
-    position.Body
-    // error page信息
+	position.Body
+	// error page信息
 	ErrorPageReq *SetCdnDomainConfigRequestErrorPageReq `json:"errorPageReq,omitempty"`
-    // ip黑名单信息
+	// ip黑名单信息
 	IpBlackList *SetCdnDomainConfigRequestIpBlackList `json:"ipBlackList,omitempty"`
-    // 缓存类型与过期时间信息
+	// 缓存类型与过期时间信息
 	Cache *SetCdnDomainConfigRequestCache `json:"cache,omitempty"`
-    // 防盗链信息
+	// 防盗链信息
 	ReferrerAntiStealingLink *SetCdnDomainConfigRequestReferrerAntiStealingLink `json:"referrerAntiStealingLink,omitempty"`
-    // 回源host
+	// 回源host
 	BackSourceHost *SetCdnDomainConfigRequestBackSourceHost `json:"backSourceHost,omitempty"`
-    // http响应头配置信息
+	// http响应头配置信息
 	RespHeaderReq *SetCdnDomainConfigRequestRespHeaderReq `json:"respHeaderReq,omitempty"`
-    // 支持HTTP/2的协议配置
+	// 支持HTTP/2的协议配置
 	Http2Status *SetCdnDomainConfigRequestHttp2Status `json:"http2Status,omitempty"`
-    // 智能压缩功能
+	// 智能压缩功能
 	GzipStatus *SetCdnDomainConfigRequestGzipStatus `json:"gzipStatus,omitempty"`
-    // 域名Id
+	// 域名Id
 	DomainId *int32 `json:"domainId,omitempty"`
-    // http请求头配置信息
+	// http请求头配置信息
 	ReqHeaderReq *SetCdnDomainConfigRequestReqHeaderReq `json:"reqHeaderReq,omitempty"`
-    // 过滤参数配置信息
+	// 过滤参数配置信息
 	UrlParameterReq *SetCdnDomainConfigRequestUrlParameterReq `json:"urlParameterReq,omitempty"`
 }
 
@@ -102,7 +102,6 @@ func (s *SetCdnDomainConfigBody) SetUrlParameterReq(v *SetCdnDomainConfigRequest
 	return s
 }
 
-
 type SetCdnDomainConfigBodyBuilder struct {
 	s *SetCdnDomainConfigBody
 }
@@ -171,5 +170,3 @@ func (b *SetCdnDomainConfigBodyBuilder) UrlParameterReq(v *SetCdnDomainConfigReq
 func (b *SetCdnDomainConfigBodyBuilder) Build() *SetCdnDomainConfigBody {
 	return b.s
 }
-
-

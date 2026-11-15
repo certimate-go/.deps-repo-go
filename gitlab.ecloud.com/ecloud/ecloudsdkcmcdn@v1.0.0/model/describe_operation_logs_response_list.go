@@ -5,36 +5,35 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type DescribeOperationLogsResponseList struct {
-
-    // 操作类型 刷新,预热
+	// 操作类型 刷新,预热
 	OperateType *string `json:"operateType,omitempty"`
-    // 刷新任务url的索引
+	// 刷新任务url的索引
 	Index *int32 `json:"index,omitempty"`
-    // 最新更新时间
+	// 最新更新时间
 	UpdateTime *string `json:"updateTime,omitempty"`
-    // 用户id
+	// 用户id
 	UserId *string `json:"userId,omitempty"`
-    // 内容更新URL或者path
+	// 内容更新URL或者path
 	Content *string `json:"content,omitempty"`
-    // 是否删除，0：否，1：是
+	// 是否删除，0：否，1：是
 	Deleted *bool `json:"deleted,omitempty"`
-    // 创建时间
+	// 创建时间
 	CreateTime *string `json:"createTime,omitempty"`
-    // 刷新类型 文件,目录
+	// 刷新类型 文件,目录
 	RefreshType *string `json:"refreshType,omitempty"`
-    // 任务开始时间
+	// 任务开始时间
 	StartTime *string `json:"startTime,omitempty"`
-    // 任务结束时间
+	// 任务结束时间
 	EndTime *string `json:"endTime,omitempty"`
 
 	Id *int32 `json:"id,omitempty"`
-    // 任务Id
+	// 任务Id
 	TaskId *string `json:"taskId,omitempty"`
-    // 状态
+	// 状态
 	Status *string `json:"status,omitempty"`
 }
 
@@ -115,7 +114,6 @@ func (s *DescribeOperationLogsResponseList) SetStatus(v string) *DescribeOperati
 	return s
 }
 
-
 type DescribeOperationLogsResponseListBuilder struct {
 	s *DescribeOperationLogsResponseList
 }
@@ -194,5 +192,3 @@ func (b *DescribeOperationLogsResponseListBuilder) Status(v string) *DescribeOpe
 func (b *DescribeOperationLogsResponseListBuilder) Build() *DescribeOperationLogsResponseList {
 	return b.s
 }
-
-

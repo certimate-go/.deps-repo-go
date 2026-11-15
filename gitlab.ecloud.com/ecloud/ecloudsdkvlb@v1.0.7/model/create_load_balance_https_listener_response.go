@@ -5,32 +5,32 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
+
 type CreateLoadBalanceHTTPSListenerResponseStateEnum string
 
 // List of State
 const (
-    CreateLoadBalanceHTTPSListenerResponseStateEnumOk CreateLoadBalanceHTTPSListenerResponseStateEnum = "OK"
-    CreateLoadBalanceHTTPSListenerResponseStateEnumError CreateLoadBalanceHTTPSListenerResponseStateEnum = "ERROR"
-    CreateLoadBalanceHTTPSListenerResponseStateEnumException CreateLoadBalanceHTTPSListenerResponseStateEnum = "EXCEPTION"
-    CreateLoadBalanceHTTPSListenerResponseStateEnumAlarm CreateLoadBalanceHTTPSListenerResponseStateEnum = "ALARM"
-    CreateLoadBalanceHTTPSListenerResponseStateEnumForbidden CreateLoadBalanceHTTPSListenerResponseStateEnum = "FORBIDDEN"
+	CreateLoadBalanceHTTPSListenerResponseStateEnumOk        CreateLoadBalanceHTTPSListenerResponseStateEnum = "OK"
+	CreateLoadBalanceHTTPSListenerResponseStateEnumError     CreateLoadBalanceHTTPSListenerResponseStateEnum = "ERROR"
+	CreateLoadBalanceHTTPSListenerResponseStateEnumException CreateLoadBalanceHTTPSListenerResponseStateEnum = "EXCEPTION"
+	CreateLoadBalanceHTTPSListenerResponseStateEnumAlarm     CreateLoadBalanceHTTPSListenerResponseStateEnum = "ALARM"
+	CreateLoadBalanceHTTPSListenerResponseStateEnumForbidden CreateLoadBalanceHTTPSListenerResponseStateEnum = "FORBIDDEN"
 )
 
 type CreateLoadBalanceHTTPSListenerResponse struct {
-
-    // 每个请求的序列号
+	// 每个请求的序列号
 	RequestId *string `json:"requestId,omitempty"`
-    // 页面国际化错误提示
+	// 页面国际化错误提示
 	ErrorMessage *string `json:"errorMessage,omitempty"`
-    // 统一错误码
+	// 统一错误码
 	ErrorCode *string `json:"errorCode,omitempty"`
-    // 返回状态码：OK（成功）, ERROR（错误）,EXCEPTION（异常）,ALARM（警告）, FORBIDDEN（禁止访问）
+	// 返回状态码：OK（成功）, ERROR（错误）,EXCEPTION（异常）,ALARM（警告）, FORBIDDEN（禁止访问）
 	State *CreateLoadBalanceHTTPSListenerResponseStateEnum `json:"state,omitempty"`
-    // 请求成功时返回的数据
+	// 请求成功时返回的数据
 	Body *string `json:"body,omitempty"`
-    // 统一错误码的自定义参数
+	// 统一错误码的自定义参数
 	ErrorParams []string `json:"errorParams,omitempty"`
 }
 
@@ -76,7 +76,6 @@ func (s *CreateLoadBalanceHTTPSListenerResponse) SetErrorParams(v []string) *Cre
 	return s
 }
 
-
 type CreateLoadBalanceHTTPSListenerResponseBuilder struct {
 	s *CreateLoadBalanceHTTPSListenerResponse
 }
@@ -120,5 +119,3 @@ func (b *CreateLoadBalanceHTTPSListenerResponseBuilder) ErrorParams(v []string) 
 func (b *CreateLoadBalanceHTTPSListenerResponseBuilder) Build() *CreateLoadBalanceHTTPSListenerResponse {
 	return b.s
 }
-
-

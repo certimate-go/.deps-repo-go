@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type CreateControlGroupRuleRequest struct {
-
-
 	CreateControlGroupRuleBody *CreateControlGroupRuleBody `json:"createControlGroupRuleBody,omitempty"`
 }
 
@@ -31,7 +29,6 @@ func (s *CreateControlGroupRuleRequest) SetCreateControlGroupRuleBody(v *CreateC
 	return s
 }
 
-
 type CreateControlGroupRuleRequestBuilder struct {
 	s *CreateControlGroupRuleRequest
 }
@@ -50,5 +47,3 @@ func (b *CreateControlGroupRuleRequestBuilder) CreateControlGroupRuleBody(v *Cre
 func (b *CreateControlGroupRuleRequestBuilder) Build() *CreateControlGroupRuleRequest {
 	return b.s
 }
-
-

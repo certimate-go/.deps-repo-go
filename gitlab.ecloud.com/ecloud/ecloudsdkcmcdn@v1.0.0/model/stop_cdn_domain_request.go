@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type StopCdnDomainRequest struct {
-
-
 	StopCdnDomainQuery *StopCdnDomainQuery `json:"stopCdnDomainQuery,omitempty"`
 }
 
@@ -31,7 +29,6 @@ func (s *StopCdnDomainRequest) SetStopCdnDomainQuery(v *StopCdnDomainQuery) *Sto
 	return s
 }
 
-
 type StopCdnDomainRequestBuilder struct {
 	s *StopCdnDomainRequest
 }
@@ -50,5 +47,3 @@ func (b *StopCdnDomainRequestBuilder) StopCdnDomainQuery(v *StopCdnDomainQuery) 
 func (b *StopCdnDomainRequestBuilder) Build() *StopCdnDomainRequest {
 	return b.s
 }
-
-

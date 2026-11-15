@@ -5,187 +5,191 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
+
 type GetLoadBalanceDetailRespResponseBodyEcStatusEnum string
 
 // List of EcStatus
 const (
-    GetLoadBalanceDetailRespResponseBodyEcStatusEnumActive GetLoadBalanceDetailRespResponseBodyEcStatusEnum = "ACTIVE"
-    GetLoadBalanceDetailRespResponseBodyEcStatusEnumBuild GetLoadBalanceDetailRespResponseBodyEcStatusEnum = "BUILD"
-    GetLoadBalanceDetailRespResponseBodyEcStatusEnumDown GetLoadBalanceDetailRespResponseBodyEcStatusEnum = "DOWN"
-    GetLoadBalanceDetailRespResponseBodyEcStatusEnumError GetLoadBalanceDetailRespResponseBodyEcStatusEnum = "ERROR"
-    GetLoadBalanceDetailRespResponseBodyEcStatusEnumPendingCreate GetLoadBalanceDetailRespResponseBodyEcStatusEnum = "PENDING_CREATE"
-    GetLoadBalanceDetailRespResponseBodyEcStatusEnumPendingUpdate GetLoadBalanceDetailRespResponseBodyEcStatusEnum = "PENDING_UPDATE"
-    GetLoadBalanceDetailRespResponseBodyEcStatusEnumPendingDelete GetLoadBalanceDetailRespResponseBodyEcStatusEnum = "PENDING_DELETE"
-    GetLoadBalanceDetailRespResponseBodyEcStatusEnumMigrating GetLoadBalanceDetailRespResponseBodyEcStatusEnum = "MIGRATING"
-    GetLoadBalanceDetailRespResponseBodyEcStatusEnumDeleted GetLoadBalanceDetailRespResponseBodyEcStatusEnum = "DELETED"
-    GetLoadBalanceDetailRespResponseBodyEcStatusEnumUnrecognized GetLoadBalanceDetailRespResponseBodyEcStatusEnum = "UNRECOGNIZED"
+	GetLoadBalanceDetailRespResponseBodyEcStatusEnumActive        GetLoadBalanceDetailRespResponseBodyEcStatusEnum = "ACTIVE"
+	GetLoadBalanceDetailRespResponseBodyEcStatusEnumBuild         GetLoadBalanceDetailRespResponseBodyEcStatusEnum = "BUILD"
+	GetLoadBalanceDetailRespResponseBodyEcStatusEnumDown          GetLoadBalanceDetailRespResponseBodyEcStatusEnum = "DOWN"
+	GetLoadBalanceDetailRespResponseBodyEcStatusEnumError         GetLoadBalanceDetailRespResponseBodyEcStatusEnum = "ERROR"
+	GetLoadBalanceDetailRespResponseBodyEcStatusEnumPendingCreate GetLoadBalanceDetailRespResponseBodyEcStatusEnum = "PENDING_CREATE"
+	GetLoadBalanceDetailRespResponseBodyEcStatusEnumPendingUpdate GetLoadBalanceDetailRespResponseBodyEcStatusEnum = "PENDING_UPDATE"
+	GetLoadBalanceDetailRespResponseBodyEcStatusEnumPendingDelete GetLoadBalanceDetailRespResponseBodyEcStatusEnum = "PENDING_DELETE"
+	GetLoadBalanceDetailRespResponseBodyEcStatusEnumMigrating     GetLoadBalanceDetailRespResponseBodyEcStatusEnum = "MIGRATING"
+	GetLoadBalanceDetailRespResponseBodyEcStatusEnumDeleted       GetLoadBalanceDetailRespResponseBodyEcStatusEnum = "DELETED"
+	GetLoadBalanceDetailRespResponseBodyEcStatusEnumUnrecognized  GetLoadBalanceDetailRespResponseBodyEcStatusEnum = "UNRECOGNIZED"
 )
 
 type GetLoadBalanceDetailRespResponseBodyIpVersionTypesEnum int32
 
 // List of IpVersionTypes
 const (
-    GetLoadBalanceDetailRespResponseBodyIpVersionTypesEnum4 GetLoadBalanceDetailRespResponseBodyIpVersionTypesEnum = 4
-    GetLoadBalanceDetailRespResponseBodyIpVersionTypesEnum6 GetLoadBalanceDetailRespResponseBodyIpVersionTypesEnum = 6
+	GetLoadBalanceDetailRespResponseBodyIpVersionTypesEnum4 GetLoadBalanceDetailRespResponseBodyIpVersionTypesEnum = 4
+	GetLoadBalanceDetailRespResponseBodyIpVersionTypesEnum6 GetLoadBalanceDetailRespResponseBodyIpVersionTypesEnum = 6
 )
+
 type GetLoadBalanceDetailRespResponseBodyProviderEnum string
 
 // List of Provider
 const (
-    GetLoadBalanceDetailRespResponseBodyProviderEnumBrocade GetLoadBalanceDetailRespResponseBodyProviderEnum = "brocade"
-    GetLoadBalanceDetailRespResponseBodyProviderEnumF5hardware GetLoadBalanceDetailRespResponseBodyProviderEnum = "f5hardware"
-    GetLoadBalanceDetailRespResponseBodyProviderEnumNokia GetLoadBalanceDetailRespResponseBodyProviderEnum = "nokia"
-    GetLoadBalanceDetailRespResponseBodyProviderEnumBcslb GetLoadBalanceDetailRespResponseBodyProviderEnum = "bcslb"
-    GetLoadBalanceDetailRespResponseBodyProviderEnumF5networksS GetLoadBalanceDetailRespResponseBodyProviderEnum = "f5networks_s"
-    GetLoadBalanceDetailRespResponseBodyProviderEnumNsb GetLoadBalanceDetailRespResponseBodyProviderEnum = "nsb"
-    GetLoadBalanceDetailRespResponseBodyProviderEnumEslb GetLoadBalanceDetailRespResponseBodyProviderEnum = "eslb"
-    GetLoadBalanceDetailRespResponseBodyProviderEnumRjhardf5 GetLoadBalanceDetailRespResponseBodyProviderEnum = "rjhardf5"
-    GetLoadBalanceDetailRespResponseBodyProviderEnumVirtual GetLoadBalanceDetailRespResponseBodyProviderEnum = "virtual"
-    GetLoadBalanceDetailRespResponseBodyProviderEnumH3clb GetLoadBalanceDetailRespResponseBodyProviderEnum = "h3clb"
-    GetLoadBalanceDetailRespResponseBodyProviderEnumH3virtual GetLoadBalanceDetailRespResponseBodyProviderEnum = "h3virtual"
-    GetLoadBalanceDetailRespResponseBodyProviderEnumAliyun GetLoadBalanceDetailRespResponseBodyProviderEnum = "aliyun"
-    GetLoadBalanceDetailRespResponseBodyProviderEnumNfvslb GetLoadBalanceDetailRespResponseBodyProviderEnum = "nfvslb"
+	GetLoadBalanceDetailRespResponseBodyProviderEnumBrocade     GetLoadBalanceDetailRespResponseBodyProviderEnum = "brocade"
+	GetLoadBalanceDetailRespResponseBodyProviderEnumF5hardware  GetLoadBalanceDetailRespResponseBodyProviderEnum = "f5hardware"
+	GetLoadBalanceDetailRespResponseBodyProviderEnumNokia       GetLoadBalanceDetailRespResponseBodyProviderEnum = "nokia"
+	GetLoadBalanceDetailRespResponseBodyProviderEnumBcslb       GetLoadBalanceDetailRespResponseBodyProviderEnum = "bcslb"
+	GetLoadBalanceDetailRespResponseBodyProviderEnumF5networksS GetLoadBalanceDetailRespResponseBodyProviderEnum = "f5networks_s"
+	GetLoadBalanceDetailRespResponseBodyProviderEnumNsb         GetLoadBalanceDetailRespResponseBodyProviderEnum = "nsb"
+	GetLoadBalanceDetailRespResponseBodyProviderEnumEslb        GetLoadBalanceDetailRespResponseBodyProviderEnum = "eslb"
+	GetLoadBalanceDetailRespResponseBodyProviderEnumRjhardf5    GetLoadBalanceDetailRespResponseBodyProviderEnum = "rjhardf5"
+	GetLoadBalanceDetailRespResponseBodyProviderEnumVirtual     GetLoadBalanceDetailRespResponseBodyProviderEnum = "virtual"
+	GetLoadBalanceDetailRespResponseBodyProviderEnumH3clb       GetLoadBalanceDetailRespResponseBodyProviderEnum = "h3clb"
+	GetLoadBalanceDetailRespResponseBodyProviderEnumH3virtual   GetLoadBalanceDetailRespResponseBodyProviderEnum = "h3virtual"
+	GetLoadBalanceDetailRespResponseBodyProviderEnumAliyun      GetLoadBalanceDetailRespResponseBodyProviderEnum = "aliyun"
+	GetLoadBalanceDetailRespResponseBodyProviderEnumNfvslb      GetLoadBalanceDetailRespResponseBodyProviderEnum = "nfvslb"
 )
+
 type GetLoadBalanceDetailRespResponseBodyProductTypeEnum string
 
 // List of ProductType
 const (
-    GetLoadBalanceDetailRespResponseBodyProductTypeEnumNormal GetLoadBalanceDetailRespResponseBodyProductTypeEnum = "NORMAL"
-    GetLoadBalanceDetailRespResponseBodyProductTypeEnumDeCloud GetLoadBalanceDetailRespResponseBodyProductTypeEnum = "DE_CLOUD"
-    GetLoadBalanceDetailRespResponseBodyProductTypeEnumAutoscaling GetLoadBalanceDetailRespResponseBodyProductTypeEnum = "AUTOSCALING"
-    GetLoadBalanceDetailRespResponseBodyProductTypeEnumVo GetLoadBalanceDetailRespResponseBodyProductTypeEnum = "VO"
-    GetLoadBalanceDetailRespResponseBodyProductTypeEnumCdn GetLoadBalanceDetailRespResponseBodyProductTypeEnum = "CDN"
-    GetLoadBalanceDetailRespResponseBodyProductTypeEnumPaasMaster GetLoadBalanceDetailRespResponseBodyProductTypeEnum = "PAAS_MASTER"
-    GetLoadBalanceDetailRespResponseBodyProductTypeEnumPaasSlave GetLoadBalanceDetailRespResponseBodyProductTypeEnum = "PAAS_SLAVE"
-    GetLoadBalanceDetailRespResponseBodyProductTypeEnumVcpe GetLoadBalanceDetailRespResponseBodyProductTypeEnum = "VCPE"
-    GetLoadBalanceDetailRespResponseBodyProductTypeEnumEmr GetLoadBalanceDetailRespResponseBodyProductTypeEnum = "EMR"
-    GetLoadBalanceDetailRespResponseBodyProductTypeEnumLogaudit GetLoadBalanceDetailRespResponseBodyProductTypeEnum = "LOGAUDIT"
-    GetLoadBalanceDetailRespResponseBodyProductTypeEnumMse GetLoadBalanceDetailRespResponseBodyProductTypeEnum = "MSE"
-    GetLoadBalanceDetailRespResponseBodyProductTypeEnumVirtual GetLoadBalanceDetailRespResponseBodyProductTypeEnum = "VIRTUAL"
-    GetLoadBalanceDetailRespResponseBodyProductTypeEnumBastion GetLoadBalanceDetailRespResponseBodyProductTypeEnum = "BASTION"
-    GetLoadBalanceDetailRespResponseBodyProductTypeEnumNextGenerationFirewall GetLoadBalanceDetailRespResponseBodyProductTypeEnum = "NEXT_GENERATION_FIREWALL"
+	GetLoadBalanceDetailRespResponseBodyProductTypeEnumNormal                 GetLoadBalanceDetailRespResponseBodyProductTypeEnum = "NORMAL"
+	GetLoadBalanceDetailRespResponseBodyProductTypeEnumDeCloud                GetLoadBalanceDetailRespResponseBodyProductTypeEnum = "DE_CLOUD"
+	GetLoadBalanceDetailRespResponseBodyProductTypeEnumAutoscaling            GetLoadBalanceDetailRespResponseBodyProductTypeEnum = "AUTOSCALING"
+	GetLoadBalanceDetailRespResponseBodyProductTypeEnumVo                     GetLoadBalanceDetailRespResponseBodyProductTypeEnum = "VO"
+	GetLoadBalanceDetailRespResponseBodyProductTypeEnumCdn                    GetLoadBalanceDetailRespResponseBodyProductTypeEnum = "CDN"
+	GetLoadBalanceDetailRespResponseBodyProductTypeEnumPaasMaster             GetLoadBalanceDetailRespResponseBodyProductTypeEnum = "PAAS_MASTER"
+	GetLoadBalanceDetailRespResponseBodyProductTypeEnumPaasSlave              GetLoadBalanceDetailRespResponseBodyProductTypeEnum = "PAAS_SLAVE"
+	GetLoadBalanceDetailRespResponseBodyProductTypeEnumVcpe                   GetLoadBalanceDetailRespResponseBodyProductTypeEnum = "VCPE"
+	GetLoadBalanceDetailRespResponseBodyProductTypeEnumEmr                    GetLoadBalanceDetailRespResponseBodyProductTypeEnum = "EMR"
+	GetLoadBalanceDetailRespResponseBodyProductTypeEnumLogaudit               GetLoadBalanceDetailRespResponseBodyProductTypeEnum = "LOGAUDIT"
+	GetLoadBalanceDetailRespResponseBodyProductTypeEnumMse                    GetLoadBalanceDetailRespResponseBodyProductTypeEnum = "MSE"
+	GetLoadBalanceDetailRespResponseBodyProductTypeEnumVirtual                GetLoadBalanceDetailRespResponseBodyProductTypeEnum = "VIRTUAL"
+	GetLoadBalanceDetailRespResponseBodyProductTypeEnumBastion                GetLoadBalanceDetailRespResponseBodyProductTypeEnum = "BASTION"
+	GetLoadBalanceDetailRespResponseBodyProductTypeEnumNextGenerationFirewall GetLoadBalanceDetailRespResponseBodyProductTypeEnum = "NEXT_GENERATION_FIREWALL"
 )
+
 type GetLoadBalanceDetailRespResponseBodyRecycleStatusEnum string
 
 // List of RecycleStatus
 const (
-    GetLoadBalanceDetailRespResponseBodyRecycleStatusEnumUnrecycle GetLoadBalanceDetailRespResponseBodyRecycleStatusEnum = "UNRECYCLE"
-    GetLoadBalanceDetailRespResponseBodyRecycleStatusEnumRecycleInProgress GetLoadBalanceDetailRespResponseBodyRecycleStatusEnum = "RECYCLE_IN_PROGRESS"
-    GetLoadBalanceDetailRespResponseBodyRecycleStatusEnumRecycleToBeDeleted GetLoadBalanceDetailRespResponseBodyRecycleStatusEnum = "RECYCLE_TO_BE_DELETED"
-    GetLoadBalanceDetailRespResponseBodyRecycleStatusEnumRecycleRecoverInProgress GetLoadBalanceDetailRespResponseBodyRecycleStatusEnum = "RECYCLE_RECOVER_IN_PROGRESS"
-    GetLoadBalanceDetailRespResponseBodyRecycleStatusEnumRecycleRecoverFailed GetLoadBalanceDetailRespResponseBodyRecycleStatusEnum = "RECYCLE_RECOVER_FAILED"
+	GetLoadBalanceDetailRespResponseBodyRecycleStatusEnumUnrecycle                GetLoadBalanceDetailRespResponseBodyRecycleStatusEnum = "UNRECYCLE"
+	GetLoadBalanceDetailRespResponseBodyRecycleStatusEnumRecycleInProgress        GetLoadBalanceDetailRespResponseBodyRecycleStatusEnum = "RECYCLE_IN_PROGRESS"
+	GetLoadBalanceDetailRespResponseBodyRecycleStatusEnumRecycleToBeDeleted       GetLoadBalanceDetailRespResponseBodyRecycleStatusEnum = "RECYCLE_TO_BE_DELETED"
+	GetLoadBalanceDetailRespResponseBodyRecycleStatusEnumRecycleRecoverInProgress GetLoadBalanceDetailRespResponseBodyRecycleStatusEnum = "RECYCLE_RECOVER_IN_PROGRESS"
+	GetLoadBalanceDetailRespResponseBodyRecycleStatusEnumRecycleRecoverFailed     GetLoadBalanceDetailRespResponseBodyRecycleStatusEnum = "RECYCLE_RECOVER_FAILED"
 )
+
 type GetLoadBalanceDetailRespResponseBodyIpVersionEnum int32
 
 // List of IpVersion
 const (
-    GetLoadBalanceDetailRespResponseBodyIpVersionEnum4 GetLoadBalanceDetailRespResponseBodyIpVersionEnum = 4
-    GetLoadBalanceDetailRespResponseBodyIpVersionEnum6 GetLoadBalanceDetailRespResponseBodyIpVersionEnum = 6
+	GetLoadBalanceDetailRespResponseBodyIpVersionEnum4 GetLoadBalanceDetailRespResponseBodyIpVersionEnum = 4
+	GetLoadBalanceDetailRespResponseBodyIpVersionEnum6 GetLoadBalanceDetailRespResponseBodyIpVersionEnum = 6
 )
 
 type GetLoadBalanceDetailRespResponseBody struct {
-
-    // 子网ID
+	// 子网ID
 	SubnetId *string `json:"subnetId,omitempty"`
-    // 订单ID
+	// 订单ID
 	OrderId *string `json:"orderId,omitempty"`
-    // 弹性负载均衡占用VIP地址
+	// 弹性负载均衡占用VIP地址
 	PrivateIp *string `json:"privateIp,omitempty"`
-    // 弹性负载均衡占用VIP的网卡ID
+	// 弹性负载均衡占用VIP的网卡ID
 	VipPortId *string `json:"vipPortId,omitempty"`
-    // 规格为NFV托管平台订购时选择的云主机核数
+	// 规格为NFV托管平台订购时选择的云主机核数
 	ServerCores *int32 `json:"serverCores,omitempty"`
-    // 是否双AZ场景
+	// 是否双AZ场景
 	IsMultiAz *bool `json:"isMultiAz,omitempty"`
-    // DNAT模式启用状态
+	// DNAT模式启用状态
 	Dnat *bool `json:"dnat,omitempty"`
-    // 公网IP的ID
+	// 公网IP的ID
 	IpId *string `json:"ipId,omitempty"`
-    // 客户是否停用
+	// 客户是否停用
 	Enable *bool `json:"enable,omitempty"`
-    // 路由器ID
+	// 路由器ID
 	RouterId *string `json:"routerId,omitempty"`
-    // 是否放入回收站
+	// 是否放入回收站
 	Recycle *bool `json:"recycle,omitempty"`
-    // 创建时间
+	// 创建时间
 	CreatedTime *string `json:"createdTime,omitempty"`
-    // 弹性负载均衡关联子网的网络ID
+	// 弹性负载均衡关联子网的网络ID
 	NetworkId *string `json:"networkId,omitempty"`
-    // 弹性负载均衡的ID
+	// 弹性负载均衡的ID
 	Id *string `json:"id,omitempty"`
-    // 弹性负载均衡状态： ACTIVE（资源已激活），BUILD（资源已创建），DOWN（资源已创建但未激活），ERROR（资源无法工作），（PENDING_CREATE,PENDING_UPDATE）资源正在创建当中，PENDING_DELETE（资源在删除当中），MIGRATING（资源在迁移中），DELETED（资源已删除），UNRECOGNIZED（未知状态）
+	// 弹性负载均衡状态： ACTIVE（资源已激活），BUILD（资源已创建），DOWN（资源已创建但未激活），ERROR（资源无法工作），（PENDING_CREATE,PENDING_UPDATE）资源正在创建当中，PENDING_DELETE（资源在删除当中），MIGRATING（资源在迁移中），DELETED（资源已删除），UNRECOGNIZED（未知状态）
 	EcStatus *GetLoadBalanceDetailRespResponseBodyEcStatusEnum `json:"ecStatus,omitempty"`
-    // 是否已可见
+	// 是否已可见
 	Visible *bool `json:"visible,omitempty"`
-    // 是否是主弹性负载均衡
+	// 是否是主弹性负载均衡
 	IsMain *bool `json:"isMain,omitempty"`
-    // 创建人，用户ID，例如：CICD-U-xxxxxx
+	// 创建人，用户ID，例如：CICD-U-xxxxxx
 	Proposer *string `json:"proposer,omitempty"`
-    // 弹性负载均衡搭载主机支持的子网IP类型，V4/V6
+	// 弹性负载均衡搭载主机支持的子网IP类型，V4/V6
 	IpVersionTypes []GetLoadBalanceDetailRespResponseBodyIpVersionTypesEnum `json:"ipVersionTypes,omitempty"`
-    // 弹性负载均衡的版本，默认为0
+	// 弹性负载均衡的版本，默认为0
 	Version *int32 `json:"version,omitempty"`
-    // 七层访问日志开关，部分灰度用户使用
+	// 七层访问日志开关，部分灰度用户使用
 	AccessLog *bool `json:"accessLog,omitempty"`
-    // 边缘云vaz
+	// 边缘云vaz
 	Vaz *string `json:"vaz,omitempty"`
-    // 标签
+	// 标签
 	Tags *[]GetLoadBalanceDetailRespResponseTags `json:"tags,omitempty"`
-    // 规格
+	// 规格
 	Flavor *int32 `json:"flavor,omitempty"`
-    // 弹性负载均衡占用的MAC地址，仅DNAT模式实例支持
+	// 弹性负载均衡占用的MAC地址，仅DNAT模式实例支持
 	MacAddress map[string]*string `json:"macAddress,omitempty"`
-    // 加入回收站次数
+	// 加入回收站次数
 	RecycleCount *int32 `json:"recycleCount,omitempty"`
-    // 弹性负载均衡名称
+	// 弹性负载均衡名称
 	Name *string `json:"name,omitempty"`
-    // 可用区
+	// 可用区
 	Region *string `json:"region,omitempty"`
-    // 放入回收站时间
+	// 放入回收站时间
 	RecycleTime *string `json:"recycleTime,omitempty"`
-    // VPC名称
+	// VPC名称
 	VpcName *string `json:"vpcName,omitempty"`
-    // 描述
+	// 描述
 	Description *string `json:"description,omitempty"`
-    // 需要绑定的独享设备IP地址，仅在isExclusive为true时生效，多个地址以“,”分隔例如：1.2.3.4,1.2.3.5
+	// 需要绑定的独享设备IP地址，仅在isExclusive为true时生效，多个地址以“,”分隔例如：1.2.3.4,1.2.3.5
 	NodeIp *string `json:"nodeIp,omitempty"`
-    // 查看该负载均衡器的订单状态，也可以标记资源正在创建中
+	// 查看该负载均衡器的订单状态，也可以标记资源正在创建中
 	OrderStatus *string `json:"orderStatus,omitempty"`
-    // 子网名称
+	// 子网名称
 	SubnetName *string `json:"subnetName,omitempty"`
-    // 最大并发连接数
+	// 最大并发连接数
 	MaxConcurrency *int32 `json:"maxConcurrency,omitempty"`
-    // 是否独享设备，true是，false不是
+	// 是否独享设备，true是，false不是
 	IsExclusive *bool `json:"isExclusive,omitempty"`
-    // 弹性负载均衡厂商
+	// 弹性负载均衡厂商
 	Provider *GetLoadBalanceDetailRespResponseBodyProviderEnum `json:"provider,omitempty"`
-    // 是否是新版本弹性负载均衡
+	// 是否是新版本弹性负载均衡
 	LbIsNew *bool `json:"lbIsNew,omitempty"`
-    // 新建连接数
+	// 新建连接数
 	NewConnection *int32 `json:"newConnection,omitempty"`
-    // 负载均衡器是否可用
+	// 负载均衡器是否可用
 	AdminStateUp *bool `json:"adminStateUp,omitempty"`
-    // 负载均衡信息
+	// 负载均衡信息
 	AzMappings []interface{} `json:"azMappings,omitempty"`
-    // SNAT POOL地址的子网id
+	// SNAT POOL地址的子网id
 	SnatSubnetId *string `json:"snatSubnetId,omitempty"`
-    // 产品类型，客户订购默认为NORMAL类型
+	// 产品类型，客户订购默认为NORMAL类型
 	ProductType *GetLoadBalanceDetailRespResponseBodyProductTypeEnum `json:"productType,omitempty"`
-    // 带宽，单位：Mbps
+	// 带宽，单位：Mbps
 	Bandwidth *int32 `json:"bandwidth,omitempty"`
-    // 弹性负载均衡状态
+	// 弹性负载均衡状态
 	LoadbalancerStatus *string `json:"loadbalancerStatus,omitempty"`
-    // 公网IP地址
+	// 公网IP地址
 	PublicIp *string `json:"publicIp,omitempty"`
-    // 双AZ情况下主弹性负载均衡的ID
+	// 双AZ情况下主弹性负载均衡的ID
 	ParentId *string `json:"parentId,omitempty"`
-    // 回收状态
+	// 回收状态
 	RecycleStatus *GetLoadBalanceDetailRespResponseBodyRecycleStatusEnum `json:"recycleStatus,omitempty"`
-    // 是否已删除
+	// 是否已删除
 	Deleted *bool `json:"deleted,omitempty"`
-    // 子网类型
+	// 子网类型
 	IpVersion *GetLoadBalanceDetailRespResponseBodyIpVersionEnum `json:"ipVersion,omitempty"`
 }
 
@@ -451,7 +455,6 @@ func (s *GetLoadBalanceDetailRespResponseBody) SetIpVersion(v GetLoadBalanceDeta
 	return s
 }
 
-
 type GetLoadBalanceDetailRespResponseBodyBuilder struct {
 	s *GetLoadBalanceDetailRespResponseBody
 }
@@ -715,5 +718,3 @@ func (b *GetLoadBalanceDetailRespResponseBodyBuilder) IpVersion(v GetLoadBalance
 func (b *GetLoadBalanceDetailRespResponseBodyBuilder) Build() *GetLoadBalanceDetailRespResponseBody {
 	return b.s
 }
-
-

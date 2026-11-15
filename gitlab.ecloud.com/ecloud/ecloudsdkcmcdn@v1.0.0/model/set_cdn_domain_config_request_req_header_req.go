@@ -5,14 +5,13 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type SetCdnDomainConfigRequestReqHeaderReq struct {
-
-    // 是否启用
+	// 是否启用
 	Enable *bool `json:"enable,omitempty"`
-    // header内容
+	// header内容
 	Detail *[]SetCdnDomainConfigRequestDetail `json:"detail,omitempty"`
 }
 
@@ -38,7 +37,6 @@ func (s *SetCdnDomainConfigRequestReqHeaderReq) SetDetail(v []SetCdnDomainConfig
 	return s
 }
 
-
 type SetCdnDomainConfigRequestReqHeaderReqBuilder struct {
 	s *SetCdnDomainConfigRequestReqHeaderReq
 }
@@ -62,5 +60,3 @@ func (b *SetCdnDomainConfigRequestReqHeaderReqBuilder) Detail(v []SetCdnDomainCo
 func (b *SetCdnDomainConfigRequestReqHeaderReqBuilder) Build() *SetCdnDomainConfigRequestReqHeaderReq {
 	return b.s
 }
-
-

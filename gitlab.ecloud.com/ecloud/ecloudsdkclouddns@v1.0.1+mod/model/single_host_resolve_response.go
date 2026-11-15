@@ -4,10 +4,7 @@
 
 package model
 
-
-
 type SingleHostResolveResponse struct {
-
 	// 该域名的IPv6解析结果，是一个列表，可能包括0个、1个或多个IP地址；仅当query=6时返回这个字段。
 	Ipsv6 []string `json:"ipsv6,omitempty"`
 

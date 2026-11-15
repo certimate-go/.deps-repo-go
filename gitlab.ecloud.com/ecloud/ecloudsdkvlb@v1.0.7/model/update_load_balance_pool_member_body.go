@@ -5,13 +5,13 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type UpdateLoadBalancePoolMemberBody struct {
-    position.Body
-    // 权重
+	position.Body
+	// 权重
 	Weight *int32 `json:"weight,omitempty"`
 }
 
@@ -32,7 +32,6 @@ func (s *UpdateLoadBalancePoolMemberBody) SetWeight(v int32) *UpdateLoadBalanceP
 	return s
 }
 
-
 type UpdateLoadBalancePoolMemberBodyBuilder struct {
 	s *UpdateLoadBalancePoolMemberBody
 }
@@ -51,5 +50,3 @@ func (b *UpdateLoadBalancePoolMemberBodyBuilder) Weight(v int32) *UpdateLoadBala
 func (b *UpdateLoadBalancePoolMemberBodyBuilder) Build() *UpdateLoadBalancePoolMemberBody {
 	return b.s
 }
-
-

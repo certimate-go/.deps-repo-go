@@ -4,43 +4,43 @@
 
 package model
 
-
 type GetRecordResponseBodyTypeEnum string
 
 // List of Type
 const (
-    GetRecordResponseBodyTypeEnumA GetRecordResponseBodyTypeEnum = "A"
-    GetRecordResponseBodyTypeEnumAaaa GetRecordResponseBodyTypeEnum = "AAAA"
-    GetRecordResponseBodyTypeEnumCaa GetRecordResponseBodyTypeEnum = "CAA"
-    GetRecordResponseBodyTypeEnumCmauth GetRecordResponseBodyTypeEnum = "CMAUTH"
-    GetRecordResponseBodyTypeEnumCname GetRecordResponseBodyTypeEnum = "CNAME"
-    GetRecordResponseBodyTypeEnumMx GetRecordResponseBodyTypeEnum = "MX"
-    GetRecordResponseBodyTypeEnumNs GetRecordResponseBodyTypeEnum = "NS"
-    GetRecordResponseBodyTypeEnumPtr GetRecordResponseBodyTypeEnum = "PTR"
-    GetRecordResponseBodyTypeEnumRp GetRecordResponseBodyTypeEnum = "RP"
-    GetRecordResponseBodyTypeEnumSpf GetRecordResponseBodyTypeEnum = "SPF"
-    GetRecordResponseBodyTypeEnumSrv GetRecordResponseBodyTypeEnum = "SRV"
-    GetRecordResponseBodyTypeEnumTxt GetRecordResponseBodyTypeEnum = "TXT"
-    GetRecordResponseBodyTypeEnumUrl GetRecordResponseBodyTypeEnum = "URL"
+	GetRecordResponseBodyTypeEnumA      GetRecordResponseBodyTypeEnum = "A"
+	GetRecordResponseBodyTypeEnumAaaa   GetRecordResponseBodyTypeEnum = "AAAA"
+	GetRecordResponseBodyTypeEnumCaa    GetRecordResponseBodyTypeEnum = "CAA"
+	GetRecordResponseBodyTypeEnumCmauth GetRecordResponseBodyTypeEnum = "CMAUTH"
+	GetRecordResponseBodyTypeEnumCname  GetRecordResponseBodyTypeEnum = "CNAME"
+	GetRecordResponseBodyTypeEnumMx     GetRecordResponseBodyTypeEnum = "MX"
+	GetRecordResponseBodyTypeEnumNs     GetRecordResponseBodyTypeEnum = "NS"
+	GetRecordResponseBodyTypeEnumPtr    GetRecordResponseBodyTypeEnum = "PTR"
+	GetRecordResponseBodyTypeEnumRp     GetRecordResponseBodyTypeEnum = "RP"
+	GetRecordResponseBodyTypeEnumSpf    GetRecordResponseBodyTypeEnum = "SPF"
+	GetRecordResponseBodyTypeEnumSrv    GetRecordResponseBodyTypeEnum = "SRV"
+	GetRecordResponseBodyTypeEnumTxt    GetRecordResponseBodyTypeEnum = "TXT"
+	GetRecordResponseBodyTypeEnumUrl    GetRecordResponseBodyTypeEnum = "URL"
 )
+
 type GetRecordResponseBodyTimedStatusEnum string
 
 // List of TimedStatus
 const (
-    GetRecordResponseBodyTimedStatusEnumDisabled GetRecordResponseBodyTimedStatusEnum = "DISABLED"
-    GetRecordResponseBodyTimedStatusEnumEnabled GetRecordResponseBodyTimedStatusEnum = "ENABLED"
-    GetRecordResponseBodyTimedStatusEnumTimed GetRecordResponseBodyTimedStatusEnum = "TIMED"
+	GetRecordResponseBodyTimedStatusEnumDisabled GetRecordResponseBodyTimedStatusEnum = "DISABLED"
+	GetRecordResponseBodyTimedStatusEnumEnabled  GetRecordResponseBodyTimedStatusEnum = "ENABLED"
+	GetRecordResponseBodyTimedStatusEnumTimed    GetRecordResponseBodyTimedStatusEnum = "TIMED"
 )
+
 type GetRecordResponseBodyStateEnum string
 
 // List of State
 const (
-    GetRecordResponseBodyStateEnumDisabled GetRecordResponseBodyStateEnum = "DISABLED"
-    GetRecordResponseBodyStateEnumEnabled GetRecordResponseBodyStateEnum = "ENABLED"
+	GetRecordResponseBodyStateEnumDisabled GetRecordResponseBodyStateEnum = "DISABLED"
+	GetRecordResponseBodyStateEnumEnabled  GetRecordResponseBodyStateEnum = "ENABLED"
 )
 
 type GetRecordResponseBody struct {
-
 	// 主机头
 	Rr string `json:"rr,omitempty"`
 

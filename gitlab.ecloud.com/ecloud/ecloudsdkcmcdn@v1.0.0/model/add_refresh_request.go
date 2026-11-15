@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type AddRefreshRequest struct {
-
-
 	AddRefreshBody *AddRefreshBody `json:"addRefreshBody,omitempty"`
 }
 
@@ -31,7 +29,6 @@ func (s *AddRefreshRequest) SetAddRefreshBody(v *AddRefreshBody) *AddRefreshRequ
 	return s
 }
 
-
 type AddRefreshRequestBuilder struct {
 	s *AddRefreshRequest
 }
@@ -50,5 +47,3 @@ func (b *AddRefreshRequestBuilder) AddRefreshBody(v *AddRefreshBody) *AddRefresh
 func (b *AddRefreshRequestBuilder) Build() *AddRefreshRequest {
 	return b.s
 }
-
-

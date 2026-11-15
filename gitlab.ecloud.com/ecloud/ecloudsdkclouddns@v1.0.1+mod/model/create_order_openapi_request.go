@@ -4,9 +4,6 @@
 
 package model
 
-
-
 type CreateOrderOpenapiRequest struct {
-
 	CreateOrderOpenapiBody *CreateOrderOpenapiBody `json:"createOrderOpenapiBody,omitempty"`
 }

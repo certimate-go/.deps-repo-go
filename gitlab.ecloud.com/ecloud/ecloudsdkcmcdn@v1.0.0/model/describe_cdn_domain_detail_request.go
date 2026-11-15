@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type DescribeCdnDomainDetailRequest struct {
-
-
 	DescribeCdnDomainDetailPath *DescribeCdnDomainDetailPath `json:"describeCdnDomainDetailPath,omitempty"`
 }
 
@@ -31,7 +29,6 @@ func (s *DescribeCdnDomainDetailRequest) SetDescribeCdnDomainDetailPath(v *Descr
 	return s
 }
 
-
 type DescribeCdnDomainDetailRequestBuilder struct {
 	s *DescribeCdnDomainDetailRequest
 }
@@ -50,5 +47,3 @@ func (b *DescribeCdnDomainDetailRequestBuilder) DescribeCdnDomainDetailPath(v *D
 func (b *DescribeCdnDomainDetailRequestBuilder) Build() *DescribeCdnDomainDetailRequest {
 	return b.s
 }
-
-

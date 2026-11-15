@@ -4,10 +4,7 @@
 
 package model
 
-
-
 type ListDomainForOpenapiRequest struct {
-
 	ListDomainForOpenapiBody *ListDomainForOpenapiBody `json:"listDomainForOpenapiBody,omitempty"`
 
 	ListDomainForOpenapiQuery *ListDomainForOpenapiQuery `json:"listDomainForOpenapiQuery,omitempty"`

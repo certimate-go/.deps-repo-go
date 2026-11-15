@@ -2,13 +2,14 @@ package request
 
 import (
 	"fmt"
+	"reflect"
+	"strings"
+
 	"gitlab.ecloud.com/ecloud/ecloudsdkcore/consts"
 	"gitlab.ecloud.com/ecloud/ecloudsdkcore/errs"
 	"gitlab.ecloud.com/ecloud/ecloudsdkcore/param"
 	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
 	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
-	"reflect"
-	"strings"
 )
 
 type HttpRequest struct {
@@ -239,7 +240,7 @@ func (httpReq *HttpRequest) ConvertRequest(request interface{}) {
 	if reqValue.Kind() == reflect.Ptr {
 		reqValue = reqValue.Elem()
 	}
-	var flag = false
+	flag := false
 	for i := 0; i < reqType.NumField(); i++ {
 		fieldType := reqType.Field(i)
 		value := reqValue.FieldByName(fieldType.Name)
@@ -286,10 +287,12 @@ func (httpReq *HttpRequest) AddHeaders(headers map[string]string) {
 	}
 }
 
-var _typeOfHeader = reflect.TypeOf(position.Header{})
-var _typeOfBody = reflect.TypeOf(position.Body{})
-var _typeOfQuery = reflect.TypeOf(position.Query{})
-var _typeOfPath = reflect.TypeOf(position.Path{})
+var (
+	_typeOfHeader = reflect.TypeOf(position.Header{})
+	_typeOfBody   = reflect.TypeOf(position.Body{})
+	_typeOfQuery  = reflect.TypeOf(position.Query{})
+	_typeOfPath   = reflect.TypeOf(position.Path{})
+)
 
 func ignorePositionField(obj interface{}, field reflect.StructField, value reflect.Value) bool {
 	if utils.ValueIsEmpty(value) {

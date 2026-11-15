@@ -5,13 +5,13 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type GetLoadbalanceCertificationDetailRespPath struct {
-    position.Path
-    // 证书ID
+	position.Path
+	// 证书ID
 	ContainerUuid *string `json:"containerUuid,omitempty"`
 }
 
@@ -32,7 +32,6 @@ func (s *GetLoadbalanceCertificationDetailRespPath) SetContainerUuid(v string) *
 	return s
 }
 
-
 type GetLoadbalanceCertificationDetailRespPathBuilder struct {
 	s *GetLoadbalanceCertificationDetailRespPath
 }
@@ -51,5 +50,3 @@ func (b *GetLoadbalanceCertificationDetailRespPathBuilder) ContainerUuid(v strin
 func (b *GetLoadbalanceCertificationDetailRespPathBuilder) Build() *GetLoadbalanceCertificationDetailRespPath {
 	return b.s
 }
-
-

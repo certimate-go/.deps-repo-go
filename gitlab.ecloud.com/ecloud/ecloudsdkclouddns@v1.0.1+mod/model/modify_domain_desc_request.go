@@ -4,9 +4,6 @@
 
 package model
 
-
-
 type ModifyDomainDescRequest struct {
-
 	ModifyDomainDescBody *ModifyDomainDescBody `json:"modifyDomainDescBody,omitempty"`
 }

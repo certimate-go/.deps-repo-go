@@ -5,20 +5,19 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type StartCdnDomainResponse struct {
-
-    // 请求Id
+	// 请求Id
 	RequestId *string `json:"requestId,omitempty"`
-    // 页面国际化错误提示
+	// 页面国际化错误提示
 	ErrorMessage *string `json:"errorMessage,omitempty"`
-    // 统一错误码
+	// 统一错误码
 	ErrorCode *string `json:"errorCode,omitempty"`
-    // 状态是否正常
+	// 状态是否正常
 	State *string `json:"state,omitempty"`
-    // 响应结果数据
+	// 响应结果数据
 	Body *bool `json:"body,omitempty"`
 }
 
@@ -59,7 +58,6 @@ func (s *StartCdnDomainResponse) SetBody(v bool) *StartCdnDomainResponse {
 	return s
 }
 
-
 type StartCdnDomainResponseBuilder struct {
 	s *StartCdnDomainResponse
 }
@@ -98,5 +96,3 @@ func (b *StartCdnDomainResponseBuilder) Body(v bool) *StartCdnDomainResponseBuil
 func (b *StartCdnDomainResponseBuilder) Build() *StartCdnDomainResponse {
 	return b.s
 }
-
-

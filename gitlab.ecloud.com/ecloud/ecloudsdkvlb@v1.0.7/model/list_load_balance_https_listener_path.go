@@ -5,13 +5,13 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type ListLoadBalanceHTTPSListenerPath struct {
-    position.Path
-    // 负载均衡ID
+	position.Path
+	// 负载均衡ID
 	LoadBalanceId *string `json:"loadBalanceId,omitempty"`
 }
 
@@ -32,7 +32,6 @@ func (s *ListLoadBalanceHTTPSListenerPath) SetLoadBalanceId(v string) *ListLoadB
 	return s
 }
 
-
 type ListLoadBalanceHTTPSListenerPathBuilder struct {
 	s *ListLoadBalanceHTTPSListenerPath
 }
@@ -51,5 +50,3 @@ func (b *ListLoadBalanceHTTPSListenerPathBuilder) LoadBalanceId(v string) *ListL
 func (b *ListLoadBalanceHTTPSListenerPathBuilder) Build() *ListLoadBalanceHTTPSListenerPath {
 	return b.s
 }
-
-

@@ -4,19 +4,17 @@
 
 package model
 
-
 type TakeOverRefreshDomainOpenapiResponseStateEnum string
 
 // List of State
 const (
-    TakeOverRefreshDomainOpenapiResponseStateEnumError TakeOverRefreshDomainOpenapiResponseStateEnum = "ERROR"
-    TakeOverRefreshDomainOpenapiResponseStateEnumException TakeOverRefreshDomainOpenapiResponseStateEnum = "EXCEPTION"
-    TakeOverRefreshDomainOpenapiResponseStateEnumForbidden TakeOverRefreshDomainOpenapiResponseStateEnum = "FORBIDDEN"
-    TakeOverRefreshDomainOpenapiResponseStateEnumOk TakeOverRefreshDomainOpenapiResponseStateEnum = "OK"
+	TakeOverRefreshDomainOpenapiResponseStateEnumError     TakeOverRefreshDomainOpenapiResponseStateEnum = "ERROR"
+	TakeOverRefreshDomainOpenapiResponseStateEnumException TakeOverRefreshDomainOpenapiResponseStateEnum = "EXCEPTION"
+	TakeOverRefreshDomainOpenapiResponseStateEnumForbidden TakeOverRefreshDomainOpenapiResponseStateEnum = "FORBIDDEN"
+	TakeOverRefreshDomainOpenapiResponseStateEnumOk        TakeOverRefreshDomainOpenapiResponseStateEnum = "OK"
 )
 
 type TakeOverRefreshDomainOpenapiResponse struct {
-
 	RequestId string `json:"requestId,omitempty"`
 
 	ErrorMessage string `json:"errorMessage,omitempty"`

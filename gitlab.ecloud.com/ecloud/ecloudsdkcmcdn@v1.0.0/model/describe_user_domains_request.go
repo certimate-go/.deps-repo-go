@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type DescribeUserDomainsRequest struct {
-
-
 	DescribeUserDomainsQuery *DescribeUserDomainsQuery `json:"describeUserDomainsQuery,omitempty"`
 }
 
@@ -31,7 +29,6 @@ func (s *DescribeUserDomainsRequest) SetDescribeUserDomainsQuery(v *DescribeUser
 	return s
 }
 
-
 type DescribeUserDomainsRequestBuilder struct {
 	s *DescribeUserDomainsRequest
 }
@@ -50,5 +47,3 @@ func (b *DescribeUserDomainsRequestBuilder) DescribeUserDomainsQuery(v *Describe
 func (b *DescribeUserDomainsRequestBuilder) Build() *DescribeUserDomainsRequest {
 	return b.s
 }
-
-

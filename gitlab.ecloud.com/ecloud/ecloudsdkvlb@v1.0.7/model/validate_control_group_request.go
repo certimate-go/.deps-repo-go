@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type ValidateControlGroupRequest struct {
-
-
 	ValidateControlGroupPath *ValidateControlGroupPath `json:"validateControlGroupPath,omitempty"`
 }
 
@@ -31,7 +29,6 @@ func (s *ValidateControlGroupRequest) SetValidateControlGroupPath(v *ValidateCon
 	return s
 }
 
-
 type ValidateControlGroupRequestBuilder struct {
 	s *ValidateControlGroupRequest
 }
@@ -50,5 +47,3 @@ func (b *ValidateControlGroupRequestBuilder) ValidateControlGroupPath(v *Validat
 func (b *ValidateControlGroupRequestBuilder) Build() *ValidateControlGroupRequest {
 	return b.s
 }
-
-

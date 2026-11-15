@@ -4,10 +4,7 @@
 
 package model
 
-
-
 type CreateCustomLineOpenapiResponseBody struct {
-
 	// 占用自定义线路的主机头
 	Rrs string `json:"rrs,omitempty"`
 

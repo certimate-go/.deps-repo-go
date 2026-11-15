@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type LoadbalancerUnbindTagRequest struct {
-
-
 	LoadbalancerUnbindTagPath *LoadbalancerUnbindTagPath `json:"loadbalancerUnbindTagPath,omitempty"`
 }
 
@@ -31,7 +29,6 @@ func (s *LoadbalancerUnbindTagRequest) SetLoadbalancerUnbindTagPath(v *Loadbalan
 	return s
 }
 
-
 type LoadbalancerUnbindTagRequestBuilder struct {
 	s *LoadbalancerUnbindTagRequest
 }
@@ -50,5 +47,3 @@ func (b *LoadbalancerUnbindTagRequestBuilder) LoadbalancerUnbindTagPath(v *Loadb
 func (b *LoadbalancerUnbindTagRequestBuilder) Build() *LoadbalancerUnbindTagRequest {
 	return b.s
 }
-
-

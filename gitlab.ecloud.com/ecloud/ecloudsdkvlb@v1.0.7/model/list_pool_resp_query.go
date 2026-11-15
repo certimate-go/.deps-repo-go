@@ -5,46 +5,47 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
+
 type ListPoolRespQueryProtocolEnum string
 
 // List of Protocol
 const (
-    ListPoolRespQueryProtocolEnumHttp ListPoolRespQueryProtocolEnum = "HTTP"
-    ListPoolRespQueryProtocolEnumHttps ListPoolRespQueryProtocolEnum = "HTTPS"
-    ListPoolRespQueryProtocolEnumTcp ListPoolRespQueryProtocolEnum = "TCP"
-    ListPoolRespQueryProtocolEnumUdp ListPoolRespQueryProtocolEnum = "UDP"
-    ListPoolRespQueryProtocolEnumTerminatedHttps ListPoolRespQueryProtocolEnum = "TERMINATED_HTTPS"
-    ListPoolRespQueryProtocolEnumSip ListPoolRespQueryProtocolEnum = "SIP"
+	ListPoolRespQueryProtocolEnumHttp            ListPoolRespQueryProtocolEnum = "HTTP"
+	ListPoolRespQueryProtocolEnumHttps           ListPoolRespQueryProtocolEnum = "HTTPS"
+	ListPoolRespQueryProtocolEnumTcp             ListPoolRespQueryProtocolEnum = "TCP"
+	ListPoolRespQueryProtocolEnumUdp             ListPoolRespQueryProtocolEnum = "UDP"
+	ListPoolRespQueryProtocolEnumTerminatedHttps ListPoolRespQueryProtocolEnum = "TERMINATED_HTTPS"
+	ListPoolRespQueryProtocolEnumSip             ListPoolRespQueryProtocolEnum = "SIP"
 )
 
 type ListPoolRespQueryPoolProtocolsEnum string
 
 // List of PoolProtocols
 const (
-    ListPoolRespQueryPoolProtocolsEnumHttp ListPoolRespQueryPoolProtocolsEnum = "HTTP"
-    ListPoolRespQueryPoolProtocolsEnumHttps ListPoolRespQueryPoolProtocolsEnum = "HTTPS"
-    ListPoolRespQueryPoolProtocolsEnumTcp ListPoolRespQueryPoolProtocolsEnum = "TCP"
-    ListPoolRespQueryPoolProtocolsEnumUdp ListPoolRespQueryPoolProtocolsEnum = "UDP"
-    ListPoolRespQueryPoolProtocolsEnumTerminatedHttps ListPoolRespQueryPoolProtocolsEnum = "TERMINATED_HTTPS"
-    ListPoolRespQueryPoolProtocolsEnumSip ListPoolRespQueryPoolProtocolsEnum = "SIP"
+	ListPoolRespQueryPoolProtocolsEnumHttp            ListPoolRespQueryPoolProtocolsEnum = "HTTP"
+	ListPoolRespQueryPoolProtocolsEnumHttps           ListPoolRespQueryPoolProtocolsEnum = "HTTPS"
+	ListPoolRespQueryPoolProtocolsEnumTcp             ListPoolRespQueryPoolProtocolsEnum = "TCP"
+	ListPoolRespQueryPoolProtocolsEnumUdp             ListPoolRespQueryPoolProtocolsEnum = "UDP"
+	ListPoolRespQueryPoolProtocolsEnumTerminatedHttps ListPoolRespQueryPoolProtocolsEnum = "TERMINATED_HTTPS"
+	ListPoolRespQueryPoolProtocolsEnumSip             ListPoolRespQueryPoolProtocolsEnum = "SIP"
 )
 
 type ListPoolRespQuery struct {
-    position.Query
-    // 监听器协议类型
+	position.Query
+	// 监听器协议类型
 	Protocol *ListPoolRespQueryProtocolEnum `json:"protocol,omitempty"`
-    // 后端服务器组协议
+	// 后端服务器组协议
 	PoolProtocols []ListPoolRespQueryPoolProtocolsEnum `json:"poolProtocols,omitempty"`
-    // 列表分页每页大小，小于0将默认为10
+	// 列表分页每页大小，小于0将默认为10
 	PageSize *int32 `json:"pageSize,omitempty"`
-    // 列表分页页数，小于1会默认第1页
+	// 列表分页页数，小于1会默认第1页
 	Page *int32 `json:"page,omitempty"`
-    // 是否绑定弹性负载均衡监听器
+	// 是否绑定弹性负载均衡监听器
 	BindListener *bool `json:"bindListener,omitempty"`
-    // 后端服务器组名称
+	// 后端服务器组名称
 	PoolName *string `json:"poolName,omitempty"`
 }
 
@@ -90,7 +91,6 @@ func (s *ListPoolRespQuery) SetPoolName(v string) *ListPoolRespQuery {
 	return s
 }
 
-
 type ListPoolRespQueryBuilder struct {
 	s *ListPoolRespQuery
 }
@@ -134,5 +134,3 @@ func (b *ListPoolRespQueryBuilder) PoolName(v string) *ListPoolRespQueryBuilder 
 func (b *ListPoolRespQueryBuilder) Build() *ListPoolRespQuery {
 	return b.s
 }
-
-

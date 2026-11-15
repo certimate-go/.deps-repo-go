@@ -5,32 +5,32 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
+
 type ListLoadBalanceHTTPSListenerResponseStateEnum string
 
 // List of State
 const (
-    ListLoadBalanceHTTPSListenerResponseStateEnumOk ListLoadBalanceHTTPSListenerResponseStateEnum = "OK"
-    ListLoadBalanceHTTPSListenerResponseStateEnumError ListLoadBalanceHTTPSListenerResponseStateEnum = "ERROR"
-    ListLoadBalanceHTTPSListenerResponseStateEnumException ListLoadBalanceHTTPSListenerResponseStateEnum = "EXCEPTION"
-    ListLoadBalanceHTTPSListenerResponseStateEnumAlarm ListLoadBalanceHTTPSListenerResponseStateEnum = "ALARM"
-    ListLoadBalanceHTTPSListenerResponseStateEnumForbidden ListLoadBalanceHTTPSListenerResponseStateEnum = "FORBIDDEN"
+	ListLoadBalanceHTTPSListenerResponseStateEnumOk        ListLoadBalanceHTTPSListenerResponseStateEnum = "OK"
+	ListLoadBalanceHTTPSListenerResponseStateEnumError     ListLoadBalanceHTTPSListenerResponseStateEnum = "ERROR"
+	ListLoadBalanceHTTPSListenerResponseStateEnumException ListLoadBalanceHTTPSListenerResponseStateEnum = "EXCEPTION"
+	ListLoadBalanceHTTPSListenerResponseStateEnumAlarm     ListLoadBalanceHTTPSListenerResponseStateEnum = "ALARM"
+	ListLoadBalanceHTTPSListenerResponseStateEnumForbidden ListLoadBalanceHTTPSListenerResponseStateEnum = "FORBIDDEN"
 )
 
 type ListLoadBalanceHTTPSListenerResponse struct {
-
-    // 每个请求的序列号
+	// 每个请求的序列号
 	RequestId *string `json:"requestId,omitempty"`
-    // 页面国际化错误提示
+	// 页面国际化错误提示
 	ErrorMessage *string `json:"errorMessage,omitempty"`
-    // 统一错误码
+	// 统一错误码
 	ErrorCode *string `json:"errorCode,omitempty"`
-    // 返回状态码：OK（成功）, ERROR（错误）,EXCEPTION（异常）,ALARM（警告）, FORBIDDEN（禁止访问）
+	// 返回状态码：OK（成功）, ERROR（错误）,EXCEPTION（异常）,ALARM（警告）, FORBIDDEN（禁止访问）
 	State *ListLoadBalanceHTTPSListenerResponseStateEnum `json:"state,omitempty"`
-    // 请求成功时返回的数据
+	// 请求成功时返回的数据
 	Body *ListLoadBalanceHTTPSListenerResponseBody `json:"body,omitempty"`
-    // 统一错误码的自定义参数
+	// 统一错误码的自定义参数
 	ErrorParams []string `json:"errorParams,omitempty"`
 }
 
@@ -76,7 +76,6 @@ func (s *ListLoadBalanceHTTPSListenerResponse) SetErrorParams(v []string) *ListL
 	return s
 }
 
-
 type ListLoadBalanceHTTPSListenerResponseBuilder struct {
 	s *ListLoadBalanceHTTPSListenerResponse
 }
@@ -120,5 +119,3 @@ func (b *ListLoadBalanceHTTPSListenerResponseBuilder) ErrorParams(v []string) *L
 func (b *ListLoadBalanceHTTPSListenerResponseBuilder) Build() *ListLoadBalanceHTTPSListenerResponse {
 	return b.s
 }
-
-

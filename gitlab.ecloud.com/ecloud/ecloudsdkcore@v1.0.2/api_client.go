@@ -63,7 +63,8 @@ func InitConfig(c *config.Config) {
 
 // Excute entry for http call
 func (c *APIClient) Excute(params *param.Params, rc *config.RuntimeConfig,
-	returnType interface{}) (*response.HttpResponse, error) {
+	returnType interface{},
+) (*response.HttpResponse, error) {
 	httpReq := c.HttpRequest
 	httpReq = new(request.HttpRequest)
 	if err := utils.DeepCopy(httpReq, c.HttpRequest); err != nil {

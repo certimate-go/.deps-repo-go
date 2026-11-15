@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type UpdateControlGroupRuleRequest struct {
-
-
 	UpdateControlGroupRuleBody *UpdateControlGroupRuleBody `json:"updateControlGroupRuleBody,omitempty"`
 }
 
@@ -31,7 +29,6 @@ func (s *UpdateControlGroupRuleRequest) SetUpdateControlGroupRuleBody(v *UpdateC
 	return s
 }
 
-
 type UpdateControlGroupRuleRequestBuilder struct {
 	s *UpdateControlGroupRuleRequest
 }
@@ -50,5 +47,3 @@ func (b *UpdateControlGroupRuleRequestBuilder) UpdateControlGroupRuleBody(v *Upd
 func (b *UpdateControlGroupRuleRequestBuilder) Build() *UpdateControlGroupRuleRequest {
 	return b.s
 }
-
-

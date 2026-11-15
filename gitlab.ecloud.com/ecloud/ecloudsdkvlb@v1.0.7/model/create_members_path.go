@@ -5,13 +5,13 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type CreateMembersPath struct {
-    position.Path
-    // 负载均衡后端服务器ID
+	position.Path
+	// 负载均衡后端服务器ID
 	MemberId *string `json:"memberId,omitempty"`
 }
 
@@ -32,7 +32,6 @@ func (s *CreateMembersPath) SetMemberId(v string) *CreateMembersPath {
 	return s
 }
 
-
 type CreateMembersPathBuilder struct {
 	s *CreateMembersPath
 }
@@ -51,5 +50,3 @@ func (b *CreateMembersPathBuilder) MemberId(v string) *CreateMembersPathBuilder 
 func (b *CreateMembersPathBuilder) Build() *CreateMembersPath {
 	return b.s
 }
-
-

@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type UnbindFipRequest struct {
-
-
 	UnbindFipPath *UnbindFipPath `json:"unbindFipPath,omitempty"`
 
 	UnbindFipQuery *UnbindFipQuery `json:"unbindFipQuery,omitempty"`
@@ -38,7 +36,6 @@ func (s *UnbindFipRequest) SetUnbindFipQuery(v *UnbindFipQuery) *UnbindFipReques
 	return s
 }
 
-
 type UnbindFipRequestBuilder struct {
 	s *UnbindFipRequest
 }
@@ -62,5 +59,3 @@ func (b *UnbindFipRequestBuilder) UnbindFipQuery(v *UnbindFipQuery) *UnbindFipRe
 func (b *UnbindFipRequestBuilder) Build() *UnbindFipRequest {
 	return b.s
 }
-
-

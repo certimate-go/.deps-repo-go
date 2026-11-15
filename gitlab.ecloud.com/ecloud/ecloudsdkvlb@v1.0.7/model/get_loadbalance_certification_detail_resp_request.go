@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type GetLoadbalanceCertificationDetailRespRequest struct {
-
-
 	GetLoadbalanceCertificationDetailRespPath *GetLoadbalanceCertificationDetailRespPath `json:"getLoadbalanceCertificationDetailRespPath,omitempty"`
 }
 
@@ -31,7 +29,6 @@ func (s *GetLoadbalanceCertificationDetailRespRequest) SetGetLoadbalanceCertific
 	return s
 }
 
-
 type GetLoadbalanceCertificationDetailRespRequestBuilder struct {
 	s *GetLoadbalanceCertificationDetailRespRequest
 }
@@ -50,5 +47,3 @@ func (b *GetLoadbalanceCertificationDetailRespRequestBuilder) GetLoadbalanceCert
 func (b *GetLoadbalanceCertificationDetailRespRequestBuilder) Build() *GetLoadbalanceCertificationDetailRespRequest {
 	return b.s
 }
-
-

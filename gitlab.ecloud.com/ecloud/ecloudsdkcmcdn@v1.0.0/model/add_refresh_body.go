@@ -5,22 +5,23 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
+
 type AddRefreshBodyRefreshTypeEnum string
 
 // List of RefreshType
 const (
-    AddRefreshBodyRefreshTypeEnumFile AddRefreshBodyRefreshTypeEnum = "FILE"
-    AddRefreshBodyRefreshTypeEnumCatalog AddRefreshBodyRefreshTypeEnum = "CATALOG"
+	AddRefreshBodyRefreshTypeEnumFile    AddRefreshBodyRefreshTypeEnum = "FILE"
+	AddRefreshBodyRefreshTypeEnumCatalog AddRefreshBodyRefreshTypeEnum = "CATALOG"
 )
 
 type AddRefreshBody struct {
-    position.Body
-    // 要刷新的URL或者目录
+	position.Body
+	// 要刷新的URL或者目录
 	Contents []string `json:"contents,omitempty"`
-    // 刷新类型 文件：FILE，目录：CATALOG
+	// 刷新类型 文件：FILE，目录：CATALOG
 	RefreshType *AddRefreshBodyRefreshTypeEnum `json:"refreshType,omitempty"`
 }
 
@@ -46,7 +47,6 @@ func (s *AddRefreshBody) SetRefreshType(v AddRefreshBodyRefreshTypeEnum) *AddRef
 	return s
 }
 
-
 type AddRefreshBodyBuilder struct {
 	s *AddRefreshBody
 }
@@ -70,5 +70,3 @@ func (b *AddRefreshBodyBuilder) RefreshType(v AddRefreshBodyRefreshTypeEnum) *Ad
 func (b *AddRefreshBodyBuilder) Build() *AddRefreshBody {
 	return b.s
 }
-
-

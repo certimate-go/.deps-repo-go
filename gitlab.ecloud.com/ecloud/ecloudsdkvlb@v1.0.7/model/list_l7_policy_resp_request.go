@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type ListL7PolicyRespRequest struct {
-
-
 	ListL7PolicyRespQuery *ListL7PolicyRespQuery `json:"listL7PolicyRespQuery,omitempty"`
 }
 
@@ -31,7 +29,6 @@ func (s *ListL7PolicyRespRequest) SetListL7PolicyRespQuery(v *ListL7PolicyRespQu
 	return s
 }
 
-
 type ListL7PolicyRespRequestBuilder struct {
 	s *ListL7PolicyRespRequest
 }
@@ -50,5 +47,3 @@ func (b *ListL7PolicyRespRequestBuilder) ListL7PolicyRespQuery(v *ListL7PolicyRe
 func (b *ListL7PolicyRespRequestBuilder) Build() *ListL7PolicyRespRequest {
 	return b.s
 }
-
-

@@ -5,14 +5,13 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type ElbOrderCreateAsyncRequestTags struct {
-
-    // 标签值
+	// 标签值
 	Value *string `json:"value,omitempty"`
-    // 标签键
+	// 标签键
 	Key *string `json:"key,omitempty"`
 }
 
@@ -38,7 +37,6 @@ func (s *ElbOrderCreateAsyncRequestTags) SetKey(v string) *ElbOrderCreateAsyncRe
 	return s
 }
 
-
 type ElbOrderCreateAsyncRequestTagsBuilder struct {
 	s *ElbOrderCreateAsyncRequestTags
 }
@@ -62,5 +60,3 @@ func (b *ElbOrderCreateAsyncRequestTagsBuilder) Key(v string) *ElbOrderCreateAsy
 func (b *ElbOrderCreateAsyncRequestTagsBuilder) Build() *ElbOrderCreateAsyncRequestTags {
 	return b.s
 }
-
-

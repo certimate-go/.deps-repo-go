@@ -5,16 +5,15 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type SetCdnDomainConfigRequestDetail struct {
-
-    // 选择域名配置，取值为以下之一 1: 启用白名单 2: 启用黑名单
+	// 选择域名配置，取值为以下之一 1: 启用白名单 2: 启用黑名单
 	ListType *int32 `json:"list_type,omitempty"`
-    // Referer配置，取值为以下之一 true：允许Referer为空 false：禁止Referer为空
+	// Referer配置，取值为以下之一 true：允许Referer为空 false：禁止Referer为空
 	ReferrerNull *bool `json:"referrer_null,omitempty"`
-    // 白/黑名单的域名列表;支持*通配符;允许最多添加100条
+	// 白/黑名单的域名列表;支持*通配符;允许最多添加100条
 	DomainList *string `json:"domainList,omitempty"`
 }
 
@@ -45,7 +44,6 @@ func (s *SetCdnDomainConfigRequestDetail) SetDomainList(v string) *SetCdnDomainC
 	return s
 }
 
-
 type SetCdnDomainConfigRequestDetailBuilder struct {
 	s *SetCdnDomainConfigRequestDetail
 }
@@ -74,5 +72,3 @@ func (b *SetCdnDomainConfigRequestDetailBuilder) DomainList(v string) *SetCdnDom
 func (b *SetCdnDomainConfigRequestDetailBuilder) Build() *SetCdnDomainConfigRequestDetail {
 	return b.s
 }
-
-

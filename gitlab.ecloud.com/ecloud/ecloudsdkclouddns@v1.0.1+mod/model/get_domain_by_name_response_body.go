@@ -4,37 +4,37 @@
 
 package model
 
-
 type GetDomainByNameResponseBodyServiceTypeEnum string
 
 // List of ServiceType
 const (
-    GetDomainByNameResponseBodyServiceTypeEnumBasic GetDomainByNameResponseBodyServiceTypeEnum = "BASIC"
-    GetDomainByNameResponseBodyServiceTypeEnumFree GetDomainByNameResponseBodyServiceTypeEnum = "FREE"
-    GetDomainByNameResponseBodyServiceTypeEnumPremium GetDomainByNameResponseBodyServiceTypeEnum = "PREMIUM"
-    GetDomainByNameResponseBodyServiceTypeEnumStandard GetDomainByNameResponseBodyServiceTypeEnum = "STANDARD"
-    GetDomainByNameResponseBodyServiceTypeEnumUltimate GetDomainByNameResponseBodyServiceTypeEnum = "ULTIMATE"
+	GetDomainByNameResponseBodyServiceTypeEnumBasic    GetDomainByNameResponseBodyServiceTypeEnum = "BASIC"
+	GetDomainByNameResponseBodyServiceTypeEnumFree     GetDomainByNameResponseBodyServiceTypeEnum = "FREE"
+	GetDomainByNameResponseBodyServiceTypeEnumPremium  GetDomainByNameResponseBodyServiceTypeEnum = "PREMIUM"
+	GetDomainByNameResponseBodyServiceTypeEnumStandard GetDomainByNameResponseBodyServiceTypeEnum = "STANDARD"
+	GetDomainByNameResponseBodyServiceTypeEnumUltimate GetDomainByNameResponseBodyServiceTypeEnum = "ULTIMATE"
 )
+
 type GetDomainByNameResponseBodyAdoptStateEnum string
 
 // List of AdoptState
 const (
-    GetDomainByNameResponseBodyAdoptStateEnumUncertain GetDomainByNameResponseBodyAdoptStateEnum = "UNCERTAIN"
-    GetDomainByNameResponseBodyAdoptStateEnumUnused GetDomainByNameResponseBodyAdoptStateEnum = "UNUSED"
-    GetDomainByNameResponseBodyAdoptStateEnumUsing GetDomainByNameResponseBodyAdoptStateEnum = "USING"
+	GetDomainByNameResponseBodyAdoptStateEnumUncertain GetDomainByNameResponseBodyAdoptStateEnum = "UNCERTAIN"
+	GetDomainByNameResponseBodyAdoptStateEnumUnused    GetDomainByNameResponseBodyAdoptStateEnum = "UNUSED"
+	GetDomainByNameResponseBodyAdoptStateEnumUsing     GetDomainByNameResponseBodyAdoptStateEnum = "USING"
 )
+
 type GetDomainByNameResponseBodyInstanceStatusEnum string
 
 // List of InstanceStatus
 const (
-    GetDomainByNameResponseBodyInstanceStatusEnumCanceling GetDomainByNameResponseBodyInstanceStatusEnum = "CANCELING"
-    GetDomainByNameResponseBodyInstanceStatusEnumDisabled GetDomainByNameResponseBodyInstanceStatusEnum = "DISABLED"
-    GetDomainByNameResponseBodyInstanceStatusEnumEnabled GetDomainByNameResponseBodyInstanceStatusEnum = "ENABLED"
-    GetDomainByNameResponseBodyInstanceStatusEnumExpired GetDomainByNameResponseBodyInstanceStatusEnum = "EXPIRED"
+	GetDomainByNameResponseBodyInstanceStatusEnumCanceling GetDomainByNameResponseBodyInstanceStatusEnum = "CANCELING"
+	GetDomainByNameResponseBodyInstanceStatusEnumDisabled  GetDomainByNameResponseBodyInstanceStatusEnum = "DISABLED"
+	GetDomainByNameResponseBodyInstanceStatusEnumEnabled   GetDomainByNameResponseBodyInstanceStatusEnum = "ENABLED"
+	GetDomainByNameResponseBodyInstanceStatusEnumExpired   GetDomainByNameResponseBodyInstanceStatusEnum = "EXPIRED"
 )
 
 type GetDomainByNameResponseBody struct {
-
 	// 套餐类型
 	ServiceType GetDomainByNameResponseBodyServiceTypeEnum `json:"serviceType,omitempty"`
 

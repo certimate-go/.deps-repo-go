@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type EnableLoadBalancerRequest struct {
-
-
 	EnableLoadBalancerQuery *EnableLoadBalancerQuery `json:"enableLoadBalancerQuery,omitempty"`
 
 	EnableLoadBalancerPath *EnableLoadBalancerPath `json:"enableLoadBalancerPath,omitempty"`
@@ -38,7 +36,6 @@ func (s *EnableLoadBalancerRequest) SetEnableLoadBalancerPath(v *EnableLoadBalan
 	return s
 }
 
-
 type EnableLoadBalancerRequestBuilder struct {
 	s *EnableLoadBalancerRequest
 }
@@ -62,5 +59,3 @@ func (b *EnableLoadBalancerRequestBuilder) EnableLoadBalancerPath(v *EnableLoadB
 func (b *EnableLoadBalancerRequestBuilder) Build() *EnableLoadBalancerRequest {
 	return b.s
 }
-
-

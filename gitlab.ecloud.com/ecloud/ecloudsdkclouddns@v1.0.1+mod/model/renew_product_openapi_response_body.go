@@ -4,10 +4,7 @@
 
 package model
 
-
-
 type RenewProductOpenapiResponseBody struct {
-
 	// 订单ID
 	OrderId string `json:"orderId"`
 

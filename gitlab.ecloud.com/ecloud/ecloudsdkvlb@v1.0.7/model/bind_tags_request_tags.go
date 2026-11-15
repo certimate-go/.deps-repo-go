@@ -5,14 +5,13 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type BindTagsRequestTags struct {
-
-    // 标签值
+	// 标签值
 	Value *string `json:"value,omitempty"`
-    // 标签键
+	// 标签键
 	Key *string `json:"key,omitempty"`
 }
 
@@ -38,7 +37,6 @@ func (s *BindTagsRequestTags) SetKey(v string) *BindTagsRequestTags {
 	return s
 }
 
-
 type BindTagsRequestTagsBuilder struct {
 	s *BindTagsRequestTags
 }
@@ -62,5 +60,3 @@ func (b *BindTagsRequestTagsBuilder) Key(v string) *BindTagsRequestTagsBuilder {
 func (b *BindTagsRequestTagsBuilder) Build() *BindTagsRequestTags {
 	return b.s
 }
-
-

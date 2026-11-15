@@ -4,9 +4,6 @@
 
 package model
 
-
-
 type GetRecordOpenapiRequest struct {
-
 	GetRecordOpenapiPath *GetRecordOpenapiPath `json:"getRecordOpenapiPath,omitempty"`
 }

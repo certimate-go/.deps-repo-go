@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type AsyncCreatePolicyRequest struct {
-
-
 	AsyncCreatePolicyBody *AsyncCreatePolicyBody `json:"asyncCreatePolicyBody,omitempty"`
 }
 
@@ -31,7 +29,6 @@ func (s *AsyncCreatePolicyRequest) SetAsyncCreatePolicyBody(v *AsyncCreatePolicy
 	return s
 }
 
-
 type AsyncCreatePolicyRequestBuilder struct {
 	s *AsyncCreatePolicyRequest
 }
@@ -50,5 +47,3 @@ func (b *AsyncCreatePolicyRequestBuilder) AsyncCreatePolicyBody(v *AsyncCreatePo
 func (b *AsyncCreatePolicyRequestBuilder) Build() *AsyncCreatePolicyRequest {
 	return b.s
 }
-
-

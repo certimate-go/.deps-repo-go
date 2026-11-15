@@ -5,21 +5,21 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type ListLoadBalanceUDPListenerQuery struct {
-    position.Query
-    // 实例使用的监听端口
+	position.Query
+	// 实例使用的监听端口
 	ProtocolPorts *string `json:"protocolPorts,omitempty"`
-    // 监听器名称
+	// 监听器名称
 	ListenerName *string `json:"listenerName,omitempty"`
-    // 列表分页每页大小，小于0将默认为10
+	// 列表分页每页大小，小于0将默认为10
 	PageSize *int32 `json:"pageSize,omitempty"`
-    // 列表分页页数，小于1会默认第1页
+	// 列表分页页数，小于1会默认第1页
 	Page *int32 `json:"page,omitempty"`
-    // 双AZ场景下创建请求的requestId唯一标志为UUID
+	// 双AZ场景下创建请求的requestId唯一标志为UUID
 	MultiAzUuid *string `json:"multiAzUuid,omitempty"`
 }
 
@@ -60,7 +60,6 @@ func (s *ListLoadBalanceUDPListenerQuery) SetMultiAzUuid(v string) *ListLoadBala
 	return s
 }
 
-
 type ListLoadBalanceUDPListenerQueryBuilder struct {
 	s *ListLoadBalanceUDPListenerQuery
 }
@@ -99,5 +98,3 @@ func (b *ListLoadBalanceUDPListenerQueryBuilder) MultiAzUuid(v string) *ListLoad
 func (b *ListLoadBalanceUDPListenerQueryBuilder) Build() *ListLoadBalanceUDPListenerQuery {
 	return b.s
 }
-
-

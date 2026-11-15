@@ -4,19 +4,17 @@
 
 package model
 
-
 type RemoveCustomLineOpenapiResponseStateEnum string
 
 // List of State
 const (
-    RemoveCustomLineOpenapiResponseStateEnumError RemoveCustomLineOpenapiResponseStateEnum = "ERROR"
-    RemoveCustomLineOpenapiResponseStateEnumException RemoveCustomLineOpenapiResponseStateEnum = "EXCEPTION"
-    RemoveCustomLineOpenapiResponseStateEnumForbidden RemoveCustomLineOpenapiResponseStateEnum = "FORBIDDEN"
-    RemoveCustomLineOpenapiResponseStateEnumOk RemoveCustomLineOpenapiResponseStateEnum = "OK"
+	RemoveCustomLineOpenapiResponseStateEnumError     RemoveCustomLineOpenapiResponseStateEnum = "ERROR"
+	RemoveCustomLineOpenapiResponseStateEnumException RemoveCustomLineOpenapiResponseStateEnum = "EXCEPTION"
+	RemoveCustomLineOpenapiResponseStateEnumForbidden RemoveCustomLineOpenapiResponseStateEnum = "FORBIDDEN"
+	RemoveCustomLineOpenapiResponseStateEnumOk        RemoveCustomLineOpenapiResponseStateEnum = "OK"
 )
 
 type RemoveCustomLineOpenapiResponse struct {
-
 	RequestId string `json:"requestId,omitempty"`
 
 	ErrorMessage string `json:"errorMessage,omitempty"`

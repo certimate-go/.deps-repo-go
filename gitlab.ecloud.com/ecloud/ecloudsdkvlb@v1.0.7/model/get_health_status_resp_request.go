@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type GetHealthStatusRespRequest struct {
-
-
 	GetHealthStatusRespPath *GetHealthStatusRespPath `json:"getHealthStatusRespPath,omitempty"`
 }
 
@@ -31,7 +29,6 @@ func (s *GetHealthStatusRespRequest) SetGetHealthStatusRespPath(v *GetHealthStat
 	return s
 }
 
-
 type GetHealthStatusRespRequestBuilder struct {
 	s *GetHealthStatusRespRequest
 }
@@ -50,5 +47,3 @@ func (b *GetHealthStatusRespRequestBuilder) GetHealthStatusRespPath(v *GetHealth
 func (b *GetHealthStatusRespRequestBuilder) Build() *GetHealthStatusRespRequest {
 	return b.s
 }
-
-

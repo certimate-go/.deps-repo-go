@@ -4,10 +4,7 @@
 
 package model
 
-
-
 type GetOperationLogOpenapiRequest struct {
-
 	GetOperationLogOpenapiQuery *GetOperationLogOpenapiQuery `json:"getOperationLogOpenapiQuery,omitempty"`
 
 	GetOperationLogOpenapiBody *GetOperationLogOpenapiBody `json:"getOperationLogOpenapiBody,omitempty"`

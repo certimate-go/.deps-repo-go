@@ -5,22 +5,21 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type AsyncUpdateRequestHealthMonitorUpdateReq struct {
-
-    // 监听器的检查间隔（单位：秒）
+	// 监听器的检查间隔（单位：秒）
 	HealthDelay *int32 `json:"healthDelay,omitempty"`
-    // 期望HTTP状态代码，取值范围100~599
+	// 期望HTTP状态代码，取值范围100~599
 	HealthExpectedCode *string `json:"healthExpectedCode,omitempty"`
-    // 监听器的最大尝试次数
+	// 监听器的最大尝试次数
 	HealthMaxRetries *int32 `json:"healthMaxRetries,omitempty"`
-    // 监听器绑定的检查方式为http的用于检查的方法，取值范围：GET，POST，HEAD
+	// 监听器绑定的检查方式为http的用于检查的方法，取值范围：GET，POST，HEAD
 	HealthHttpMethod *string `json:"healthHttpMethod,omitempty"`
-    // 用于监控的URL
+	// 用于监控的URL
 	HealthUrlPath *string `json:"healthUrlPath,omitempty"`
-    // 监听器的超时时间（单位：秒）
+	// 监听器的超时时间（单位：秒）
 	HealthTimeout *int32 `json:"healthTimeout,omitempty"`
 }
 
@@ -66,7 +65,6 @@ func (s *AsyncUpdateRequestHealthMonitorUpdateReq) SetHealthTimeout(v int32) *As
 	return s
 }
 
-
 type AsyncUpdateRequestHealthMonitorUpdateReqBuilder struct {
 	s *AsyncUpdateRequestHealthMonitorUpdateReq
 }
@@ -110,5 +108,3 @@ func (b *AsyncUpdateRequestHealthMonitorUpdateReqBuilder) HealthTimeout(v int32)
 func (b *AsyncUpdateRequestHealthMonitorUpdateReqBuilder) Build() *AsyncUpdateRequestHealthMonitorUpdateReq {
 	return b.s
 }
-
-

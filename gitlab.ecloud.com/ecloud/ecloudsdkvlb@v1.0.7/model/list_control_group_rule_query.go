@@ -5,23 +5,23 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type ListControlGroupRuleQuery struct {
-    position.Query
-    // 描述
+	position.Query
+	// 描述
 	Description *string `json:"description,omitempty"`
-    // 列表分页每页大小，小于0将默认为10
+	// 列表分页每页大小，小于0将默认为10
 	PageSize *int32 `json:"pageSize,omitempty"`
-    // 列表分页页数，小于1会默认第1页
+	// 列表分页页数，小于1会默认第1页
 	Page *int32 `json:"page,omitempty"`
-    // 根据IP或描述模糊查询
+	// 根据IP或描述模糊查询
 	QueryWord *string `json:"queryWord,omitempty"`
-    // 访问控制组ID
+	// 访问控制组ID
 	ControlGroupId *string `json:"controlGroupId,omitempty"`
-    // 查询类型（description或ipAddress，该参数与queryword同时传参）
+	// 查询类型（description或ipAddress，该参数与queryword同时传参）
 	QueryType *string `json:"queryType,omitempty"`
 }
 
@@ -67,7 +67,6 @@ func (s *ListControlGroupRuleQuery) SetQueryType(v string) *ListControlGroupRule
 	return s
 }
 
-
 type ListControlGroupRuleQueryBuilder struct {
 	s *ListControlGroupRuleQuery
 }
@@ -111,5 +110,3 @@ func (b *ListControlGroupRuleQueryBuilder) QueryType(v string) *ListControlGroup
 func (b *ListControlGroupRuleQueryBuilder) Build() *ListControlGroupRuleQuery {
 	return b.s
 }
-
-

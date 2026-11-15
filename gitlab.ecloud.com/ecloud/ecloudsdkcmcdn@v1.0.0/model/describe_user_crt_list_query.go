@@ -5,17 +5,17 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type DescribeUserCrtListQuery struct {
-    position.Query
-    // 一页中个数，默认为10
+	position.Query
+	// 一页中个数，默认为10
 	PageSize *string `json:"pageSize,omitempty"`
-    // 页数，默认为1
+	// 页数，默认为1
 	Page *string `json:"page,omitempty"`
-    // 搜索关键字
+	// 搜索关键字
 	Keyword *string `json:"keyword,omitempty"`
 }
 
@@ -46,7 +46,6 @@ func (s *DescribeUserCrtListQuery) SetKeyword(v string) *DescribeUserCrtListQuer
 	return s
 }
 
-
 type DescribeUserCrtListQueryBuilder struct {
 	s *DescribeUserCrtListQuery
 }
@@ -75,5 +74,3 @@ func (b *DescribeUserCrtListQueryBuilder) Keyword(v string) *DescribeUserCrtList
 func (b *DescribeUserCrtListQueryBuilder) Build() *DescribeUserCrtListQuery {
 	return b.s
 }
-
-

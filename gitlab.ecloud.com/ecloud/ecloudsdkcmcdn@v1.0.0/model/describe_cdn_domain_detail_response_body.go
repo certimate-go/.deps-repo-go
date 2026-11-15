@@ -5,137 +5,140 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
+
 type DescribeCdnDomainDetailResponseBodyCdnProtocolEnum string
 
 // List of CdnProtocol
 const (
-    DescribeCdnDomainDetailResponseBodyCdnProtocolEnumHttp DescribeCdnDomainDetailResponseBodyCdnProtocolEnum = "HTTP"
-    DescribeCdnDomainDetailResponseBodyCdnProtocolEnumHttps DescribeCdnDomainDetailResponseBodyCdnProtocolEnum = "HTTPS"
-    DescribeCdnDomainDetailResponseBodyCdnProtocolEnumHttpHttps DescribeCdnDomainDetailResponseBodyCdnProtocolEnum = "HTTP_HTTPS"
+	DescribeCdnDomainDetailResponseBodyCdnProtocolEnumHttp      DescribeCdnDomainDetailResponseBodyCdnProtocolEnum = "HTTP"
+	DescribeCdnDomainDetailResponseBodyCdnProtocolEnumHttps     DescribeCdnDomainDetailResponseBodyCdnProtocolEnum = "HTTPS"
+	DescribeCdnDomainDetailResponseBodyCdnProtocolEnumHttpHttps DescribeCdnDomainDetailResponseBodyCdnProtocolEnum = "HTTP_HTTPS"
 )
+
 type DescribeCdnDomainDetailResponseBodyConfigStatusEnum string
 
 // List of ConfigStatus
 const (
-    DescribeCdnDomainDetailResponseBodyConfigStatusEnumUpdateFail DescribeCdnDomainDetailResponseBodyConfigStatusEnum = "UPDATE_FAIL"
-    DescribeCdnDomainDetailResponseBodyConfigStatusEnumUpdating DescribeCdnDomainDetailResponseBodyConfigStatusEnum = "UPDATING"
-    DescribeCdnDomainDetailResponseBodyConfigStatusEnumUpdated DescribeCdnDomainDetailResponseBodyConfigStatusEnum = "UPDATED"
+	DescribeCdnDomainDetailResponseBodyConfigStatusEnumUpdateFail DescribeCdnDomainDetailResponseBodyConfigStatusEnum = "UPDATE_FAIL"
+	DescribeCdnDomainDetailResponseBodyConfigStatusEnumUpdating   DescribeCdnDomainDetailResponseBodyConfigStatusEnum = "UPDATING"
+	DescribeCdnDomainDetailResponseBodyConfigStatusEnumUpdated    DescribeCdnDomainDetailResponseBodyConfigStatusEnum = "UPDATED"
 )
+
 type DescribeCdnDomainDetailResponseBodyCdnTypeEnum string
 
 // List of CdnType
 const (
-    DescribeCdnDomainDetailResponseBodyCdnTypeEnumWeb DescribeCdnDomainDetailResponseBodyCdnTypeEnum = "web"
-    DescribeCdnDomainDetailResponseBodyCdnTypeEnumDownload DescribeCdnDomainDetailResponseBodyCdnTypeEnum = "download"
-    DescribeCdnDomainDetailResponseBodyCdnTypeEnumVideo DescribeCdnDomainDetailResponseBodyCdnTypeEnum = "video"
-    DescribeCdnDomainDetailResponseBodyCdnTypeEnumLivestream DescribeCdnDomainDetailResponseBodyCdnTypeEnum = "liveStream"
+	DescribeCdnDomainDetailResponseBodyCdnTypeEnumWeb        DescribeCdnDomainDetailResponseBodyCdnTypeEnum = "web"
+	DescribeCdnDomainDetailResponseBodyCdnTypeEnumDownload   DescribeCdnDomainDetailResponseBodyCdnTypeEnum = "download"
+	DescribeCdnDomainDetailResponseBodyCdnTypeEnumVideo      DescribeCdnDomainDetailResponseBodyCdnTypeEnum = "video"
+	DescribeCdnDomainDetailResponseBodyCdnTypeEnumLivestream DescribeCdnDomainDetailResponseBodyCdnTypeEnum = "liveStream"
 )
+
 type DescribeCdnDomainDetailResponseBodyDomainStatusEnum string
 
 // List of DomainStatus
 const (
-    DescribeCdnDomainDetailResponseBodyDomainStatusEnumAddAuditing DescribeCdnDomainDetailResponseBodyDomainStatusEnum = "ADD_AUDITING"
-    DescribeCdnDomainDetailResponseBodyDomainStatusEnumAddOpening DescribeCdnDomainDetailResponseBodyDomainStatusEnum = "ADD_OPENING"
-    DescribeCdnDomainDetailResponseBodyDomainStatusEnumUpdateAuditing DescribeCdnDomainDetailResponseBodyDomainStatusEnum = "UPDATE_AUDITING"
-    DescribeCdnDomainDetailResponseBodyDomainStatusEnumUpdateHandling DescribeCdnDomainDetailResponseBodyDomainStatusEnum = "UPDATE_HANDLING"
-    DescribeCdnDomainDetailResponseBodyDomainStatusEnumPauseAuditing DescribeCdnDomainDetailResponseBodyDomainStatusEnum = "PAUSE_AUDITING"
-    DescribeCdnDomainDetailResponseBodyDomainStatusEnumPauseHandling DescribeCdnDomainDetailResponseBodyDomainStatusEnum = "PAUSE_HANDLING"
-    DescribeCdnDomainDetailResponseBodyDomainStatusEnumRecoverAuditing DescribeCdnDomainDetailResponseBodyDomainStatusEnum = "RECOVER_AUDITING"
-    DescribeCdnDomainDetailResponseBodyDomainStatusEnumRecoverHandling DescribeCdnDomainDetailResponseBodyDomainStatusEnum = "RECOVER_HANDLING"
-    DescribeCdnDomainDetailResponseBodyDomainStatusEnumOfflineAuditing DescribeCdnDomainDetailResponseBodyDomainStatusEnum = "OFFLINE_AUDITING"
-    DescribeCdnDomainDetailResponseBodyDomainStatusEnumOfflineHandling DescribeCdnDomainDetailResponseBodyDomainStatusEnum = "OFFLINE_HANDLING"
-    DescribeCdnDomainDetailResponseBodyDomainStatusEnumRunning DescribeCdnDomainDetailResponseBodyDomainStatusEnum = "RUNNING"
-    DescribeCdnDomainDetailResponseBodyDomainStatusEnumPaused DescribeCdnDomainDetailResponseBodyDomainStatusEnum = "PAUSED"
-    DescribeCdnDomainDetailResponseBodyDomainStatusEnumOffline DescribeCdnDomainDetailResponseBodyDomainStatusEnum = "OFFLINE"
-    DescribeCdnDomainDetailResponseBodyDomainStatusEnumAuditFail DescribeCdnDomainDetailResponseBodyDomainStatusEnum = "AUDIT_FAIL"
-    DescribeCdnDomainDetailResponseBodyDomainStatusEnumUpdateFail DescribeCdnDomainDetailResponseBodyDomainStatusEnum = "UPDATE_FAIL"
-    DescribeCdnDomainDetailResponseBodyDomainStatusEnumAddFail DescribeCdnDomainDetailResponseBodyDomainStatusEnum = "ADD_FAIL"
-    DescribeCdnDomainDetailResponseBodyDomainStatusEnumOfflineFail DescribeCdnDomainDetailResponseBodyDomainStatusEnum = "OFFLINE_FAIL"
-    DescribeCdnDomainDetailResponseBodyDomainStatusEnumPauseOfflineAuditing DescribeCdnDomainDetailResponseBodyDomainStatusEnum = "PAUSE_OFFLINE_AUDITING"
-    DescribeCdnDomainDetailResponseBodyDomainStatusEnumPauseOfflineFail DescribeCdnDomainDetailResponseBodyDomainStatusEnum = "PAUSE_OFFLINE_FAIL"
+	DescribeCdnDomainDetailResponseBodyDomainStatusEnumAddAuditing          DescribeCdnDomainDetailResponseBodyDomainStatusEnum = "ADD_AUDITING"
+	DescribeCdnDomainDetailResponseBodyDomainStatusEnumAddOpening           DescribeCdnDomainDetailResponseBodyDomainStatusEnum = "ADD_OPENING"
+	DescribeCdnDomainDetailResponseBodyDomainStatusEnumUpdateAuditing       DescribeCdnDomainDetailResponseBodyDomainStatusEnum = "UPDATE_AUDITING"
+	DescribeCdnDomainDetailResponseBodyDomainStatusEnumUpdateHandling       DescribeCdnDomainDetailResponseBodyDomainStatusEnum = "UPDATE_HANDLING"
+	DescribeCdnDomainDetailResponseBodyDomainStatusEnumPauseAuditing        DescribeCdnDomainDetailResponseBodyDomainStatusEnum = "PAUSE_AUDITING"
+	DescribeCdnDomainDetailResponseBodyDomainStatusEnumPauseHandling        DescribeCdnDomainDetailResponseBodyDomainStatusEnum = "PAUSE_HANDLING"
+	DescribeCdnDomainDetailResponseBodyDomainStatusEnumRecoverAuditing      DescribeCdnDomainDetailResponseBodyDomainStatusEnum = "RECOVER_AUDITING"
+	DescribeCdnDomainDetailResponseBodyDomainStatusEnumRecoverHandling      DescribeCdnDomainDetailResponseBodyDomainStatusEnum = "RECOVER_HANDLING"
+	DescribeCdnDomainDetailResponseBodyDomainStatusEnumOfflineAuditing      DescribeCdnDomainDetailResponseBodyDomainStatusEnum = "OFFLINE_AUDITING"
+	DescribeCdnDomainDetailResponseBodyDomainStatusEnumOfflineHandling      DescribeCdnDomainDetailResponseBodyDomainStatusEnum = "OFFLINE_HANDLING"
+	DescribeCdnDomainDetailResponseBodyDomainStatusEnumRunning              DescribeCdnDomainDetailResponseBodyDomainStatusEnum = "RUNNING"
+	DescribeCdnDomainDetailResponseBodyDomainStatusEnumPaused               DescribeCdnDomainDetailResponseBodyDomainStatusEnum = "PAUSED"
+	DescribeCdnDomainDetailResponseBodyDomainStatusEnumOffline              DescribeCdnDomainDetailResponseBodyDomainStatusEnum = "OFFLINE"
+	DescribeCdnDomainDetailResponseBodyDomainStatusEnumAuditFail            DescribeCdnDomainDetailResponseBodyDomainStatusEnum = "AUDIT_FAIL"
+	DescribeCdnDomainDetailResponseBodyDomainStatusEnumUpdateFail           DescribeCdnDomainDetailResponseBodyDomainStatusEnum = "UPDATE_FAIL"
+	DescribeCdnDomainDetailResponseBodyDomainStatusEnumAddFail              DescribeCdnDomainDetailResponseBodyDomainStatusEnum = "ADD_FAIL"
+	DescribeCdnDomainDetailResponseBodyDomainStatusEnumOfflineFail          DescribeCdnDomainDetailResponseBodyDomainStatusEnum = "OFFLINE_FAIL"
+	DescribeCdnDomainDetailResponseBodyDomainStatusEnumPauseOfflineAuditing DescribeCdnDomainDetailResponseBodyDomainStatusEnum = "PAUSE_OFFLINE_AUDITING"
+	DescribeCdnDomainDetailResponseBodyDomainStatusEnumPauseOfflineFail     DescribeCdnDomainDetailResponseBodyDomainStatusEnum = "PAUSE_OFFLINE_FAIL"
 )
 
 type DescribeCdnDomainDetailResponseBody struct {
-
-    // error page信息
+	// error page信息
 	ErrorPageDetail *DescribeCdnDomainDetailResponseErrorPageDetail `json:"errorPageDetail,omitempty"`
-    // 文件列表，已;间隔
+	// 文件列表，已;间隔
 	FileName *string `json:"fileName,omitempty"`
-    // 是否开启http请求头配置
+	// 是否开启http请求头配置
 	EnableSetReqHeader *bool `json:"enableSetReqHeader,omitempty"`
-    // 回源地址列表
+	// 回源地址列表
 	Sources *[]DescribeCdnDomainDetailResponseSources `json:"sources,omitempty"`
-    // 配置状态错误信息
+	// 配置状态错误信息
 	ConfigCommons *string `json:"configCommons,omitempty"`
-    // 客户访问服务节点的协议
+	// 客户访问服务节点的协议
 	CdnProtocol *DescribeCdnDomainDetailResponseBodyCdnProtocolEnum `json:"cdnProtocol,omitempty"`
-    // CNAME
+	// CNAME
 	Cname *string `json:"cname,omitempty"`
-    // 证书名
+	// 证书名
 	CrtName *string `json:"crtName,omitempty"`
-    // 回源host
+	// 回源host
 	BackSourceHost *DescribeCdnDomainDetailResponseBackSourceHost `json:"backSourceHost,omitempty"`
-    // 备案号
+	// 备案号
 	IcpLicensing *string `json:"icpLicensing,omitempty"`
-    // 配置状态状态
+	// 配置状态状态
 	ConfigStatus *DescribeCdnDomainDetailResponseBodyConfigStatusEnum `json:"configStatus,omitempty"`
-    // 过滤参数信息
+	// 过滤参数信息
 	UrlParameterDetail *DescribeCdnDomainDetailResponseUrlParameterDetail `json:"urlParameterDetail,omitempty"`
-    // 运行状态错误原因
+	// 运行状态错误原因
 	Commons *string `json:"commons,omitempty"`
-    // 是否开启http2协议
+	// 是否开启http2协议
 	EnableHttp2Parameter *bool `json:"enableHttp2Parameter,omitempty"`
-    // 是否开启过滤参数
+	// 是否开启过滤参数
 	EnableUrlParameter *bool `json:"enableUrlParameter,omitempty"`
-    // 是否开启ipv6支持
+	// 是否开启ipv6支持
 	Ipv6OnOff *bool `json:"ipv6OnOff,omitempty"`
-    // ip黑名单信息
+	// ip黑名单信息
 	IpBlackList *DescribeCdnDomainDetailResponseIpBlackList `json:"ipBlackList,omitempty"`
-    // 是否开启防盗链配置
+	// 是否开启防盗链配置
 	EnableReferrerAntiStealingLink *bool `json:"enableReferrerAntiStealingLink,omitempty"`
-    // 缓存设置列表，仅当enable为true时有值，支持指定路径或者文件名后缀方式
+	// 缓存设置列表，仅当enable为true时有值，支持指定路径或者文件名后缀方式
 	CacheDetails *[]DescribeCdnDomainDetailResponseCacheDetails `json:"cacheDetails,omitempty"`
-    // 是否开启http2协议
+	// 是否开启http2协议
 	EnableHttp2Status *bool `json:"enableHttp2Status,omitempty"`
-    // 是否开启ip黑名单配置
+	// 是否开启ip黑名单配置
 	EnableIpBlackList *bool `json:"enableIpBlackList,omitempty"`
-    // 是否开启http响应头配置
+	// 是否开启http响应头配置
 	EnableSetRespHeader *bool `json:"enableSetRespHeader,omitempty"`
-    // 文件列表
+	// 文件列表
 	FileList []string `json:"fileList,omitempty"`
-    // 防盗链信息
+	// 防盗链信息
 	RasLinkDetail *DescribeCdnDomainDetailResponseRasLinkDetail `json:"rasLinkDetail,omitempty"`
-    // 加速域名类型
+	// 加速域名类型
 	CdnType *DescribeCdnDomainDetailResponseBodyCdnTypeEnum `json:"cdnType,omitempty"`
-    // 证书uniqueId
+	// 证书uniqueId
 	CrtUniqueId *string `json:"crtUniqueId,omitempty"`
-    // 域名状态
+	// 域名状态
 	DomainStatus *DescribeCdnDomainDetailResponseBodyDomainStatusEnum `json:"domainStatus,omitempty"`
-    // 更新时间
+	// 更新时间
 	UpdateTime *string `json:"updateTime,omitempty"`
-    // 是否开启error page配置
+	// 是否开启error page配置
 	EnableCustomErrorPage *bool `json:"enableCustomErrorPage,omitempty"`
-    // 请求头信息
+	// 请求头信息
 	RespHeaderDetails *[]DescribeCdnDomainDetailResponseRespHeaderDetails `json:"respHeaderDetails,omitempty"`
-    // 域名Id
+	// 域名Id
 	DomainId *int32 `json:"domainId,omitempty"`
-    // 是否开启回源host配置
+	// 是否开启回源host配置
 	EnableBackSourceHost *bool `json:"enableBackSourceHost,omitempty"`
-    // 定制化分类，0：非定制化，1：定制化
+	// 定制化分类，0：非定制化，1：定制化
 	AddType *int32 `json:"addType,omitempty"`
-    // 是否删除，0：否，1：是
+	// 是否删除，0：否，1：是
 	Deleted *bool `json:"deleted,omitempty"`
-    // 创建时间
+	// 创建时间
 	CreateTime *string `json:"createTime,omitempty"`
-    // 域名
+	// 域名
 	DomainName *string `json:"domainName,omitempty"`
-    // 是否开启智能压缩功能
+	// 是否开启智能压缩功能
 	EnableGzipStatus *bool `json:"enableGzipStatus,omitempty"`
-    // 请求头信息
+	// 请求头信息
 	ReqHeaderDetails *[]DescribeCdnDomainDetailResponseReqHeaderDetails `json:"reqHeaderDetails,omitempty"`
-    // 是否开启缓存类型与过期时间配置
+	// 是否开启缓存类型与过期时间配置
 	EnableCache *bool `json:"enableCache,omitempty"`
 }
 
@@ -346,7 +349,6 @@ func (s *DescribeCdnDomainDetailResponseBody) SetEnableCache(v bool) *DescribeCd
 	return s
 }
 
-
 type DescribeCdnDomainDetailResponseBodyBuilder struct {
 	s *DescribeCdnDomainDetailResponseBody
 }
@@ -555,5 +557,3 @@ func (b *DescribeCdnDomainDetailResponseBodyBuilder) EnableCache(v bool) *Descri
 func (b *DescribeCdnDomainDetailResponseBodyBuilder) Build() *DescribeCdnDomainDetailResponseBody {
 	return b.s
 }
-
-

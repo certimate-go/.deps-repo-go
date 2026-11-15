@@ -5,50 +5,50 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
+
 type GetL7PolicyRespResponseBodyCompareTypeEnum string
 
 // List of CompareType
 const (
-    GetL7PolicyRespResponseBodyCompareTypeEnumRegex GetL7PolicyRespResponseBodyCompareTypeEnum = "REGEX"
-    GetL7PolicyRespResponseBodyCompareTypeEnumStartsWith GetL7PolicyRespResponseBodyCompareTypeEnum = "STARTS_WITH"
-    GetL7PolicyRespResponseBodyCompareTypeEnumEqualTo GetL7PolicyRespResponseBodyCompareTypeEnum = "EQUAL_TO"
+	GetL7PolicyRespResponseBodyCompareTypeEnumRegex      GetL7PolicyRespResponseBodyCompareTypeEnum = "REGEX"
+	GetL7PolicyRespResponseBodyCompareTypeEnumStartsWith GetL7PolicyRespResponseBodyCompareTypeEnum = "STARTS_WITH"
+	GetL7PolicyRespResponseBodyCompareTypeEnumEqualTo    GetL7PolicyRespResponseBodyCompareTypeEnum = "EQUAL_TO"
 )
 
 type GetL7PolicyRespResponseBody struct {
-
-    // 修改时间
+	// 修改时间
 	ModifiedTime *string `json:"modifiedTime,omitempty"`
-    // 描述
+	// 描述
 	Description *string `json:"description,omitempty"`
-    // 七层转发策略域名
+	// 七层转发策略域名
 	L7PolicyDomainName *string `json:"l7PolicyDomainName,omitempty"`
-    // 是否是多AZ场景
+	// 是否是多AZ场景
 	IsMultiAz *bool `json:"isMultiAz,omitempty"`
-    // 负载均衡监听器ID
+	// 负载均衡监听器ID
 	ListenerId *string `json:"listenerId,omitempty"`
-    // 匹配规格，取值如下： REGEX：正则表达式STARTS_WITH：以某字符串开始ENDS_WITH：以某字符串结束CONTAINS：包含 EQUAL_TO：等于
+	// 匹配规格，取值如下： REGEX：正则表达式STARTS_WITH：以某字符串开始ENDS_WITH：以某字符串结束CONTAINS：包含 EQUAL_TO：等于
 	CompareType *GetL7PolicyRespResponseBodyCompareTypeEnum `json:"compareType,omitempty"`
-    // 是否删除
+	// 是否删除
 	Deleted *bool `json:"deleted,omitempty"`
-    // 七层转发策略规则输入的URL
+	// 七层转发策略规则输入的URL
 	L7PolicyUrl *string `json:"l7PolicyUrl,omitempty"`
-    // 七层转发策略名称
+	// 七层转发策略名称
 	L7PolicyName *string `json:"l7PolicyName,omitempty"`
-    // 后端服务组ID
+	// 后端服务组ID
 	PoolId *string `json:"poolId,omitempty"`
-    // 创建时间
+	// 创建时间
 	CreatedTime *string `json:"createdTime,omitempty"`
-    // 七层转发策略ID
+	// 七层转发策略ID
 	L7PolicyId *string `json:"l7PolicyId,omitempty"`
-    // 七层转发策略的优先级的位置
+	// 七层转发策略的优先级的位置
 	Position *int32 `json:"position,omitempty"`
-    // 转发策略激活状态
+	// 转发策略激活状态
 	AdminStateUp *bool `json:"adminStateUp,omitempty"`
-    // 多AZ场景下创建请求的requestId唯一标志为uuid
+	// 多AZ场景下创建请求的requestId唯一标志为uuid
 	MultiAzUuid *string `json:"multiAzUuid,omitempty"`
-    // 后端服务组名称
+	// 后端服务组名称
 	PoolName *string `json:"poolName,omitempty"`
 }
 
@@ -144,7 +144,6 @@ func (s *GetL7PolicyRespResponseBody) SetPoolName(v string) *GetL7PolicyRespResp
 	return s
 }
 
-
 type GetL7PolicyRespResponseBodyBuilder struct {
 	s *GetL7PolicyRespResponseBody
 }
@@ -238,5 +237,3 @@ func (b *GetL7PolicyRespResponseBodyBuilder) PoolName(v string) *GetL7PolicyResp
 func (b *GetL7PolicyRespResponseBodyBuilder) Build() *GetL7PolicyRespResponseBody {
 	return b.s
 }
-
-

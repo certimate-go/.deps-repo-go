@@ -5,39 +5,42 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
+
 type OpenCdnServiceFromApiBodyCdnProductTypeEnum string
 
 // List of CdnProductType
 const (
-    OpenCdnServiceFromApiBodyCdnProductTypeEnumEcdn OpenCdnServiceFromApiBodyCdnProductTypeEnum = "ECDN"
+	OpenCdnServiceFromApiBodyCdnProductTypeEnumEcdn OpenCdnServiceFromApiBodyCdnProductTypeEnum = "ECDN"
 )
+
 type OpenCdnServiceFromApiBodyChargeTypeEnum string
 
 // List of ChargeType
 const (
-    OpenCdnServiceFromApiBodyChargeTypeEnumFlow OpenCdnServiceFromApiBodyChargeTypeEnum = "FLOW"
-    OpenCdnServiceFromApiBodyChargeTypeEnumDayPeak OpenCdnServiceFromApiBodyChargeTypeEnum = "DAY_PEAK"
+	OpenCdnServiceFromApiBodyChargeTypeEnumFlow    OpenCdnServiceFromApiBodyChargeTypeEnum = "FLOW"
+	OpenCdnServiceFromApiBodyChargeTypeEnumDayPeak OpenCdnServiceFromApiBodyChargeTypeEnum = "DAY_PEAK"
 )
+
 type OpenCdnServiceFromApiBodyServiceProviderEnum string
 
 // List of ServiceProvider
 const (
-    OpenCdnServiceFromApiBodyServiceProviderEnumMobile OpenCdnServiceFromApiBodyServiceProviderEnum = "MOBILE"
-    OpenCdnServiceFromApiBodyServiceProviderEnumOther OpenCdnServiceFromApiBodyServiceProviderEnum = "OTHER"
+	OpenCdnServiceFromApiBodyServiceProviderEnumMobile OpenCdnServiceFromApiBodyServiceProviderEnum = "MOBILE"
+	OpenCdnServiceFromApiBodyServiceProviderEnumOther  OpenCdnServiceFromApiBodyServiceProviderEnum = "OTHER"
 )
 
 type OpenCdnServiceFromApiBody struct {
-    position.Body
-    // 用户信息
+	position.Body
+	// 用户信息
 	UserInfoReq *OpenCdnServiceFromApiRequestUserInfoReq `json:"userInfoReq,omitempty"`
-    // 产品类型
+	// 产品类型
 	CdnProductType *OpenCdnServiceFromApiBodyCdnProductTypeEnum `json:"cdnProductType,omitempty"`
-    // 计费类型，按流量计费：FLOW，按日峰值计费：DAY_PEAK
+	// 计费类型，按流量计费：FLOW，按日峰值计费：DAY_PEAK
 	ChargeType *OpenCdnServiceFromApiBodyChargeTypeEnum `json:"chargeType,omitempty"`
-    // 服务提供厂商,移动网：MOBILE，移动电信联通三网：OTHER
+	// 服务提供厂商,移动网：MOBILE，移动电信联通三网：OTHER
 	ServiceProvider *OpenCdnServiceFromApiBodyServiceProviderEnum `json:"serviceProvider,omitempty"`
 }
 
@@ -73,7 +76,6 @@ func (s *OpenCdnServiceFromApiBody) SetServiceProvider(v OpenCdnServiceFromApiBo
 	return s
 }
 
-
 type OpenCdnServiceFromApiBodyBuilder struct {
 	s *OpenCdnServiceFromApiBody
 }
@@ -107,5 +109,3 @@ func (b *OpenCdnServiceFromApiBodyBuilder) ServiceProvider(v OpenCdnServiceFromA
 func (b *OpenCdnServiceFromApiBodyBuilder) Build() *OpenCdnServiceFromApiBody {
 	return b.s
 }
-
-

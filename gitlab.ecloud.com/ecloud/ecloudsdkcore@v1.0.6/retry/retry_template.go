@@ -2,8 +2,9 @@ package retry
 
 import (
 	"fmt"
-	"gitlab.ecloud.com/ecloud/ecloudsdkcore/errs"
 	"time"
+
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/errs"
 )
 
 type Template struct {

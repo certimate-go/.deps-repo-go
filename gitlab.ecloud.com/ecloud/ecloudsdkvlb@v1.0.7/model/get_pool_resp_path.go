@@ -5,13 +5,13 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type GetPoolRespPath struct {
-    position.Path
-    // 后端服务器组ID
+	position.Path
+	// 后端服务器组ID
 	PoolId *string `json:"poolId,omitempty"`
 }
 
@@ -32,7 +32,6 @@ func (s *GetPoolRespPath) SetPoolId(v string) *GetPoolRespPath {
 	return s
 }
 
-
 type GetPoolRespPathBuilder struct {
 	s *GetPoolRespPath
 }
@@ -51,5 +50,3 @@ func (b *GetPoolRespPathBuilder) PoolId(v string) *GetPoolRespPathBuilder {
 func (b *GetPoolRespPathBuilder) Build() *GetPoolRespPath {
 	return b.s
 }
-
-

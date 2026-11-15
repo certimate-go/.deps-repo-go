@@ -4,9 +4,6 @@
 
 package model
 
-
-
 type ModifyBalanceRateOpenapiRequest struct {
-
 	ModifyBalanceRateOpenapiBody *ModifyBalanceRateOpenapiBody `json:"modifyBalanceRateOpenapiBody,omitempty"`
 }

@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type ElbOrderCreateAsyncRequest struct {
-
-
 	ElbOrderCreateAsyncBody *ElbOrderCreateAsyncBody `json:"elbOrderCreateAsyncBody,omitempty"`
 }
 
@@ -31,7 +29,6 @@ func (s *ElbOrderCreateAsyncRequest) SetElbOrderCreateAsyncBody(v *ElbOrderCreat
 	return s
 }
 
-
 type ElbOrderCreateAsyncRequestBuilder struct {
 	s *ElbOrderCreateAsyncRequest
 }
@@ -50,5 +47,3 @@ func (b *ElbOrderCreateAsyncRequestBuilder) ElbOrderCreateAsyncBody(v *ElbOrderC
 func (b *ElbOrderCreateAsyncRequestBuilder) Build() *ElbOrderCreateAsyncRequest {
 	return b.s
 }
-
-

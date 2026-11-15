@@ -5,15 +5,15 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type UpdateTLSNameBody struct {
-    position.Body
-    // TLS安全策略名称
+	position.Body
+	// TLS安全策略名称
 	Name *string `json:"name,omitempty"`
-    // TLS安全策略ID
+	// TLS安全策略ID
 	Id *int64 `json:"id,omitempty"`
 }
 
@@ -39,7 +39,6 @@ func (s *UpdateTLSNameBody) SetId(v int64) *UpdateTLSNameBody {
 	return s
 }
 
-
 type UpdateTLSNameBodyBuilder struct {
 	s *UpdateTLSNameBody
 }
@@ -63,5 +62,3 @@ func (b *UpdateTLSNameBodyBuilder) Id(v int64) *UpdateTLSNameBodyBuilder {
 func (b *UpdateTLSNameBodyBuilder) Build() *UpdateTLSNameBody {
 	return b.s
 }
-
-

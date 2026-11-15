@@ -5,52 +5,53 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
+
 type ListLoadbalanceByTagResponseBindListenersProtocolEnum string
 
 // List of Protocol
 const (
-    ListLoadbalanceByTagResponseBindListenersProtocolEnumHttp ListLoadbalanceByTagResponseBindListenersProtocolEnum = "HTTP"
-    ListLoadbalanceByTagResponseBindListenersProtocolEnumHttps ListLoadbalanceByTagResponseBindListenersProtocolEnum = "HTTPS"
-    ListLoadbalanceByTagResponseBindListenersProtocolEnumTcp ListLoadbalanceByTagResponseBindListenersProtocolEnum = "TCP"
-    ListLoadbalanceByTagResponseBindListenersProtocolEnumUdp ListLoadbalanceByTagResponseBindListenersProtocolEnum = "UDP"
-    ListLoadbalanceByTagResponseBindListenersProtocolEnumTerminatedHttps ListLoadbalanceByTagResponseBindListenersProtocolEnum = "TERMINATED_HTTPS"
-    ListLoadbalanceByTagResponseBindListenersProtocolEnumSip ListLoadbalanceByTagResponseBindListenersProtocolEnum = "SIP"
+	ListLoadbalanceByTagResponseBindListenersProtocolEnumHttp            ListLoadbalanceByTagResponseBindListenersProtocolEnum = "HTTP"
+	ListLoadbalanceByTagResponseBindListenersProtocolEnumHttps           ListLoadbalanceByTagResponseBindListenersProtocolEnum = "HTTPS"
+	ListLoadbalanceByTagResponseBindListenersProtocolEnumTcp             ListLoadbalanceByTagResponseBindListenersProtocolEnum = "TCP"
+	ListLoadbalanceByTagResponseBindListenersProtocolEnumUdp             ListLoadbalanceByTagResponseBindListenersProtocolEnum = "UDP"
+	ListLoadbalanceByTagResponseBindListenersProtocolEnumTerminatedHttps ListLoadbalanceByTagResponseBindListenersProtocolEnum = "TERMINATED_HTTPS"
+	ListLoadbalanceByTagResponseBindListenersProtocolEnumSip             ListLoadbalanceByTagResponseBindListenersProtocolEnum = "SIP"
 )
+
 type ListLoadbalanceByTagResponseBindListenersOpStatusEnum string
 
 // List of OpStatus
 const (
-    ListLoadbalanceByTagResponseBindListenersOpStatusEnumInactive ListLoadbalanceByTagResponseBindListenersOpStatusEnum = "INACTIVE"
-    ListLoadbalanceByTagResponseBindListenersOpStatusEnumActive ListLoadbalanceByTagResponseBindListenersOpStatusEnum = "ACTIVE"
-    ListLoadbalanceByTagResponseBindListenersOpStatusEnumCreating ListLoadbalanceByTagResponseBindListenersOpStatusEnum = "CREATING"
-    ListLoadbalanceByTagResponseBindListenersOpStatusEnumDeleting ListLoadbalanceByTagResponseBindListenersOpStatusEnum = "DELETING"
-    ListLoadbalanceByTagResponseBindListenersOpStatusEnumUpdating ListLoadbalanceByTagResponseBindListenersOpStatusEnum = "UPDATING"
-    ListLoadbalanceByTagResponseBindListenersOpStatusEnumError ListLoadbalanceByTagResponseBindListenersOpStatusEnum = "ERROR"
+	ListLoadbalanceByTagResponseBindListenersOpStatusEnumInactive ListLoadbalanceByTagResponseBindListenersOpStatusEnum = "INACTIVE"
+	ListLoadbalanceByTagResponseBindListenersOpStatusEnumActive   ListLoadbalanceByTagResponseBindListenersOpStatusEnum = "ACTIVE"
+	ListLoadbalanceByTagResponseBindListenersOpStatusEnumCreating ListLoadbalanceByTagResponseBindListenersOpStatusEnum = "CREATING"
+	ListLoadbalanceByTagResponseBindListenersOpStatusEnumDeleting ListLoadbalanceByTagResponseBindListenersOpStatusEnum = "DELETING"
+	ListLoadbalanceByTagResponseBindListenersOpStatusEnumUpdating ListLoadbalanceByTagResponseBindListenersOpStatusEnum = "UPDATING"
+	ListLoadbalanceByTagResponseBindListenersOpStatusEnumError    ListLoadbalanceByTagResponseBindListenersOpStatusEnum = "ERROR"
 )
 
 type ListLoadbalanceByTagResponseBindListeners struct {
-
-    // 弹性负载均衡规格
+	// 弹性负载均衡规格
 	Flavor *string `json:"flavor,omitempty"`
-    // 绑定的访问控制组类型: 黑名单:blacklist,白名单:whitelist
+	// 绑定的访问控制组类型: 黑名单:blacklist,白名单:whitelist
 	GroupType *string `json:"groupType,omitempty"`
-    // 监听器协议
+	// 监听器协议
 	Protocol *ListLoadbalanceByTagResponseBindListenersProtocolEnum `json:"protocol,omitempty"`
-    // 弹性负载均衡厂商
+	// 弹性负载均衡厂商
 	Provider *string `json:"provider,omitempty"`
-    // 监听器名称
+	// 监听器名称
 	Name *string `json:"name,omitempty"`
-    // 访问控制是否生效,true:生效;false:未生效
+	// 访问控制是否生效,true:生效;false:未生效
 	Active *bool `json:"active,omitempty"`
-    // 监听器ID
+	// 监听器ID
 	Id *string `json:"id,omitempty"`
-    // 监听器状态
+	// 监听器状态
 	OpStatus *ListLoadbalanceByTagResponseBindListenersOpStatusEnum `json:"opStatus,omitempty"`
-    // 弹性负载均衡ID
+	// 弹性负载均衡ID
 	LoadBalanceId *string `json:"loadBalanceId,omitempty"`
-    // 协议端口号
+	// 协议端口号
 	ProtocolPort *int32 `json:"protocolPort,omitempty"`
 }
 
@@ -116,7 +117,6 @@ func (s *ListLoadbalanceByTagResponseBindListeners) SetProtocolPort(v int32) *Li
 	return s
 }
 
-
 type ListLoadbalanceByTagResponseBindListenersBuilder struct {
 	s *ListLoadbalanceByTagResponseBindListeners
 }
@@ -180,5 +180,3 @@ func (b *ListLoadbalanceByTagResponseBindListenersBuilder) ProtocolPort(v int32)
 func (b *ListLoadbalanceByTagResponseBindListenersBuilder) Build() *ListLoadbalanceByTagResponseBindListeners {
 	return b.s
 }
-
-

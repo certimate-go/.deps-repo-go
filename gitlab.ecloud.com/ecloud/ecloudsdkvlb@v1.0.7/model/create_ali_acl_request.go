@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type CreateAliAclRequest struct {
-
-
 	CreateAliAclHeader *CreateAliAclHeader `json:"createAliAclHeader,omitempty"`
 
 	CreateAliAclBody *CreateAliAclBody `json:"createAliAclBody,omitempty"`
@@ -38,7 +36,6 @@ func (s *CreateAliAclRequest) SetCreateAliAclBody(v *CreateAliAclBody) *CreateAl
 	return s
 }
 
-
 type CreateAliAclRequestBuilder struct {
 	s *CreateAliAclRequest
 }
@@ -62,5 +59,3 @@ func (b *CreateAliAclRequestBuilder) CreateAliAclBody(v *CreateAliAclBody) *Crea
 func (b *CreateAliAclRequestBuilder) Build() *CreateAliAclRequest {
 	return b.s
 }
-
-

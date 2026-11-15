@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type DeleteTLSCustomizeProtocolRequest struct {
-
-
 	DeleteTLSCustomizeProtocolPath *DeleteTLSCustomizeProtocolPath `json:"deleteTLSCustomizeProtocolPath,omitempty"`
 }
 
@@ -31,7 +29,6 @@ func (s *DeleteTLSCustomizeProtocolRequest) SetDeleteTLSCustomizeProtocolPath(v 
 	return s
 }
 
-
 type DeleteTLSCustomizeProtocolRequestBuilder struct {
 	s *DeleteTLSCustomizeProtocolRequest
 }
@@ -50,5 +47,3 @@ func (b *DeleteTLSCustomizeProtocolRequestBuilder) DeleteTLSCustomizeProtocolPat
 func (b *DeleteTLSCustomizeProtocolRequestBuilder) Build() *DeleteTLSCustomizeProtocolRequest {
 	return b.s
 }
-
-

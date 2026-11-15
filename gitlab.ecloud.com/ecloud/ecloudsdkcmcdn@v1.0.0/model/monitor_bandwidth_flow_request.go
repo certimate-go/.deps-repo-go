@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type MonitorBandwidthFlowRequest struct {
-
-
 	MonitorBandwidthFlowBody *MonitorBandwidthFlowBody `json:"monitorBandwidthFlowBody,omitempty"`
 }
 
@@ -31,7 +29,6 @@ func (s *MonitorBandwidthFlowRequest) SetMonitorBandwidthFlowBody(v *MonitorBand
 	return s
 }
 
-
 type MonitorBandwidthFlowRequestBuilder struct {
 	s *MonitorBandwidthFlowRequest
 }
@@ -50,5 +47,3 @@ func (b *MonitorBandwidthFlowRequestBuilder) MonitorBandwidthFlowBody(v *Monitor
 func (b *MonitorBandwidthFlowRequestBuilder) Build() *MonitorBandwidthFlowRequest {
 	return b.s
 }
-
-

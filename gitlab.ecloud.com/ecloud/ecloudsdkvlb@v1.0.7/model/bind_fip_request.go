@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type BindFipRequest struct {
-
-
 	BindFipBody *BindFipBody `json:"bindFipBody,omitempty"`
 }
 
@@ -31,7 +29,6 @@ func (s *BindFipRequest) SetBindFipBody(v *BindFipBody) *BindFipRequest {
 	return s
 }
 
-
 type BindFipRequestBuilder struct {
 	s *BindFipRequest
 }
@@ -50,5 +47,3 @@ func (b *BindFipRequestBuilder) BindFipBody(v *BindFipBody) *BindFipRequestBuild
 func (b *BindFipRequestBuilder) Build() *BindFipRequest {
 	return b.s
 }
-
-

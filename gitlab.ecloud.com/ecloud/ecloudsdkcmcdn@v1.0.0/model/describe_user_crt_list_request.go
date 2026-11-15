@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type DescribeUserCrtListRequest struct {
-
-
 	DescribeUserCrtListQuery *DescribeUserCrtListQuery `json:"describeUserCrtListQuery,omitempty"`
 }
 
@@ -31,7 +29,6 @@ func (s *DescribeUserCrtListRequest) SetDescribeUserCrtListQuery(v *DescribeUser
 	return s
 }
 
-
 type DescribeUserCrtListRequestBuilder struct {
 	s *DescribeUserCrtListRequest
 }
@@ -50,5 +47,3 @@ func (b *DescribeUserCrtListRequestBuilder) DescribeUserCrtListQuery(v *Describe
 func (b *DescribeUserCrtListRequestBuilder) Build() *DescribeUserCrtListRequest {
 	return b.s
 }
-
-

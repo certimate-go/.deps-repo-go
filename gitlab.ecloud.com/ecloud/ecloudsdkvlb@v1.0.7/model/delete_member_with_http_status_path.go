@@ -5,15 +5,15 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type DeleteMemberWithHttpStatusPath struct {
-    position.Path
-    // 负载均衡后端服务器组ID
+	position.Path
+	// 负载均衡后端服务器组ID
 	PoolId *string `json:"poolId,omitempty"`
-    // 负载均衡后端服务器ID
+	// 负载均衡后端服务器ID
 	MemberId *string `json:"memberId,omitempty"`
 }
 
@@ -39,7 +39,6 @@ func (s *DeleteMemberWithHttpStatusPath) SetMemberId(v string) *DeleteMemberWith
 	return s
 }
 
-
 type DeleteMemberWithHttpStatusPathBuilder struct {
 	s *DeleteMemberWithHttpStatusPath
 }
@@ -63,5 +62,3 @@ func (b *DeleteMemberWithHttpStatusPathBuilder) MemberId(v string) *DeleteMember
 func (b *DeleteMemberWithHttpStatusPathBuilder) Build() *DeleteMemberWithHttpStatusPath {
 	return b.s
 }
-
-

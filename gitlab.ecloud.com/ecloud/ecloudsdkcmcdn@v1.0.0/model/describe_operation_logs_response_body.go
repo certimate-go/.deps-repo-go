@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type DescribeOperationLogsResponseBody struct {
-
-
 	PageSize *int32 `json:"pageSize,omitempty"`
 
 	Page *int32 `json:"page,omitempty"`
@@ -45,7 +43,6 @@ func (s *DescribeOperationLogsResponseBody) SetList(v []DescribeOperationLogsRes
 	return s
 }
 
-
 type DescribeOperationLogsResponseBodyBuilder struct {
 	s *DescribeOperationLogsResponseBody
 }
@@ -74,5 +71,3 @@ func (b *DescribeOperationLogsResponseBodyBuilder) List(v []DescribeOperationLog
 func (b *DescribeOperationLogsResponseBodyBuilder) Build() *DescribeOperationLogsResponseBody {
 	return b.s
 }
-
-

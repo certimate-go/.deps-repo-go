@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type DeleteControlGroupRuleRequest struct {
-
-
 	DeleteControlGroupRuleBody *DeleteControlGroupRuleBody `json:"deleteControlGroupRuleBody,omitempty"`
 
 	DeleteControlGroupRulePath *DeleteControlGroupRulePath `json:"deleteControlGroupRulePath,omitempty"`
@@ -38,7 +36,6 @@ func (s *DeleteControlGroupRuleRequest) SetDeleteControlGroupRulePath(v *DeleteC
 	return s
 }
 
-
 type DeleteControlGroupRuleRequestBuilder struct {
 	s *DeleteControlGroupRuleRequest
 }
@@ -62,5 +59,3 @@ func (b *DeleteControlGroupRuleRequestBuilder) DeleteControlGroupRulePath(v *Del
 func (b *DeleteControlGroupRuleRequestBuilder) Build() *DeleteControlGroupRuleRequest {
 	return b.s
 }
-
-

@@ -4,9 +4,6 @@
 
 package model
 
-
-
 type ModifyDomainRequest struct {
-
 	ModifyDomainBody *ModifyDomainBody `json:"modifyDomainBody,omitempty"`
 }

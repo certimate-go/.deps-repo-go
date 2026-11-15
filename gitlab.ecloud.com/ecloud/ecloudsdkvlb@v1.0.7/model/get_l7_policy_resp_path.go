@@ -5,13 +5,13 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type GetL7PolicyRespPath struct {
-    position.Path
-    // 七层转发策略ID
+	position.Path
+	// 七层转发策略ID
 	L7PolicyId *string `json:"l7PolicyId,omitempty"`
 }
 
@@ -32,7 +32,6 @@ func (s *GetL7PolicyRespPath) SetL7PolicyId(v string) *GetL7PolicyRespPath {
 	return s
 }
 
-
 type GetL7PolicyRespPathBuilder struct {
 	s *GetL7PolicyRespPath
 }
@@ -51,5 +50,3 @@ func (b *GetL7PolicyRespPathBuilder) L7PolicyId(v string) *GetL7PolicyRespPathBu
 func (b *GetL7PolicyRespPathBuilder) Build() *GetL7PolicyRespPath {
 	return b.s
 }
-
-

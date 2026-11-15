@@ -4,19 +4,17 @@
 
 package model
 
-
 type GetOperationLogResponseStateEnum string
 
 // List of State
 const (
-    GetOperationLogResponseStateEnumError GetOperationLogResponseStateEnum = "ERROR"
-    GetOperationLogResponseStateEnumException GetOperationLogResponseStateEnum = "EXCEPTION"
-    GetOperationLogResponseStateEnumForbidden GetOperationLogResponseStateEnum = "FORBIDDEN"
-    GetOperationLogResponseStateEnumOk GetOperationLogResponseStateEnum = "OK"
+	GetOperationLogResponseStateEnumError     GetOperationLogResponseStateEnum = "ERROR"
+	GetOperationLogResponseStateEnumException GetOperationLogResponseStateEnum = "EXCEPTION"
+	GetOperationLogResponseStateEnumForbidden GetOperationLogResponseStateEnum = "FORBIDDEN"
+	GetOperationLogResponseStateEnumOk        GetOperationLogResponseStateEnum = "OK"
 )
 
 type GetOperationLogResponse struct {
-
 	RequestId string `json:"requestId,omitempty"`
 
 	ErrorMessage string `json:"errorMessage,omitempty"`

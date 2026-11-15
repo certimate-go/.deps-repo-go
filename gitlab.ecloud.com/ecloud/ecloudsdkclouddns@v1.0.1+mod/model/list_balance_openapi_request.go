@@ -4,10 +4,7 @@
 
 package model
 
-
-
 type ListBalanceOpenapiRequest struct {
-
 	ListBalanceOpenapiQuery *ListBalanceOpenapiQuery `json:"listBalanceOpenapiQuery,omitempty"`
 
 	ListBalanceOpenapiBody *ListBalanceOpenapiBody `json:"listBalanceOpenapiBody,omitempty"`

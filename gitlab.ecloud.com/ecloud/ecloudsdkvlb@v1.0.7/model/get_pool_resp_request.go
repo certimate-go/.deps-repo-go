@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type GetPoolRespRequest struct {
-
-
 	GetPoolRespPath *GetPoolRespPath `json:"getPoolRespPath,omitempty"`
 }
 
@@ -31,7 +29,6 @@ func (s *GetPoolRespRequest) SetGetPoolRespPath(v *GetPoolRespPath) *GetPoolResp
 	return s
 }
 
-
 type GetPoolRespRequestBuilder struct {
 	s *GetPoolRespRequest
 }
@@ -50,5 +47,3 @@ func (b *GetPoolRespRequestBuilder) GetPoolRespPath(v *GetPoolRespPath) *GetPool
 func (b *GetPoolRespRequestBuilder) Build() *GetPoolRespRequest {
 	return b.s
 }
-
-

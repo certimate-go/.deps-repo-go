@@ -4,37 +4,37 @@
 
 package model
 
-
 type ListDomainResponseResultsServiceTypeEnum string
 
 // List of ServiceType
 const (
-    ListDomainResponseResultsServiceTypeEnumBasic ListDomainResponseResultsServiceTypeEnum = "BASIC"
-    ListDomainResponseResultsServiceTypeEnumFree ListDomainResponseResultsServiceTypeEnum = "FREE"
-    ListDomainResponseResultsServiceTypeEnumPremium ListDomainResponseResultsServiceTypeEnum = "PREMIUM"
-    ListDomainResponseResultsServiceTypeEnumStandard ListDomainResponseResultsServiceTypeEnum = "STANDARD"
-    ListDomainResponseResultsServiceTypeEnumUltimate ListDomainResponseResultsServiceTypeEnum = "ULTIMATE"
+	ListDomainResponseResultsServiceTypeEnumBasic    ListDomainResponseResultsServiceTypeEnum = "BASIC"
+	ListDomainResponseResultsServiceTypeEnumFree     ListDomainResponseResultsServiceTypeEnum = "FREE"
+	ListDomainResponseResultsServiceTypeEnumPremium  ListDomainResponseResultsServiceTypeEnum = "PREMIUM"
+	ListDomainResponseResultsServiceTypeEnumStandard ListDomainResponseResultsServiceTypeEnum = "STANDARD"
+	ListDomainResponseResultsServiceTypeEnumUltimate ListDomainResponseResultsServiceTypeEnum = "ULTIMATE"
 )
+
 type ListDomainResponseResultsAdoptStateEnum string
 
 // List of AdoptState
 const (
-    ListDomainResponseResultsAdoptStateEnumUncertain ListDomainResponseResultsAdoptStateEnum = "UNCERTAIN"
-    ListDomainResponseResultsAdoptStateEnumUnused ListDomainResponseResultsAdoptStateEnum = "UNUSED"
-    ListDomainResponseResultsAdoptStateEnumUsing ListDomainResponseResultsAdoptStateEnum = "USING"
+	ListDomainResponseResultsAdoptStateEnumUncertain ListDomainResponseResultsAdoptStateEnum = "UNCERTAIN"
+	ListDomainResponseResultsAdoptStateEnumUnused    ListDomainResponseResultsAdoptStateEnum = "UNUSED"
+	ListDomainResponseResultsAdoptStateEnumUsing     ListDomainResponseResultsAdoptStateEnum = "USING"
 )
+
 type ListDomainResponseResultsInstanceStatusEnum string
 
 // List of InstanceStatus
 const (
-    ListDomainResponseResultsInstanceStatusEnumCanceling ListDomainResponseResultsInstanceStatusEnum = "CANCELING"
-    ListDomainResponseResultsInstanceStatusEnumDisabled ListDomainResponseResultsInstanceStatusEnum = "DISABLED"
-    ListDomainResponseResultsInstanceStatusEnumEnabled ListDomainResponseResultsInstanceStatusEnum = "ENABLED"
-    ListDomainResponseResultsInstanceStatusEnumExpired ListDomainResponseResultsInstanceStatusEnum = "EXPIRED"
+	ListDomainResponseResultsInstanceStatusEnumCanceling ListDomainResponseResultsInstanceStatusEnum = "CANCELING"
+	ListDomainResponseResultsInstanceStatusEnumDisabled  ListDomainResponseResultsInstanceStatusEnum = "DISABLED"
+	ListDomainResponseResultsInstanceStatusEnumEnabled   ListDomainResponseResultsInstanceStatusEnum = "ENABLED"
+	ListDomainResponseResultsInstanceStatusEnumExpired   ListDomainResponseResultsInstanceStatusEnum = "EXPIRED"
 )
 
 type ListDomainResponseResults struct {
-
 	// 套餐类型
 	ServiceType ListDomainResponseResultsServiceTypeEnum `json:"serviceType,omitempty"`
 

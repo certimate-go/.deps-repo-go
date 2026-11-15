@@ -5,24 +5,24 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
+
 type SetCdnDomainConfigRequestBackSourceHostTypeEnum string
 
 // List of Type
 const (
-    SetCdnDomainConfigRequestBackSourceHostTypeEnumAccelerated SetCdnDomainConfigRequestBackSourceHostTypeEnum = "ACCELERATED"
-    SetCdnDomainConfigRequestBackSourceHostTypeEnumSource SetCdnDomainConfigRequestBackSourceHostTypeEnum = "SOURCE"
-    SetCdnDomainConfigRequestBackSourceHostTypeEnumCustomize SetCdnDomainConfigRequestBackSourceHostTypeEnum = "CUSTOMIZE"
+	SetCdnDomainConfigRequestBackSourceHostTypeEnumAccelerated SetCdnDomainConfigRequestBackSourceHostTypeEnum = "ACCELERATED"
+	SetCdnDomainConfigRequestBackSourceHostTypeEnumSource      SetCdnDomainConfigRequestBackSourceHostTypeEnum = "SOURCE"
+	SetCdnDomainConfigRequestBackSourceHostTypeEnumCustomize   SetCdnDomainConfigRequestBackSourceHostTypeEnum = "CUSTOMIZE"
 )
 
 type SetCdnDomainConfigRequestBackSourceHost struct {
-
-    // 回源host配置是否开启，不开启，默认host为加速域名
+	// 回源host配置是否开启，不开启，默认host为加速域名
 	Enable *bool `json:"enable,omitempty"`
-    // 回源host
+	// 回源host
 	Host *string `json:"host,omitempty"`
-    // 域名类型:0:加速域名，1:源站域名，2:自定义域名
+	// 域名类型:0:加速域名，1:源站域名，2:自定义域名
 	Type *SetCdnDomainConfigRequestBackSourceHostTypeEnum `json:"type,omitempty"`
 }
 
@@ -53,7 +53,6 @@ func (s *SetCdnDomainConfigRequestBackSourceHost) SetType(v SetCdnDomainConfigRe
 	return s
 }
 
-
 type SetCdnDomainConfigRequestBackSourceHostBuilder struct {
 	s *SetCdnDomainConfigRequestBackSourceHost
 }
@@ -82,5 +81,3 @@ func (b *SetCdnDomainConfigRequestBackSourceHostBuilder) Type(v SetCdnDomainConf
 func (b *SetCdnDomainConfigRequestBackSourceHostBuilder) Build() *SetCdnDomainConfigRequestBackSourceHost {
 	return b.s
 }
-
-

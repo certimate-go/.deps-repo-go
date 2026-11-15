@@ -5,24 +5,24 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
+
 type IsPoolDeletablesResponseBodyOperateDisplayEnumEnum string
 
 // List of OperateDisplayEnum
 const (
-    IsPoolDeletablesResponseBodyOperateDisplayEnumEnumAllow IsPoolDeletablesResponseBodyOperateDisplayEnumEnum = "ALLOW"
-    IsPoolDeletablesResponseBodyOperateDisplayEnumEnumTempDeny IsPoolDeletablesResponseBodyOperateDisplayEnumEnum = "TEMP_DENY"
-    IsPoolDeletablesResponseBodyOperateDisplayEnumEnumForeverDeny IsPoolDeletablesResponseBodyOperateDisplayEnumEnum = "FOREVER_DENY"
+	IsPoolDeletablesResponseBodyOperateDisplayEnumEnumAllow       IsPoolDeletablesResponseBodyOperateDisplayEnumEnum = "ALLOW"
+	IsPoolDeletablesResponseBodyOperateDisplayEnumEnumTempDeny    IsPoolDeletablesResponseBodyOperateDisplayEnumEnum = "TEMP_DENY"
+	IsPoolDeletablesResponseBodyOperateDisplayEnumEnumForeverDeny IsPoolDeletablesResponseBodyOperateDisplayEnumEnum = "FOREVER_DENY"
 )
 
 type IsPoolDeletablesResponseBody struct {
-
-    // 后端服务器组ID
+	// 后端服务器组ID
 	PoolId *string `json:"poolId,omitempty"`
-    // 后端服务器组能否删除校验结果，ALLOW：可操作，TEMP_DENY：置灰，FOREVER_DENY：不可见
+	// 后端服务器组能否删除校验结果，ALLOW：可操作，TEMP_DENY：置灰，FOREVER_DENY：不可见
 	OperateDisplayEnum *IsPoolDeletablesResponseBodyOperateDisplayEnumEnum `json:"operateDisplayEnum,omitempty"`
-    // 后端服务器组能否删除信息
+	// 后端服务器组能否删除信息
 	Message *string `json:"message,omitempty"`
 }
 
@@ -53,7 +53,6 @@ func (s *IsPoolDeletablesResponseBody) SetMessage(v string) *IsPoolDeletablesRes
 	return s
 }
 
-
 type IsPoolDeletablesResponseBodyBuilder struct {
 	s *IsPoolDeletablesResponseBody
 }
@@ -82,5 +81,3 @@ func (b *IsPoolDeletablesResponseBodyBuilder) Message(v string) *IsPoolDeletable
 func (b *IsPoolDeletablesResponseBodyBuilder) Build() *IsPoolDeletablesResponseBody {
 	return b.s
 }
-
-

@@ -4,9 +4,6 @@
 
 package model
 
-
-
 type CreateFreeDomainRequest struct {
-
 	CreateFreeDomainBody *CreateFreeDomainBody `json:"createFreeDomainBody,omitempty"`
 }

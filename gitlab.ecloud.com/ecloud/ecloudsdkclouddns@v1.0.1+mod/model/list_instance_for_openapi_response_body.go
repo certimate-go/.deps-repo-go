@@ -4,10 +4,7 @@
 
 package model
 
-
-
 type ListInstanceForOpenapiResponseBody struct {
-
 	// 当前页的具体数据列表
 	Data *[]ListInstanceForOpenapiResponseData `json:"data,omitempty"`
 

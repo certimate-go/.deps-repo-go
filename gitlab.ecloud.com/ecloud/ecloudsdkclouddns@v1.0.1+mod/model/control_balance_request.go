@@ -4,9 +4,6 @@
 
 package model
 
-
-
 type ControlBalanceRequest struct {
-
 	ControlBalanceBody *ControlBalanceBody `json:"controlBalanceBody,omitempty"`
 }

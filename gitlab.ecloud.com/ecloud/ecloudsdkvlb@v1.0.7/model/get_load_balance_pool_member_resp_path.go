@@ -5,13 +5,13 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type GetLoadBalancePoolMemberRespPath struct {
-    position.Path
-    // 后端服务器ID
+	position.Path
+	// 后端服务器ID
 	MemberId *string `json:"memberId,omitempty"`
 }
 
@@ -32,7 +32,6 @@ func (s *GetLoadBalancePoolMemberRespPath) SetMemberId(v string) *GetLoadBalance
 	return s
 }
 
-
 type GetLoadBalancePoolMemberRespPathBuilder struct {
 	s *GetLoadBalancePoolMemberRespPath
 }
@@ -51,5 +50,3 @@ func (b *GetLoadBalancePoolMemberRespPathBuilder) MemberId(v string) *GetLoadBal
 func (b *GetLoadBalancePoolMemberRespPathBuilder) Build() *GetLoadBalancePoolMemberRespPath {
 	return b.s
 }
-
-

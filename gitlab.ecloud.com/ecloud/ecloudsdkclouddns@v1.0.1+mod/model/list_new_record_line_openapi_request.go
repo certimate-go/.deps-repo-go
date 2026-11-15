@@ -4,9 +4,6 @@
 
 package model
 
-
-
 type ListNewRecordLineOpenapiRequest struct {
-
 	ListNewRecordLineOpenapiQuery *ListNewRecordLineOpenapiQuery `json:"listNewRecordLineOpenapiQuery,omitempty"`
 }

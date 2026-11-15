@@ -5,34 +5,34 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
+
 type UpdateTLSNameResponseStateEnum string
 
 // List of State
 const (
-    UpdateTLSNameResponseStateEnumOk UpdateTLSNameResponseStateEnum = "OK"
-    UpdateTLSNameResponseStateEnumError UpdateTLSNameResponseStateEnum = "ERROR"
-    UpdateTLSNameResponseStateEnumException UpdateTLSNameResponseStateEnum = "EXCEPTION"
-    UpdateTLSNameResponseStateEnumAlarm UpdateTLSNameResponseStateEnum = "ALARM"
-    UpdateTLSNameResponseStateEnumForbidden UpdateTLSNameResponseStateEnum = "FORBIDDEN"
+	UpdateTLSNameResponseStateEnumOk        UpdateTLSNameResponseStateEnum = "OK"
+	UpdateTLSNameResponseStateEnumError     UpdateTLSNameResponseStateEnum = "ERROR"
+	UpdateTLSNameResponseStateEnumException UpdateTLSNameResponseStateEnum = "EXCEPTION"
+	UpdateTLSNameResponseStateEnumAlarm     UpdateTLSNameResponseStateEnum = "ALARM"
+	UpdateTLSNameResponseStateEnumForbidden UpdateTLSNameResponseStateEnum = "FORBIDDEN"
 )
 
 type UpdateTLSNameResponse struct {
-
-    // 异步流程跟踪ID
+	// 异步流程跟踪ID
 	AsyncKey *string `json:"asyncKey,omitempty"`
-    // 每个请求的序列号
+	// 每个请求的序列号
 	RequestId *string `json:"requestId,omitempty"`
-    // 页面国际化错误提示
+	// 页面国际化错误提示
 	ErrorMessage *string `json:"errorMessage,omitempty"`
-    // 统一错误码
+	// 统一错误码
 	ErrorCode *string `json:"errorCode,omitempty"`
-    // 返回状态码 OK（成功）,ERROR（错误）,EXCEPTION（异常）,ALARM（警告）,FORBIDDEN（禁止访问）
+	// 返回状态码 OK（成功）,ERROR（错误）,EXCEPTION（异常）,ALARM（警告）,FORBIDDEN（禁止访问）
 	State *UpdateTLSNameResponseStateEnum `json:"state,omitempty"`
-    // 请求成功时返回的数据
+	// 请求成功时返回的数据
 	Body *bool `json:"body,omitempty"`
-    // 统一错误码的自定义参数
+	// 统一错误码的自定义参数
 	ErrorParams []string `json:"errorParams,omitempty"`
 }
 
@@ -83,7 +83,6 @@ func (s *UpdateTLSNameResponse) SetErrorParams(v []string) *UpdateTLSNameRespons
 	return s
 }
 
-
 type UpdateTLSNameResponseBuilder struct {
 	s *UpdateTLSNameResponse
 }
@@ -132,5 +131,3 @@ func (b *UpdateTLSNameResponseBuilder) ErrorParams(v []string) *UpdateTLSNameRes
 func (b *UpdateTLSNameResponseBuilder) Build() *UpdateTLSNameResponse {
 	return b.s
 }
-
-

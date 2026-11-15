@@ -4,19 +4,17 @@
 
 package model
 
-
 type UpgradeOrderOpenapiResponseStateEnum string
 
 // List of State
 const (
-    UpgradeOrderOpenapiResponseStateEnumError UpgradeOrderOpenapiResponseStateEnum = "ERROR"
-    UpgradeOrderOpenapiResponseStateEnumException UpgradeOrderOpenapiResponseStateEnum = "EXCEPTION"
-    UpgradeOrderOpenapiResponseStateEnumForbidden UpgradeOrderOpenapiResponseStateEnum = "FORBIDDEN"
-    UpgradeOrderOpenapiResponseStateEnumOk UpgradeOrderOpenapiResponseStateEnum = "OK"
+	UpgradeOrderOpenapiResponseStateEnumError     UpgradeOrderOpenapiResponseStateEnum = "ERROR"
+	UpgradeOrderOpenapiResponseStateEnumException UpgradeOrderOpenapiResponseStateEnum = "EXCEPTION"
+	UpgradeOrderOpenapiResponseStateEnumForbidden UpgradeOrderOpenapiResponseStateEnum = "FORBIDDEN"
+	UpgradeOrderOpenapiResponseStateEnumOk        UpgradeOrderOpenapiResponseStateEnum = "OK"
 )
 
 type UpgradeOrderOpenapiResponse struct {
-
 	RequestId string `json:"requestId,omitempty"`
 
 	ErrorMessage string `json:"errorMessage,omitempty"`

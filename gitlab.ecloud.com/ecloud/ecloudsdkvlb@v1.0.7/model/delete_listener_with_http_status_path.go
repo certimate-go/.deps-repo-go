@@ -5,13 +5,13 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type DeleteListenerWithHttpStatusPath struct {
-    position.Path
-    // 负载均衡监听器ID
+	position.Path
+	// 负载均衡监听器ID
 	ListenerId *string `json:"listenerId,omitempty"`
 }
 
@@ -32,7 +32,6 @@ func (s *DeleteListenerWithHttpStatusPath) SetListenerId(v string) *DeleteListen
 	return s
 }
 
-
 type DeleteListenerWithHttpStatusPathBuilder struct {
 	s *DeleteListenerWithHttpStatusPath
 }
@@ -51,5 +50,3 @@ func (b *DeleteListenerWithHttpStatusPathBuilder) ListenerId(v string) *DeleteLi
 func (b *DeleteListenerWithHttpStatusPathBuilder) Build() *DeleteListenerWithHttpStatusPath {
 	return b.s
 }
-
-

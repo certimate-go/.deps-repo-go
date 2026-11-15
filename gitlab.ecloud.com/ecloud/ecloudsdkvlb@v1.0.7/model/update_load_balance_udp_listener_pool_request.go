@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type UpdateLoadBalanceUDPListenerPoolRequest struct {
-
-
 	UpdateLoadBalanceUDPListenerPoolBody *UpdateLoadBalanceUDPListenerPoolBody `json:"updateLoadBalanceUDPListenerPoolBody,omitempty"`
 }
 
@@ -31,7 +29,6 @@ func (s *UpdateLoadBalanceUDPListenerPoolRequest) SetUpdateLoadBalanceUDPListene
 	return s
 }
 
-
 type UpdateLoadBalanceUDPListenerPoolRequestBuilder struct {
 	s *UpdateLoadBalanceUDPListenerPoolRequest
 }
@@ -50,5 +47,3 @@ func (b *UpdateLoadBalanceUDPListenerPoolRequestBuilder) UpdateLoadBalanceUDPLis
 func (b *UpdateLoadBalanceUDPListenerPoolRequestBuilder) Build() *UpdateLoadBalanceUDPListenerPoolRequest {
 	return b.s
 }
-
-

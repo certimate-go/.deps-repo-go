@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type CheckCdnFromApiRequest struct {
-
-
 	CheckCdnFromApiPath *CheckCdnFromApiPath `json:"checkCdnFromApiPath,omitempty"`
 }
 
@@ -31,7 +29,6 @@ func (s *CheckCdnFromApiRequest) SetCheckCdnFromApiPath(v *CheckCdnFromApiPath) 
 	return s
 }
 
-
 type CheckCdnFromApiRequestBuilder struct {
 	s *CheckCdnFromApiRequest
 }
@@ -50,5 +47,3 @@ func (b *CheckCdnFromApiRequestBuilder) CheckCdnFromApiPath(v *CheckCdnFromApiPa
 func (b *CheckCdnFromApiRequestBuilder) Build() *CheckCdnFromApiRequest {
 	return b.s
 }
-
-

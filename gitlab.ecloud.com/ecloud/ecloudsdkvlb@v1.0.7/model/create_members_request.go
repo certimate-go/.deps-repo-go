@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type CreateMembersRequest struct {
-
-
 	CreateMembersPath *CreateMembersPath `json:"createMembersPath,omitempty"`
 
 	CreateMembersBody *CreateMembersBody `json:"createMembersBody,omitempty"`
@@ -38,7 +36,6 @@ func (s *CreateMembersRequest) SetCreateMembersBody(v *CreateMembersBody) *Creat
 	return s
 }
 
-
 type CreateMembersRequestBuilder struct {
 	s *CreateMembersRequest
 }
@@ -62,5 +59,3 @@ func (b *CreateMembersRequestBuilder) CreateMembersBody(v *CreateMembersBody) *C
 func (b *CreateMembersRequestBuilder) Build() *CreateMembersRequest {
 	return b.s
 }
-
-

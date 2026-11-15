@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type DeleteLoadbalanceCertificationRequest struct {
-
-
 	DeleteLoadbalanceCertificationPath *DeleteLoadbalanceCertificationPath `json:"deleteLoadbalanceCertificationPath,omitempty"`
 }
 
@@ -31,7 +29,6 @@ func (s *DeleteLoadbalanceCertificationRequest) SetDeleteLoadbalanceCertificatio
 	return s
 }
 
-
 type DeleteLoadbalanceCertificationRequestBuilder struct {
 	s *DeleteLoadbalanceCertificationRequest
 }
@@ -50,5 +47,3 @@ func (b *DeleteLoadbalanceCertificationRequestBuilder) DeleteLoadbalanceCertific
 func (b *DeleteLoadbalanceCertificationRequestBuilder) Build() *DeleteLoadbalanceCertificationRequest {
 	return b.s
 }
-
-

@@ -5,33 +5,33 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type UpdateLoadBalanceTCPListenerBody struct {
-    position.Body
-    // 绑定的访问控制组的名字
+	position.Body
+	// 绑定的访问控制组的名字
 	GroupName *string `json:"groupName,omitempty"`
-    // 绑定的访问控制组类型。黑名单：blacklist，白名单：whitelist
+	// 绑定的访问控制组类型。黑名单：blacklist，白名单：whitelist
 	GroupType *string `json:"groupType,omitempty"`
-    // 空闲超时时间，取值为10-300
+	// 空闲超时时间，取值为10-300
 	KeepAliveTimeout *int32 `json:"keepAliveTimeout,omitempty"`
-    // 监听器备注
+	// 监听器备注
 	Notes *string `json:"notes,omitempty"`
-    // 监听器是否支持proxy_protocol
+	// 监听器是否支持proxy_protocol
 	ProxyProtocol *bool `json:"proxyProtocol,omitempty"`
-    // 监听器名称为5~64位的英文、数字、下划线、中划线等的组合
+	// 监听器名称为5~64位的英文、数字、下划线、中划线等的组合
 	Name *string `json:"name,omitempty"`
-    // 修改监听器绑定的后端服务器组ID
+	// 修改监听器绑定的后端服务器组ID
 	PoolId *string `json:"poolId,omitempty"`
-    // 是否开启访问控制
+	// 是否开启访问控制
 	GroupEnabled *bool `json:"groupEnabled,omitempty"`
-    // 监听器的ID
+	// 监听器的ID
 	Id *string `json:"id,omitempty"`
-    // 访问控制组的ID
+	// 访问控制组的ID
 	ControlGroupId *string `json:"controlGroupId,omitempty"`
-    // 是否开启获取真实IP
+	// 是否开启获取真实IP
 	Transparent *bool `json:"transparent,omitempty"`
 }
 
@@ -102,7 +102,6 @@ func (s *UpdateLoadBalanceTCPListenerBody) SetTransparent(v bool) *UpdateLoadBal
 	return s
 }
 
-
 type UpdateLoadBalanceTCPListenerBodyBuilder struct {
 	s *UpdateLoadBalanceTCPListenerBody
 }
@@ -171,5 +170,3 @@ func (b *UpdateLoadBalanceTCPListenerBodyBuilder) Transparent(v bool) *UpdateLoa
 func (b *UpdateLoadBalanceTCPListenerBodyBuilder) Build() *UpdateLoadBalanceTCPListenerBody {
 	return b.s
 }
-
-

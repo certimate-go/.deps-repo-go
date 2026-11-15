@@ -4,10 +4,7 @@
 
 package model
 
-
-
 type GetOperationLogResponseResults struct {
-
 	// 域名
 	DomainName string `json:"domainName,omitempty"`
 

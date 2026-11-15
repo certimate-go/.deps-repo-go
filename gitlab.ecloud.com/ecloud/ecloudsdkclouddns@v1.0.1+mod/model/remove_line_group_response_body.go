@@ -4,17 +4,15 @@
 
 package model
 
-
 type RemoveLineGroupResponseBodyCodeEnum string
 
 // List of Code
 const (
-    RemoveLineGroupResponseBodyCodeEnumError RemoveLineGroupResponseBodyCodeEnum = "ERROR"
-    RemoveLineGroupResponseBodyCodeEnumSuccess RemoveLineGroupResponseBodyCodeEnum = "SUCCESS"
+	RemoveLineGroupResponseBodyCodeEnumError   RemoveLineGroupResponseBodyCodeEnum = "ERROR"
+	RemoveLineGroupResponseBodyCodeEnumSuccess RemoveLineGroupResponseBodyCodeEnum = "SUCCESS"
 )
 
 type RemoveLineGroupResponseBody struct {
-
 	// 结果说明
 	Msg string `json:"msg,omitempty"`
 

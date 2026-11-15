@@ -5,27 +5,27 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type AddDomainServerCertificateBody struct {
-    position.Body
-    // 证书联系人手机号
+	position.Body
+	// 证书联系人手机号
 	ContactMobile *string `json:"contactMobile,omitempty"`
-    // 证书私钥
+	// 证书私钥
 	PrivateKey *string `json:"privateKey,omitempty"`
-    // 证书联系人邮箱
+	// 证书联系人邮箱
 	ContactEmail *string `json:"contactEmail,omitempty"`
-    // 证书联系人
+	// 证书联系人
 	ContactName *string `json:"contactName,omitempty"`
-    // 证书公钥
+	// 证书公钥
 	Certificate *string `json:"certificate,omitempty"`
-    // 证书名称
+	// 证书名称
 	CrtName *string `json:"crtName,omitempty"`
-    // 绑定的域名id
+	// 绑定的域名id
 	DomainId *int32 `json:"domainId,omitempty"`
-    // 证书唯一id，证书新增时无需填写，修改时为必填项
+	// 证书唯一id，证书新增时无需填写，修改时为必填项
 	UniqueId *string `json:"uniqueId,omitempty"`
 }
 
@@ -81,7 +81,6 @@ func (s *AddDomainServerCertificateBody) SetUniqueId(v string) *AddDomainServerC
 	return s
 }
 
-
 type AddDomainServerCertificateBodyBuilder struct {
 	s *AddDomainServerCertificateBody
 }
@@ -135,5 +134,3 @@ func (b *AddDomainServerCertificateBodyBuilder) UniqueId(v string) *AddDomainSer
 func (b *AddDomainServerCertificateBodyBuilder) Build() *AddDomainServerCertificateBody {
 	return b.s
 }
-
-

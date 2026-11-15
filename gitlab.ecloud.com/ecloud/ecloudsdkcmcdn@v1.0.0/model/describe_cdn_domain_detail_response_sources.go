@@ -5,36 +5,37 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
+
 type DescribeCdnDomainDetailResponseSourcesBackProtocolEnum string
 
 // List of BackProtocol
 const (
-    DescribeCdnDomainDetailResponseSourcesBackProtocolEnumFlow DescribeCdnDomainDetailResponseSourcesBackProtocolEnum = "FLOW"
-    DescribeCdnDomainDetailResponseSourcesBackProtocolEnumHttp DescribeCdnDomainDetailResponseSourcesBackProtocolEnum = "HTTP"
-    DescribeCdnDomainDetailResponseSourcesBackProtocolEnumHttps DescribeCdnDomainDetailResponseSourcesBackProtocolEnum = "HTTPS"
+	DescribeCdnDomainDetailResponseSourcesBackProtocolEnumFlow  DescribeCdnDomainDetailResponseSourcesBackProtocolEnum = "FLOW"
+	DescribeCdnDomainDetailResponseSourcesBackProtocolEnumHttp  DescribeCdnDomainDetailResponseSourcesBackProtocolEnum = "HTTP"
+	DescribeCdnDomainDetailResponseSourcesBackProtocolEnumHttps DescribeCdnDomainDetailResponseSourcesBackProtocolEnum = "HTTPS"
 )
+
 type DescribeCdnDomainDetailResponseSourcesBackTypeEnum string
 
 // List of BackType
 const (
-    DescribeCdnDomainDetailResponseSourcesBackTypeEnumIp DescribeCdnDomainDetailResponseSourcesBackTypeEnum = "ip"
-    DescribeCdnDomainDetailResponseSourcesBackTypeEnumDomain DescribeCdnDomainDetailResponseSourcesBackTypeEnum = "domain"
-    DescribeCdnDomainDetailResponseSourcesBackTypeEnumEos DescribeCdnDomainDetailResponseSourcesBackTypeEnum = "eos"
+	DescribeCdnDomainDetailResponseSourcesBackTypeEnumIp     DescribeCdnDomainDetailResponseSourcesBackTypeEnum = "ip"
+	DescribeCdnDomainDetailResponseSourcesBackTypeEnumDomain DescribeCdnDomainDetailResponseSourcesBackTypeEnum = "domain"
+	DescribeCdnDomainDetailResponseSourcesBackTypeEnumEos    DescribeCdnDomainDetailResponseSourcesBackTypeEnum = "eos"
 )
 
 type DescribeCdnDomainDetailResponseSources struct {
-
-    // 回源协议
+	// 回源协议
 	BackProtocol *DescribeCdnDomainDetailResponseSourcesBackProtocolEnum `json:"backProtocol,omitempty"`
-    // 回源配置id
+	// 回源配置id
 	SourceId *int32 `json:"sourceId,omitempty"`
-    // 回源地址，ip或域名
+	// 回源地址，ip或域名
 	BackAddr *string `json:"backAddr,omitempty"`
-    // 回源地址类型
+	// 回源地址类型
 	BackType *DescribeCdnDomainDetailResponseSourcesBackTypeEnum `json:"backType,omitempty"`
-    // 是否为主站
+	// 是否为主站
 	Primary *bool `json:"primary,omitempty"`
 }
 
@@ -75,7 +76,6 @@ func (s *DescribeCdnDomainDetailResponseSources) SetPrimary(v bool) *DescribeCdn
 	return s
 }
 
-
 type DescribeCdnDomainDetailResponseSourcesBuilder struct {
 	s *DescribeCdnDomainDetailResponseSources
 }
@@ -114,5 +114,3 @@ func (b *DescribeCdnDomainDetailResponseSourcesBuilder) Primary(v bool) *Describ
 func (b *DescribeCdnDomainDetailResponseSourcesBuilder) Build() *DescribeCdnDomainDetailResponseSources {
 	return b.s
 }
-
-

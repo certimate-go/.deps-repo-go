@@ -5,13 +5,13 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type DeleteCdnDomainsQuery struct {
-    position.Query
-    // 域名Id列表
+	position.Query
+	// 域名Id列表
 	DomainIds *string `json:"domainIds,omitempty"`
 }
 
@@ -32,7 +32,6 @@ func (s *DeleteCdnDomainsQuery) SetDomainIds(v string) *DeleteCdnDomainsQuery {
 	return s
 }
 
-
 type DeleteCdnDomainsQueryBuilder struct {
 	s *DeleteCdnDomainsQuery
 }
@@ -51,5 +50,3 @@ func (b *DeleteCdnDomainsQueryBuilder) DomainIds(v string) *DeleteCdnDomainsQuer
 func (b *DeleteCdnDomainsQueryBuilder) Build() *DeleteCdnDomainsQuery {
 	return b.s
 }
-
-

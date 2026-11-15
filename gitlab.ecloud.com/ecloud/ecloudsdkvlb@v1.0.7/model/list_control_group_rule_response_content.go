@@ -5,32 +5,31 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type ListControlGroupRuleResponseContent struct {
-
-    // 修改时间
+	// 修改时间
 	ModifiedTime *string `json:"modifiedTime,omitempty"`
-    // IP版本（IPv4或IPv6）
+	// IP版本（IPv4或IPv6）
 	IpVersion *string `json:"ipVersion,omitempty"`
-    // 是否删除
+	// 是否删除
 	IsDelete *bool `json:"isDelete,omitempty"`
-    // 用户名
+	// 用户名
 	Proposer *string `json:"proposer,omitempty"`
-    // 客户ID
+	// 客户ID
 	CustomerId *string `json:"customerId,omitempty"`
-    // IP地址
+	// IP地址
 	IpAddress *string `json:"ipAddress,omitempty"`
-    // 创建时间
+	// 创建时间
 	CreatedTime *string `json:"createdTime,omitempty"`
-    // 访问控制组规则描述
+	// 访问控制组规则描述
 	Description *string `json:"description,omitempty"`
-    // 修改人
+	// 修改人
 	ModifiedBy *string `json:"modifiedBy,omitempty"`
-    // 访问控制组规则ID
+	// 访问控制组规则ID
 	Id *string `json:"id,omitempty"`
-    // 控制组ID
+	// 控制组ID
 	ControlGroupId *string `json:"controlGroupId,omitempty"`
 }
 
@@ -101,7 +100,6 @@ func (s *ListControlGroupRuleResponseContent) SetControlGroupId(v string) *ListC
 	return s
 }
 
-
 type ListControlGroupRuleResponseContentBuilder struct {
 	s *ListControlGroupRuleResponseContent
 }
@@ -170,5 +168,3 @@ func (b *ListControlGroupRuleResponseContentBuilder) ControlGroupId(v string) *L
 func (b *ListControlGroupRuleResponseContentBuilder) Build() *ListControlGroupRuleResponseContent {
 	return b.s
 }
-
-

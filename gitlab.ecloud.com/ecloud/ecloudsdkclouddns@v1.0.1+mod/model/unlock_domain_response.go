@@ -4,19 +4,17 @@
 
 package model
 
-
 type UnlockDomainResponseStateEnum string
 
 // List of State
 const (
-    UnlockDomainResponseStateEnumError UnlockDomainResponseStateEnum = "ERROR"
-    UnlockDomainResponseStateEnumException UnlockDomainResponseStateEnum = "EXCEPTION"
-    UnlockDomainResponseStateEnumForbidden UnlockDomainResponseStateEnum = "FORBIDDEN"
-    UnlockDomainResponseStateEnumOk UnlockDomainResponseStateEnum = "OK"
+	UnlockDomainResponseStateEnumError     UnlockDomainResponseStateEnum = "ERROR"
+	UnlockDomainResponseStateEnumException UnlockDomainResponseStateEnum = "EXCEPTION"
+	UnlockDomainResponseStateEnumForbidden UnlockDomainResponseStateEnum = "FORBIDDEN"
+	UnlockDomainResponseStateEnumOk        UnlockDomainResponseStateEnum = "OK"
 )
 
 type UnlockDomainResponse struct {
-
 	RequestId string `json:"requestId,omitempty"`
 
 	ErrorMessage string `json:"errorMessage,omitempty"`

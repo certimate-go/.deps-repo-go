@@ -5,44 +5,44 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
+
 type ListNewServerPortsForMemberResponseContentOpStatusEnum string
 
 // List of OpStatus
 const (
-    ListNewServerPortsForMemberResponseContentOpStatusEnumCreating ListNewServerPortsForMemberResponseContentOpStatusEnum = "CREATING"
-    ListNewServerPortsForMemberResponseContentOpStatusEnumOk ListNewServerPortsForMemberResponseContentOpStatusEnum = "OK"
-    ListNewServerPortsForMemberResponseContentOpStatusEnumRebooting ListNewServerPortsForMemberResponseContentOpStatusEnum = "REBOOTING"
-    ListNewServerPortsForMemberResponseContentOpStatusEnumFrozen ListNewServerPortsForMemberResponseContentOpStatusEnum = "FROZEN"
-    ListNewServerPortsForMemberResponseContentOpStatusEnumBackupRebuilding ListNewServerPortsForMemberResponseContentOpStatusEnum = "BACKUP_REBUILDING"
-    ListNewServerPortsForMemberResponseContentOpStatusEnumRebuilding ListNewServerPortsForMemberResponseContentOpStatusEnum = "REBUILDING"
-    ListNewServerPortsForMemberResponseContentOpStatusEnumResizing ListNewServerPortsForMemberResponseContentOpStatusEnum = "RESIZING"
-    ListNewServerPortsForMemberResponseContentOpStatusEnumShelving ListNewServerPortsForMemberResponseContentOpStatusEnum = "SHELVING"
-    ListNewServerPortsForMemberResponseContentOpStatusEnumUnshelving ListNewServerPortsForMemberResponseContentOpStatusEnum = "UNSHELVING"
-    ListNewServerPortsForMemberResponseContentOpStatusEnumStarting ListNewServerPortsForMemberResponseContentOpStatusEnum = "STARTING"
-    ListNewServerPortsForMemberResponseContentOpStatusEnumStoping ListNewServerPortsForMemberResponseContentOpStatusEnum = "STOPING"
-    ListNewServerPortsForMemberResponseContentOpStatusEnumPasswordUpdating ListNewServerPortsForMemberResponseContentOpStatusEnum = "PASSWORD_UPDATING"
-    ListNewServerPortsForMemberResponseContentOpStatusEnumBackuping ListNewServerPortsForMemberResponseContentOpStatusEnum = "BACKUPING"
-    ListNewServerPortsForMemberResponseContentOpStatusEnumImageCreating ListNewServerPortsForMemberResponseContentOpStatusEnum = "IMAGE_CREATING"
-    ListNewServerPortsForMemberResponseContentOpStatusEnumUnrecognized ListNewServerPortsForMemberResponseContentOpStatusEnum = "UNRECOGNIZED"
-    ListNewServerPortsForMemberResponseContentOpStatusEnumBootVolumeResizing ListNewServerPortsForMemberResponseContentOpStatusEnum = "BOOT_VOLUME_RESIZING"
-    ListNewServerPortsForMemberResponseContentOpStatusEnumDeleting ListNewServerPortsForMemberResponseContentOpStatusEnum = "DELETING"
-    ListNewServerPortsForMemberResponseContentOpStatusEnumSecondDeleting ListNewServerPortsForMemberResponseContentOpStatusEnum = "SECOND_DELETING"
-    ListNewServerPortsForMemberResponseContentOpStatusEnumMigrating ListNewServerPortsForMemberResponseContentOpStatusEnum = "MIGRATING"
+	ListNewServerPortsForMemberResponseContentOpStatusEnumCreating           ListNewServerPortsForMemberResponseContentOpStatusEnum = "CREATING"
+	ListNewServerPortsForMemberResponseContentOpStatusEnumOk                 ListNewServerPortsForMemberResponseContentOpStatusEnum = "OK"
+	ListNewServerPortsForMemberResponseContentOpStatusEnumRebooting          ListNewServerPortsForMemberResponseContentOpStatusEnum = "REBOOTING"
+	ListNewServerPortsForMemberResponseContentOpStatusEnumFrozen             ListNewServerPortsForMemberResponseContentOpStatusEnum = "FROZEN"
+	ListNewServerPortsForMemberResponseContentOpStatusEnumBackupRebuilding   ListNewServerPortsForMemberResponseContentOpStatusEnum = "BACKUP_REBUILDING"
+	ListNewServerPortsForMemberResponseContentOpStatusEnumRebuilding         ListNewServerPortsForMemberResponseContentOpStatusEnum = "REBUILDING"
+	ListNewServerPortsForMemberResponseContentOpStatusEnumResizing           ListNewServerPortsForMemberResponseContentOpStatusEnum = "RESIZING"
+	ListNewServerPortsForMemberResponseContentOpStatusEnumShelving           ListNewServerPortsForMemberResponseContentOpStatusEnum = "SHELVING"
+	ListNewServerPortsForMemberResponseContentOpStatusEnumUnshelving         ListNewServerPortsForMemberResponseContentOpStatusEnum = "UNSHELVING"
+	ListNewServerPortsForMemberResponseContentOpStatusEnumStarting           ListNewServerPortsForMemberResponseContentOpStatusEnum = "STARTING"
+	ListNewServerPortsForMemberResponseContentOpStatusEnumStoping            ListNewServerPortsForMemberResponseContentOpStatusEnum = "STOPING"
+	ListNewServerPortsForMemberResponseContentOpStatusEnumPasswordUpdating   ListNewServerPortsForMemberResponseContentOpStatusEnum = "PASSWORD_UPDATING"
+	ListNewServerPortsForMemberResponseContentOpStatusEnumBackuping          ListNewServerPortsForMemberResponseContentOpStatusEnum = "BACKUPING"
+	ListNewServerPortsForMemberResponseContentOpStatusEnumImageCreating      ListNewServerPortsForMemberResponseContentOpStatusEnum = "IMAGE_CREATING"
+	ListNewServerPortsForMemberResponseContentOpStatusEnumUnrecognized       ListNewServerPortsForMemberResponseContentOpStatusEnum = "UNRECOGNIZED"
+	ListNewServerPortsForMemberResponseContentOpStatusEnumBootVolumeResizing ListNewServerPortsForMemberResponseContentOpStatusEnum = "BOOT_VOLUME_RESIZING"
+	ListNewServerPortsForMemberResponseContentOpStatusEnumDeleting           ListNewServerPortsForMemberResponseContentOpStatusEnum = "DELETING"
+	ListNewServerPortsForMemberResponseContentOpStatusEnumSecondDeleting     ListNewServerPortsForMemberResponseContentOpStatusEnum = "SECOND_DELETING"
+	ListNewServerPortsForMemberResponseContentOpStatusEnumMigrating          ListNewServerPortsForMemberResponseContentOpStatusEnum = "MIGRATING"
 )
 
 type ListNewServerPortsForMemberResponseContent struct {
-
-    // 子网ID
+	// 子网ID
 	SubnetId *string `json:"subnetId,omitempty"`
-    // 绑定的资源ID
+	// 绑定的资源ID
 	ResourceId *string `json:"resourceId,omitempty"`
-    // 内网IP
+	// 内网IP
 	PrivateIp *string `json:"privateIp,omitempty"`
-    // 绑定的资源名称
+	// 绑定的资源名称
 	ResourceName *string `json:"resourceName,omitempty"`
-    // 云主机状态，使用时注意实时查询云主机的状态，https://eop.vip.ha.core:18080/portal/product/vm
+	// 云主机状态，使用时注意实时查询云主机的状态，https://eop.vip.ha.core:18080/portal/product/vm
 	OpStatus *ListNewServerPortsForMemberResponseContentOpStatusEnum `json:"opStatus,omitempty"`
 }
 
@@ -83,7 +83,6 @@ func (s *ListNewServerPortsForMemberResponseContent) SetOpStatus(v ListNewServer
 	return s
 }
 
-
 type ListNewServerPortsForMemberResponseContentBuilder struct {
 	s *ListNewServerPortsForMemberResponseContent
 }
@@ -122,5 +121,3 @@ func (b *ListNewServerPortsForMemberResponseContentBuilder) OpStatus(v ListNewSe
 func (b *ListNewServerPortsForMemberResponseContentBuilder) Build() *ListNewServerPortsForMemberResponseContent {
 	return b.s
 }
-
-

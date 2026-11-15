@@ -5,12 +5,11 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type ElbOrderDeleteResponseBody struct {
-
-    // 是否删除
+	// 是否删除
 	IsDeleted *bool `json:"isDeleted,omitempty"`
 }
 
@@ -31,7 +30,6 @@ func (s *ElbOrderDeleteResponseBody) SetIsDeleted(v bool) *ElbOrderDeleteRespons
 	return s
 }
 
-
 type ElbOrderDeleteResponseBodyBuilder struct {
 	s *ElbOrderDeleteResponseBody
 }
@@ -50,5 +48,3 @@ func (b *ElbOrderDeleteResponseBodyBuilder) IsDeleted(v bool) *ElbOrderDeleteRes
 func (b *ElbOrderDeleteResponseBodyBuilder) Build() *ElbOrderDeleteResponseBody {
 	return b.s
 }
-
-

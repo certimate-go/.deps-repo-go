@@ -4,19 +4,17 @@
 
 package model
 
-
 type CancelOrderForOpenapiResponseStateEnum string
 
 // List of State
 const (
-    CancelOrderForOpenapiResponseStateEnumError CancelOrderForOpenapiResponseStateEnum = "ERROR"
-    CancelOrderForOpenapiResponseStateEnumException CancelOrderForOpenapiResponseStateEnum = "EXCEPTION"
-    CancelOrderForOpenapiResponseStateEnumForbidden CancelOrderForOpenapiResponseStateEnum = "FORBIDDEN"
-    CancelOrderForOpenapiResponseStateEnumOk CancelOrderForOpenapiResponseStateEnum = "OK"
+	CancelOrderForOpenapiResponseStateEnumError     CancelOrderForOpenapiResponseStateEnum = "ERROR"
+	CancelOrderForOpenapiResponseStateEnumException CancelOrderForOpenapiResponseStateEnum = "EXCEPTION"
+	CancelOrderForOpenapiResponseStateEnumForbidden CancelOrderForOpenapiResponseStateEnum = "FORBIDDEN"
+	CancelOrderForOpenapiResponseStateEnumOk        CancelOrderForOpenapiResponseStateEnum = "OK"
 )
 
 type CancelOrderForOpenapiResponse struct {
-
 	RequestId string `json:"requestId,omitempty"`
 
 	ErrorMessage string `json:"errorMessage,omitempty"`

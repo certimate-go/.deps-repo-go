@@ -5,13 +5,13 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type ListPoolRespPath struct {
-    position.Path
-    // 负载均衡ID
+	position.Path
+	// 负载均衡ID
 	LoadBalanceId *string `json:"loadBalanceId,omitempty"`
 }
 
@@ -32,7 +32,6 @@ func (s *ListPoolRespPath) SetLoadBalanceId(v string) *ListPoolRespPath {
 	return s
 }
 
-
 type ListPoolRespPathBuilder struct {
 	s *ListPoolRespPath
 }
@@ -51,5 +50,3 @@ func (b *ListPoolRespPathBuilder) LoadBalanceId(v string) *ListPoolRespPathBuild
 func (b *ListPoolRespPathBuilder) Build() *ListPoolRespPath {
 	return b.s
 }
-
-

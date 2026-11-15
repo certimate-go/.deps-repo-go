@@ -4,9 +4,6 @@
 
 package model
 
-
-
 type CancelOrderForOpenapiRequest struct {
-
 	CancelOrderForOpenapiBody *CancelOrderForOpenapiBody `json:"cancelOrderForOpenapiBody,omitempty"`
 }

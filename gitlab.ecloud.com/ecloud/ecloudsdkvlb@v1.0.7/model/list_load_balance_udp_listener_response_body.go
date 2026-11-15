@@ -5,14 +5,13 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type ListLoadBalanceUDPListenerResponseBody struct {
-
-    // 满足查询条件的总个数
+	// 满足查询条件的总个数
 	Total *int32 `json:"total,omitempty"`
-    // 分页查询返回的具体结构体
+	// 分页查询返回的具体结构体
 	Content *[]ListLoadBalanceUDPListenerResponseContent `json:"content,omitempty"`
 }
 
@@ -38,7 +37,6 @@ func (s *ListLoadBalanceUDPListenerResponseBody) SetContent(v []ListLoadBalanceU
 	return s
 }
 
-
 type ListLoadBalanceUDPListenerResponseBodyBuilder struct {
 	s *ListLoadBalanceUDPListenerResponseBody
 }
@@ -62,5 +60,3 @@ func (b *ListLoadBalanceUDPListenerResponseBodyBuilder) Content(v []ListLoadBala
 func (b *ListLoadBalanceUDPListenerResponseBodyBuilder) Build() *ListLoadBalanceUDPListenerResponseBody {
 	return b.s
 }
-
-

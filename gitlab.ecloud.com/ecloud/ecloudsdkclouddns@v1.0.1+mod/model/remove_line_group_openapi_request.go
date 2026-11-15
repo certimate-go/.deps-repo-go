@@ -4,9 +4,6 @@
 
 package model
 
-
-
 type RemoveLineGroupOpenapiRequest struct {
-
 	RemoveLineGroupOpenapiBody *RemoveLineGroupOpenapiBody `json:"removeLineGroupOpenapiBody,omitempty"`
 }

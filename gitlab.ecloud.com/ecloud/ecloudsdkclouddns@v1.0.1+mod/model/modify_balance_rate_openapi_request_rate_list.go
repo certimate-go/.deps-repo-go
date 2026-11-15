@@ -4,10 +4,7 @@
 
 package model
 
-
-
 type ModifyBalanceRateOpenapiRequestRateList struct {
-
 	// 解析记录ID
 	RecordId string `json:"recordId"`
 

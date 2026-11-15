@@ -5,13 +5,13 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type GetLoadBalanceDetailRespQuery struct {
-    position.Query
-    // 用户是否可见
+	position.Query
+	// 用户是否可见
 	Visible *bool `json:"visible,omitempty"`
 }
 
@@ -32,7 +32,6 @@ func (s *GetLoadBalanceDetailRespQuery) SetVisible(v bool) *GetLoadBalanceDetail
 	return s
 }
 
-
 type GetLoadBalanceDetailRespQueryBuilder struct {
 	s *GetLoadBalanceDetailRespQuery
 }
@@ -51,5 +50,3 @@ func (b *GetLoadBalanceDetailRespQueryBuilder) Visible(v bool) *GetLoadBalanceDe
 func (b *GetLoadBalanceDetailRespQueryBuilder) Build() *GetLoadBalanceDetailRespQuery {
 	return b.s
 }
-
-

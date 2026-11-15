@@ -4,9 +4,6 @@
 
 package model
 
-
-
 type ControlDomainRequest struct {
-
 	ControlDomainBody *ControlDomainBody `json:"controlDomainBody,omitempty"`
 }

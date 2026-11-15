@@ -5,15 +5,15 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type UpdateLoadBalancListenerNameBody struct {
-    position.Body
-    // 监听器名称为5~64位的英文、数字、下划线、中划线等的组合
+	position.Body
+	// 监听器名称为5~64位的英文、数字、下划线、中划线等的组合
 	Name *string `json:"name,omitempty"`
-    // 监听器ID
+	// 监听器ID
 	Id *string `json:"id,omitempty"`
 }
 
@@ -39,7 +39,6 @@ func (s *UpdateLoadBalancListenerNameBody) SetId(v string) *UpdateLoadBalancList
 	return s
 }
 
-
 type UpdateLoadBalancListenerNameBodyBuilder struct {
 	s *UpdateLoadBalancListenerNameBody
 }
@@ -63,5 +62,3 @@ func (b *UpdateLoadBalancListenerNameBodyBuilder) Id(v string) *UpdateLoadBalanc
 func (b *UpdateLoadBalancListenerNameBodyBuilder) Build() *UpdateLoadBalancListenerNameBody {
 	return b.s
 }
-
-

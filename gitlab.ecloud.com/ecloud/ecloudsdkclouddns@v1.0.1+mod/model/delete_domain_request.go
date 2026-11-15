@@ -4,9 +4,6 @@
 
 package model
 
-
-
 type DeleteDomainRequest struct {
-
 	DeleteDomainBody *DeleteDomainBody `json:"deleteDomainBody,omitempty"`
 }

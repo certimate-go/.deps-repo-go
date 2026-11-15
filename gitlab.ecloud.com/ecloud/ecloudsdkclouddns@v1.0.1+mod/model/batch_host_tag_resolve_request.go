@@ -4,9 +4,6 @@
 
 package model
 
-
-
 type BatchHostTagResolveRequest struct {
-
 	BatchHostTagResolveQuery *BatchHostTagResolveQuery `json:"batchHostTagResolveQuery,omitempty"`
 }

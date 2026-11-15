@@ -4,9 +4,6 @@
 
 package model
 
-
-
 type ControlDomainOpenapiRequest struct {
-
 	ControlDomainOpenapiBody *ControlDomainOpenapiBody `json:"controlDomainOpenapiBody,omitempty"`
 }

@@ -5,13 +5,13 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type DeletePoolAsyncPath struct {
-    position.Path
-    // 后端服务器组ID
+	position.Path
+	// 后端服务器组ID
 	PoolId *string `json:"poolId,omitempty"`
 }
 
@@ -32,7 +32,6 @@ func (s *DeletePoolAsyncPath) SetPoolId(v string) *DeletePoolAsyncPath {
 	return s
 }
 
-
 type DeletePoolAsyncPathBuilder struct {
 	s *DeletePoolAsyncPath
 }
@@ -51,5 +50,3 @@ func (b *DeletePoolAsyncPathBuilder) PoolId(v string) *DeletePoolAsyncPathBuilde
 func (b *DeletePoolAsyncPathBuilder) Build() *DeletePoolAsyncPath {
 	return b.s
 }
-
-

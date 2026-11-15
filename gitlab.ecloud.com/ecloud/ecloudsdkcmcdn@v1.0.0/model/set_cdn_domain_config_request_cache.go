@@ -5,12 +5,11 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type SetCdnDomainConfigRequestCache struct {
-
-    // 缓存设置列表，仅当enable为true时有值，支持指定路径或者文件名后缀方式
+	// 缓存设置列表，仅当enable为true时有值，支持指定路径或者文件名后缀方式
 	Detail *[]SetCdnDomainConfigRequestDetail `json:"detail,omitempty"`
 }
 
@@ -31,7 +30,6 @@ func (s *SetCdnDomainConfigRequestCache) SetDetail(v []SetCdnDomainConfigRequest
 	return s
 }
 
-
 type SetCdnDomainConfigRequestCacheBuilder struct {
 	s *SetCdnDomainConfigRequestCache
 }
@@ -50,5 +48,3 @@ func (b *SetCdnDomainConfigRequestCacheBuilder) Detail(v []SetCdnDomainConfigReq
 func (b *SetCdnDomainConfigRequestCacheBuilder) Build() *SetCdnDomainConfigRequestCache {
 	return b.s
 }
-
-

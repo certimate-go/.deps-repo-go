@@ -4,36 +4,36 @@
 
 package model
 
-
 type ListDomainForOpenapiResponseDataServiceTypeEnum string
 
 // List of ServiceType
 const (
-    ListDomainForOpenapiResponseDataServiceTypeEnumBasic ListDomainForOpenapiResponseDataServiceTypeEnum = "BASIC"
-    ListDomainForOpenapiResponseDataServiceTypeEnumPremium ListDomainForOpenapiResponseDataServiceTypeEnum = "PREMIUM"
-    ListDomainForOpenapiResponseDataServiceTypeEnumStandard ListDomainForOpenapiResponseDataServiceTypeEnum = "STANDARD"
-    ListDomainForOpenapiResponseDataServiceTypeEnumUltimate ListDomainForOpenapiResponseDataServiceTypeEnum = "ULTIMATE"
+	ListDomainForOpenapiResponseDataServiceTypeEnumBasic    ListDomainForOpenapiResponseDataServiceTypeEnum = "BASIC"
+	ListDomainForOpenapiResponseDataServiceTypeEnumPremium  ListDomainForOpenapiResponseDataServiceTypeEnum = "PREMIUM"
+	ListDomainForOpenapiResponseDataServiceTypeEnumStandard ListDomainForOpenapiResponseDataServiceTypeEnum = "STANDARD"
+	ListDomainForOpenapiResponseDataServiceTypeEnumUltimate ListDomainForOpenapiResponseDataServiceTypeEnum = "ULTIMATE"
 )
+
 type ListDomainForOpenapiResponseDataAdoptStateEnum string
 
 // List of AdoptState
 const (
-    ListDomainForOpenapiResponseDataAdoptStateEnumUncertain ListDomainForOpenapiResponseDataAdoptStateEnum = "UNCERTAIN"
-    ListDomainForOpenapiResponseDataAdoptStateEnumUnused ListDomainForOpenapiResponseDataAdoptStateEnum = "UNUSED"
-    ListDomainForOpenapiResponseDataAdoptStateEnumUsing ListDomainForOpenapiResponseDataAdoptStateEnum = "USING"
+	ListDomainForOpenapiResponseDataAdoptStateEnumUncertain ListDomainForOpenapiResponseDataAdoptStateEnum = "UNCERTAIN"
+	ListDomainForOpenapiResponseDataAdoptStateEnumUnused    ListDomainForOpenapiResponseDataAdoptStateEnum = "UNUSED"
+	ListDomainForOpenapiResponseDataAdoptStateEnumUsing     ListDomainForOpenapiResponseDataAdoptStateEnum = "USING"
 )
+
 type ListDomainForOpenapiResponseDataInstanceStatusEnum string
 
 // List of InstanceStatus
 const (
-    ListDomainForOpenapiResponseDataInstanceStatusEnumCanceling ListDomainForOpenapiResponseDataInstanceStatusEnum = "CANCELING"
-    ListDomainForOpenapiResponseDataInstanceStatusEnumDisabled ListDomainForOpenapiResponseDataInstanceStatusEnum = "DISABLED"
-    ListDomainForOpenapiResponseDataInstanceStatusEnumEnabled ListDomainForOpenapiResponseDataInstanceStatusEnum = "ENABLED"
-    ListDomainForOpenapiResponseDataInstanceStatusEnumExpired ListDomainForOpenapiResponseDataInstanceStatusEnum = "EXPIRED"
+	ListDomainForOpenapiResponseDataInstanceStatusEnumCanceling ListDomainForOpenapiResponseDataInstanceStatusEnum = "CANCELING"
+	ListDomainForOpenapiResponseDataInstanceStatusEnumDisabled  ListDomainForOpenapiResponseDataInstanceStatusEnum = "DISABLED"
+	ListDomainForOpenapiResponseDataInstanceStatusEnumEnabled   ListDomainForOpenapiResponseDataInstanceStatusEnum = "ENABLED"
+	ListDomainForOpenapiResponseDataInstanceStatusEnumExpired   ListDomainForOpenapiResponseDataInstanceStatusEnum = "EXPIRED"
 )
 
 type ListDomainForOpenapiResponseData struct {
-
 	// 套餐类型
 	ServiceType ListDomainForOpenapiResponseDataServiceTypeEnum `json:"serviceType,omitempty"`
 

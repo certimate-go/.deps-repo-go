@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type GetLoadBalanceListenerDetailRespRequest struct {
-
-
 	GetLoadBalanceListenerDetailRespPath *GetLoadBalanceListenerDetailRespPath `json:"getLoadBalanceListenerDetailRespPath,omitempty"`
 }
 
@@ -31,7 +29,6 @@ func (s *GetLoadBalanceListenerDetailRespRequest) SetGetLoadBalanceListenerDetai
 	return s
 }
 
-
 type GetLoadBalanceListenerDetailRespRequestBuilder struct {
 	s *GetLoadBalanceListenerDetailRespRequest
 }
@@ -50,5 +47,3 @@ func (b *GetLoadBalanceListenerDetailRespRequestBuilder) GetLoadBalanceListenerD
 func (b *GetLoadBalanceListenerDetailRespRequestBuilder) Build() *GetLoadBalanceListenerDetailRespRequest {
 	return b.s
 }
-
-

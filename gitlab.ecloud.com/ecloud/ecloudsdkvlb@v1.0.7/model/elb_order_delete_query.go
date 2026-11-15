@@ -5,13 +5,13 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type ElbOrderDeleteQuery struct {
-    position.Query
-    // 弹性负载均衡的ID
+	position.Query
+	// 弹性负载均衡的ID
 	LoadBalanceId *string `json:"loadBalanceId,omitempty"`
 }
 
@@ -32,7 +32,6 @@ func (s *ElbOrderDeleteQuery) SetLoadBalanceId(v string) *ElbOrderDeleteQuery {
 	return s
 }
 
-
 type ElbOrderDeleteQueryBuilder struct {
 	s *ElbOrderDeleteQuery
 }
@@ -51,5 +50,3 @@ func (b *ElbOrderDeleteQueryBuilder) LoadBalanceId(v string) *ElbOrderDeleteQuer
 func (b *ElbOrderDeleteQueryBuilder) Build() *ElbOrderDeleteQuery {
 	return b.s
 }
-
-

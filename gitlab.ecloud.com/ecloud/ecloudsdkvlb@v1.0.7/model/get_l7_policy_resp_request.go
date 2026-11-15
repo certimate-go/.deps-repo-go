@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type GetL7PolicyRespRequest struct {
-
-
 	GetL7PolicyRespPath *GetL7PolicyRespPath `json:"getL7PolicyRespPath,omitempty"`
 }
 
@@ -31,7 +29,6 @@ func (s *GetL7PolicyRespRequest) SetGetL7PolicyRespPath(v *GetL7PolicyRespPath) 
 	return s
 }
 
-
 type GetL7PolicyRespRequestBuilder struct {
 	s *GetL7PolicyRespRequest
 }
@@ -50,5 +47,3 @@ func (b *GetL7PolicyRespRequestBuilder) GetL7PolicyRespPath(v *GetL7PolicyRespPa
 func (b *GetL7PolicyRespRequestBuilder) Build() *GetL7PolicyRespRequest {
 	return b.s
 }
-
-

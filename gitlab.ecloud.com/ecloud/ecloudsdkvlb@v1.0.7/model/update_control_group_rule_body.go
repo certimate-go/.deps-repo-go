@@ -5,17 +5,17 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type UpdateControlGroupRuleBody struct {
-    position.Body
-    // 访问控制组规则描述
+	position.Body
+	// 访问控制组规则描述
 	Description *string `json:"description,omitempty"`
-    // 控制组规则ID
+	// 控制组规则ID
 	Id *string `json:"id,omitempty"`
-    // 所属控制组ID
+	// 所属控制组ID
 	ControlGroupId *string `json:"controlGroupId,omitempty"`
 }
 
@@ -46,7 +46,6 @@ func (s *UpdateControlGroupRuleBody) SetControlGroupId(v string) *UpdateControlG
 	return s
 }
 
-
 type UpdateControlGroupRuleBodyBuilder struct {
 	s *UpdateControlGroupRuleBody
 }
@@ -75,5 +74,3 @@ func (b *UpdateControlGroupRuleBodyBuilder) ControlGroupId(v string) *UpdateCont
 func (b *UpdateControlGroupRuleBodyBuilder) Build() *UpdateControlGroupRuleBody {
 	return b.s
 }
-
-

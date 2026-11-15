@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type UpdatePoolNameRequest struct {
-
-
 	UpdatePoolNameBody *UpdatePoolNameBody `json:"updatePoolNameBody,omitempty"`
 }
 
@@ -31,7 +29,6 @@ func (s *UpdatePoolNameRequest) SetUpdatePoolNameBody(v *UpdatePoolNameBody) *Up
 	return s
 }
 
-
 type UpdatePoolNameRequestBuilder struct {
 	s *UpdatePoolNameRequest
 }
@@ -50,5 +47,3 @@ func (b *UpdatePoolNameRequestBuilder) UpdatePoolNameBody(v *UpdatePoolNameBody)
 func (b *UpdatePoolNameRequestBuilder) Build() *UpdatePoolNameRequest {
 	return b.s
 }
-
-

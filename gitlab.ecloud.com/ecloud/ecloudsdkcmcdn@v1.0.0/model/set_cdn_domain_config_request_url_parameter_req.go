@@ -5,14 +5,13 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type SetCdnDomainConfigRequestUrlParameterReq struct {
-
-    // 是否启用
+	// 是否启用
 	Enable *bool `json:"enable,omitempty"`
-    // 过滤参数内容
+	// 过滤参数内容
 	Detail *SetCdnDomainConfigRequestDetail `json:"detail,omitempty"`
 }
 
@@ -38,7 +37,6 @@ func (s *SetCdnDomainConfigRequestUrlParameterReq) SetDetail(v *SetCdnDomainConf
 	return s
 }
 
-
 type SetCdnDomainConfigRequestUrlParameterReqBuilder struct {
 	s *SetCdnDomainConfigRequestUrlParameterReq
 }
@@ -62,5 +60,3 @@ func (b *SetCdnDomainConfigRequestUrlParameterReqBuilder) Detail(v *SetCdnDomain
 func (b *SetCdnDomainConfigRequestUrlParameterReqBuilder) Build() *SetCdnDomainConfigRequestUrlParameterReq {
 	return b.s
 }
-
-

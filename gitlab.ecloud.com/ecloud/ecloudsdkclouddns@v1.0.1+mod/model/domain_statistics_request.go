@@ -4,9 +4,6 @@
 
 package model
 
-
-
 type DomainStatisticsRequest struct {
-
 	DomainStatisticsBody *DomainStatisticsBody `json:"domainStatisticsBody,omitempty"`
 }

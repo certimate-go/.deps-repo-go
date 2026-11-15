@@ -5,40 +5,41 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
+
 type DescribeCdnDomainDetailResponseCacheDetailsUnitEnum string
 
 // List of Unit
 const (
-    DescribeCdnDomainDetailResponseCacheDetailsUnitEnumMonth DescribeCdnDomainDetailResponseCacheDetailsUnitEnum = "month"
-    DescribeCdnDomainDetailResponseCacheDetailsUnitEnumDay DescribeCdnDomainDetailResponseCacheDetailsUnitEnum = "day"
-    DescribeCdnDomainDetailResponseCacheDetailsUnitEnumHour DescribeCdnDomainDetailResponseCacheDetailsUnitEnum = "hour"
-    DescribeCdnDomainDetailResponseCacheDetailsUnitEnumMinute DescribeCdnDomainDetailResponseCacheDetailsUnitEnum = "minute"
-    DescribeCdnDomainDetailResponseCacheDetailsUnitEnumSecond DescribeCdnDomainDetailResponseCacheDetailsUnitEnum = "second"
+	DescribeCdnDomainDetailResponseCacheDetailsUnitEnumMonth  DescribeCdnDomainDetailResponseCacheDetailsUnitEnum = "month"
+	DescribeCdnDomainDetailResponseCacheDetailsUnitEnumDay    DescribeCdnDomainDetailResponseCacheDetailsUnitEnum = "day"
+	DescribeCdnDomainDetailResponseCacheDetailsUnitEnumHour   DescribeCdnDomainDetailResponseCacheDetailsUnitEnum = "hour"
+	DescribeCdnDomainDetailResponseCacheDetailsUnitEnumMinute DescribeCdnDomainDetailResponseCacheDetailsUnitEnum = "minute"
+	DescribeCdnDomainDetailResponseCacheDetailsUnitEnumSecond DescribeCdnDomainDetailResponseCacheDetailsUnitEnum = "second"
 )
+
 type DescribeCdnDomainDetailResponseCacheDetailsCacheTypeEnum string
 
 // List of CacheType
 const (
-    DescribeCdnDomainDetailResponseCacheDetailsCacheTypeEnumCatalog DescribeCdnDomainDetailResponseCacheDetailsCacheTypeEnum = "CATALOG"
-    DescribeCdnDomainDetailResponseCacheDetailsCacheTypeEnumFileExtension DescribeCdnDomainDetailResponseCacheDetailsCacheTypeEnum = "FILE_EXTENSION"
-    DescribeCdnDomainDetailResponseCacheDetailsCacheTypeEnumGlobal DescribeCdnDomainDetailResponseCacheDetailsCacheTypeEnum = "GLOBAL"
+	DescribeCdnDomainDetailResponseCacheDetailsCacheTypeEnumCatalog       DescribeCdnDomainDetailResponseCacheDetailsCacheTypeEnum = "CATALOG"
+	DescribeCdnDomainDetailResponseCacheDetailsCacheTypeEnumFileExtension DescribeCdnDomainDetailResponseCacheDetailsCacheTypeEnum = "FILE_EXTENSION"
+	DescribeCdnDomainDetailResponseCacheDetailsCacheTypeEnumGlobal        DescribeCdnDomainDetailResponseCacheDetailsCacheTypeEnum = "GLOBAL"
 )
 
 type DescribeCdnDomainDetailResponseCacheDetails struct {
-
-    // 过期时间
+	// 过期时间
 	Unit *DescribeCdnDomainDetailResponseCacheDetailsUnitEnum `json:"unit,omitempty"`
-    // 同一个域名多个缓存规则的优先级，权重越高优先级越高。
+	// 同一个域名多个缓存规则的优先级，权重越高优先级越高。
 	Weight *int32 `json:"weight,omitempty"`
-    // 缓存类型
+	// 缓存类型
 	CacheType *DescribeCdnDomainDetailResponseCacheDetailsCacheTypeEnum `json:"cacheType,omitempty"`
-    // 过期时间。缓存策略设置为0，即不缓存。
+	// 过期时间。缓存策略设置为0，即不缓存。
 	Ttl *int32 `json:"ttl,omitempty"`
-    // 具体设置过期时间的缓存内容
+	// 具体设置过期时间的缓存内容
 	Content *string `json:"content,omitempty"`
-    // 缓存id
+	// 缓存id
 	CacheId *int32 `json:"cacheId,omitempty"`
 }
 
@@ -84,7 +85,6 @@ func (s *DescribeCdnDomainDetailResponseCacheDetails) SetCacheId(v int32) *Descr
 	return s
 }
 
-
 type DescribeCdnDomainDetailResponseCacheDetailsBuilder struct {
 	s *DescribeCdnDomainDetailResponseCacheDetails
 }
@@ -128,5 +128,3 @@ func (b *DescribeCdnDomainDetailResponseCacheDetailsBuilder) CacheId(v int32) *D
 func (b *DescribeCdnDomainDetailResponseCacheDetailsBuilder) Build() *DescribeCdnDomainDetailResponseCacheDetails {
 	return b.s
 }
-
-

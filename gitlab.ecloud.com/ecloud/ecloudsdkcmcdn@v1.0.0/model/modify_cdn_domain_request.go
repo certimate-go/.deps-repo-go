@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type ModifyCdnDomainRequest struct {
-
-
 	ModifyCdnDomainBody *ModifyCdnDomainBody `json:"modifyCdnDomainBody,omitempty"`
 }
 
@@ -31,7 +29,6 @@ func (s *ModifyCdnDomainRequest) SetModifyCdnDomainBody(v *ModifyCdnDomainBody) 
 	return s
 }
 
-
 type ModifyCdnDomainRequestBuilder struct {
 	s *ModifyCdnDomainRequest
 }
@@ -50,5 +47,3 @@ func (b *ModifyCdnDomainRequestBuilder) ModifyCdnDomainBody(v *ModifyCdnDomainBo
 func (b *ModifyCdnDomainRequestBuilder) Build() *ModifyCdnDomainRequest {
 	return b.s
 }
-
-

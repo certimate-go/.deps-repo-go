@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type DeleteDomainServerCertificateRequest struct {
-
-
 	DeleteDomainServerCertificatePath *DeleteDomainServerCertificatePath `json:"deleteDomainServerCertificatePath,omitempty"`
 }
 
@@ -31,7 +29,6 @@ func (s *DeleteDomainServerCertificateRequest) SetDeleteDomainServerCertificateP
 	return s
 }
 
-
 type DeleteDomainServerCertificateRequestBuilder struct {
 	s *DeleteDomainServerCertificateRequest
 }
@@ -50,5 +47,3 @@ func (b *DeleteDomainServerCertificateRequestBuilder) DeleteDomainServerCertific
 func (b *DeleteDomainServerCertificateRequestBuilder) Build() *DeleteDomainServerCertificateRequest {
 	return b.s
 }
-
-

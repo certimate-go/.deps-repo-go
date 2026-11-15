@@ -4,37 +4,37 @@
 
 package model
 
-
 type ModifyDomainResponseBodyServiceTypeEnum string
 
 // List of ServiceType
 const (
-    ModifyDomainResponseBodyServiceTypeEnumBasic ModifyDomainResponseBodyServiceTypeEnum = "BASIC"
-    ModifyDomainResponseBodyServiceTypeEnumFree ModifyDomainResponseBodyServiceTypeEnum = "FREE"
-    ModifyDomainResponseBodyServiceTypeEnumPremium ModifyDomainResponseBodyServiceTypeEnum = "PREMIUM"
-    ModifyDomainResponseBodyServiceTypeEnumStandard ModifyDomainResponseBodyServiceTypeEnum = "STANDARD"
-    ModifyDomainResponseBodyServiceTypeEnumUltimate ModifyDomainResponseBodyServiceTypeEnum = "ULTIMATE"
+	ModifyDomainResponseBodyServiceTypeEnumBasic    ModifyDomainResponseBodyServiceTypeEnum = "BASIC"
+	ModifyDomainResponseBodyServiceTypeEnumFree     ModifyDomainResponseBodyServiceTypeEnum = "FREE"
+	ModifyDomainResponseBodyServiceTypeEnumPremium  ModifyDomainResponseBodyServiceTypeEnum = "PREMIUM"
+	ModifyDomainResponseBodyServiceTypeEnumStandard ModifyDomainResponseBodyServiceTypeEnum = "STANDARD"
+	ModifyDomainResponseBodyServiceTypeEnumUltimate ModifyDomainResponseBodyServiceTypeEnum = "ULTIMATE"
 )
+
 type ModifyDomainResponseBodyAdoptStateEnum string
 
 // List of AdoptState
 const (
-    ModifyDomainResponseBodyAdoptStateEnumUncertain ModifyDomainResponseBodyAdoptStateEnum = "UNCERTAIN"
-    ModifyDomainResponseBodyAdoptStateEnumUnused ModifyDomainResponseBodyAdoptStateEnum = "UNUSED"
-    ModifyDomainResponseBodyAdoptStateEnumUsing ModifyDomainResponseBodyAdoptStateEnum = "USING"
+	ModifyDomainResponseBodyAdoptStateEnumUncertain ModifyDomainResponseBodyAdoptStateEnum = "UNCERTAIN"
+	ModifyDomainResponseBodyAdoptStateEnumUnused    ModifyDomainResponseBodyAdoptStateEnum = "UNUSED"
+	ModifyDomainResponseBodyAdoptStateEnumUsing     ModifyDomainResponseBodyAdoptStateEnum = "USING"
 )
+
 type ModifyDomainResponseBodyInstanceStatusEnum string
 
 // List of InstanceStatus
 const (
-    ModifyDomainResponseBodyInstanceStatusEnumCanceling ModifyDomainResponseBodyInstanceStatusEnum = "CANCELING"
-    ModifyDomainResponseBodyInstanceStatusEnumDisabled ModifyDomainResponseBodyInstanceStatusEnum = "DISABLED"
-    ModifyDomainResponseBodyInstanceStatusEnumEnabled ModifyDomainResponseBodyInstanceStatusEnum = "ENABLED"
-    ModifyDomainResponseBodyInstanceStatusEnumExpired ModifyDomainResponseBodyInstanceStatusEnum = "EXPIRED"
+	ModifyDomainResponseBodyInstanceStatusEnumCanceling ModifyDomainResponseBodyInstanceStatusEnum = "CANCELING"
+	ModifyDomainResponseBodyInstanceStatusEnumDisabled  ModifyDomainResponseBodyInstanceStatusEnum = "DISABLED"
+	ModifyDomainResponseBodyInstanceStatusEnumEnabled   ModifyDomainResponseBodyInstanceStatusEnum = "ENABLED"
+	ModifyDomainResponseBodyInstanceStatusEnumExpired   ModifyDomainResponseBodyInstanceStatusEnum = "EXPIRED"
 )
 
 type ModifyDomainResponseBody struct {
-
 	// 套餐类型
 	ServiceType ModifyDomainResponseBodyServiceTypeEnum `json:"serviceType,omitempty"`
 

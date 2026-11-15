@@ -5,21 +5,21 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type ListLoadBalancePoolMemberQuery struct {
-    position.Query
-    // 请输入后端服务器类型对应的数字，0：IP类型，1：云主机，3：裸金属
+	position.Query
+	// 请输入后端服务器类型对应的数字，0：IP类型，1：云主机，3：裸金属
 	Types []int32 `json:"types,omitempty"`
-    // 后端服务器IP
+	// 后端服务器IP
 	Ip *string `json:"ip,omitempty"`
-    // 后端服务器名称
+	// 后端服务器名称
 	Name *string `json:"name,omitempty"`
-    // 列表分页每页大小，小于0将默认为10
+	// 列表分页每页大小，小于0将默认为10
 	PageSize *int32 `json:"pageSize,omitempty"`
-    // 列表分页页数，小于1会默认第1页
+	// 列表分页页数，小于1会默认第1页
 	Page *int32 `json:"page,omitempty"`
 }
 
@@ -60,7 +60,6 @@ func (s *ListLoadBalancePoolMemberQuery) SetPage(v int32) *ListLoadBalancePoolMe
 	return s
 }
 
-
 type ListLoadBalancePoolMemberQueryBuilder struct {
 	s *ListLoadBalancePoolMemberQuery
 }
@@ -99,5 +98,3 @@ func (b *ListLoadBalancePoolMemberQueryBuilder) Page(v int32) *ListLoadBalancePo
 func (b *ListLoadBalancePoolMemberQueryBuilder) Build() *ListLoadBalancePoolMemberQuery {
 	return b.s
 }
-
-

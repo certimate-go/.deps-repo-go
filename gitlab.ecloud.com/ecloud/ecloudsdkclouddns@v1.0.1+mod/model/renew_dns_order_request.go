@@ -4,9 +4,6 @@
 
 package model
 
-
-
 type RenewDnsOrderRequest struct {
-
 	RenewDnsOrderBody *RenewDnsOrderBody `json:"renewDnsOrderBody,omitempty"`
 }

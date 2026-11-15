@@ -4,9 +4,6 @@
 
 package model
 
-
-
 type GetBalanceDetailOpenapiRequest struct {
-
 	GetBalanceDetailOpenapiBody *GetBalanceDetailOpenapiBody `json:"getBalanceDetailOpenapiBody,omitempty"`
 }

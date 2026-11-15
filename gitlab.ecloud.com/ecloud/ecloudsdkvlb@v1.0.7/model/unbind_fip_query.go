@@ -5,13 +5,13 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type UnbindFipQuery struct {
-    position.Query
-    // 公网IP ID
+	position.Query
+	// 公网IP ID
 	IpId *string `json:"ipId,omitempty"`
 }
 
@@ -32,7 +32,6 @@ func (s *UnbindFipQuery) SetIpId(v string) *UnbindFipQuery {
 	return s
 }
 
-
 type UnbindFipQueryBuilder struct {
 	s *UnbindFipQuery
 }
@@ -51,5 +50,3 @@ func (b *UnbindFipQueryBuilder) IpId(v string) *UnbindFipQueryBuilder {
 func (b *UnbindFipQueryBuilder) Build() *UnbindFipQuery {
 	return b.s
 }
-
-

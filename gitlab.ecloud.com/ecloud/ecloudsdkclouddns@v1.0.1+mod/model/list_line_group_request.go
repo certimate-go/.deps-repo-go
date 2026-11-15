@@ -4,9 +4,6 @@
 
 package model
 
-
-
 type ListLineGroupRequest struct {
-
 	ListLineGroupQuery *ListLineGroupQuery `json:"listLineGroupQuery,omitempty"`
 }

@@ -5,24 +5,24 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
+
 type ElbOrderRenewResponseBodyProcedureCodeEnum string
 
 // List of ProcedureCode
 const (
-    ElbOrderRenewResponseBodyProcedureCodeEnumPrepaid ElbOrderRenewResponseBodyProcedureCodeEnum = "PREPAID"
-    ElbOrderRenewResponseBodyProcedureCodeEnumInternalapproval ElbOrderRenewResponseBodyProcedureCodeEnum = "INTERNALAPPROVAL"
-    ElbOrderRenewResponseBodyProcedureCodeEnumPostpaid ElbOrderRenewResponseBodyProcedureCodeEnum = "POSTPAID"
+	ElbOrderRenewResponseBodyProcedureCodeEnumPrepaid          ElbOrderRenewResponseBodyProcedureCodeEnum = "PREPAID"
+	ElbOrderRenewResponseBodyProcedureCodeEnumInternalapproval ElbOrderRenewResponseBodyProcedureCodeEnum = "INTERNALAPPROVAL"
+	ElbOrderRenewResponseBodyProcedureCodeEnumPostpaid         ElbOrderRenewResponseBodyProcedureCodeEnum = "POSTPAID"
 )
 
 type ElbOrderRenewResponseBody struct {
-
-    // 订单号
+	// 订单号
 	OrderId *string `json:"orderId,omitempty"`
-    // 付费类型
+	// 付费类型
 	ProcedureCode *ElbOrderRenewResponseBodyProcedureCodeEnum `json:"procedureCode,omitempty"`
-    // 续订下单返回的订单项集合
+	// 续订下单返回的订单项集合
 	Products *[]ElbOrderRenewResponseProducts `json:"products,omitempty"`
 }
 
@@ -53,7 +53,6 @@ func (s *ElbOrderRenewResponseBody) SetProducts(v []ElbOrderRenewResponseProduct
 	return s
 }
 
-
 type ElbOrderRenewResponseBodyBuilder struct {
 	s *ElbOrderRenewResponseBody
 }
@@ -82,5 +81,3 @@ func (b *ElbOrderRenewResponseBodyBuilder) Products(v []ElbOrderRenewResponsePro
 func (b *ElbOrderRenewResponseBodyBuilder) Build() *ElbOrderRenewResponseBody {
 	return b.s
 }
-
-

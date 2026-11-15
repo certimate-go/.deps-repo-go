@@ -48,8 +48,10 @@ const (
 	HEADER HttpRequestPosition = "Header"
 )
 
-const SdkPortalUrl = "/op-apim-portal/apim/request/sdk"
-const SdkPortalGatewayUrl = "/api/query/openapi/apim/request/sdk"
+const (
+	SdkPortalUrl        = "/op-apim-portal/apim/request/sdk"
+	SdkPortalGatewayUrl = "/api/query/openapi/apim/request/sdk"
+)
 
 // NewAPIClient creates a new API client.
 func NewAPIClient() *APIClient {
@@ -197,7 +199,7 @@ func buildHttpRequest(httpRequest *HttpRequest, config *config.Config) *HttpRequ
 		if v.Kind() == reflect.Ptr {
 			v = v.Elem()
 		}
-		var flag = false
+		flag := false
 		for i := 0; i < reqType.NumField(); i++ {
 			fieldType := reqType.Field(i)
 			value := v.FieldByName(fieldType.Name)
@@ -268,7 +270,7 @@ func structToMap(value interface{}) map[string]interface{} {
 }
 
 func buildCall(httpRequest *HttpRequest) (request *http.Request) {
-	var url = ""
+	url := ""
 	if len(httpRequest.Url) > 0 {
 		url = httpRequest.Url + SdkPortalUrl
 	} else {
@@ -282,12 +284,11 @@ func buildCall(httpRequest *HttpRequest) (request *http.Request) {
 func prepareRequest(path string, method string,
 	postBody interface{},
 ) (httpRequest *http.Request, err error) {
-
 	var body *bytes.Buffer
 
 	// Detect postBody type and post.
 	if postBody != nil {
-		var contentType = detectContentType(postBody)
+		contentType := detectContentType(postBody)
 		body, err = setBody(postBody, contentType)
 		if err != nil {
 			return nil, err

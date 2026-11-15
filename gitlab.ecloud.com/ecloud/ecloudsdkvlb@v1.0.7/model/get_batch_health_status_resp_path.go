@@ -5,13 +5,13 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type GetBatchHealthStatusRespPath struct {
-    position.Path
-    // 负载均衡后端服务器组ID
+	position.Path
+	// 负载均衡后端服务器组ID
 	PoolId *string `json:"poolId,omitempty"`
 }
 
@@ -32,7 +32,6 @@ func (s *GetBatchHealthStatusRespPath) SetPoolId(v string) *GetBatchHealthStatus
 	return s
 }
 
-
 type GetBatchHealthStatusRespPathBuilder struct {
 	s *GetBatchHealthStatusRespPath
 }
@@ -51,5 +50,3 @@ func (b *GetBatchHealthStatusRespPathBuilder) PoolId(v string) *GetBatchHealthSt
 func (b *GetBatchHealthStatusRespPathBuilder) Build() *GetBatchHealthStatusRespPath {
 	return b.s
 }
-
-

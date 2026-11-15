@@ -5,21 +5,21 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type ListControlGroupQuery struct {
-    position.Query
-    // 产商，取值：nfvslb，aliyun，其他传值不生效，默认返回常规域
+	position.Query
+	// 产商，取值：nfvslb，aliyun，其他传值不生效，默认返回常规域
 	Provider *string `json:"provider,omitempty"`
-    // 列表分页每页大小，小于0将默认为10
+	// 列表分页每页大小，小于0将默认为10
 	PageSize *int32 `json:"pageSize,omitempty"`
-    // 列表分页页数，page小于1时，默认返回第一页
+	// 列表分页页数，page小于1时，默认返回第一页
 	Page *int32 `json:"page,omitempty"`
-    // 根据名称或描述模糊查询
+	// 根据名称或描述模糊查询
 	QueryWord *string `json:"queryWord,omitempty"`
-    // 虚拟可用区
+	// 虚拟可用区
 	Vaz *string `json:"vaz,omitempty"`
 }
 
@@ -60,7 +60,6 @@ func (s *ListControlGroupQuery) SetVaz(v string) *ListControlGroupQuery {
 	return s
 }
 
-
 type ListControlGroupQueryBuilder struct {
 	s *ListControlGroupQuery
 }
@@ -99,5 +98,3 @@ func (b *ListControlGroupQueryBuilder) Vaz(v string) *ListControlGroupQueryBuild
 func (b *ListControlGroupQueryBuilder) Build() *ListControlGroupQuery {
 	return b.s
 }
-
-

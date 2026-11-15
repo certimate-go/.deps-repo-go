@@ -5,14 +5,13 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type DescribeCdnDomainDetailResponseErrorPageDetail struct {
-
-    // 链接，格式必须符合url通用格式
+	// 链接，格式必须符合url通用格式
 	Link *string `json:"link,omitempty"`
-    // 错误码类型
+	// 错误码类型
 	Type *int32 `json:"type,omitempty"`
 }
 
@@ -38,7 +37,6 @@ func (s *DescribeCdnDomainDetailResponseErrorPageDetail) SetType(v int32) *Descr
 	return s
 }
 
-
 type DescribeCdnDomainDetailResponseErrorPageDetailBuilder struct {
 	s *DescribeCdnDomainDetailResponseErrorPageDetail
 }
@@ -62,5 +60,3 @@ func (b *DescribeCdnDomainDetailResponseErrorPageDetailBuilder) Type(v int32) *D
 func (b *DescribeCdnDomainDetailResponseErrorPageDetailBuilder) Build() *DescribeCdnDomainDetailResponseErrorPageDetail {
 	return b.s
 }
-
-

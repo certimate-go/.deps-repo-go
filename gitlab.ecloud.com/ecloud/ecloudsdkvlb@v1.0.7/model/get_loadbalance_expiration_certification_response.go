@@ -5,32 +5,32 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
+
 type GetLoadbalanceExpirationCertificationResponseStateEnum string
 
 // List of State
 const (
-    GetLoadbalanceExpirationCertificationResponseStateEnumOk GetLoadbalanceExpirationCertificationResponseStateEnum = "OK"
-    GetLoadbalanceExpirationCertificationResponseStateEnumError GetLoadbalanceExpirationCertificationResponseStateEnum = "ERROR"
-    GetLoadbalanceExpirationCertificationResponseStateEnumException GetLoadbalanceExpirationCertificationResponseStateEnum = "EXCEPTION"
-    GetLoadbalanceExpirationCertificationResponseStateEnumAlarm GetLoadbalanceExpirationCertificationResponseStateEnum = "ALARM"
-    GetLoadbalanceExpirationCertificationResponseStateEnumForbidden GetLoadbalanceExpirationCertificationResponseStateEnum = "FORBIDDEN"
+	GetLoadbalanceExpirationCertificationResponseStateEnumOk        GetLoadbalanceExpirationCertificationResponseStateEnum = "OK"
+	GetLoadbalanceExpirationCertificationResponseStateEnumError     GetLoadbalanceExpirationCertificationResponseStateEnum = "ERROR"
+	GetLoadbalanceExpirationCertificationResponseStateEnumException GetLoadbalanceExpirationCertificationResponseStateEnum = "EXCEPTION"
+	GetLoadbalanceExpirationCertificationResponseStateEnumAlarm     GetLoadbalanceExpirationCertificationResponseStateEnum = "ALARM"
+	GetLoadbalanceExpirationCertificationResponseStateEnumForbidden GetLoadbalanceExpirationCertificationResponseStateEnum = "FORBIDDEN"
 )
 
 type GetLoadbalanceExpirationCertificationResponse struct {
-
-    // 每个请求的序列号
+	// 每个请求的序列号
 	RequestId *string `json:"requestId,omitempty"`
-    // 页面国际化错误提示
+	// 页面国际化错误提示
 	ErrorMessage *string `json:"errorMessage,omitempty"`
-    // 统一错误码
+	// 统一错误码
 	ErrorCode *string `json:"errorCode,omitempty"`
-    // 返回状态码：OK（成功）, ERROR（错误）,EXCEPTION（异常）,ALARM（警告）, FORBIDDEN（禁止访问）
+	// 返回状态码：OK（成功）, ERROR（错误）,EXCEPTION（异常）,ALARM（警告）, FORBIDDEN（禁止访问）
 	State *GetLoadbalanceExpirationCertificationResponseStateEnum `json:"state,omitempty"`
-    // 请求成功时返回的数据
+	// 请求成功时返回的数据
 	Body *[]GetLoadbalanceExpirationCertificationResponseBody `json:"body,omitempty"`
-    // 统一错误码的自定义参数
+	// 统一错误码的自定义参数
 	ErrorParams []string `json:"errorParams,omitempty"`
 }
 
@@ -76,7 +76,6 @@ func (s *GetLoadbalanceExpirationCertificationResponse) SetErrorParams(v []strin
 	return s
 }
 
-
 type GetLoadbalanceExpirationCertificationResponseBuilder struct {
 	s *GetLoadbalanceExpirationCertificationResponse
 }
@@ -120,5 +119,3 @@ func (b *GetLoadbalanceExpirationCertificationResponseBuilder) ErrorParams(v []s
 func (b *GetLoadbalanceExpirationCertificationResponseBuilder) Build() *GetLoadbalanceExpirationCertificationResponse {
 	return b.s
 }
-
-

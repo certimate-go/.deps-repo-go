@@ -4,36 +4,36 @@
 
 package model
 
-
 type TakeOverRefreshDomainOpenapiResponseBodyServiceTypeEnum string
 
 // List of ServiceType
 const (
-    TakeOverRefreshDomainOpenapiResponseBodyServiceTypeEnumBasic TakeOverRefreshDomainOpenapiResponseBodyServiceTypeEnum = "BASIC"
-    TakeOverRefreshDomainOpenapiResponseBodyServiceTypeEnumPremium TakeOverRefreshDomainOpenapiResponseBodyServiceTypeEnum = "PREMIUM"
-    TakeOverRefreshDomainOpenapiResponseBodyServiceTypeEnumStandard TakeOverRefreshDomainOpenapiResponseBodyServiceTypeEnum = "STANDARD"
-    TakeOverRefreshDomainOpenapiResponseBodyServiceTypeEnumUltimate TakeOverRefreshDomainOpenapiResponseBodyServiceTypeEnum = "ULTIMATE"
+	TakeOverRefreshDomainOpenapiResponseBodyServiceTypeEnumBasic    TakeOverRefreshDomainOpenapiResponseBodyServiceTypeEnum = "BASIC"
+	TakeOverRefreshDomainOpenapiResponseBodyServiceTypeEnumPremium  TakeOverRefreshDomainOpenapiResponseBodyServiceTypeEnum = "PREMIUM"
+	TakeOverRefreshDomainOpenapiResponseBodyServiceTypeEnumStandard TakeOverRefreshDomainOpenapiResponseBodyServiceTypeEnum = "STANDARD"
+	TakeOverRefreshDomainOpenapiResponseBodyServiceTypeEnumUltimate TakeOverRefreshDomainOpenapiResponseBodyServiceTypeEnum = "ULTIMATE"
 )
+
 type TakeOverRefreshDomainOpenapiResponseBodyAdoptStateEnum string
 
 // List of AdoptState
 const (
-    TakeOverRefreshDomainOpenapiResponseBodyAdoptStateEnumUncertain TakeOverRefreshDomainOpenapiResponseBodyAdoptStateEnum = "UNCERTAIN"
-    TakeOverRefreshDomainOpenapiResponseBodyAdoptStateEnumUnused TakeOverRefreshDomainOpenapiResponseBodyAdoptStateEnum = "UNUSED"
-    TakeOverRefreshDomainOpenapiResponseBodyAdoptStateEnumUsing TakeOverRefreshDomainOpenapiResponseBodyAdoptStateEnum = "USING"
+	TakeOverRefreshDomainOpenapiResponseBodyAdoptStateEnumUncertain TakeOverRefreshDomainOpenapiResponseBodyAdoptStateEnum = "UNCERTAIN"
+	TakeOverRefreshDomainOpenapiResponseBodyAdoptStateEnumUnused    TakeOverRefreshDomainOpenapiResponseBodyAdoptStateEnum = "UNUSED"
+	TakeOverRefreshDomainOpenapiResponseBodyAdoptStateEnumUsing     TakeOverRefreshDomainOpenapiResponseBodyAdoptStateEnum = "USING"
 )
+
 type TakeOverRefreshDomainOpenapiResponseBodyInstanceStatusEnum string
 
 // List of InstanceStatus
 const (
-    TakeOverRefreshDomainOpenapiResponseBodyInstanceStatusEnumCanceling TakeOverRefreshDomainOpenapiResponseBodyInstanceStatusEnum = "CANCELING"
-    TakeOverRefreshDomainOpenapiResponseBodyInstanceStatusEnumDisabled TakeOverRefreshDomainOpenapiResponseBodyInstanceStatusEnum = "DISABLED"
-    TakeOverRefreshDomainOpenapiResponseBodyInstanceStatusEnumEnabled TakeOverRefreshDomainOpenapiResponseBodyInstanceStatusEnum = "ENABLED"
-    TakeOverRefreshDomainOpenapiResponseBodyInstanceStatusEnumExpired TakeOverRefreshDomainOpenapiResponseBodyInstanceStatusEnum = "EXPIRED"
+	TakeOverRefreshDomainOpenapiResponseBodyInstanceStatusEnumCanceling TakeOverRefreshDomainOpenapiResponseBodyInstanceStatusEnum = "CANCELING"
+	TakeOverRefreshDomainOpenapiResponseBodyInstanceStatusEnumDisabled  TakeOverRefreshDomainOpenapiResponseBodyInstanceStatusEnum = "DISABLED"
+	TakeOverRefreshDomainOpenapiResponseBodyInstanceStatusEnumEnabled   TakeOverRefreshDomainOpenapiResponseBodyInstanceStatusEnum = "ENABLED"
+	TakeOverRefreshDomainOpenapiResponseBodyInstanceStatusEnumExpired   TakeOverRefreshDomainOpenapiResponseBodyInstanceStatusEnum = "EXPIRED"
 )
 
 type TakeOverRefreshDomainOpenapiResponseBody struct {
-
 	// 套餐类型
 	ServiceType TakeOverRefreshDomainOpenapiResponseBodyServiceTypeEnum `json:"serviceType,omitempty"`
 

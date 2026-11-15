@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type ListControlGroupRequest struct {
-
-
 	ListControlGroupQuery *ListControlGroupQuery `json:"listControlGroupQuery,omitempty"`
 }
 
@@ -31,7 +29,6 @@ func (s *ListControlGroupRequest) SetListControlGroupQuery(v *ListControlGroupQu
 	return s
 }
 
-
 type ListControlGroupRequestBuilder struct {
 	s *ListControlGroupRequest
 }
@@ -50,5 +47,3 @@ func (b *ListControlGroupRequestBuilder) ListControlGroupQuery(v *ListControlGro
 func (b *ListControlGroupRequestBuilder) Build() *ListControlGroupRequest {
 	return b.s
 }
-
-

@@ -4,10 +4,7 @@
 
 package model
 
-
-
 type ListBalanceRequest struct {
-
 	ListBalanceBody *ListBalanceBody `json:"listBalanceBody,omitempty"`
 
 	ListBalanceQuery *ListBalanceQuery `json:"listBalanceQuery,omitempty"`

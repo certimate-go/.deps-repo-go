@@ -5,25 +5,25 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type MonitorBandwidthFlowBody struct {
-    position.Body
-    // 域名id
+	position.Body
+	// 域名id
 	DomainIds []int32 `json:"domainIds,omitempty"`
-    // 时间间隔，5:5分钟，60:小时，24:天
+	// 时间间隔，5:5分钟，60:小时，24:天
 	Period *int32 `json:"period,omitempty"`
-    // 日期，区分0今日，1昨日，2近7天，3近30天，7当月，8上月，4自定义
+	// 日期，区分0今日，1昨日，2近7天，3近30天，7当月，8上月，4自定义
 	DateType *int32 `json:"dateType,omitempty"`
-    // 地区编码 全国:1001 北京:100 上海:210
+	// 地区编码 全国:1001 北京:100 上海:210
 	AreaIds []int32 `json:"areaIds,omitempty"`
-    // 自定义，开始时间戳(毫秒)
+	// 自定义，开始时间戳(毫秒)
 	StartTime *int64 `json:"startTime,omitempty"`
-    // 自定义，结束时间戳(毫秒)
+	// 自定义，结束时间戳(毫秒)
 	EndTime *int64 `json:"endTime,omitempty"`
-    // 0带宽、1流量、2带宽和流量
+	// 0带宽、1流量、2带宽和流量
 	Type *int32 `json:"type,omitempty"`
 }
 
@@ -74,7 +74,6 @@ func (s *MonitorBandwidthFlowBody) SetType(v int32) *MonitorBandwidthFlowBody {
 	return s
 }
 
-
 type MonitorBandwidthFlowBodyBuilder struct {
 	s *MonitorBandwidthFlowBody
 }
@@ -123,5 +122,3 @@ func (b *MonitorBandwidthFlowBodyBuilder) Type(v int32) *MonitorBandwidthFlowBod
 func (b *MonitorBandwidthFlowBodyBuilder) Build() *MonitorBandwidthFlowBody {
 	return b.s
 }
-
-

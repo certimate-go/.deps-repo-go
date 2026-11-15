@@ -5,13 +5,13 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type EnableLoadBalancerQuery struct {
-    position.Query
-    // 是否启用弹性负载均衡
+	position.Query
+	// 是否启用弹性负载均衡
 	Enable *bool `json:"enable,omitempty"`
 }
 
@@ -32,7 +32,6 @@ func (s *EnableLoadBalancerQuery) SetEnable(v bool) *EnableLoadBalancerQuery {
 	return s
 }
 
-
 type EnableLoadBalancerQueryBuilder struct {
 	s *EnableLoadBalancerQuery
 }
@@ -51,5 +50,3 @@ func (b *EnableLoadBalancerQueryBuilder) Enable(v bool) *EnableLoadBalancerQuery
 func (b *EnableLoadBalancerQueryBuilder) Build() *EnableLoadBalancerQuery {
 	return b.s
 }
-
-

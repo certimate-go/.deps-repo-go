@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type DeletePoolRequest struct {
-
-
 	DeletePoolPath *DeletePoolPath `json:"deletePoolPath,omitempty"`
 }
 
@@ -31,7 +29,6 @@ func (s *DeletePoolRequest) SetDeletePoolPath(v *DeletePoolPath) *DeletePoolRequ
 	return s
 }
 
-
 type DeletePoolRequestBuilder struct {
 	s *DeletePoolRequest
 }
@@ -50,5 +47,3 @@ func (b *DeletePoolRequestBuilder) DeletePoolPath(v *DeletePoolPath) *DeletePool
 func (b *DeletePoolRequestBuilder) Build() *DeletePoolRequest {
 	return b.s
 }
-
-

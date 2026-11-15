@@ -5,39 +5,40 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
+
 type ElbOrderCreateAsyncWithHttpStatusBodyChargePeriodEnumEnum string
 
 // List of ChargePeriodEnum
 const (
-    ElbOrderCreateAsyncWithHttpStatusBodyChargePeriodEnumEnumHour ElbOrderCreateAsyncWithHttpStatusBodyChargePeriodEnumEnum = "hour"
-    ElbOrderCreateAsyncWithHttpStatusBodyChargePeriodEnumEnumMonth ElbOrderCreateAsyncWithHttpStatusBodyChargePeriodEnumEnum = "month"
-    ElbOrderCreateAsyncWithHttpStatusBodyChargePeriodEnumEnumYear ElbOrderCreateAsyncWithHttpStatusBodyChargePeriodEnumEnum = "year"
+	ElbOrderCreateAsyncWithHttpStatusBodyChargePeriodEnumEnumHour  ElbOrderCreateAsyncWithHttpStatusBodyChargePeriodEnumEnum = "hour"
+	ElbOrderCreateAsyncWithHttpStatusBodyChargePeriodEnumEnumMonth ElbOrderCreateAsyncWithHttpStatusBodyChargePeriodEnumEnum = "month"
+	ElbOrderCreateAsyncWithHttpStatusBodyChargePeriodEnumEnumYear  ElbOrderCreateAsyncWithHttpStatusBodyChargePeriodEnumEnum = "year"
 )
 
 type ElbOrderCreateAsyncWithHttpStatusBody struct {
-    position.Body
-    // 订购时长, 预付费订购且计费周期为month或者year时必填，后付费订购且计费周期为year时必填。 计费周期为month时，取值为1~12月，计费周期为year时，取值为[年数*12月]，最多5年
+	position.Body
+	// 订购时长, 预付费订购且计费周期为month或者year时必填，后付费订购且计费周期为year时必填。 计费周期为month时，取值为1~12月，计费周期为year时，取值为[年数*12月]，最多5年
 	Duration *int32 `json:"duration,omitempty"`
-    // 弹性负载均衡的规格。1：普通型，2：优享型I，3：优享型II，4：高端型I，5：高端型II，6：旗舰型， 7：增强型， 10：简约型，21：性能保障型（选取时必填bandwidth参数）， 30：LCU规格，100：NFV托管平台
+	// 弹性负载均衡的规格。1：普通型，2：优享型I，3：优享型II，4：高端型I，5：高端型II，6：旗舰型， 7：增强型， 10：简约型，21：性能保障型（选取时必填bandwidth参数）， 30：LCU规格，100：NFV托管平台
 	Flavor *int32 `json:"flavor,omitempty"`
-    // 弹性负载均衡名称，5~64位的英文、数字、下划线、中划线等的组合
+	// 弹性负载均衡名称，5~64位的英文、数字、下划线、中划线等的组合
 	LoadBalanceName *string `json:"loadBalanceName,omitempty"`
-    // 弹性负载均衡的子网资源ID
+	// 弹性负载均衡的子网资源ID
 	SubnetId *string `json:"subnetId,omitempty"`
-    // 计费周期: 按时, 按月, 按年
+	// 计费周期: 按时, 按月, 按年
 	ChargePeriodEnum *ElbOrderCreateAsyncWithHttpStatusBodyChargePeriodEnumEnum `json:"chargePeriodEnum,omitempty"`
-    // 带宽，仅订购性能保障型实例时可输入生效，单位：Mbps（flavro选择21性能保证型时，该字段为必填）
+	// 带宽，仅订购性能保障型实例时可输入生效，单位：Mbps（flavro选择21性能保证型时，该字段为必填）
 	Bandwidth *int32 `json:"bandwidth,omitempty"`
-    // 指定内网IP地址创建弹性负载均衡实例
+	// 指定内网IP地址创建弹性负载均衡实例
 	IpAddress *string `json:"ipAddress,omitempty"`
-    // 需要绑定的独享设备IP地址，多个地址以“,”分隔例如：1.2.3.4,1.2.3.5
+	// 需要绑定的独享设备IP地址，多个地址以“,”分隔例如：1.2.3.4,1.2.3.5
 	NodeIp *string `json:"nodeIp,omitempty"`
-    // 规格为NFV托管平台订购时选择的云主机核数
+	// 规格为NFV托管平台订购时选择的云主机核数
 	ServerCores *int32 `json:"serverCores,omitempty"`
-    // 绑定标签
+	// 绑定标签
 	Tags *[]ElbOrderCreateAsyncWithHttpStatusRequestTags `json:"tags,omitempty"`
 }
 
@@ -103,7 +104,6 @@ func (s *ElbOrderCreateAsyncWithHttpStatusBody) SetTags(v []ElbOrderCreateAsyncW
 	return s
 }
 
-
 type ElbOrderCreateAsyncWithHttpStatusBodyBuilder struct {
 	s *ElbOrderCreateAsyncWithHttpStatusBody
 }
@@ -167,5 +167,3 @@ func (b *ElbOrderCreateAsyncWithHttpStatusBodyBuilder) Tags(v []ElbOrderCreateAs
 func (b *ElbOrderCreateAsyncWithHttpStatusBodyBuilder) Build() *ElbOrderCreateAsyncWithHttpStatusBody {
 	return b.s
 }
-
-

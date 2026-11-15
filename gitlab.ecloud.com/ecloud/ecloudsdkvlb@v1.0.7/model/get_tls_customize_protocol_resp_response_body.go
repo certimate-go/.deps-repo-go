@@ -5,50 +5,50 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
+
 type GetTLSCustomizeProtocolRespResponseBodyTlsStatusEnum string
 
 // List of TlsStatus
 const (
-    GetTLSCustomizeProtocolRespResponseBodyTlsStatusEnumNormal GetTLSCustomizeProtocolRespResponseBodyTlsStatusEnum = "NORMAL"
-    GetTLSCustomizeProtocolRespResponseBodyTlsStatusEnumError GetTLSCustomizeProtocolRespResponseBodyTlsStatusEnum = "ERROR"
-    GetTLSCustomizeProtocolRespResponseBodyTlsStatusEnumRunning GetTLSCustomizeProtocolRespResponseBodyTlsStatusEnum = "RUNNING"
+	GetTLSCustomizeProtocolRespResponseBodyTlsStatusEnumNormal  GetTLSCustomizeProtocolRespResponseBodyTlsStatusEnum = "NORMAL"
+	GetTLSCustomizeProtocolRespResponseBodyTlsStatusEnumError   GetTLSCustomizeProtocolRespResponseBodyTlsStatusEnum = "ERROR"
+	GetTLSCustomizeProtocolRespResponseBodyTlsStatusEnumRunning GetTLSCustomizeProtocolRespResponseBodyTlsStatusEnum = "RUNNING"
 )
 
 type GetTLSCustomizeProtocolRespResponseBody struct {
-
-    // 修改时间
+	// 修改时间
 	ModifiedTime *string `json:"modifiedTime,omitempty"`
-    // TLS安全策略绑定监听器数量
+	// TLS安全策略绑定监听器数量
 	BindedListeners *int32 `json:"bindedListeners,omitempty"`
-    // 是否删除
+	// 是否删除
 	IsDelete *bool `json:"isDelete,omitempty"`
-    // 绑定监听器列表
+	// 绑定监听器列表
 	ListenerInfoList *[]GetTLSCustomizeProtocolRespResponseListenerInfoList `json:"listenerInfoList,omitempty"`
-    // TLS安全策略状态
+	// TLS安全策略状态
 	TlsStatus *GetTLSCustomizeProtocolRespResponseBodyTlsStatusEnum `json:"tlsStatus,omitempty"`
-    // 是否为边缘云
+	// 是否为边缘云
 	Vaz *string `json:"vaz,omitempty"`
-    // 绑定监听信息
+	// 绑定监听信息
 	ListenerInfos *string `json:"listenerInfos,omitempty"`
-    // TLS安全策略协议
+	// TLS安全策略协议
 	TlsProtocols *string `json:"tlsProtocols,omitempty"`
-    // 是否是默认策略
+	// 是否是默认策略
 	IsDefault *bool `json:"isDefault,omitempty"`
-    // 创建人
+	// 创建人
 	CreatedBy *string `json:"createdBy,omitempty"`
-    // TLS安全策略加密套件
+	// TLS安全策略加密套件
 	CipherSuites *string `json:"cipherSuites,omitempty"`
-    // 客户ID
+	// 客户ID
 	CustomerId *string `json:"customerId,omitempty"`
-    // TLS安全策略名称
+	// TLS安全策略名称
 	Name *string `json:"name,omitempty"`
-    // 创建时间
+	// 创建时间
 	CreatedTime *string `json:"createdTime,omitempty"`
-    // 修改人
+	// 修改人
 	ModifiedBy *string `json:"modifiedBy,omitempty"`
-    // TLS安全策略ID
+	// TLS安全策略ID
 	Id *int64 `json:"id,omitempty"`
 }
 
@@ -144,7 +144,6 @@ func (s *GetTLSCustomizeProtocolRespResponseBody) SetId(v int64) *GetTLSCustomiz
 	return s
 }
 
-
 type GetTLSCustomizeProtocolRespResponseBodyBuilder struct {
 	s *GetTLSCustomizeProtocolRespResponseBody
 }
@@ -238,5 +237,3 @@ func (b *GetTLSCustomizeProtocolRespResponseBodyBuilder) Id(v int64) *GetTLSCust
 func (b *GetTLSCustomizeProtocolRespResponseBodyBuilder) Build() *GetTLSCustomizeProtocolRespResponseBody {
 	return b.s
 }
-
-

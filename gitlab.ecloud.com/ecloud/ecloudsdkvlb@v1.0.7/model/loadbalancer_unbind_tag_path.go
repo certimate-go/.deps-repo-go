@@ -5,13 +5,13 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type LoadbalancerUnbindTagPath struct {
-    position.Path
-    // 负载均衡器ID
+	position.Path
+	// 负载均衡器ID
 	LoadbalanceId *string `json:"loadbalanceId,omitempty"`
 }
 
@@ -32,7 +32,6 @@ func (s *LoadbalancerUnbindTagPath) SetLoadbalanceId(v string) *LoadbalancerUnbi
 	return s
 }
 
-
 type LoadbalancerUnbindTagPathBuilder struct {
 	s *LoadbalancerUnbindTagPath
 }
@@ -51,5 +50,3 @@ func (b *LoadbalancerUnbindTagPathBuilder) LoadbalanceId(v string) *Loadbalancer
 func (b *LoadbalancerUnbindTagPathBuilder) Build() *LoadbalancerUnbindTagPath {
 	return b.s
 }
-
-

@@ -4,19 +4,17 @@
 
 package model
 
-
 type GetDomainByNameForOpenapiResponseStateEnum string
 
 // List of State
 const (
-    GetDomainByNameForOpenapiResponseStateEnumError GetDomainByNameForOpenapiResponseStateEnum = "ERROR"
-    GetDomainByNameForOpenapiResponseStateEnumException GetDomainByNameForOpenapiResponseStateEnum = "EXCEPTION"
-    GetDomainByNameForOpenapiResponseStateEnumForbidden GetDomainByNameForOpenapiResponseStateEnum = "FORBIDDEN"
-    GetDomainByNameForOpenapiResponseStateEnumOk GetDomainByNameForOpenapiResponseStateEnum = "OK"
+	GetDomainByNameForOpenapiResponseStateEnumError     GetDomainByNameForOpenapiResponseStateEnum = "ERROR"
+	GetDomainByNameForOpenapiResponseStateEnumException GetDomainByNameForOpenapiResponseStateEnum = "EXCEPTION"
+	GetDomainByNameForOpenapiResponseStateEnumForbidden GetDomainByNameForOpenapiResponseStateEnum = "FORBIDDEN"
+	GetDomainByNameForOpenapiResponseStateEnumOk        GetDomainByNameForOpenapiResponseStateEnum = "OK"
 )
 
 type GetDomainByNameForOpenapiResponse struct {
-
 	RequestId string `json:"requestId,omitempty"`
 
 	ErrorMessage string `json:"errorMessage,omitempty"`

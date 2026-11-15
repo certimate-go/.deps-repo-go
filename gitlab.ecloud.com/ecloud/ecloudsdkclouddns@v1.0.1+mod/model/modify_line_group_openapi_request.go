@@ -4,10 +4,7 @@
 
 package model
 
-
-
 type ModifyLineGroupOpenapiRequest struct {
-
 	ModifyLineGroupOpenapiPath *ModifyLineGroupOpenapiPath `json:"modifyLineGroupOpenapiPath,omitempty"`
 
 	ModifyLineGroupOpenapiBody *ModifyLineGroupOpenapiBody `json:"modifyLineGroupOpenapiBody,omitempty"`

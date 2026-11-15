@@ -5,13 +5,13 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type GetTLSCustomizeProtocolRespPath struct {
-    position.Path
-    // TLS安全策略ID
+	position.Path
+	// TLS安全策略ID
 	TlsCustomizeProtocolId *string `json:"tlsCustomizeProtocolId,omitempty"`
 }
 
@@ -32,7 +32,6 @@ func (s *GetTLSCustomizeProtocolRespPath) SetTlsCustomizeProtocolId(v string) *G
 	return s
 }
 
-
 type GetTLSCustomizeProtocolRespPathBuilder struct {
 	s *GetTLSCustomizeProtocolRespPath
 }
@@ -51,5 +50,3 @@ func (b *GetTLSCustomizeProtocolRespPathBuilder) TlsCustomizeProtocolId(v string
 func (b *GetTLSCustomizeProtocolRespPathBuilder) Build() *GetTLSCustomizeProtocolRespPath {
 	return b.s
 }
-
-

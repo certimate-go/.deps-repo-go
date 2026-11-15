@@ -4,10 +4,7 @@
 
 package model
 
-
-
 type ListDomainRequest struct {
-
 	ListDomainBody *ListDomainBody `json:"listDomainBody,omitempty"`
 
 	ListDomainQuery *ListDomainQuery `json:"listDomainQuery,omitempty"`

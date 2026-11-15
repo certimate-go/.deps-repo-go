@@ -2,12 +2,13 @@ package provider
 
 import (
 	"bufio"
-	"gitlab.ecloud.com/ecloud/ecloudsdkcore/auth"
-	"gitlab.ecloud.com/ecloud/ecloudsdkcore/errs"
-	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 	"os"
 	"path/filepath"
 	"strings"
+
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/auth"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/errs"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type ICredentialProvider interface {
@@ -41,8 +42,7 @@ func CreateBasicCredentialProvider(credential *auth.Credential) *BasicCredential
 	return NewBasicCredentialProvider(credential)
 }
 
-type EnvCredentialProvider struct {
-}
+type EnvCredentialProvider struct{}
 
 func NewEnvCredentialProvider() *EnvCredentialProvider {
 	return &EnvCredentialProvider{}
@@ -89,7 +89,6 @@ func getProfilePathByDefault() (string, error) {
 	dir, err := os.UserHomeDir()
 	if err != nil {
 		return "", errs.NewCredentialError("Get the user home directory error", err)
-
 	}
 	dir = filepath.Join(dir, strings.ReplaceAll(auth.PathCredentialFile, "/", string(filepath.Separator)))
 	_, err = os.Stat(dir)

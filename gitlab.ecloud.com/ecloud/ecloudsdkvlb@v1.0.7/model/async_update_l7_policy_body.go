@@ -5,19 +5,19 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type AsyncUpdateL7PolicyBody struct {
-    position.Body
-    // 七层转发策略名称，为5~64位的英文、数字、下划线中划线等的组合
+	position.Body
+	// 七层转发策略名称，为5~64位的英文、数字、下划线中划线等的组合
 	Name *string `json:"name,omitempty"`
-    // 后端服务组ID
+	// 后端服务组ID
 	PoolId *string `json:"poolId,omitempty"`
-    // 七层转发策略ID
+	// 七层转发策略ID
 	L7PolicyId *string `json:"l7PolicyId,omitempty"`
-    // 七层转发策略优先级
+	// 七层转发策略优先级
 	Position *int32 `json:"position,omitempty"`
 }
 
@@ -53,7 +53,6 @@ func (s *AsyncUpdateL7PolicyBody) SetPosition(v int32) *AsyncUpdateL7PolicyBody 
 	return s
 }
 
-
 type AsyncUpdateL7PolicyBodyBuilder struct {
 	s *AsyncUpdateL7PolicyBody
 }
@@ -87,5 +86,3 @@ func (b *AsyncUpdateL7PolicyBodyBuilder) Position(v int32) *AsyncUpdateL7PolicyB
 func (b *AsyncUpdateL7PolicyBodyBuilder) Build() *AsyncUpdateL7PolicyBody {
 	return b.s
 }
-
-

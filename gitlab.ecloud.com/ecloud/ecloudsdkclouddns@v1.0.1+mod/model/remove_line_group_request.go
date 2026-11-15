@@ -4,9 +4,6 @@
 
 package model
 
-
-
 type RemoveLineGroupRequest struct {
-
 	RemoveLineGroupBody *RemoveLineGroupBody `json:"removeLineGroupBody,omitempty"`
 }

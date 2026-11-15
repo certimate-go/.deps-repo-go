@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type AddCdnDomainRequest struct {
-
-
 	AddCdnDomainBody *AddCdnDomainBody `json:"addCdnDomainBody,omitempty"`
 }
 
@@ -31,7 +29,6 @@ func (s *AddCdnDomainRequest) SetAddCdnDomainBody(v *AddCdnDomainBody) *AddCdnDo
 	return s
 }
 
-
 type AddCdnDomainRequestBuilder struct {
 	s *AddCdnDomainRequest
 }
@@ -50,5 +47,3 @@ func (b *AddCdnDomainRequestBuilder) AddCdnDomainBody(v *AddCdnDomainBody) *AddC
 func (b *AddCdnDomainRequestBuilder) Build() *AddCdnDomainRequest {
 	return b.s
 }
-
-

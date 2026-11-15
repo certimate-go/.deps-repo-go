@@ -4,9 +4,6 @@
 
 package model
 
-
-
 type RenewProductOpenapiRequest struct {
-
 	RenewProductOpenapiBody *RenewProductOpenapiBody `json:"renewProductOpenapiBody,omitempty"`
 }

@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type CertificationUnbindTagRequest struct {
-
-
 	CertificationUnbindTagPath *CertificationUnbindTagPath `json:"certificationUnbindTagPath,omitempty"`
 }
 
@@ -31,7 +29,6 @@ func (s *CertificationUnbindTagRequest) SetCertificationUnbindTagPath(v *Certifi
 	return s
 }
 
-
 type CertificationUnbindTagRequestBuilder struct {
 	s *CertificationUnbindTagRequest
 }
@@ -50,5 +47,3 @@ func (b *CertificationUnbindTagRequestBuilder) CertificationUnbindTagPath(v *Cer
 func (b *CertificationUnbindTagRequestBuilder) Build() *CertificationUnbindTagRequest {
 	return b.s
 }
-
-

@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type BatchDeleteControlGroupRequest struct {
-
-
 	BatchDeleteControlGroupBody *BatchDeleteControlGroupBody `json:"batchDeleteControlGroupBody,omitempty"`
 }
 
@@ -31,7 +29,6 @@ func (s *BatchDeleteControlGroupRequest) SetBatchDeleteControlGroupBody(v *Batch
 	return s
 }
 
-
 type BatchDeleteControlGroupRequestBuilder struct {
 	s *BatchDeleteControlGroupRequest
 }
@@ -50,5 +47,3 @@ func (b *BatchDeleteControlGroupRequestBuilder) BatchDeleteControlGroupBody(v *B
 func (b *BatchDeleteControlGroupRequestBuilder) Build() *BatchDeleteControlGroupRequest {
 	return b.s
 }
-
-

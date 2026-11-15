@@ -5,136 +5,142 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
+
 type AsyncCreateWithHttpStatusBodyGroupTypeEnum string
 
 // List of GroupType
 const (
-    AsyncCreateWithHttpStatusBodyGroupTypeEnumBlacklist AsyncCreateWithHttpStatusBodyGroupTypeEnum = "blacklist"
-    AsyncCreateWithHttpStatusBodyGroupTypeEnumWhitelist AsyncCreateWithHttpStatusBodyGroupTypeEnum = "whitelist"
+	AsyncCreateWithHttpStatusBodyGroupTypeEnumBlacklist AsyncCreateWithHttpStatusBodyGroupTypeEnum = "blacklist"
+	AsyncCreateWithHttpStatusBodyGroupTypeEnumWhitelist AsyncCreateWithHttpStatusBodyGroupTypeEnum = "whitelist"
 )
+
 type AsyncCreateWithHttpStatusBodyProtocolEnum string
 
 // List of Protocol
 const (
-    AsyncCreateWithHttpStatusBodyProtocolEnumHttp AsyncCreateWithHttpStatusBodyProtocolEnum = "HTTP"
-    AsyncCreateWithHttpStatusBodyProtocolEnumHttps AsyncCreateWithHttpStatusBodyProtocolEnum = "HTTPS"
-    AsyncCreateWithHttpStatusBodyProtocolEnumTcp AsyncCreateWithHttpStatusBodyProtocolEnum = "TCP"
-    AsyncCreateWithHttpStatusBodyProtocolEnumTerminatedHttps AsyncCreateWithHttpStatusBodyProtocolEnum = "TERMINATED_HTTPS"
-    AsyncCreateWithHttpStatusBodyProtocolEnumUdp AsyncCreateWithHttpStatusBodyProtocolEnum = "UDP"
+	AsyncCreateWithHttpStatusBodyProtocolEnumHttp            AsyncCreateWithHttpStatusBodyProtocolEnum = "HTTP"
+	AsyncCreateWithHttpStatusBodyProtocolEnumHttps           AsyncCreateWithHttpStatusBodyProtocolEnum = "HTTPS"
+	AsyncCreateWithHttpStatusBodyProtocolEnumTcp             AsyncCreateWithHttpStatusBodyProtocolEnum = "TCP"
+	AsyncCreateWithHttpStatusBodyProtocolEnumTerminatedHttps AsyncCreateWithHttpStatusBodyProtocolEnum = "TERMINATED_HTTPS"
+	AsyncCreateWithHttpStatusBodyProtocolEnumUdp             AsyncCreateWithHttpStatusBodyProtocolEnum = "UDP"
 )
+
 type AsyncCreateWithHttpStatusBodyProductTypeEnum string
 
 // List of ProductType
 const (
-    AsyncCreateWithHttpStatusBodyProductTypeEnumNormal AsyncCreateWithHttpStatusBodyProductTypeEnum = "NORMAL"
-    AsyncCreateWithHttpStatusBodyProductTypeEnumDeCloud AsyncCreateWithHttpStatusBodyProductTypeEnum = "DE_CLOUD"
-    AsyncCreateWithHttpStatusBodyProductTypeEnumAutoscaling AsyncCreateWithHttpStatusBodyProductTypeEnum = "AUTOSCALING"
-    AsyncCreateWithHttpStatusBodyProductTypeEnumVo AsyncCreateWithHttpStatusBodyProductTypeEnum = "VO"
-    AsyncCreateWithHttpStatusBodyProductTypeEnumCdn AsyncCreateWithHttpStatusBodyProductTypeEnum = "CDN"
-    AsyncCreateWithHttpStatusBodyProductTypeEnumPaasMaster AsyncCreateWithHttpStatusBodyProductTypeEnum = "PAAS_MASTER"
-    AsyncCreateWithHttpStatusBodyProductTypeEnumPaasSlave AsyncCreateWithHttpStatusBodyProductTypeEnum = "PAAS_SLAVE"
+	AsyncCreateWithHttpStatusBodyProductTypeEnumNormal      AsyncCreateWithHttpStatusBodyProductTypeEnum = "NORMAL"
+	AsyncCreateWithHttpStatusBodyProductTypeEnumDeCloud     AsyncCreateWithHttpStatusBodyProductTypeEnum = "DE_CLOUD"
+	AsyncCreateWithHttpStatusBodyProductTypeEnumAutoscaling AsyncCreateWithHttpStatusBodyProductTypeEnum = "AUTOSCALING"
+	AsyncCreateWithHttpStatusBodyProductTypeEnumVo          AsyncCreateWithHttpStatusBodyProductTypeEnum = "VO"
+	AsyncCreateWithHttpStatusBodyProductTypeEnumCdn         AsyncCreateWithHttpStatusBodyProductTypeEnum = "CDN"
+	AsyncCreateWithHttpStatusBodyProductTypeEnumPaasMaster  AsyncCreateWithHttpStatusBodyProductTypeEnum = "PAAS_MASTER"
+	AsyncCreateWithHttpStatusBodyProductTypeEnumPaasSlave   AsyncCreateWithHttpStatusBodyProductTypeEnum = "PAAS_SLAVE"
 )
+
 type AsyncCreateWithHttpStatusBodyLbAlgorithmEnum string
 
 // List of LbAlgorithm
 const (
-    AsyncCreateWithHttpStatusBodyLbAlgorithmEnumRoundRobin AsyncCreateWithHttpStatusBodyLbAlgorithmEnum = "ROUND_ROBIN"
-    AsyncCreateWithHttpStatusBodyLbAlgorithmEnumLeastConnections AsyncCreateWithHttpStatusBodyLbAlgorithmEnum = "LEAST_CONNECTIONS"
-    AsyncCreateWithHttpStatusBodyLbAlgorithmEnumSourceIp AsyncCreateWithHttpStatusBodyLbAlgorithmEnum = "SOURCE_IP"
+	AsyncCreateWithHttpStatusBodyLbAlgorithmEnumRoundRobin       AsyncCreateWithHttpStatusBodyLbAlgorithmEnum = "ROUND_ROBIN"
+	AsyncCreateWithHttpStatusBodyLbAlgorithmEnumLeastConnections AsyncCreateWithHttpStatusBodyLbAlgorithmEnum = "LEAST_CONNECTIONS"
+	AsyncCreateWithHttpStatusBodyLbAlgorithmEnumSourceIp         AsyncCreateWithHttpStatusBodyLbAlgorithmEnum = "SOURCE_IP"
 )
+
 type AsyncCreateWithHttpStatusBodyHealthTypeEnum string
 
 // List of HealthType
 const (
-    AsyncCreateWithHttpStatusBodyHealthTypeEnumHttp10 AsyncCreateWithHttpStatusBodyHealthTypeEnum = "HTTP10"
-    AsyncCreateWithHttpStatusBodyHealthTypeEnumHttp11 AsyncCreateWithHttpStatusBodyHealthTypeEnum = "HTTP11"
-    AsyncCreateWithHttpStatusBodyHealthTypeEnumHttps AsyncCreateWithHttpStatusBodyHealthTypeEnum = "HTTPS"
-    AsyncCreateWithHttpStatusBodyHealthTypeEnumTcp AsyncCreateWithHttpStatusBodyHealthTypeEnum = "TCP"
-    AsyncCreateWithHttpStatusBodyHealthTypeEnumPing AsyncCreateWithHttpStatusBodyHealthTypeEnum = "PING"
+	AsyncCreateWithHttpStatusBodyHealthTypeEnumHttp10 AsyncCreateWithHttpStatusBodyHealthTypeEnum = "HTTP10"
+	AsyncCreateWithHttpStatusBodyHealthTypeEnumHttp11 AsyncCreateWithHttpStatusBodyHealthTypeEnum = "HTTP11"
+	AsyncCreateWithHttpStatusBodyHealthTypeEnumHttps  AsyncCreateWithHttpStatusBodyHealthTypeEnum = "HTTPS"
+	AsyncCreateWithHttpStatusBodyHealthTypeEnumTcp    AsyncCreateWithHttpStatusBodyHealthTypeEnum = "TCP"
+	AsyncCreateWithHttpStatusBodyHealthTypeEnumPing   AsyncCreateWithHttpStatusBodyHealthTypeEnum = "PING"
 )
+
 type AsyncCreateWithHttpStatusBodySessionPersistenceEnum string
 
 // List of SessionPersistence
 const (
-    AsyncCreateWithHttpStatusBodySessionPersistenceEnumNone AsyncCreateWithHttpStatusBodySessionPersistenceEnum = "NONE"
-    AsyncCreateWithHttpStatusBodySessionPersistenceEnumAppCookie AsyncCreateWithHttpStatusBodySessionPersistenceEnum = "APP_COOKIE"
-    AsyncCreateWithHttpStatusBodySessionPersistenceEnumHttpCookie AsyncCreateWithHttpStatusBodySessionPersistenceEnum = "HTTP_COOKIE"
-    AsyncCreateWithHttpStatusBodySessionPersistenceEnumSourceIp AsyncCreateWithHttpStatusBodySessionPersistenceEnum = "SOURCE_IP"
-    AsyncCreateWithHttpStatusBodySessionPersistenceEnumCallId AsyncCreateWithHttpStatusBodySessionPersistenceEnum = "CALL_ID"
+	AsyncCreateWithHttpStatusBodySessionPersistenceEnumNone       AsyncCreateWithHttpStatusBodySessionPersistenceEnum = "NONE"
+	AsyncCreateWithHttpStatusBodySessionPersistenceEnumAppCookie  AsyncCreateWithHttpStatusBodySessionPersistenceEnum = "APP_COOKIE"
+	AsyncCreateWithHttpStatusBodySessionPersistenceEnumHttpCookie AsyncCreateWithHttpStatusBodySessionPersistenceEnum = "HTTP_COOKIE"
+	AsyncCreateWithHttpStatusBodySessionPersistenceEnumSourceIp   AsyncCreateWithHttpStatusBodySessionPersistenceEnum = "SOURCE_IP"
+	AsyncCreateWithHttpStatusBodySessionPersistenceEnumCallId     AsyncCreateWithHttpStatusBodySessionPersistenceEnum = "CALL_ID"
 )
 
 type AsyncCreateWithHttpStatusBody struct {
-    position.Body
-    // 监听器绑定的健康检查的时间间隔，单位为秒，取值为1-100的整数
+	position.Body
+	// 监听器绑定的健康检查的时间间隔，单位为秒，取值为1-100的整数
 	HealthDelay *int32 `json:"healthDelay,omitempty"`
-    // 绑定的访问控制组类型: blacklist:黑名单，whitelist:白名单
+	// 绑定的访问控制组类型: blacklist:黑名单，whitelist:白名单
 	GroupType *AsyncCreateWithHttpStatusBodyGroupTypeEnum `json:"groupType,omitempty"`
-    // 重定向到的监听器ID，不是Null，说明该监听器开启了重定向
+	// 重定向到的监听器ID，不是Null，说明该监听器开启了重定向
 	RedirectToListenerId *string `json:"redirectToListenerId,omitempty"`
-    // 证书容器中的SNI证书ID
+	// 证书容器中的SNI证书ID
 	SniContainerIds []string `json:"sniContainerIds,omitempty"`
-    // 是否开启获取真实IP
+	// 是否开启获取真实IP
 	Transparent *bool `json:"transparent,omitempty"`
-    // 是否是多AZ场景
+	// 是否是多AZ场景
 	IsMultiAz *bool `json:"isMultiAz,omitempty"`
-    // 监听器前后端使用的协议
+	// 监听器前后端使用的协议
 	Protocol *AsyncCreateWithHttpStatusBodyProtocolEnum `json:"protocol,omitempty"`
-    // 是否开启HTTP2协议
+	// 是否开启HTTP2协议
 	Http2 *bool `json:"http2,omitempty"`
-    // 监听器是否可用
+	// 监听器是否可用
 	AdminStateUp *bool `json:"adminStateUp,omitempty"`
-    // 证书容器中的服务器证书的访问链接中的UUID
+	// 证书容器中的服务器证书的访问链接中的UUID
 	DefaultTlsContainerId *string `json:"defaultTlsContainerId,omitempty"`
-    // 是否开启双向认证
+	// 是否开启双向认证
 	MutualAuthenticationUp *bool `json:"mutualAuthenticationUp,omitempty"`
-    // 产品类型，客户订购默认为NORMAL类型
+	// 产品类型，客户订购默认为NORMAL类型
 	ProductType *AsyncCreateWithHttpStatusBodyProductTypeEnum `json:"productType,omitempty"`
-    // 后端服务器组名称
+	// 后端服务器组名称
 	PoolName *string `json:"poolName,omitempty"`
-    // TLS安全策略的ID
+	// TLS安全策略的ID
 	TlsCustomizeProtocolId *int64 `json:"tlsCustomizeProtocolId,omitempty"`
-    // 是否开启SNI证书
+	// 是否开启SNI证书
 	SniUp *bool `json:"sniUp,omitempty"`
-    // TCP长连接超时时间，取值为10-3600
+	// TCP长连接超时时间，取值为10-3600
 	KeepAliveTimeout *int32 `json:"keepAliveTimeout,omitempty"`
-    // 监听器的调度算法
+	// 监听器的调度算法
 	LbAlgorithm *AsyncCreateWithHttpStatusBodyLbAlgorithmEnum `json:"lbAlgorithm,omitempty"`
-    // 是否开启TLS安全策略
+	// 是否开启TLS安全策略
 	TlsUp *bool `json:"tlsUp,omitempty"`
-    // 监听器绑定的检查方式为HTTP的用于检查的方法，取值范围：GET，POST
+	// 监听器绑定的检查方式为HTTP的用于检查的方法，取值范围：GET，POST
 	HealthHttpMethod *string `json:"healthHttpMethod,omitempty"`
-    // 监听器是否支持proxy_protocol（仅TCP协议监听器支持该参数，天池底层不支持该参数）
+	// 监听器是否支持proxy_protocol（仅TCP协议监听器支持该参数，天池底层不支持该参数）
 	ProxyProtocol *bool `json:"proxyProtocol,omitempty"`
-    // 监听器绑定的健康检查的检查方式
+	// 监听器绑定的健康检查的检查方式
 	HealthType *AsyncCreateWithHttpStatusBodyHealthTypeEnum `json:"healthType,omitempty"`
-    // 负载均衡ID
+	// 负载均衡ID
 	LoadBalanceId *string `json:"loadBalanceId,omitempty"`
-    // 监听器前端协议的端口号，取值为1-65535
+	// 监听器前端协议的端口号，取值为1-65535
 	ProtocolPort *int32 `json:"protocolPort,omitempty"`
-    // 监听器绑定的检查方式为HTTP的健康检查的期望HTTP状态代码
+	// 监听器绑定的检查方式为HTTP的健康检查的期望HTTP状态代码
 	HealthExpectedCode *string `json:"healthExpectedCode,omitempty"`
-    // 监听器绑定的健康检查检查失败后的最大尝试检查次数，取值为1-10
+	// 监听器绑定的健康检查检查失败后的最大尝试检查次数，取值为1-10
 	HealthMaxRetries *int32 `json:"healthMaxRetries,omitempty"`
-    // 监听器名称为5~64位的英文、数字、下划线、中划线等的组合
+	// 监听器名称为5~64位的英文、数字、下划线、中划线等的组合
 	Name *string `json:"name,omitempty"`
-    // 后端服务器组ID, 不为Null，说明使用该poolId，不新建pool
+	// 后端服务器组ID, 不为Null，说明使用该poolId，不新建pool
 	PoolId *string `json:"poolId,omitempty"`
-    // 会话保持方式：NONE,APP_COOKIE,HTTP_COOKIE,SOURCE_IP,SOURCE_IP_PORT,CALL_ID（sessionPersistence参数存在默认值，当取值错误或者不填是默认值为NONE）
+	// 会话保持方式：NONE,APP_COOKIE,HTTP_COOKIE,SOURCE_IP,SOURCE_IP_PORT,CALL_ID（sessionPersistence参数存在默认值，当取值错误或者不填是默认值为NONE）
 	SessionPersistence *AsyncCreateWithHttpStatusBodySessionPersistenceEnum `json:"sessionPersistence,omitempty"`
-    // 是否开启访问控制
+	// 是否开启访问控制
 	GroupEnabled *bool `json:"groupEnabled,omitempty"`
-    // 监听器绑定的检查方式为HTTP或HTTPS的用于监控的URL，必须以“/”开头
+	// 监听器绑定的检查方式为HTTP或HTTPS的用于监控的URL，必须以“/”开头
 	HealthUrlPath *string `json:"healthUrlPath,omitempty"`
-    // 证书容器中的CA证书ID
+	// 证书容器中的CA证书ID
 	CaContainerId *string `json:"caContainerId,omitempty"`
-    // 健康检查开关（仅provider为F5时可用）
+	// 健康检查开关（仅provider为F5时可用）
 	HealthAdminStateUp *bool `json:"healthAdminStateUp,omitempty"`
-    // 访问控制组ID
+	// 访问控制组ID
 	ControlGroupId *string `json:"controlGroupId,omitempty"`
-    // 监听器绑定的健康检查每次检查的超时时间，以秒为单位，取值为1-100的整数
+	// 监听器绑定的健康检查每次检查的超时时间，以秒为单位，取值为1-100的整数
 	HealthTimeout *int32 `json:"healthTimeout,omitempty"`
 }
 
@@ -320,7 +326,6 @@ func (s *AsyncCreateWithHttpStatusBody) SetHealthTimeout(v int32) *AsyncCreateWi
 	return s
 }
 
-
 type AsyncCreateWithHttpStatusBodyBuilder struct {
 	s *AsyncCreateWithHttpStatusBody
 }
@@ -504,5 +509,3 @@ func (b *AsyncCreateWithHttpStatusBodyBuilder) HealthTimeout(v int32) *AsyncCrea
 func (b *AsyncCreateWithHttpStatusBodyBuilder) Build() *AsyncCreateWithHttpStatusBody {
 	return b.s
 }
-
-

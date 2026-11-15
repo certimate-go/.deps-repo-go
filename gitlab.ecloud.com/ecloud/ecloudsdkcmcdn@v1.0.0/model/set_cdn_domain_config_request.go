@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type SetCdnDomainConfigRequest struct {
-
-
 	SetCdnDomainConfigBody *SetCdnDomainConfigBody `json:"setCdnDomainConfigBody,omitempty"`
 }
 
@@ -31,7 +29,6 @@ func (s *SetCdnDomainConfigRequest) SetSetCdnDomainConfigBody(v *SetCdnDomainCon
 	return s
 }
 
-
 type SetCdnDomainConfigRequestBuilder struct {
 	s *SetCdnDomainConfigRequest
 }
@@ -50,5 +47,3 @@ func (b *SetCdnDomainConfigRequestBuilder) SetCdnDomainConfigBody(v *SetCdnDomai
 func (b *SetCdnDomainConfigRequestBuilder) Build() *SetCdnDomainConfigRequest {
 	return b.s
 }
-
-

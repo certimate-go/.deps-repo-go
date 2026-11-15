@@ -4,9 +4,6 @@
 
 package model
 
-
-
 type RemoveCustomLineOpenapiRequest struct {
-
 	RemoveCustomLineOpenapiBody *RemoveCustomLineOpenapiBody `json:"removeCustomLineOpenapiBody,omitempty"`
 }

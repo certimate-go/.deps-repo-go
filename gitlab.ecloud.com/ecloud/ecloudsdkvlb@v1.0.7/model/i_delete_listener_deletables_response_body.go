@@ -5,24 +5,24 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
+
 type IDeleteListenerDeletablesResponseBodyOperateDisplayEnumEnum string
 
 // List of OperateDisplayEnum
 const (
-    IDeleteListenerDeletablesResponseBodyOperateDisplayEnumEnumAllow IDeleteListenerDeletablesResponseBodyOperateDisplayEnumEnum = "ALLOW"
-    IDeleteListenerDeletablesResponseBodyOperateDisplayEnumEnumTempDeny IDeleteListenerDeletablesResponseBodyOperateDisplayEnumEnum = "TEMP_DENY"
-    IDeleteListenerDeletablesResponseBodyOperateDisplayEnumEnumForeverDeny IDeleteListenerDeletablesResponseBodyOperateDisplayEnumEnum = "FOREVER_DENY"
+	IDeleteListenerDeletablesResponseBodyOperateDisplayEnumEnumAllow       IDeleteListenerDeletablesResponseBodyOperateDisplayEnumEnum = "ALLOW"
+	IDeleteListenerDeletablesResponseBodyOperateDisplayEnumEnumTempDeny    IDeleteListenerDeletablesResponseBodyOperateDisplayEnumEnum = "TEMP_DENY"
+	IDeleteListenerDeletablesResponseBodyOperateDisplayEnumEnumForeverDeny IDeleteListenerDeletablesResponseBodyOperateDisplayEnumEnum = "FOREVER_DENY"
 )
 
 type IDeleteListenerDeletablesResponseBody struct {
-
-    // 监听器ID
+	// 监听器ID
 	ListenerId *string `json:"listenerId,omitempty"`
-    // 校验监听器能否删除校验结果
+	// 校验监听器能否删除校验结果
 	OperateDisplayEnum *IDeleteListenerDeletablesResponseBodyOperateDisplayEnumEnum `json:"operateDisplayEnum,omitempty"`
-    // 校验监听器能否删除信息
+	// 校验监听器能否删除信息
 	Message *string `json:"message,omitempty"`
 }
 
@@ -53,7 +53,6 @@ func (s *IDeleteListenerDeletablesResponseBody) SetMessage(v string) *IDeleteLis
 	return s
 }
 
-
 type IDeleteListenerDeletablesResponseBodyBuilder struct {
 	s *IDeleteListenerDeletablesResponseBody
 }
@@ -82,5 +81,3 @@ func (b *IDeleteListenerDeletablesResponseBodyBuilder) Message(v string) *IDelet
 func (b *IDeleteListenerDeletablesResponseBodyBuilder) Build() *IDeleteListenerDeletablesResponseBody {
 	return b.s
 }
-
-

@@ -4,9 +4,6 @@
 
 package model
 
-
-
 type HostSingleResolveRequest struct {
-
 	HostSingleResolveQuery *HostSingleResolveQuery `json:"hostSingleResolveQuery,omitempty"`
 }

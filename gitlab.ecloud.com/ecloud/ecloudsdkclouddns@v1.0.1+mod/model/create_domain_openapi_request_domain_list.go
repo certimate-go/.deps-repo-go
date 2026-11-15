@@ -4,10 +4,7 @@
 
 package model
 
-
-
 type CreateDomainOpenapiRequestDomainList struct {
-
 	// 实例ID
 	InstanceId string `json:"instanceId"`
 

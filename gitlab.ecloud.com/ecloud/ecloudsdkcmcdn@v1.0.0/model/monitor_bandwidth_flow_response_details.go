@@ -5,26 +5,25 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type MonitorBandwidthFlowResponseDetails struct {
-
-    // 区域，取值为32个全国地区
+	// 区域，取值为32个全国地区
 	Area *string `json:"area,omitempty"`
-    // 用量粒度时间
+	// 用量粒度时间
 	DateTime *string `json:"dateTime,omitempty"`
-    // 5分钟粒度时间内请命中数
+	// 5分钟粒度时间内请命中数
 	RequestHit *int64 `json:"requestHit,omitempty"`
-    // 5分钟粒度时间内请求总数
+	// 5分钟粒度时间内请求总数
 	RequestNum *int64 `json:"requestNum,omitempty"`
-    // 用量，流量KB
+	// 用量，流量KB
 	FlowValue *float64 `json:"flowValue,omitempty"`
-    // 用量，带宽Kbps
+	// 用量，带宽Kbps
 	BandwidthValue *float64 `json:"bandwidthValue,omitempty"`
-    // 字节命中率%
+	// 字节命中率%
 	ByteHitrate *float64 `json:"byteHitrate,omitempty"`
-    // 请求命中率，命中率=命中数/请求数，单位%
+	// 请求命中率，命中率=命中数/请求数，单位%
 	RequestHitrate *float64 `json:"requestHitrate,omitempty"`
 }
 
@@ -80,7 +79,6 @@ func (s *MonitorBandwidthFlowResponseDetails) SetRequestHitrate(v float64) *Moni
 	return s
 }
 
-
 type MonitorBandwidthFlowResponseDetailsBuilder struct {
 	s *MonitorBandwidthFlowResponseDetails
 }
@@ -134,5 +132,3 @@ func (b *MonitorBandwidthFlowResponseDetailsBuilder) RequestHitrate(v float64) *
 func (b *MonitorBandwidthFlowResponseDetailsBuilder) Build() *MonitorBandwidthFlowResponseDetails {
 	return b.s
 }
-
-

@@ -5,15 +5,15 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type UpdateLoadBalanceTCPListenerPoolBody struct {
-    position.Body
-    // 监听器绑定的后端服务器组ID
+	position.Body
+	// 监听器绑定的后端服务器组ID
 	PoolId *string `json:"poolId,omitempty"`
-    // 监听器的ID
+	// 监听器的ID
 	Id *string `json:"id,omitempty"`
 }
 
@@ -39,7 +39,6 @@ func (s *UpdateLoadBalanceTCPListenerPoolBody) SetId(v string) *UpdateLoadBalanc
 	return s
 }
 
-
 type UpdateLoadBalanceTCPListenerPoolBodyBuilder struct {
 	s *UpdateLoadBalanceTCPListenerPoolBody
 }
@@ -63,5 +62,3 @@ func (b *UpdateLoadBalanceTCPListenerPoolBodyBuilder) Id(v string) *UpdateLoadBa
 func (b *UpdateLoadBalanceTCPListenerPoolBodyBuilder) Build() *UpdateLoadBalanceTCPListenerPoolBody {
 	return b.s
 }
-
-

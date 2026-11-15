@@ -5,14 +5,14 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type DeleteControlGroupRuleBody struct {
-    position.Body
-    // 访问控制组规则ID列表
-	RuleLists []string 
+	position.Body
+	// 访问控制组规则ID列表
+	RuleLists []string
 }
 
 func (s DeleteControlGroupRuleBody) String() string {
@@ -32,7 +32,6 @@ func (s *DeleteControlGroupRuleBody) SetRuleLists(v []string) *DeleteControlGrou
 	return s
 }
 
-
 type DeleteControlGroupRuleBodyBuilder struct {
 	s *DeleteControlGroupRuleBody
 }
@@ -51,5 +50,3 @@ func (b *DeleteControlGroupRuleBodyBuilder) RuleLists(v []string) *DeleteControl
 func (b *DeleteControlGroupRuleBodyBuilder) Build() *DeleteControlGroupRuleBody {
 	return b.s
 }
-
-

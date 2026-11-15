@@ -5,14 +5,13 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type ListNewServerPortsForMemberResponseBody struct {
-
-    // 满足查询条件的总个数
+	// 满足查询条件的总个数
 	Total *int32 `json:"total,omitempty"`
-    // 分页查询返回的具体结构体
+	// 分页查询返回的具体结构体
 	Content *[]ListNewServerPortsForMemberResponseContent `json:"content,omitempty"`
 }
 
@@ -38,7 +37,6 @@ func (s *ListNewServerPortsForMemberResponseBody) SetContent(v []ListNewServerPo
 	return s
 }
 
-
 type ListNewServerPortsForMemberResponseBodyBuilder struct {
 	s *ListNewServerPortsForMemberResponseBody
 }
@@ -62,5 +60,3 @@ func (b *ListNewServerPortsForMemberResponseBodyBuilder) Content(v []ListNewServ
 func (b *ListNewServerPortsForMemberResponseBodyBuilder) Build() *ListNewServerPortsForMemberResponseBody {
 	return b.s
 }
-
-

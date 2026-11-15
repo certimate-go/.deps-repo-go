@@ -5,14 +5,13 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type SetCdnDomainConfigRequestReferrerAntiStealingLink struct {
-
-    // 是否启用
+	// 是否启用
 	Enable *bool `json:"enable,omitempty"`
-    // 防盗链配置内容
+	// 防盗链配置内容
 	Detail *SetCdnDomainConfigRequestDetail `json:"detail,omitempty"`
 }
 
@@ -38,7 +37,6 @@ func (s *SetCdnDomainConfigRequestReferrerAntiStealingLink) SetDetail(v *SetCdnD
 	return s
 }
 
-
 type SetCdnDomainConfigRequestReferrerAntiStealingLinkBuilder struct {
 	s *SetCdnDomainConfigRequestReferrerAntiStealingLink
 }
@@ -62,5 +60,3 @@ func (b *SetCdnDomainConfigRequestReferrerAntiStealingLinkBuilder) Detail(v *Set
 func (b *SetCdnDomainConfigRequestReferrerAntiStealingLinkBuilder) Build() *SetCdnDomainConfigRequestReferrerAntiStealingLink {
 	return b.s
 }
-
-

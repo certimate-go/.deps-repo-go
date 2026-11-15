@@ -5,49 +5,51 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
+
 type AsyncCreatePolicyBodyCompareTypeEnum string
 
 // List of CompareType
 const (
-    AsyncCreatePolicyBodyCompareTypeEnumRegex AsyncCreatePolicyBodyCompareTypeEnum = "REGEX"
-    AsyncCreatePolicyBodyCompareTypeEnumStartsWith AsyncCreatePolicyBodyCompareTypeEnum = "STARTS_WITH"
-    AsyncCreatePolicyBodyCompareTypeEnumEqualTo AsyncCreatePolicyBodyCompareTypeEnum = "EQUAL_TO"
+	AsyncCreatePolicyBodyCompareTypeEnumRegex      AsyncCreatePolicyBodyCompareTypeEnum = "REGEX"
+	AsyncCreatePolicyBodyCompareTypeEnumStartsWith AsyncCreatePolicyBodyCompareTypeEnum = "STARTS_WITH"
+	AsyncCreatePolicyBodyCompareTypeEnumEqualTo    AsyncCreatePolicyBodyCompareTypeEnum = "EQUAL_TO"
 )
+
 type AsyncCreatePolicyBodyHostNameCompareTypeEnum string
 
 // List of HostNameCompareType
 const (
-    AsyncCreatePolicyBodyHostNameCompareTypeEnumRegex AsyncCreatePolicyBodyHostNameCompareTypeEnum = "REGEX"
-    AsyncCreatePolicyBodyHostNameCompareTypeEnumStartsWith AsyncCreatePolicyBodyHostNameCompareTypeEnum = "STARTS_WITH"
-    AsyncCreatePolicyBodyHostNameCompareTypeEnumEqualTo AsyncCreatePolicyBodyHostNameCompareTypeEnum = "EQUAL_TO"
+	AsyncCreatePolicyBodyHostNameCompareTypeEnumRegex      AsyncCreatePolicyBodyHostNameCompareTypeEnum = "REGEX"
+	AsyncCreatePolicyBodyHostNameCompareTypeEnumStartsWith AsyncCreatePolicyBodyHostNameCompareTypeEnum = "STARTS_WITH"
+	AsyncCreatePolicyBodyHostNameCompareTypeEnumEqualTo    AsyncCreatePolicyBodyHostNameCompareTypeEnum = "EQUAL_TO"
 )
 
 type AsyncCreatePolicyBody struct {
-    position.Body
-    // 负载均衡监听器ID
+	position.Body
+	// 负载均衡监听器ID
 	ListenerId *string `json:"listenerId,omitempty"`
-    // URL的匹配规格，取值如下:  REGEX:正则匹配; STARTS_WITH:前缀匹配; EQUAL_TO:精准匹配 选择URL时必填
+	// URL的匹配规格，取值如下:  REGEX:正则匹配; STARTS_WITH:前缀匹配; EQUAL_TO:精准匹配 选择URL时必填
 	CompareType *AsyncCreatePolicyBodyCompareTypeEnum `json:"compareType,omitempty"`
-    // 七层转发策略URL，与转发策略域名需填写其中一个，也可都填写
+	// 七层转发策略URL，与转发策略域名需填写其中一个，也可都填写
 	L7PolicyUrl *string `json:"l7PolicyUrl,omitempty"`
-    // 域名的匹配规格，取值如下：REGEX：正则匹配；STARTS_WITH：前缀匹配； EQUAL_TO：精准匹配，选择域名时必填
+	// 域名的匹配规格，取值如下：REGEX：正则匹配；STARTS_WITH：前缀匹配； EQUAL_TO：精准匹配，选择域名时必填
 	HostNameCompareType *AsyncCreatePolicyBodyHostNameCompareTypeEnum `json:"hostNameCompareType,omitempty"`
-    // 七层转发策略名称，为5~64位的英文、数字、下划线中划线等的组合
+	// 七层转发策略名称，为5~64位的英文、数字、下划线中划线等的组合
 	L7PolicyName *string `json:"l7PolicyName,omitempty"`
-    // 后端服务组ID, 若为Null则新建后端服务器组
+	// 后端服务组ID, 若为Null则新建后端服务器组
 	PoolId *string `json:"poolId,omitempty"`
-    // 描述
+	// 描述
 	Description *string `json:"description,omitempty"`
-    // 七层转发策略域名，与转发策略URL需填写其中一个，也可都填写
+	// 七层转发策略域名，与转发策略URL需填写其中一个，也可都填写
 	L7PolicyDomainName *string `json:"l7PolicyDomainName,omitempty"`
-    // 七层转发策略在监听器中位置优先级
+	// 七层转发策略在监听器中位置优先级
 	Position *int32 `json:"position,omitempty"`
-    // 后端服务组创建参数，若为Null则使用已有后端服务器组，poolId则必填
+	// 后端服务组创建参数，若为Null则使用已有后端服务器组，poolId则必填
 	PoolCreateReq *AsyncCreatePolicyRequestPoolCreateReq `json:"poolCreateReq,omitempty"`
-    // 是否是多AZ场景
+	// 是否是多AZ场景
 	IsMultiAz *bool `json:"isMultiAz,omitempty"`
 }
 
@@ -118,7 +120,6 @@ func (s *AsyncCreatePolicyBody) SetIsMultiAz(v bool) *AsyncCreatePolicyBody {
 	return s
 }
 
-
 type AsyncCreatePolicyBodyBuilder struct {
 	s *AsyncCreatePolicyBody
 }
@@ -187,5 +188,3 @@ func (b *AsyncCreatePolicyBodyBuilder) IsMultiAz(v bool) *AsyncCreatePolicyBodyB
 func (b *AsyncCreatePolicyBodyBuilder) Build() *AsyncCreatePolicyBody {
 	return b.s
 }
-
-

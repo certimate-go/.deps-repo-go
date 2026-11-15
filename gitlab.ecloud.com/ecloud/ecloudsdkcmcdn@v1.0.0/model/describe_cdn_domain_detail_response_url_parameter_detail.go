@@ -5,14 +5,13 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type DescribeCdnDomainDetailResponseUrlParameterDetail struct {
-
-    // 参数类型
+	// 参数类型
 	Type *int32 `json:"type,omitempty"`
-    // 取值
+	// 取值
 	Content *string `json:"content,omitempty"`
 }
 
@@ -38,7 +37,6 @@ func (s *DescribeCdnDomainDetailResponseUrlParameterDetail) SetContent(v string)
 	return s
 }
 
-
 type DescribeCdnDomainDetailResponseUrlParameterDetailBuilder struct {
 	s *DescribeCdnDomainDetailResponseUrlParameterDetail
 }
@@ -62,5 +60,3 @@ func (b *DescribeCdnDomainDetailResponseUrlParameterDetailBuilder) Content(v str
 func (b *DescribeCdnDomainDetailResponseUrlParameterDetailBuilder) Build() *DescribeCdnDomainDetailResponseUrlParameterDetail {
 	return b.s
 }
-
-

@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type GetAsyncResultRequest struct {
-
-
 	GetAsyncResultQuery *GetAsyncResultQuery `json:"getAsyncResultQuery,omitempty"`
 }
 
@@ -31,7 +29,6 @@ func (s *GetAsyncResultRequest) SetGetAsyncResultQuery(v *GetAsyncResultQuery) *
 	return s
 }
 
-
 type GetAsyncResultRequestBuilder struct {
 	s *GetAsyncResultRequest
 }
@@ -50,5 +47,3 @@ func (b *GetAsyncResultRequestBuilder) GetAsyncResultQuery(v *GetAsyncResultQuer
 func (b *GetAsyncResultRequestBuilder) Build() *GetAsyncResultRequest {
 	return b.s
 }
-
-

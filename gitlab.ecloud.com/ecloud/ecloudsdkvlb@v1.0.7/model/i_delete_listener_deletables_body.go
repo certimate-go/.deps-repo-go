@@ -5,14 +5,14 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/position"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type IDeleteListenerDeletablesBody struct {
-    position.Body
-    // 监听器ID列表
-	ListenerIds []string 
+	position.Body
+	// 监听器ID列表
+	ListenerIds []string
 }
 
 func (s IDeleteListenerDeletablesBody) String() string {
@@ -32,7 +32,6 @@ func (s *IDeleteListenerDeletablesBody) SetListenerIds(v []string) *IDeleteListe
 	return s
 }
 
-
 type IDeleteListenerDeletablesBodyBuilder struct {
 	s *IDeleteListenerDeletablesBody
 }
@@ -51,5 +50,3 @@ func (b *IDeleteListenerDeletablesBodyBuilder) ListenerIds(v []string) *IDeleteL
 func (b *IDeleteListenerDeletablesBodyBuilder) Build() *IDeleteListenerDeletablesBody {
 	return b.s
 }
-
-

@@ -4,10 +4,7 @@
 
 package model
 
-
-
 type ListDomainResponseActions struct {
-
 	// 字段名称
 	FieldName string `json:"fieldName,omitempty"`
 

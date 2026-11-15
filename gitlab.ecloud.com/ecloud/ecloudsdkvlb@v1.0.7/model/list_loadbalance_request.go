@@ -5,12 +5,10 @@
 package model
 
 import (
-    "gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
+	"gitlab.ecloud.com/ecloud/ecloudsdkcore/utils"
 )
 
 type ListLoadbalanceRequest struct {
-
-
 	ListLoadbalanceQuery *ListLoadbalanceQuery `json:"listLoadbalanceQuery,omitempty"`
 }
 
@@ -31,7 +29,6 @@ func (s *ListLoadbalanceRequest) SetListLoadbalanceQuery(v *ListLoadbalanceQuery
 	return s
 }
 
-
 type ListLoadbalanceRequestBuilder struct {
 	s *ListLoadbalanceRequest
 }
@@ -50,5 +47,3 @@ func (b *ListLoadbalanceRequestBuilder) ListLoadbalanceQuery(v *ListLoadbalanceQ
 func (b *ListLoadbalanceRequestBuilder) Build() *ListLoadbalanceRequest {
 	return b.s
 }
-
-
